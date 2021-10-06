@@ -2,6 +2,7 @@
 
 - [landing page] community info
 - [landing page] setup mailing list
+- [landing page] logo
 
 # library
 
