@@ -1,7 +1,4 @@
-# infra
-
-- merge `infra` and `ut` from cicada-lang-api
-- `Resource` class
+- [infra] `Resource` class
 
 # landing page
 
