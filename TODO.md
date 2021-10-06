@@ -1,4 +1,3 @@
-- setup format
 - fix naming convention
 - setup tailwind -- twind
 
