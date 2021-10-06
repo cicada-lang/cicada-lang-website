@@ -28,14 +28,15 @@
         </li>
 
         <li>
-          IRC channel: #cicada-lang at
-          <a href="https://libera.chat" class="underline">libera.chat</a>
-        </li>
-        <li>
           Telegram group:
           <a href="https://t.me/CicadaLanguage" class="underline">
             CicadaLanguage
           </a>
+        </li>
+
+        <li>
+          IRC channel: #cicada-lang at
+          <a href="https://libera.chat" class="underline">libera.chat</a>
         </li>
       </ul>
     </div>
