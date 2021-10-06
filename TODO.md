@@ -1,4 +1,4 @@
-- fix naming convention
+- fix routes convention
 - setup tailwind -- twind
 
 # infra

@@ -1,6 +1,6 @@
 import { createApp } from "vue"
-import App from "./App.vue"
-import "./registerServiceWorker"
+import app from "./app.vue"
 import router from "./router"
+import "./register-service-worker"
 
-createApp(App).use(router).mount("#app")
+createApp(app).use(router).mount("#app")
