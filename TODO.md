@@ -1,3 +1,7 @@
+- `GitFileStore`
+- `GitLabFileStore`
+- `GitHubFileStore`
+
 # landing page
 
 - [landing page] community info
@@ -11,10 +15,6 @@
   - watch file change and provide feedback
 
 - load web library from gitlab and github
-
-  - `GitFileStore`
-  - `GitLabFileStore`
-  - `GitHubFileStore`
 
 # REPL
 
