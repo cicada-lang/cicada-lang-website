@@ -1,5 +1,6 @@
 - setup format
 - fix naming convention
+- setup tailwind -- twind
 
 # infra
 
@@ -13,6 +14,8 @@
 # library
 
 - web interface for working with library
+
+  - watch file change and provide feedback
 
 - load web library from gitlab and github
 
