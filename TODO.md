@@ -1,5 +1,3 @@
-- [infra] `Resource` class
-
 # landing page
 
 - [landing page] community info
@@ -24,3 +22,7 @@
 # wiki system
 
 - [later] wiki of formal proofs
+
+# infra
+
+- [infra] `Resource` class
