@@ -1,20 +1,15 @@
+- [landing page] setup mailing list
+
 - `GitFileStore`
 - `GitLabFileStore`
 - `GitHubFileStore`
 
-# landing page
-
-- [landing page] community info
-- [landing page] setup mailing list
-- [landing page] logo
-
 # library
 
-- web interface for working with library
+- web interface for study in a library
 
+  - load web library from gitlab and github
   - watch file change and provide feedback
-
-- load web library from gitlab and github
 
 # REPL
 
@@ -27,3 +22,8 @@
 # infra
 
 - [infra] `Resource` class
+
+# landing page
+
+- [landing page] logo
+- [landing page] decorate -- celtic knotwork
