@@ -21,9 +21,9 @@
 
       <ul class="py-4 text-lg space-y-2 list-disc list-inside">
         <li>
-          GitHub Organization:
+          GitHub:
           <a href="https://github.com/cicada-lang" class="underline">
-            github.com/cicada-lang
+            cicada-lang
           </a>
         </li>
 
