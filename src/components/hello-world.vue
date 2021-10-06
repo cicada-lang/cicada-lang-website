@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>hello world!</h1>
-    <h1>hi! {{ name }}</h1>
+    <h1 class="p-2 font-bold">hello world!</h1>
+    <h1 class="p-2">hi! {{ name }}</h1>
   </div>
 </template>
 

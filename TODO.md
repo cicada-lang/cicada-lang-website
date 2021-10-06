@@ -1,5 +1,3 @@
-- setup tailwind -- twind
-
 # infra
 
 - merge `infra` and `ut` from cicada-lang-api
