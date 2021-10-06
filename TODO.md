@@ -1,3 +1,6 @@
+- setup format
+- fix naming convention
+
 # infra
 
 - merge `infra` and `ut` from cicada-lang-api
