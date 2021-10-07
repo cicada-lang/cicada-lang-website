@@ -52,7 +52,7 @@
         </li>
 
         <li>
-          <a href="https://github.com/tsao-chi" class="underline"> Tsao Chi </a>
+          <a href="https://github.com/tsao-chi" class="underline"> Zaoqi </a>
         </li>
       </ul>
     </div>

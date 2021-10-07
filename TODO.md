@@ -1,4 +1,4 @@
-- [landing page] setup mailing list
+- use `@xieyuheng/enchanter` instead of `infra`
 
 - `GitFileStore`
 - `GitLabFileStore`
@@ -19,11 +19,13 @@
 
 - [later] wiki of formal proofs
 
-# infra
-
-- [infra] `Resource` class
-
 # landing page
 
 - [landing page] logo
+
 - [landing page] decorate -- celtic knotwork
+
+- [landing page] sign up form
+
+  - sign up to receive news asynchronously
+  - sign in to use our services
