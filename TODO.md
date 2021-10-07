@@ -1,9 +1,5 @@
 - use `@xieyuheng/enchanter` instead of `infra`
 
-- `GitFileStore`
-- `GitLabFileStore`
-- `GitHubFileStore`
-
 # library
 
 - web interface for study in a library
