@@ -40,6 +40,22 @@
         </li>
       </ul>
     </div>
+
+    <div>
+      <h2 class="text-2xl">Core Team</h2>
+
+      <ul class="py-4 text-lg space-y-2 list-disc list-inside">
+        <li>
+          <a href="https://github.com/xieyuheng" class="underline">
+            Xie Yuheng
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/tsao-chi" class="underline"> Tsao Chi </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
