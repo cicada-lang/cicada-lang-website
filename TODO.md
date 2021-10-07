@@ -1,5 +1,3 @@
-- use `@xieyuheng/enchanter` instead of `infra`
-
 # library
 
 - web interface for study in a library

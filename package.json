@@ -24,6 +24,7 @@
   "dependencies": {
     "@cicada-lang/cicada": "^0.3.11",
     "@cicada-lang/partech": "^0.1.15",
+    "@xieyuheng/enchanter": "^0.0.1",
     "@xieyuheng/ty": "^0.1.6",
     "commonmark": "^0.30.0",
     "nanoid": "^3.1.29",
