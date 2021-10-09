@@ -4,10 +4,12 @@
 
 - [route] `books/`
 
-- `books` -- load web book from `Reference` entry
-  - gitlab or github
+- `books` -- `Reference` class
+- `books` -- load book from github
+- `books` -- load book from gitlab
 - `books` -- show information in `book.json`
 - `books` -- show table of contents
+- `books` -- be able to config how to order pages
 
 # pages
 
