@@ -5,7 +5,6 @@
     </div>
     <div v-else>
       {{ reference }}
-      {{ state }}
     </div>
   </div>
 </template>
@@ -28,6 +27,10 @@ export default {
     })
 
     return { state }
+  },
+
+  async mounted() {
+    // console.log(await this.state.files.keys())
   },
 }
 </script>
