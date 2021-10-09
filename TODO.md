@@ -2,10 +2,7 @@
 
 > Demonstration of a book.
 
-- `views/book-list` -- setup `BookListState`
-
-- `views/book` -- setup route to `/books/{bookname}`
-- `views/book` -- setup `BookState`
+- `views/book` -- `BookState` class
 - `views/book` -- `Reference` class
 - `views/book` -- load book from github
 - `views/book` -- load book from gitlab
