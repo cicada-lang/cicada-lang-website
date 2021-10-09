@@ -1,18 +1,29 @@
-# libraries
+# books
 
-> Demonstration of a library.
+> Demonstration of a book.
 
-- [route] `libraries/`
-- `libraries` -- load web library from `Reference`
+- [route] `books/`
+
+- `books` -- load web book from `Reference` entry
   - gitlab or github
-- `libraries` -- run and show results in the page
-- `libraries` -- rander markdown files
+- `books` -- show information in `book.json`
+- `books` -- show table of contents
+
+# pages
+
+- [route] `books/{bookname}/pages/{pagename}`
+- `pages` -- run and show results in the page
+- `pages` -- rander markdown files
+
+# user
+
+- [route] `{username}`
 
 # studies
 
-> Ones study of a library.
+> Ones study.
 
-- [route] `<username>/studies/`
+- [route] `{username}/studies/`
 - watch file change and provide feedback
 - support REPL
 
