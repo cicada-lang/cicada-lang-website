@@ -2,22 +2,31 @@
 
 > Demonstration of a book.
 
-- [route] `books/`
+- `views/book-list` -- setup `BookListState`
 
-- `books` -- `Reference` class
-- `books` -- load book from github
-- `books` -- load book from gitlab
-- `books` -- show information in `book.json`
-- `books` -- show table of contents
-- `books` -- be able to config how to order pages
+- `views/book` -- setup route to `/books/{bookname}`
+- `views/book` -- setup `BookState`
+- `views/book` -- `Reference` class
+- `views/book` -- load book from github
+- `views/book` -- load book from gitlab
+- `views/book` -- show information in `book.json`
+- `views/book` -- show table of contents
+- `views/book` -- be able to config how to order pages
+
+# refactoring
+
+- dispatch view at very top-level
+  - learn from https://inertiajs.com/the-protocol
 
 # pages
 
-- [route] `books/{bookname}/pages/{pagename}`
-- `pages` -- run and show results in the page
-- `pages` -- rander markdown files
+- `views/page` -- setup route to `/books/{bookname}/pages/{pagename}`
+- `views/page` -- run and show results in the page
+- `views/page` -- rander markdown files
 
 # user
+
+- `views/users` -- setup route to `/books/{bookname}/pages/{pagename}`
 
 - [route] `{username}`
 
