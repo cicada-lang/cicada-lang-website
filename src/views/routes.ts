@@ -5,6 +5,14 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/books/:bookname",
     component: require("@/views/book").default,
-    props: (route) => ({ bookname: route.params.bookname }),
+    props: (route) => ({
+      reference: {
+        bookname: route.params.bookname,
+        host: route.query.host,
+        by: route.query.by,
+        dir: route.query.dir,
+        hostURL: route.query.hostURL,
+      },
+    }),
   },
 ]
