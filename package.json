@@ -22,10 +22,10 @@
     "typescript": "~4.4.3"
   },
   "dependencies": {
-    "@cicada-lang/cicada": "^0.3.11",
+    "@cicada-lang/cicada": "^0.3.13",
     "@cicada-lang/partech": "^0.1.15",
-    "@xieyuheng/enchanter": "^0.0.9",
-    "@xieyuheng/ty": "^0.1.6",
+    "@xieyuheng/enchanter": "^0.0.12",
+    "@xieyuheng/ty": "^0.1.7",
     "commonmark": "^0.30.0",
     "nanoid": "^3.1.29",
     "register-service-worker": "^1.7.2",

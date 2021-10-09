@@ -1,25 +1,25 @@
-# library
+# libraries
 
-- web interface for study in a library
+> Demonstration of a library.
 
-  - load web library from gitlab and github
-  - watch file change and provide feedback
+- [route] `libraries/`
+- `libraries` -- load web library from `Reference`
+  - gitlab or github
+- `libraries` -- run and show results in the page
+- `libraries` -- rander markdown files
 
-# REPL
+# studies
 
-- web interface for REPL
+> Ones study of a library.
 
-# wiki system
-
-- [later] wiki of formal proofs
+- [route] `<username>/studies/`
+- watch file change and provide feedback
+- support REPL
 
 # landing page
 
 - [landing page] logo
-
 - [landing page] decorate -- celtic knotwork
-
 - [landing page] sign up form
-
   - sign up to receive news asynchronously
   - sign in to use our services
