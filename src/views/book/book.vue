@@ -4,8 +4,9 @@
       <pre>{{ error }}</pre>
     </div>
     <div v-else>
-      {{ reference }}
-      {{ bookConfig }}
+      <div>{{ reference }}</div>
+      <div>{{ bookConfig }}</div>
+      <div>{{ files }}</div>
     </div>
   </div>
 </template>
@@ -27,14 +28,15 @@ export default class extends Vue {
   state: State | null = null
   bookConfig: any | null = null
   error: Error | null = null
+  files: Record<string, string> | null = null
 
   async mounted(): Promise<void> {
     try {
-      this.state = new State({
-        reference: this.reference,
-      })
-      this.bookConfig = await this.state.files.get("book.json")
-      console.log(await this.state.files.all())
+      this.state = new State({ reference: this.reference })
+      const text = await this.state.files.getOrFail("book.json")
+      this.bookConfig = JSON.parse(text)
+      this.files = await this.state.files.all()
+      console.log(this.files)
     } catch (error) {
       this.error
     }
