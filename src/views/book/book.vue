@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:py-20 max-w-prose px-6 py-6 mx-auto font-serif text-2xl h-screen"
+    class="md:py-20 max-w-prose h-screen px-6 py-6 mx-auto font-serif text-2xl"
   >
     <div v-if="error">
       <pre>{{ error }}</pre>
@@ -8,7 +8,7 @@
     <div v-else-if="!state" class="flex flex-col items-center">
       <div class="py-4">Loading...</div>
     </div>
-    <div v-else class="flex flex-col justify-between items-center h-full">
+    <div v-else class="flex flex-col items-center justify-between h-full">
       <h1 class="py-4 font-sans text-4xl font-bold">
         <span class="pl-4 pr-1">{{ state.bookConfig.title }}</span>
         <span class="text-sm">{{ state.bookConfig.version }}</span>
@@ -26,7 +26,7 @@
         </div>
       </section>
 
-      <section class="px-4 flex flex-col items-center">
+      <section class="flex flex-col items-center px-4">
         <div class="py-1 font-sans">
           <span>{{ state.bookId.path }}</span>
           <span> @ {{ state.bookId.host }}</span>

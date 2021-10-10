@@ -2,8 +2,6 @@
 
 > Demonstration of a book.
 
-- `models/book-id` -- use base64 instead of hex
-
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 

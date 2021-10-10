@@ -1,4 +1,4 @@
-import * as ut from "../ut"
+import { Base64 } from "js-base64"
 
 export class BookId {
   host: string
@@ -12,11 +12,13 @@ export class BookId {
   }
 
   encode(): string {
-    return ut.hexEncode([this.host, this.path, this.dir || ""].join(" "))
+    const text = [this.host, this.path, this.dir || ""].join(" ")
+    return Base64.encodeURI(text)
   }
 
   static decode(str: string): BookId {
-    const [host, path, dir] = ut.hexDecode(str).split(" ")
+    const text = Base64.decode(str)
+    const [host, path, dir] = text.split(" ")
     return new BookId({ host, path, dir })
   }
 }
