@@ -2,6 +2,8 @@
 
 > Demonstration of a book.
 
+- `views/home` -- link to books
+
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 
