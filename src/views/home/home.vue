@@ -28,7 +28,7 @@
               path: 'books/cicada',
               query: { by: 'cicada-lang', dir: 'books/group' },
             }"
-            class="underline font-sans"
+            class="font-sans underline"
           >
             Group Theory
           </router-link>
@@ -40,7 +40,7 @@
               path: 'books/cicada',
               query: { by: 'cicada-lang', dir: 'books/order' },
             }"
-            class="underline font-sans"
+            class="font-sans underline"
           >
             Order Theory
           </router-link>
@@ -52,7 +52,7 @@
               path: 'books/cicada',
               query: { by: 'cicada-lang', dir: 'books/category' },
             }"
-            class="underline font-sans"
+            class="font-sans underline"
           >
             Category Theory
           </router-link>
@@ -64,7 +64,7 @@
               path: 'books/cicada',
               query: { by: 'cicada-lang', dir: 'books/the-little-typer' },
             }"
-            class="underline font-sans"
+            class="font-sans underline"
           >
             The Little Typer
           </router-link>
@@ -78,22 +78,34 @@
       <ul class="space-y-2">
         <li>
           GitHub:
-          <a href="https://github.com/cicada-lang" class="underline font-sans">
-            cicada-lang
+          <a
+            href="https://github.com/cicada-lang"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            cicada-lang <icon-external-link class="w-4" />
           </a>
         </li>
 
         <li>
           Telegram group:
-          <a href="https://t.me/CicadaLanguage" class="underline font-sans">
-            CicadaLanguage
+          <a
+            href="https://t.me/CicadaLanguage"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            CicadaLanguage <icon-external-link class="w-4" />
           </a>
         </li>
 
         <li>
           IRC channel: #cicada-lang at
-          <a href="https://libera.chat" class="underline font-sans">
-            libera.chat
+          <a
+            href="https://libera.chat"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            libera.chat <icon-external-link class="w-4" />
           </a>
         </li>
       </ul>
@@ -104,14 +116,22 @@
     <section class="py-4 space-y-2">
       <ul class="space-y-2">
         <li>
-          <a href="https://github.com/xieyuheng" class="underline font-sans">
-            Xie Yuheng
+          <a
+            href="https://github.com/xieyuheng"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            Xie Yuheng <icon-external-link class="w-4" />
           </a>
         </li>
 
         <li>
-          <a href="https://github.com/tsao-chi" class="underline font-sans">
-            Zaoqi
+          <a
+            href="https://github.com/tsao-chi"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            Zaoqi <icon-external-link class="w-4" />
           </a>
         </li>
       </ul>
@@ -126,7 +146,7 @@ import { Component, Vue } from "vue-property-decorator"
   name: "home",
   // prettier-ignore
   components: {
-    // TODO
+    "icon-external-link": require("@/icons/icon-external-link").default
   },
 })
 export default class extends Vue {}
