@@ -2,12 +2,14 @@
 
 > Demonstration of a book.
 
+- `models/book-id` -- use base64 instead of hex
+
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 
 # page
 
-- `views/page` -- setup route to `/books/{bookname}/pages/{pagename}`
+- `views/page` -- setup route to `/books/{bookId}/pages/{pagename}`
 - `views/page` -- run and show results in the page
 - `views/page` -- rander markdown files
 
@@ -19,7 +21,7 @@
 
 > Ones study.
 
-- `views/study` -- setup route to `/{username}/study/{bookname}`
+- `views/study` -- setup route to `/{username}/study/{bookId}`
 - `views/study` -- watch file change and provide feedback
 - `views/study` -- support REPL
 

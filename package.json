@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "watch": "tsc --noEmit --watch",
     "format": "prettier src --write"
   },
   "prettier": {

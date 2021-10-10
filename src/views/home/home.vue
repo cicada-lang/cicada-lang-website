@@ -16,57 +16,20 @@
       </p>
     </section>
 
-    <h2 class="font-sans text-3xl font-bold">Books</h2>
+    <h2 class="font-sans text-3xl font-bold">Books & Papers</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada code can be organized into books.</p>
+      <p>Cicada code can be organized into books or papers.</p>
+
+      <p>Example books:</p>
 
       <ul class="space-y-2">
-        <li>
+        <li v-for="book in exampleBooks">
           <router-link
-            :to="{
-              path: 'books/cicada',
-              query: { by: 'cicada-lang', dir: 'books/group' },
-            }"
+            :to="{ path: `books/${book.id}` }"
             class="font-sans underline"
           >
-            Group Theory
-          </router-link>
-        </li>
-
-        <li>
-          <router-link
-            :to="{
-              path: 'books/cicada',
-              query: { by: 'cicada-lang', dir: 'books/order' },
-            }"
-            class="font-sans underline"
-          >
-            Order Theory
-          </router-link>
-        </li>
-
-        <li>
-          <router-link
-            :to="{
-              path: 'books/cicada',
-              query: { by: 'cicada-lang', dir: 'books/category' },
-            }"
-            class="font-sans underline"
-          >
-            Category Theory
-          </router-link>
-        </li>
-
-        <li>
-          <router-link
-            :to="{
-              path: 'books/cicada',
-              query: { by: 'cicada-lang', dir: 'books/the-little-typer' },
-            }"
-            class="font-sans underline"
-          >
-            The Little Typer
+            {{ book.title }}
           </router-link>
         </li>
       </ul>
@@ -141,6 +104,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
+import { BookId } from "@/models/book-id"
 
 @Component({
   name: "home",
@@ -149,7 +113,27 @@ import { Component, Vue } from "vue-property-decorator"
     "icon-external-link": require("@/icons/icon-external-link").default
   },
 })
-export default class extends Vue {}
+export default class extends Vue {
+  // prettier-ignore
+  exampleBooks = [
+    {
+      title: "Group Theory",
+      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/group" }).encode(),
+    },
+    {
+      title: "Order Theory",
+      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/order" }).encode(),
+    },
+    {
+      title: "Category Theory",
+      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/category" }).encode(),
+    },
+    {
+      title: "The Little Typer",
+      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/the-little-typer" }).encode(),
+    },
+  ]
+}
 </script>
 
 <style scoped>
