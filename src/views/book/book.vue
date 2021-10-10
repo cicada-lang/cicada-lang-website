@@ -27,10 +27,14 @@
       </section>
 
       <section class="flex flex-col items-center px-4">
-        <div class="py-1 font-sans">
+        <a
+          :href="state.bookId.repoURL()"
+          class="py-1 font-sans hover:text-gray-500"
+          target="_blank"
+        >
           <span>{{ state.bookId.path }}</span>
           <span> @ {{ state.bookId.host }}</span>
-        </div>
+        </a>
 
         <div v-if="state.bookConfig.date" class="py-1">
           <div class="font-sans">{{ state.bookConfig.date }}</div>
