@@ -3,8 +3,11 @@
 > Demonstration of a book.
 
 - `views/book` -- show information in `book.json`
-- `views/book` -- show table of contents
-- `views/book` -- be able to config how to order pages
+
+- `views/book` -- use explicit table of contents to get an order pages
+
+  - because books pages can be turned
+  - generate order from links in the page
 
 # refactoring
 
