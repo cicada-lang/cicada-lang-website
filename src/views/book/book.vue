@@ -4,6 +4,7 @@
       <pre>{{ error }}</pre>
     </div>
     <div v-else>
+      {{ test }}
       {{ reference }}
     </div>
   </div>
@@ -27,9 +28,9 @@ export default {
         reference: this.reference,
       })
 
-      return { state }
+      return { state, error: undefined }
     } catch (error) {
-      return { error }
+      return { state: undefined, error }
     }
   },
 
