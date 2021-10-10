@@ -59,11 +59,15 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator"
+
+@Component({
   name: "home",
+  // prettier-ignore
   components: {
     // TODO
   },
-}
+})
+export default class extends Vue {}
 </script>

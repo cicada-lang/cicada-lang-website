@@ -10,33 +10,34 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator"
 import { BookState as State } from "@/views/book/book-state"
 
-export default {
+@Component({
   name: "book",
-
+  // prettier-ignore
   components: {
     // TODO
   },
+})
+export default class extends Vue {
+  @Prop() reference!: any
 
-  props: ["reference"],
+  state: State | null = null
+  bookConfig: any | null = null
+  error: Error | null = null
 
-  data() {
+  async mounted(): Promise<void> {
     try {
-      const state = new State({
+      this.state = new State({
         reference: this.reference,
       })
-
-      return { state, error: undefined, bookConfig: null }
+      this.bookConfig = await this.state.files.get("book.json")
+      console.log(await this.state.files.all())
     } catch (error) {
-      return { state: undefined, error }
+      this.error
     }
-  },
-
-  async mounted() {
-    this.bookConfig = await this.state.files.get("book.json")
-    console.log(await this.state.files.all())
-  },
+  }
 }
 </script>

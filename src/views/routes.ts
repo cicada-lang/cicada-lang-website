@@ -1,6 +1,6 @@
-import { RouteRecordRaw } from "vue-router"
+import { RouteConfig } from "vue-router"
 
-export const routes: Array<RouteRecordRaw> = [
+export const routes: Array<RouteConfig> = [
   { path: "/", component: require("@/views/home").default },
   {
     path: "/books/:bookname",

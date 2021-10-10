@@ -1,7 +1,11 @@
-import { createRouter, createWebHistory } from "vue-router"
+import Vue from "vue"
+import VueRouter, { RouteConfig } from "vue-router"
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   // prettier-ignore
   routes: [
     ...require("@/views/routes").routes,
