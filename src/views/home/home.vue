@@ -1,8 +1,8 @@
 <template>
-  <div class="md:mx-auto mx-6 md:py-10 py-6 max-w-prose">
-    <h1 class="text-3xl">Cicada Language</h1>
+  <div class="md:py-10 max-w-prose px-6 py-6 mx-auto font-serif text-xl">
+    <h1 class="font-sans text-4xl font-bold">Cicada Language</h1>
 
-    <div class="py-4 text-lg space-y-2">
+    <div class="py-4 space-y-2">
       <p>
         Cicada language is a dependently typed programming language and
         interactive theorem prover.
@@ -17,9 +17,9 @@
     </div>
 
     <div>
-      <h2 class="text-2xl">Community</h2>
+      <h2 class="font-sans text-3xl font-bold">Community</h2>
 
-      <ul class="py-4 text-lg space-y-2 list-disc list-inside">
+      <ul class="py-4 space-y-2 list-disc list-inside">
         <li>
           GitHub:
           <a href="https://github.com/cicada-lang" class="underline">
@@ -42,9 +42,9 @@
     </div>
 
     <div>
-      <h2 class="text-2xl">Core Team</h2>
+      <h2 class="font-sans text-3xl font-bold">Core Team</h2>
 
-      <ul class="py-4 text-lg space-y-2 list-disc list-inside">
+      <ul class="py-4 space-y-2 list-disc list-inside">
         <li>
           <a href="https://github.com/xieyuheng" class="underline">
             Xie Yuheng

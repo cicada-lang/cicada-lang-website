@@ -2,7 +2,6 @@
 
 > Demonstration of a book.
 
-- `views/book` -- show information in `book.json`
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 

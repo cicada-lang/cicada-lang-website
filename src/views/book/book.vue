@@ -1,16 +1,32 @@
 <template>
-  <div class="md:mx-auto mx-6 md:py-10 py-6 max-w-prose">
+  <div class="md:py-10 max-w-prose px-6 py-6 mx-auto font-serif text-2xl">
     <div v-if="error">
       <pre>{{ error }}</pre>
     </div>
     <div v-else-if="!state">
       <div>Loading...</div>
     </div>
-    <div v-else>
-      <h1 class="text-4xl py-4 font-bold">{{ state.bookConfig.title }}</h1>
-      <div>{{ state.bookConfig.version }}</div>
-      <div v-if="state.bookConfig.authors">{{ state.bookConfig.authors }}</div>
-      <div v-if="state.bookConfig.date">{{ state.bookConfig.date }}</div>
+    <div v-else class="flex flex-col items-center">
+      <h1 class="py-4 font-sans text-4xl font-bold">
+        <span class="pl-4 pr-1">{{ state.bookConfig.title }}</span>
+        <span class="text-sm">{{ state.bookConfig.version }}</span>
+      </h1>
+
+      <div
+        v-if="state.bookConfig.authors && state.bookConfig.authors.length > 0"
+        class="py-4"
+      >
+        <div
+          class="font-sans font-bold"
+          v-for="author in state.bookConfig.authors"
+        >
+          {{ author }}
+        </div>
+      </div>
+
+      <div v-if="state.bookConfig.date" class="py-4">
+        <div class="font-sans">{{ state.bookConfig.date }}</div>
+      </div>
     </div>
   </div>
 </template>
