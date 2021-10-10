@@ -4,8 +4,8 @@
       <pre>{{ error }}</pre>
     </div>
     <div v-else>
-      {{ test }}
       {{ reference }}
+      {{ bookConfig }}
     </div>
   </div>
 </template>
@@ -28,13 +28,14 @@ export default {
         reference: this.reference,
       })
 
-      return { state, error: undefined }
+      return { state, error: undefined, bookConfig: null }
     } catch (error) {
       return { state: undefined, error }
     }
   },
 
   async mounted() {
+    this.bookConfig = await this.state.files.get("book.json")
     console.log(await this.state.files.all())
   },
 }
