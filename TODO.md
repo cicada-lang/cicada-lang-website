@@ -1,5 +1,3 @@
-- back to tailwind -- instead of twind
-
 # book
 
 > Demonstration of a book.
