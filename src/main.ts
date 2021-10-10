@@ -2,7 +2,7 @@ import Vue from "vue"
 import app from "./app.vue"
 import router from "./router"
 import "./plugins/register-service-worker"
-import "twind/shim"
+import "./plugins/twind"
 
 Vue.config.productionTip = false
 

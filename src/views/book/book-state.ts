@@ -9,10 +9,23 @@ import ty from "@xieyuheng/ty"
 export class BookState {
   reference: Reference
   files: FileStore
+  bookConfig: Record<string, any>
 
-  constructor(opts: { reference: any }) {
-    this.reference = createReference(opts.reference)
-    this.files = createFileStore(this.reference)
+  constructor(opts: {
+    reference: Reference
+    files: FileStore
+    bookConfig: Record<string, any>
+  }) {
+    this.reference = opts.reference
+    this.files = opts.files
+    this.bookConfig = opts.bookConfig
+  }
+
+  static async build(opts: { reference: any }): Promise<BookState> {
+    const reference = createReference(opts.reference)
+    const files = createFileStore(reference)
+    const bookConfig = JSON.parse(await files.getOrFail("book.json"))
+    return new BookState({ reference, files, bookConfig })
   }
 }
 

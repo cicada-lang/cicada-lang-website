@@ -3,10 +3,14 @@
     <div v-if="error">
       <pre>{{ error }}</pre>
     </div>
+    <div v-else-if="!state">
+      <div>Loading...</div>
+    </div>
     <div v-else>
-      <div>{{ reference }}</div>
-      <div>{{ bookConfig }}</div>
-      <div>{{ files }}</div>
+      <h1 class="text-4xl py-4 font-bold">{{ state.bookConfig.title }}</h1>
+      <div>{{ state.bookConfig.version }}</div>
+      <div v-if="state.bookConfig.authors">{{ state.bookConfig.authors }}</div>
+      <div v-if="state.bookConfig.date">{{ state.bookConfig.date }}</div>
     </div>
   </div>
 </template>
@@ -26,19 +30,13 @@ export default class extends Vue {
   @Prop() reference!: any
 
   state: State | null = null
-  bookConfig: any | null = null
-  error: Error | null = null
-  files: Record<string, string> | null = null
+  error: unknown | null = null
 
   async mounted(): Promise<void> {
     try {
-      this.state = new State({ reference: this.reference })
-      const text = await this.state.files.getOrFail("book.json")
-      this.bookConfig = JSON.parse(text)
-      this.files = await this.state.files.all()
-      console.log(this.files)
+      this.state = await State.build({ reference: this.reference })
     } catch (error) {
-      this.error
+      this.error = error
     }
   }
 }
