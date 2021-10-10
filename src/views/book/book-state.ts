@@ -1,27 +1,37 @@
 import { Reference } from "@/models/reference"
 import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
 import { GitHubFileStore } from "@xieyuheng/enchanter/lib/github-file-store"
+import { GitLabFileStore } from "@xieyuheng/enchanter/lib/gitlab-file-store"
+import { Gitlab } from "@gitbeaker/browser"
 import { Optional } from "utility-types"
 import ty from "@xieyuheng/ty"
 
 export class BookState {
   reference: Reference
-  error?: Error
   files: FileStore
 
   constructor(opts: { reference: any }) {
-    try {
-      this.reference = createReference(opts.reference)
-      this.files = createFileStore(this.reference)
-    } catch (error) {
-      this.error = error
-    }
+    this.reference = createReference(opts.reference)
+    this.files = createFileStore(this.reference)
   }
 }
 
 function createFileStore(reference: Reference): FileStore {
-  const { bookname, by, dir } = reference
-  return new GitHubFileStore(by + "/" + bookname, { dir })
+  const { host, bookname, by, dir } = reference
+
+  switch (host) {
+    case "github":
+      return new GitHubFileStore(by + "/" + bookname, {
+        dir,
+      })
+    case "gitlab":
+      return new GitLabFileStore(by + "/" + bookname, {
+        dir,
+        requester: new Gitlab({
+          host: reference.hostURL || "https://gitlab.com",
+        }),
+      })
+  }
 }
 
 function createReference(input: any): Reference {

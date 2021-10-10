@@ -2,7 +2,6 @@
 
 > Demonstration of a book.
 
-- `views/book` -- load book from gitlab
 - `views/book` -- show information in `book.json`
 - `views/book` -- show table of contents
 - `views/book` -- be able to config how to order pages

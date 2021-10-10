@@ -1,7 +1,7 @@
 <template>
   <div class="md:mx-auto mx-6 md:py-10 py-6 max-w-prose">
-    <div v-if="state.error">
-      <pre>{{ state.error }}</pre>
+    <div v-if="error">
+      <pre>{{ error }}</pre>
     </div>
     <div v-else>
       {{ reference }}
@@ -22,15 +22,19 @@ export default {
   props: ["reference"],
 
   data() {
-    const state = new State({
-      reference: this.reference,
-    })
+    try {
+      const state = new State({
+        reference: this.reference,
+      })
 
-    return { state }
+      return { state }
+    } catch (error) {
+      return { error }
+    }
   },
 
   async mounted() {
-    // console.log(await this.state.files.keys())
+    console.log(await this.state.files.all())
   },
 }
 </script>
