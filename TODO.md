@@ -1,20 +1,12 @@
-# books
+# book
 
 > Demonstration of a book.
 
 - `views/book` -- show information in `book.json`
+- `views/book` -- show information in `CONTENTS.md`
+- `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 
-- `views/book` -- use explicit table of contents to get an order pages
-
-  - because books pages can be turned
-  - generate order from links in the page
-
-# refactoring
-
-- dispatch view at very top-level
-  - learn from https://inertiajs.com/the-protocol
-
-# pages
+# page
 
 - `views/page` -- setup route to `/books/{bookname}/pages/{pagename}`
 - `views/page` -- run and show results in the page
@@ -22,22 +14,20 @@
 
 # user
 
-- `views/users` -- setup route to `/books/{bookname}/pages/{pagename}`
+- `views/user` -- setup route to `/{username}`
 
-- [route] `{username}`
-
-# studies
+# study
 
 > Ones study.
 
-- [route] `{username}/studies/`
-- watch file change and provide feedback
-- support REPL
+- `views/study` -- setup route to `/{username}/study/{bookname}`
+- `views/study` -- watch file change and provide feedback
+- `views/study` -- support REPL
 
 # landing page
 
-- [landing page] logo
-- [landing page] decorate -- celtic knotwork
-- [landing page] sign up form
+- `views/home` -- logo
+- `views/home` -- decorate -- celtic knotworklogo
+- `views/home` -- sign up form
   - sign up to receive news asynchronously
   - sign in to use our services
