@@ -9,9 +9,19 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else class="flex flex-col items-center justify-between h-full">
-      <h1 class="flex flex-col items-center py-4 font-sans text-4xl font-bold">
+      <h1
+        class="
+          md:text-4xl
+          flex flex-col
+          items-center
+          py-4
+          font-sans
+          text-3xl
+          font-bold
+        "
+      >
         <div>
-          <span class="pl-4 pr-1">{{ state.bookConfig.title }}</span>
+          <span class="pl-2 pr-1">{{ state.bookConfig.title }}</span>
           <span class="text-sm">{{ state.bookConfig.version }}</span>
         </div>
 
