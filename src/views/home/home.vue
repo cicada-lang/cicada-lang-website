@@ -51,7 +51,7 @@
         </li>
 
         <li>
-          Telegram group:
+          Telegram:
           <a
             href="https://t.me/CicadaLanguage"
             class="inline-flex font-sans underline"
@@ -62,7 +62,7 @@
         </li>
 
         <li>
-          IRC channel: #cicada-lang at
+          IRC: #cicada-lang at
           <a
             href="https://libera.chat"
             class="inline-flex font-sans underline"
