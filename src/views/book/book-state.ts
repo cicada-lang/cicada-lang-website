@@ -1,4 +1,4 @@
-import { GitFileStoreId } from "@/models/git-file-store-id"
+import { GitFileStoreId } from "@xieyuheng/enchanter/lib/git-file-store-id"
 import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
 import { GitHubFileStore } from "@xieyuheng/enchanter/lib/github-file-store"
 import { GitLabFileStore } from "@xieyuheng/enchanter/lib/gitlab-file-store"

@@ -1,5 +1,3 @@
-- extract `GitFileStoreId` to `enchanter`
-
 # book
 
 > Demonstration of a book.

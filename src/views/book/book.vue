@@ -44,7 +44,7 @@
 
       <section class="flex flex-col items-center px-4">
         <a
-          :href="state.bookId.repoURL()"
+          :href="state.bookId.formatURL()"
           class="hover:text-gray-500 py-1 font-sans"
           target="_blank"
         >

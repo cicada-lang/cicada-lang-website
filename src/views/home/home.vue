@@ -104,7 +104,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
-import { GitFileStoreId } from "@/models/git-file-store-id"
+import { GitFileStoreId } from "@xieyuheng/enchanter/lib/git-file-store-id"
 
 @Component({
   name: "home",
