@@ -24,12 +24,12 @@
       <p>Example books:</p>
 
       <ul class="space-y-2">
-        <li v-for="book in exampleBooks">
+        <li v-for="exampleBook in exampleBooks">
           <router-link
-            :to="{ path: `books/${book.id}` }"
+            :to="{ path: `books/${getBookId(exampleBook)}` }"
             class="font-sans underline"
           >
-            {{ book.title }}
+            {{ exampleBook.title }}
           </router-link>
         </li>
       </ul>
@@ -104,7 +104,14 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
-import { GitFileStoreId } from "@xieyuheng/enchanter/lib/git-file-store-id"
+import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
+
+type ExampleBook = {
+  title: string
+  host: string
+  repo: string
+  path?: string
+}
 
 @Component({
   name: "home",
@@ -114,23 +121,35 @@ import { GitFileStoreId } from "@xieyuheng/enchanter/lib/git-file-store-id"
   },
 })
 export default class extends Vue {
-  // prettier-ignore
+  getBookId(exampleBook: ExampleBook): string {
+    const { host, repo, path } = exampleBook
+    return new GitPath({ host, repo, path }).encode()
+  }
+
   exampleBooks = [
     {
       title: "Group Theory",
-      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/group" }).encode(),
+      host: "github",
+      repo: "cicada-lang/cicada",
+      path: "books/group",
     },
     {
       title: "Order Theory",
-      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/order" }).encode(),
+      host: "github",
+      repo: "cicada-lang/cicada",
+      path: "books/order",
     },
     {
       title: "Category Theory",
-      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/category" }).encode(),
+      host: "github",
+      repo: "cicada-lang/cicada",
+      path: "books/category",
     },
     {
       title: "Logic and Judgment",
-      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/logic-and-judgment" }).encode(),
+      host: "github",
+      repo: "cicada-lang/cicada",
+      path: "books/logic-and-judgment",
     },
   ]
 }
