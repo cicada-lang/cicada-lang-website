@@ -129,8 +129,8 @@ export default class extends Vue {
       id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/category" }).encode(),
     },
     {
-      title: "The Little Typer",
-      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/the-little-typer" }).encode(),
+      title: "Logic and Judgment",
+      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/logic-and-judgment" }).encode(),
     },
   ]
 }
