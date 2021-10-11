@@ -11,14 +11,21 @@ export class BookId {
     this.dir = opts.dir || ""
   }
 
+  format(): string {
+    return JSON.stringify([this.host, this.path, this.dir])
+  }
+
+  static parse(str: string): [host: string, path: string, dir: string] {
+    const [host, path, dir] = JSON.parse(str)
+    return [host, path, dir]
+  }
+
   encode(): string {
-    const text = [this.host, this.path, this.dir].join(" ")
-    return Base64.encodeURI(text)
+    return Base64.encodeURI(this.format())
   }
 
   static decode(str: string): BookId {
-    const text = Base64.decode(str)
-    const [host, path, dir] = text.split(" ")
+    const [host, path, dir] = this.parse(Base64.decode(str))
     return new BookId({ host, path, dir })
   }
 

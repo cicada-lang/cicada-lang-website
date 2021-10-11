@@ -1,3 +1,5 @@
+- [refactor] rename `BookId` to `GitFileStoreId`
+
 # book
 
 > Demonstration of a book.
