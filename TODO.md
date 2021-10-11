@@ -9,7 +9,7 @@
 
 - `views/page` -- setup route to `/books/{bookId}/pages/{pagename}`
 - `views/page` -- run and show results in the page
-- `views/page` -- rander markdown files
+- `views/page` -- render markdown files
 
 # user
 
