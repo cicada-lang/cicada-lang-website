@@ -1,6 +1,6 @@
 import { Base64 } from "js-base64"
 
-export class BookId {
+export class GitFileStoreId {
   host: string
   path: string
   dir: string
@@ -24,9 +24,9 @@ export class BookId {
     return Base64.encodeURI(this.format())
   }
 
-  static decode(str: string): BookId {
+  static decode(str: string): GitFileStoreId {
     const [host, path, dir] = this.parse(Base64.decode(str))
-    return new BookId({ host, path, dir })
+    return new GitFileStoreId({ host, path, dir })
   }
 
   repoURL(): string {

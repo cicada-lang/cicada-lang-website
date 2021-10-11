@@ -1,4 +1,4 @@
-- [refactor] rename `BookId` to `GitFileStoreId`
+- extract `GitFileStoreId` to `enchanter`
 
 # book
 

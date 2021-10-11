@@ -104,7 +104,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
-import { BookId } from "@/models/book-id"
+import { GitFileStoreId } from "@/models/git-file-store-id"
 
 @Component({
   name: "home",
@@ -118,19 +118,19 @@ export default class extends Vue {
   exampleBooks = [
     {
       title: "Group Theory",
-      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/group" }).encode(),
+      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/group" }).encode(),
     },
     {
       title: "Order Theory",
-      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/order" }).encode(),
+      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/order" }).encode(),
     },
     {
       title: "Category Theory",
-      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/category" }).encode(),
+      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/category" }).encode(),
     },
     {
       title: "Logic and Judgment",
-      id: new BookId({ host: "github", path: "cicada-lang/cicada", dir: "books/logic-and-judgment" }).encode(),
+      id: new GitFileStoreId({ host: "github", path: "cicada-lang/cicada", dir: "books/logic-and-judgment" }).encode(),
     },
   ]
 }

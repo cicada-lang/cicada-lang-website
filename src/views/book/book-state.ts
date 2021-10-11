@@ -1,4 +1,4 @@
-import { BookId } from "@/models/book-id"
+import { GitFileStoreId } from "@/models/git-file-store-id"
 import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
 import { GitHubFileStore } from "@xieyuheng/enchanter/lib/github-file-store"
 import { GitLabFileStore } from "@xieyuheng/enchanter/lib/gitlab-file-store"
@@ -7,12 +7,12 @@ import { Optional } from "utility-types"
 import ty from "@xieyuheng/ty"
 
 export class BookState {
-  bookId: BookId
+  bookId: GitFileStoreId
   files: FileStore
   bookConfig: Record<string, any>
 
   constructor(opts: {
-    bookId: BookId
+    bookId: GitFileStoreId
     files: FileStore
     bookConfig: Record<string, any>
   }) {
@@ -22,14 +22,14 @@ export class BookState {
   }
 
   static async build(input: string): Promise<BookState> {
-    const bookId = BookId.decode(input)
+    const bookId = GitFileStoreId.decode(input)
     const files = createFileStore(bookId)
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     return new BookState({ bookId, files, bookConfig })
   }
 }
 
-function createFileStore({ host, path, dir }: BookId): FileStore {
+function createFileStore({ host, path, dir }: GitFileStoreId): FileStore {
   switch (host) {
     case "github":
       return new GitHubFileStore(path, { dir })
