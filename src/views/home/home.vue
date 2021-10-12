@@ -19,7 +19,7 @@
     <h2 class="font-sans text-3xl font-bold">Books & Papers</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada code can be organized into books or papers.</p>
+      <p>Cicada code can be organized into books & papers.</p>
 
       <p>Example books:</p>
 

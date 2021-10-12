@@ -25,7 +25,7 @@
           <span class="text-sm">{{ state.bookConfig.version }}</span>
         </div>
 
-        <h2 class="py-2 font-sans text-2xl font-normal">
+        <h2 class="py-2 font-sans md:text-2xl text-xl font-normal">
           <span>{{ state.bookConfig.subtitle }}</span>
         </h2>
       </h1>
