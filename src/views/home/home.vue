@@ -16,10 +16,10 @@
       </p>
     </section>
 
-    <h2 class="font-sans text-3xl font-bold">Books & Papers</h2>
+    <h2 class="font-sans text-3xl font-bold">Books & Articles</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada code can be organized into books and papers.</p>
+      <p>Cicada code can be organized into books and articles.</p>
 
       <p>Example books:</p>
 
