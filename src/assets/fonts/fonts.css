@@ -74,6 +74,36 @@
   font-style: normal;
 }
 
+/* Terminus (TTF) */
+
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: url("terminus-ttf-4.49.1/TerminusTTF-4.49.1.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: url("terminus-ttf-4.49.1/TerminusTTF-Italic-4.49.1.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: url("terminus-ttf-4.49.1/TerminusTTF-Bold-4.49.1.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: url("terminus-ttf-4.49.1/TerminusTTF-Bold Italic-4.49.1.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* To display subscripts and angle brackets that are missing in Inconsolata */
 @font-face {
   font-family: "DejaVu Sans Mono";
@@ -81,6 +111,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* FiraCode */
+
+@import url("FiraCode/fira_code.css");
 
 /* Computer Modern math font for extended symbols */
 /* (Figure 3.33 uses this for integral sign) */

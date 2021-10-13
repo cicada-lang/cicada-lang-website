@@ -1,4 +1,3 @@
-- update `assets/fonts`
 - update `tailwind.config.js`
 - update `vendor/postmark/`
 
