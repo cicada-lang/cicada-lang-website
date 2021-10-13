@@ -1,3 +1,7 @@
+# article
+
+- `views/home` -- list example articles
+
 # book
 
 > Demonstration of a book.
@@ -7,9 +11,9 @@
 
 # page
 
-- `views/page` -- setup route to `/books/{bookId}/pages/{pagename}`
-- `views/page` -- run and show results in the page
-- `views/page` -- render markdown files
+- `views/book/page` -- setup route to `/books/{bookId}/pages/{pagename}`
+- `views/book/page` -- run and show results in the page
+- `views/book/page` -- render markdown files
 
 # user
 
