@@ -1,5 +1,3 @@
-- update `vendor/postmark/`
-
 # book
 
 > Demonstration of a book.
