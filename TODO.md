@@ -1,4 +1,3 @@
-- update `tailwind.config.js`
 - update `vendor/postmark/`
 
 # book

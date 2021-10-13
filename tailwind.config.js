@@ -6,7 +6,13 @@ module.exports = {
     fontFamily: {
       sans: ["Linux Biolinum O", "sans-serif"],
       serif: ["Linux Libertine O", "serif"],
-      mono: ["Inconsolata LGC", "DejaVu Sans Mono", "monospace"],
+      mono: [
+        // "Inconsolata LGC",
+        // "Terminus (TTF)",
+        "Fira Code",
+        // "DejaVu Sans Mono",
+        "monospace",
+      ],
     },
     extend: {
       colors: {
