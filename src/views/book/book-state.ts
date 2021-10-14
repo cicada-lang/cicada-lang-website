@@ -2,7 +2,6 @@ import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
 import { GitHubFileStore } from "@xieyuheng/enchanter/lib/github-file-store"
 import { GitLabFileStore } from "@xieyuheng/enchanter/lib/gitlab-file-store"
-import { Gitlab } from "@gitbeaker/browser"
 import ty from "@xieyuheng/ty"
 
 export class BookState {
@@ -35,14 +34,8 @@ function createFileStore(gitPath: GitPath): FileStore {
     case "github":
       return new GitHubFileStore(repo, { dir })
     case "gitlab":
-      return new GitLabFileStore(repo, {
-        dir,
-        requester: new Gitlab({ host: "https://gitlab.com" }),
-      })
+      return new GitLabFileStore(repo, { dir })
     default:
-      return new GitLabFileStore(repo, {
-        dir,
-        requester: new Gitlab({ host }),
-      })
+      return new GitLabFileStore(repo, { dir, host })
   }
 }
