@@ -21,15 +21,28 @@
     <section class="py-4 space-y-2">
       <p>Cicada code can be organized into books and articles.</p>
 
-      <p>Example books:</p>
+      <p class="font-sans font-bold">Example books:</p>
 
       <ul class="space-y-2">
         <li v-for="exampleBook in exampleBooks">
           <router-link
-            :to="{ path: `books/${getBookId(exampleBook)}` }"
+            :to="{ path: `books/${getGitPath(exampleBook)}` }"
             class="font-sans underline"
           >
             {{ exampleBook.title }}
+          </router-link>
+        </li>
+      </ul>
+
+      <p class="font-sans font-bold">Example articles:</p>
+
+      <ul class="space-y-2">
+        <li v-for="exampleArticle in exampleArticles">
+          <router-link
+            :to="{ path: `articles/${getGitPath(exampleArticle)}` }"
+            class="font-sans underline"
+          >
+            {{ exampleArticle.title }}
           </router-link>
         </li>
       </ul>
@@ -106,11 +119,11 @@
 import { Component, Vue } from "vue-property-decorator"
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 
-type ExampleBook = {
+type Example = {
   title: string
   host: string
   repo: string
-  path?: string
+  path: string
 }
 
 @Component({
@@ -121,12 +134,12 @@ type ExampleBook = {
   },
 })
 export default class extends Vue {
-  getBookId(exampleBook: ExampleBook): string {
-    const { host, repo, path } = exampleBook
+  getGitPath(example: Example): string {
+    const { host, repo, path } = example
     return new GitPath({ host, repo, path }).encode()
   }
 
-  exampleBooks = [
+  exampleBooks: Array<Example> = [
     {
       title: "Group Theory",
       host: "github",
@@ -152,6 +165,21 @@ export default class extends Vue {
       path: "books/logic-and-judgment",
     },
   ]
+
+  // prettier-ignore
+  chs = [
+    "01", "02", "03", "04",
+    "05", "06", "07", "08",
+    "09", "10", "11", "12",
+    "13", "14", "15", "16"
+  ]
+
+  exampleArticles: Array<Example> = this.chs.map((n) => ({
+    title: `ch${n}`,
+    host: "github",
+    repo: "cicada-lang/cicada",
+    path: `books/logic-and-judgment/src/ch${n}.md`,
+  }))
 }
 </script>
 

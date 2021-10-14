@@ -1,7 +1,3 @@
-# article
-
-- `views/home` -- list example articles
-
 # book
 
 > Demonstration of a book.
