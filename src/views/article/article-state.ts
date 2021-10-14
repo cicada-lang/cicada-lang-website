@@ -1,7 +1,5 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
-import { GitHubFileStore } from "@xieyuheng/enchanter/lib/github-file-store"
-import { GitLabFileStore } from "@xieyuheng/enchanter/lib/gitlab-file-store"
 import { Parser, Nodes } from "@xieyuheng/postmark"
 import ty from "@xieyuheng/ty"
 const Path = require("path")
