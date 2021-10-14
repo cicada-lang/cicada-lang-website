@@ -9,7 +9,7 @@ export const components = {
   "md-thematic-break": () => import("./leaf-blocks/md-thematic-break.vue"),
   "md-html-block": () => import("./leaf-blocks/md-html-block.vue"),
   "md-code-block": () => import("./leaf-blocks/md-code-block.vue"),
-  // "md-custom-block": () => import("./leaf-blocks/md-custom-block.vue"),
+  "md-custom-block": () => import("./leaf-blocks/md-custom-block.vue"),
 
   "md-block-quote": () => import("./container-blocks/md-block-quote.vue"),
   "md-bullet-list": () => import("./container-blocks/md-bullet-list.vue"),

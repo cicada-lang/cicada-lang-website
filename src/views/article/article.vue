@@ -7,12 +7,11 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else>
-      <pre
-        v-if="Object.keys(state.document.attributes).length > 0"
-        class="overflow-x-auto"
-        >{{ state.document.attributes }}</pre
-      >
-      <md-document :document="state.document" />
+      <md-document
+        :document="state.document"
+        :path-resolver="state.pathResolver"
+        :custom-block-components="{}"
+      />
     </div>
   </div>
 </template>
@@ -30,13 +29,17 @@ import { ArticleState as State } from "./article-state"
 })
 export default class extends Vue {
   @Prop() articleId!: string
+  @Prop() baseURL!: string
 
   state: State | null = null
   error: unknown | null = null
 
   async mounted(): Promise<void> {
     try {
-      this.state = await State.build(this.articleId)
+      this.state = await State.build({
+        articleId: this.articleId,
+        baseURL: this.baseURL,
+      })
     } catch (error) {
       this.error = error
     }

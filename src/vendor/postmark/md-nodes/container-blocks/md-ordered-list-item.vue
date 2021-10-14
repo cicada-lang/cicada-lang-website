@@ -1,8 +1,9 @@
 <template>
-  <li>
+  <li class="list-decimal">
     <md-node
       v-for="(child, index) in node.children"
       :key="index"
+      :state="state"
       :node="child"
     />
   </li>
@@ -10,7 +11,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { Node } from "@xieyuheng/postmark"
+import { Node, Nodes } from "@xieyuheng/postmark"
+import { MdDocumentState as State } from "../md-document-state"
 
 @Component({
   name: "md-ordered-list-item",
@@ -20,12 +22,7 @@ import { Node } from "@xieyuheng/postmark"
   },
 })
 export default class extends Vue {
+  @Prop() state!: State
   @Prop() node!: Node
 }
 </script>
-
-<style scoped>
-li {
-  list-style-type: decimal;
-}
-</style>

@@ -1,4 +1,4 @@
-update vendor
+- cicada custom block
 
 # book
 
@@ -7,7 +7,7 @@ update vendor
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
 
-# page
+# book page
 
 - `views/book/page` -- setup route to `/books/{bookId}/pages/{pagename}`
 - `views/book/page` -- run and show results in the page

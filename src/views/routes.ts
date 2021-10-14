@@ -1,15 +1,18 @@
 import { RouteConfig } from "vue-router"
 
 export const routes: Array<RouteConfig> = [
-  { path: "/", component: require("@/views/home").default },
+  { path: "/", component: () => import("@/views/home") },
   {
     path: "/articles/:articleId",
-    component: require("@/views/article").default,
-    props: (route) => ({ articleId: route.params.articleId }),
+    component: () => import("@/views/article"),
+    props: (route) => ({
+      articleId: route.params.articleId,
+      baseURL: `${window.location.origin}/articles`,
+    }),
   },
   {
     path: "/books/:bookId",
-    component: require("@/views/book").default,
+    component: () => import("@/views/book"),
     props: (route) => ({ bookId: route.params.bookId }),
   },
 ]
