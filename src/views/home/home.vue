@@ -130,7 +130,7 @@ type Example = {
   name: "home",
   // prettier-ignore
   components: {
-    "icon-external-link": require("@/icons/icon-external-link").default
+    "icon-external-link": require("@/components/icons/icon-external-link").default
   },
 })
 export default class extends Vue {
