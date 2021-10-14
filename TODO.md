@@ -1,5 +1,3 @@
-- quit using `gitbeaker`
-
 # article
 
 - `views/home` -- list example articles
