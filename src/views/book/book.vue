@@ -48,7 +48,7 @@
           class="hover:text-gray-500 py-1 font-sans"
           target="_blank"
         >
-          <span>{{ state.bookId.path }}</span>
+          <span>{{ state.bookId.repo }}</span>
           <span> @ {{ state.bookId.host }}</span>
         </a>
 
