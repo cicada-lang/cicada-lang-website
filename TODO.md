@@ -1,8 +1,4 @@
-- cicada custom block
-
 # book
-
-> Demonstration of a book.
 
 - `views/book` -- show information in `CONTENTS.md`
 - `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
@@ -12,6 +8,10 @@
 - `views/book/page` -- setup route to `/books/{bookId}/pages/{pagename}`
 - `views/book/page` -- run and show results in the page
 - `views/book/page` -- render markdown files
+
+- `cicada custom block` for `article` and `book/page` views
+
+- `views/book/page` -- be able to turn pages of a book
 
 # user
 
