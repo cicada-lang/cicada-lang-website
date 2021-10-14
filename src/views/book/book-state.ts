@@ -21,21 +21,8 @@ export class BookState {
 
   static async build(input: string): Promise<BookState> {
     const bookId = GitPath.decode(input)
-    const files = createFileStore(bookId)
+    const files = bookId.createFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     return new BookState({ bookId, files, bookConfig })
-  }
-}
-
-function createFileStore(gitPath: GitPath): FileStore {
-  const { host, repo, path: dir } = gitPath
-
-  switch (host) {
-    case "github":
-      return new GitHubFileStore(repo, { dir })
-    case "gitlab":
-      return new GitLabFileStore(repo, { dir })
-    default:
-      return new GitLabFileStore(repo, { dir, host })
   }
 }

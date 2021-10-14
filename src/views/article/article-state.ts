@@ -19,7 +19,7 @@ export class ArticleState {
 
   static async build(input: string): Promise<ArticleState> {
     const articleId = GitPath.decode(input)
-    const files = createFileStore(articleId.upward())
+    const files = articleId.upward().createFileStore()
     const text = await files.getOrFail(Path.basename(articleId.path))
     return new ArticleState({ articleId, files, text })
   }
@@ -31,18 +31,5 @@ export class ArticleState {
 
   render(): string {
     return this.document.render()
-  }
-}
-
-function createFileStore(gitPath: GitPath): FileStore {
-  const { host, repo, path: dir } = gitPath
-
-  switch (host) {
-    case "github":
-      return new GitHubFileStore(repo, { dir })
-    case "gitlab":
-      return new GitLabFileStore(repo, { dir })
-    default:
-      return new GitLabFileStore(repo, { dir, host })
   }
 }
