@@ -59,7 +59,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            cicada-lang <icon-external-link class="p-0.5" />
+            cicada-lang <icon-external-link class="w-4" />
           </a>
         </li>
 
@@ -70,7 +70,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            CicadaLanguage <icon-external-link class="p-0.5" />
+            CicadaLanguage <icon-external-link class="w-4" />
           </a>
         </li>
 
@@ -81,7 +81,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            libera.chat <icon-external-link class="p-0.5" />
+            libera.chat <icon-external-link class="w-4" />
           </a>
         </li>
       </ul>
@@ -97,7 +97,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            Xie Yuheng <icon-external-link class="p-0.5" />
+            Xie Yuheng <icon-external-link class="w-4" />
           </a>
         </li>
 
@@ -107,7 +107,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            Zaoqi <icon-external-link class="p-0.5" />
+            Zaoqi <icon-external-link class="w-4" />
           </a>
         </li>
       </ul>

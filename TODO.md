@@ -1,7 +1,6 @@
-# book
-
-- `views/book` -- show information in `CONTENTS.md`
-- `views/book` -- generate order from links in `CONTENTS.md` -- need `postmark`
+- icons about arrows
+- `views/book` -- use prefix numbering convention generate order from for table of contents
+- `views/book` -- setup route to `/books` -- a book loading page
 
 # book page
 
