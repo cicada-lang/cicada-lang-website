@@ -1,4 +1,4 @@
-- `views/book-contents`
+- `views/book-contents` -- `cd` to `src` and `loadPages`
 
 - `views/book` -- use prefix numbering convention generate order from for table of contents
 

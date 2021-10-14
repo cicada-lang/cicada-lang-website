@@ -6,6 +6,7 @@ export class BookState {
   bookId: GitPath
   files: FileStore
   bookConfig: Record<string, any>
+  pages: Record<string, string> | null = null
 
   constructor(opts: {
     bookId: GitPath
@@ -22,5 +23,11 @@ export class BookState {
     const files = bookId.createFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     return new BookState({ bookId, files, bookConfig })
+  }
+
+  async loadPages(): Promise<void> {
+    console.log(this.bookConfig.src)
+    // this.pages = await this.files.cd(this.bookConfig.src).all()
+    this.pages = await this.files.all()
   }
 }
