@@ -34,18 +34,18 @@
         </li>
       </ul>
 
-      <p class="font-sans font-bold">Example articles:</p>
+      <!-- <p class="font-sans font-bold">Example articles:</p>
 
-      <ul class="space-y-2">
-        <li v-for="exampleArticle in exampleArticles">
-          <router-link
-            :to="{ path: `/articles/${getGitPath(exampleArticle)}` }"
-            class="font-sans underline"
-          >
-            {{ exampleArticle.title }}
-          </router-link>
-        </li>
-      </ul>
+           <ul class="space-y-2">
+           <li v-for="exampleArticle in exampleArticles">
+           <router-link
+           :to="{ path: `/articles/${getGitPath(exampleArticle)}` }"
+           class="font-sans underline"
+           >
+           {{ exampleArticle.title }}
+           </router-link>
+           </li>
+           </ul> -->
     </section>
 
     <h2 class="font-sans text-3xl font-bold">Community</h2>
