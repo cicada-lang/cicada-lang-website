@@ -1,7 +1,5 @@
 - `views/book-layout` -- for common error and loading
 
-- `views/book-navbar` -- extract component
-
 - bg warm gray -- extract component
 
 - `views/book-contents` -- show content entry
