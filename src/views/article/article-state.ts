@@ -35,7 +35,7 @@ export class ArticleState {
     baseURL: string
   }): Promise<ArticleState> {
     const articleId = GitPath.decode(opts.articleId)
-    const files = articleId.upward().createFileStore()
+    const files = articleId.upward().createGitFileStore()
     const text = await files.getOrFail(Path.basename(articleId.path))
     return new ArticleState({
       articleId,

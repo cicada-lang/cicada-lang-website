@@ -20,7 +20,7 @@ export class BookState {
 
   static async build(input: string): Promise<BookState> {
     const bookId = GitPath.decode(input)
-    const files = bookId.createFileStore()
+    const files = bookId.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     return new BookState({ bookId, files, bookConfig })
   }
