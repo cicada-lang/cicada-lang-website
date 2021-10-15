@@ -1,7 +1,3 @@
-- `views/book-layout` -- for common error and loading
-
-- bg warm gray -- extract component
-
 - `views/book-contents` -- show content entry
 
 - `views/book` -- setup route to `/books` -- a book loading page
@@ -10,8 +6,6 @@
 
 - `cicada custom block` for `article` and `book/page` views
 - `views/book-page` -- run cicada code block and show results in the page
-
-- `views/book/page` -- be able to turn pages of a book
 
 # user
 

@@ -7,15 +7,18 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else>
-      <book-navbar :book-id="bookId" :state="state" />
-
+      <book-page-navbar :bookId="bookId" :pageName="pageName" :state="state" />
       <md-document
         :document="state.parseDocument(page)"
         :path-resolver="pathResolver"
         :custom-block-components="{}"
       />
-
-      <book-navbar :book-id="bookId" :state="state" />
+      <book-page-navbar
+        class="my-6"
+        :bookId="bookId"
+        :pageName="pageName"
+        :state="state"
+      />
     </div>
   </div>
 </template>
@@ -29,7 +32,7 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   name: "book-page",
   // prettier-ignore
   components: {
-    "book-navbar": require("./book-navbar.vue").default,
+    "book-page-navbar": require("./book-page-navbar.vue").default,
     ...require("@/vendor/postmark/md-nodes").components,
   },
 })

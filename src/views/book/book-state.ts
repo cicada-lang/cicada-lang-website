@@ -29,6 +29,10 @@ export class BookState {
     return new BookState({ bookId, files, bookConfig, pages })
   }
 
+  get pageNames(): Array<string> {
+    return Object.keys(this.pages).filter((path) => path.endsWith(".md"))
+  }
+
   parseDocument(text: string): Nodes.Document {
     return postmark.parser.parseDocument(text).postprocess({
       customBlockParsers: [
