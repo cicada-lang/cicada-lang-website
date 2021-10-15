@@ -1,11 +1,14 @@
 - `views/book-layout` -- for common error and loading
 
+- `views/book-navbar` -- extract component
+
+- bg warm gray -- extract component
+
 - `views/book-contents` -- show content entry
 
 - `views/book` -- setup route to `/books` -- a book loading page
 
 - `views/book` -- [maybe] use prefix numbering convention generate order from for table of contents
-- `views/book` -- button to turn from title page to table of contents
 
 - `cicada custom block` for `article` and `book/page` views
 - `views/book-page` -- run cicada code block and show results in the page

@@ -7,15 +7,28 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else>
-      <div class="flex justify-between">
+      <div class="flex justify-between font-sans text-gray-400">
         <div></div>
-        <router-link
-          :to="{ path: `/books/${bookId}/contents` }"
-          class="font-sans underline"
-          title="Back to Contents"
-        >
-          <icon-chevron-double-up class="w-4" />
-        </router-link>
+
+        <div>
+          <router-link
+            :to="{ path: `/books/${bookId}` }"
+            class="hover:text-gray-700"
+            title="Back to Title Page"
+          >
+            TITLE
+          </router-link>
+          /
+          <router-link
+            :to="{ path: `/books/${bookId}/contents` }"
+            class="hover:text-gray-700"
+            title="Back to Contents"
+          >
+            CONTENTS
+          </router-link>
+        </div>
+
+        <div></div>
       </div>
 
       <md-document
@@ -23,6 +36,30 @@
         :path-resolver="pathResolver"
         :custom-block-components="{}"
       />
+
+      <div class="flex justify-between font-sans text-gray-400">
+        <div></div>
+
+        <div>
+          <router-link
+            :to="{ path: `/books/${bookId}` }"
+            class="hover:text-gray-700"
+            title="Back to Title Page"
+          >
+            TITLE
+          </router-link>
+          /
+          <router-link
+            :to="{ path: `/books/${bookId}/contents` }"
+            class="hover:text-gray-700"
+            title="Back to Contents"
+          >
+            CONTENTS
+          </router-link>
+        </div>
+
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,7 +73,6 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   name: "book-page",
   // prettier-ignore
   components: {
-    "icon-chevron-double-up": require("@/components/icons/icon-chevron-double-up.vue").default,
     ...require("@/vendor/postmark/md-nodes").components,
   },
 })

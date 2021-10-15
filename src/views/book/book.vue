@@ -9,9 +9,11 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else class="flex flex-col items-center justify-between h-full">
-      <h1
+      <router-link
+        :to="{ path: `/books/${bookId}/contents` }"
         class="
           md:text-4xl
+          hover:text-gray-500
           flex flex-col
           items-center
           py-4
@@ -28,7 +30,7 @@
         <h2 class="md:text-2xl py-2 font-sans text-xl font-normal">
           <span>{{ state.bookConfig.subtitle }}</span>
         </h2>
-      </h1>
+      </router-link>
 
       <section
         v-if="state.bookConfig.authors && state.bookConfig.authors.length > 0"
