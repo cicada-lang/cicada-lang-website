@@ -13,7 +13,7 @@
         :to="{ path: `/books/${bookId}/contents` }"
         class="
           md:text-4xl
-          hover:text-gray-600
+          hover:text-gray-500
           flex flex-col
           items-center
           py-4

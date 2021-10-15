@@ -1,3 +1,5 @@
+- `views/book-contents` -- handle title less page
+
 - `views/book` -- setup route to `/books` -- a book loading page
 
 - `views/book` -- [maybe] use prefix numbering convention generate order from for table of contents

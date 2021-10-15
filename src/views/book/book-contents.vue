@@ -11,7 +11,7 @@
         <div v-if="pageName.endsWith('.md')">
           <router-link
             :to="{ path: `/books/${bookId}/pages/${pageName}` }"
-            class="hover:text-gray-600 font-sans"
+            class="hover:text-gray-500 font-sans"
           >
             {{ state.parseDocument(text).attributes.title }}
           </router-link>
