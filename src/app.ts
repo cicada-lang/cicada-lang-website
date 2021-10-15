@@ -12,3 +12,11 @@ export class App {
     return state
   }
 }
+
+declare global {
+  interface Window {
+    app: App
+  }
+}
+
+window.app = new App()

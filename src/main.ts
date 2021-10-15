@@ -1,4 +1,5 @@
 import Vue from "vue"
+import "./app"
 import app from "./app.vue"
 import router from "./router"
 import "./styles/tailwind.css"

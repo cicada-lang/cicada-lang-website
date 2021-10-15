@@ -10,7 +10,6 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
 import { BookState as State } from "@/views/book/book-state"
-import app from "@/app"
 
 @Component({
   name: "book-page",
@@ -28,7 +27,7 @@ export default class extends Vue {
 
   async mounted(): Promise<void> {
     try {
-      this.state = await app.buildBookState({
+      this.state = await window.app.buildBookState({
         bookId: this.bookId,
       })
     } catch (error) {

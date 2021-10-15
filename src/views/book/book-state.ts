@@ -17,7 +17,7 @@ export class BookState {
     this.bookId = opts.bookId
     this.files = opts.files
     this.bookConfig = opts.bookConfig
-    this.pages = opts.pages    
+    this.pages = opts.pages
   }
 
   static async build(opts: { bookId: string }): Promise<BookState> {
