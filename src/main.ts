@@ -1,5 +1,5 @@
 import Vue from "vue"
-import app from "./app.vue"
+import root from "./root.vue"
 import router from "./router"
 import "./styles/tailwind.css"
 import "./assets/fonts/fonts.css"
@@ -9,5 +9,5 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: (h) => h(app),
+  render: (h) => h(root),
 }).$mount("#app")

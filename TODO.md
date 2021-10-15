@@ -1,4 +1,4 @@
-- use `app.bookState` to share state across views -- `book`, `book-contents` and `book-page`
+- `BookState` always `loadPages` -- do not need to call it in `app.buildBookState`
 
 - `views/book-contents` -- show content entry
 - `views/book-contents` -- link jump to page route
