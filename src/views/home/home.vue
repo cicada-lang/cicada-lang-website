@@ -140,19 +140,19 @@ export default class extends Vue {
   exampleBooks: Array<Example> = [
     {
       title: "Group Theory",
-      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/group",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
     },
     {
       title: "Order Theory",
-      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/order",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
     },
     {
       title: "Category Theory",
-      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/category",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
     },
     {
       title: "Logic and Judgment",
-      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
     },
   ]
 
@@ -166,7 +166,7 @@ export default class extends Vue {
 
   exampleArticles: Array<Example> = this.chs.map((n) => ({
     title: `ch${n}`,
-    url: `https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment/src/ch${n}.md`,
+    url: `https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment/src/ch${n}.md`,
   }))
 }
 </script>
