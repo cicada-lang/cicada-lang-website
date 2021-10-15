@@ -1,5 +1,6 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
+import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
 import ty from "@xieyuheng/ty"
 
 export class BookState {
@@ -26,5 +27,13 @@ export class BookState {
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(bookConfig.src).all()
     return new BookState({ bookId, files, bookConfig, pages })
+  }
+
+  parseDocument(text: string): Nodes.Document {
+    return postmark.parser.parseDocument(text).postprocess({
+      customBlockParsers: [
+        // TODO
+      ],
+    })
   }
 }

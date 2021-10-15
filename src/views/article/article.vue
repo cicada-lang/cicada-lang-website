@@ -9,7 +9,7 @@
     <div v-else>
       <md-document
         :document="state.document"
-        :path-resolver="state.pathResolver"
+        :path-resolver="pathResolver"
         :custom-block-components="{}"
       />
     </div>
@@ -19,6 +19,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
+import { ArticlePathResolver } from "./article-path-resolver"
 
 @Component({
   name: "cicada-article",
@@ -33,11 +34,15 @@ export default class extends Vue {
 
   state: State | null = null
   error: unknown | null = null
+  pathResolver: ArticlePathResolver | null = null
 
   async mounted(): Promise<void> {
     try {
       this.state = await State.build({
         articleId: this.articleId,
+      })
+      this.pathResolver = new ArticlePathResolver({
+        articleId: this.state.articleId,
         baseURL: this.baseURL,
       })
     } catch (error) {

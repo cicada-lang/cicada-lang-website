@@ -3,7 +3,7 @@
     <div v-if="error">
       <pre>{{ error }}</pre>
     </div>
-    <div v-else-if="!(state && state.pages)" class="flex flex-col items-center">
+    <div v-else-if="!state" class="flex flex-col items-center">
       <div class="py-4">Loading...</div>
     </div>
     <div v-else class="flex flex-col">

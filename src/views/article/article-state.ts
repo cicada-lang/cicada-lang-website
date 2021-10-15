@@ -1,48 +1,24 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
 import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
-import { ArticlePathResolver } from "./article-path-resolver"
-import ty from "@xieyuheng/ty"
 const Path = require("path")
 
 export class ArticleState {
   articleId: GitPath
   files: GitFileStore
   text: string
-  baseURL: string
 
-  pathResolver: ArticlePathResolver
-
-  constructor(opts: {
-    articleId: GitPath
-    files: GitFileStore
-    text: string
-    baseURL: string
-  }) {
+  constructor(opts: { articleId: GitPath; files: GitFileStore; text: string }) {
     this.articleId = opts.articleId
     this.files = opts.files
     this.text = opts.text
-    this.baseURL = opts.baseURL
-
-    this.pathResolver = new ArticlePathResolver({
-      articleId: this.articleId,
-      baseURL: this.baseURL,
-    })
   }
 
-  static async build(opts: {
-    articleId: string
-    baseURL: string
-  }): Promise<ArticleState> {
+  static async build(opts: { articleId: string }): Promise<ArticleState> {
     const articleId = GitPath.decode(opts.articleId)
     const files = articleId.upward().createGitFileStore()
     const text = await files.getOrFail(Path.basename(articleId.path))
-    return new ArticleState({
-      articleId,
-      files,
-      text,
-      baseURL: opts.baseURL,
-    })
+    return new ArticleState({ articleId, files, text })
   }
 
   get document(): Nodes.Document {
@@ -51,9 +27,5 @@ export class ArticleState {
         // TODO
       ],
     })
-  }
-
-  render(): string {
-    return this.document.render()
   }
 }
