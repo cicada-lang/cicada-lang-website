@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
 import { BookState as State } from "@/views/book/book-state"
-import app from "@/app/index"
+import app from "@/app"
 
 @Component({
   name: "book-page",

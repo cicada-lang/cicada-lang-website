@@ -12,8 +12,7 @@ export const routes: Array<RouteConfig> = [
   },
   {
     path: "/books/:bookId",
-    // component: () => import("@/views/book"),
-    component: require("@/views/book").default,
+    component: () => import("@/views/book"),
     props: (route) => ({ bookId: route.params.bookId }),
   },
   {

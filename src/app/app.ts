@@ -8,7 +8,6 @@ export class App {
     if (found) return found
 
     const state = await BookState.build(opts)
-    await state.loadPages()
 
     this.bookStateCache.set(opts.bookId, state)
 

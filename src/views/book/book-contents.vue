@@ -35,7 +35,6 @@ export default class extends Vue {
       this.state = await app.buildBookState({
         bookId: this.bookId,
       })
-      this.state.loadPages()
     } catch (error) {
       this.error = error
     }
