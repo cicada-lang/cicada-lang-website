@@ -8,9 +8,7 @@ export class App {
     if (found) return found
 
     const state = await BookState.build(opts)
-
     this.bookStateCache.set(opts.bookId, state)
-
     return state
   }
 }
