@@ -1,16 +1,16 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
+import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
 import ty from "@xieyuheng/ty"
 
 export class BookState {
   bookId: GitPath
-  files: FileStore
+  files: GitFileStore
   bookConfig: Record<string, any>
   pages: Record<string, string> | null = null
 
   constructor(opts: {
     bookId: GitPath
-    files: FileStore
+    files: GitFileStore
     bookConfig: Record<string, any>
   }) {
     this.bookId = opts.bookId
@@ -26,8 +26,6 @@ export class BookState {
   }
 
   async loadPages(): Promise<void> {
-    console.log(this.bookConfig.src)
-    // this.pages = await this.files.cd(this.bookConfig.src).all()
-    this.pages = await this.files.all()
+    this.pages = await this.files.cd(this.bookConfig.src).all()
   }
 }

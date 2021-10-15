@@ -1,5 +1,5 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-import { FileStore } from "@xieyuheng/enchanter/lib/file-store"
+import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
 import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
 import { ArticlePathResolver } from "./article-path-resolver"
 import ty from "@xieyuheng/ty"
@@ -7,7 +7,7 @@ const Path = require("path")
 
 export class ArticleState {
   articleId: GitPath
-  files: FileStore
+  files: GitFileStore
   text: string
   baseURL: string
 
@@ -15,7 +15,7 @@ export class ArticleState {
 
   constructor(opts: {
     articleId: GitPath
-    files: FileStore
+    files: GitFileStore
     text: string
     baseURL: string
   }) {

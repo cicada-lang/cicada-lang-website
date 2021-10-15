@@ -1,4 +1,5 @@
-- `views/book-contents` -- `cd` to `src` and `loadPages`
+- `views/book-contents` -- link jump to page
+- `views/book-contents` -- show content entry
 
 - `views/book` -- use prefix numbering convention generate order from for table of contents
 

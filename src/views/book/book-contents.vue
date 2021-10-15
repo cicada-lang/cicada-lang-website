@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:py-12 max-w-prose h-screen px-6 py-6 mx-auto font-serif text-2xl"
+    class="md:py-12 max-w-prose px-6 py-6 mx-auto font-serif text-2xl"
   >
     <div v-if="error">
       <pre>{{ error }}</pre>
@@ -8,8 +8,8 @@
     <div v-else-if="!(state && state.pages)" class="flex flex-col items-center">
       <div class="py-4">Loading...</div>
     </div>
-    <div v-else class="flex flex-col items-center justify-between h-full">
-      <div>{{ state.pages }}</div>
+    <div v-else class="flex flex-col">
+      <div v-for="(text, path) in state.pages" :key="">{{ path }}</div>
     </div>
   </div>
 </template>
