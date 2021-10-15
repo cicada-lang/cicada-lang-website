@@ -7,6 +7,17 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else>
+      <div class="flex justify-between">
+        <div></div>
+        <router-link
+          :to="{ path: `/books/${bookId}/contents` }"
+          class="font-sans underline"
+          title="Back to Contents"
+        >
+          <icon-chevron-double-up class="w-4" />
+        </router-link>
+      </div>
+
       <md-document
         :document="state.parseDocument(page)"
         :path-resolver="pathResolver"
@@ -25,6 +36,7 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   name: "book-page",
   // prettier-ignore
   components: {
+    "icon-chevron-double-up": require("@/components/icons/icon-chevron-double-up.vue").default,
     ...require("@/vendor/postmark/md-nodes").components,
   },
 })
@@ -45,7 +57,7 @@ export default class extends Vue {
 
   async mounted(): Promise<void> {
     try {
-      this.state = await State.build({
+      this.state = await window.app.buildBookState({
         bookId: this.bookId,
       })
 

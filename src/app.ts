@@ -5,6 +5,8 @@ export class App extends ServiceContainer {
   bookStateCache: Map<string, BookState> = new Map()
 
   async buildBookState(opts: { bookId: string }): Promise<BookState> {
+    console.log(Array.from(this.bookStateCache.keys()))
+
     const found = this.bookStateCache.get(opts.bookId)
     if (found) return found
 
