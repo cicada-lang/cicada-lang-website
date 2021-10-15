@@ -8,13 +8,26 @@
     </div>
     <div v-else class="flex flex-col">
       <div v-for="(text, pageName) in state.pages" :key="pageName">
-        <router-link
-          v-if="pageName.endsWith('.md')"
-          :to="{ path: `/books/${bookId}/pages/${pageName}` }"
-          class="font-sans underline"
-        >
-          {{ pageName }}
-        </router-link>
+        <div v-if="pageName.endsWith('.md')">
+          <router-link
+            :to="{ path: `/books/${bookId}/pages/${pageName}` }"
+            class="hover:text-gray-600 font-sans"
+          >
+            {{ state.parseDocument(text).attributes.title }}
+          </router-link>
+          <div
+            class="
+              font-sans
+              text-xs
+              italic
+              leading-3
+              tracking-tight
+              text-right text-gray-600
+            "
+          >
+            {{ pageName }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,3 @@
-- `views/book-contents` -- show content entry
-
 - `views/book` -- setup route to `/books` -- a book loading page
 
 - `views/book` -- [maybe] use prefix numbering convention generate order from for table of contents
