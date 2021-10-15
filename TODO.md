@@ -1,3 +1,4 @@
+- update tsconfig `target` to `es6` to fix `class extends` problem
 - `views/book-contents` -- show content entry
 - `views/book-contents` -- link jump to page route
 
