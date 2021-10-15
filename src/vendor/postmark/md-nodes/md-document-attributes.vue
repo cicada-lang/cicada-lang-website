@@ -6,7 +6,8 @@
       </div>
 
       <div>
-        <div v-if="date">{{ date }}</div>
+        <div v-if="year">{{ year }}</div>
+        <div v-else-if="date">{{ date }}</div>
       </div>
     </div>
 
@@ -36,6 +37,12 @@ export default class extends Vue {
   @Prop() state!: State
 
   attributes: any = this.state.document.attributes
+
+  get year(): string | undefined {
+    if (this.attributes.year) {
+      return String(this.attributes.year)
+    }
+  }
 
   get date(): string | undefined {
     if (this.attributes.date) {

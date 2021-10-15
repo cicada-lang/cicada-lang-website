@@ -6,6 +6,7 @@ export type CustomBlockEntry = {
   component: Vue.Component
   props: <T>(node: Nodes.CustomBlock<T>) => any
   style: Record<string, string>
+  class: Record<string, any> | Array<any>
 }
 
 export class MdDocumentState {

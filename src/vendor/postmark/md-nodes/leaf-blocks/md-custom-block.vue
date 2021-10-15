@@ -4,6 +4,7 @@
     :is="customBlockEntry.component"
     v-bind="customBlockEntry.props(node)"
     :style="customBlockEntry.style"
+    :class="customBlockEntry.class"
     :state="state"
     :node="node"
   />
