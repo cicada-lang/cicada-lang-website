@@ -121,9 +121,7 @@ import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 
 type Example = {
   title: string
-  host: string
-  repo: string
-  path: string
+  url: string
 }
 
 @Component({
@@ -135,34 +133,26 @@ type Example = {
 })
 export default class extends Vue {
   getGitPath(example: Example): string {
-    const { host, repo, path } = example
-    return new GitPath({ host, repo, path }).encode()
+    const { url } = example
+    return GitPath.fromURL(url).encode()
   }
 
   exampleBooks: Array<Example> = [
     {
       title: "Group Theory",
-      host: "gitee",
-      repo: "cicada-lang/cicada",
-      path: "books/group",
+      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/group",
     },
     {
       title: "Order Theory",
-      host: "gitee",
-      repo: "cicada-lang/cicada",
-      path: "books/order",
+      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/order",
     },
     {
       title: "Category Theory",
-      host: "gitee",
-      repo: "cicada-lang/cicada",
-      path: "books/category",
+      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/category",
     },
     {
       title: "Logic and Judgment",
-      host: "gitee",
-      repo: "cicada-lang/cicada",
-      path: "books/logic-and-judgment",
+      url: "https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
     },
   ]
 
@@ -176,9 +166,7 @@ export default class extends Vue {
 
   exampleArticles: Array<Example> = this.chs.map((n) => ({
     title: `ch${n}`,
-    host: "gitee",
-    repo: "cicada-lang/cicada",
-    path: `books/logic-and-judgment/src/ch${n}.md`,
+    url: `https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment/src/ch${n}.md`,
   }))
 }
 </script>
