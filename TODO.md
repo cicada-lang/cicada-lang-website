@@ -1,5 +1,6 @@
+- `views/book-layout` -- for common error and loading
+
 - `views/book-contents` -- show content entry
-- `views/book-contents` -- link jump to page route
 
 - `views/book` -- setup route to `/books` -- a book loading page
 

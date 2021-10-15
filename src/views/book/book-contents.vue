@@ -7,7 +7,15 @@
       <div class="py-4">Loading...</div>
     </div>
     <div v-else class="flex flex-col">
-      <div v-for="(text, path) in state.pages" :key="path">{{ path }}</div>
+      <div v-for="(text, pageName) in state.pages" :key="pageName">
+        <router-link
+          v-if="pageName.endsWith('.md')"
+          :to="{ path: `/books/${bookId}/pages/${pageName}` }"
+          class="font-sans underline"
+        >
+          {{ pageName }}
+        </router-link>
+      </div>
     </div>
   </div>
 </template>

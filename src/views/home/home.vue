@@ -26,7 +26,7 @@
       <ul class="space-y-2">
         <li v-for="exampleBook in exampleBooks">
           <router-link
-            :to="{ path: `books/${getGitPath(exampleBook)}` }"
+            :to="{ path: `/books/${getGitPath(exampleBook)}` }"
             class="font-sans underline"
           >
             {{ exampleBook.title }}
@@ -39,7 +39,7 @@
       <ul class="space-y-2">
         <li v-for="exampleArticle in exampleArticles">
           <router-link
-            :to="{ path: `articles/${getGitPath(exampleArticle)}` }"
+            :to="{ path: `/articles/${getGitPath(exampleArticle)}` }"
             class="font-sans underline"
           >
             {{ exampleArticle.title }}
