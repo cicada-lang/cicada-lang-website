@@ -79,7 +79,9 @@ export default class extends Vue {
 
   async mounted(): Promise<void> {
     try {
-      this.state = await State.build(this.bookId)
+      this.state = await State.build({
+        bookId: this.bookId,
+      })
     } catch (error) {
       this.error = error
     }

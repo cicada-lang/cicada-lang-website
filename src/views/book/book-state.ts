@@ -18,8 +18,8 @@ export class BookState {
     this.bookConfig = opts.bookConfig
   }
 
-  static async build(input: string): Promise<BookState> {
-    const bookId = GitPath.decode(input)
+  static async build(opts: { bookId: string }): Promise<BookState> {
+    const bookId = GitPath.decode(opts.bookId)
     const files = bookId.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     return new BookState({ bookId, files, bookConfig })
