@@ -142,25 +142,25 @@ export default class extends Vue {
   exampleBooks: Array<Example> = [
     {
       title: "Group Theory",
-      host: "gitlab",
+      host: "gitee",
       repo: "cicada-lang/cicada",
       path: "books/group",
     },
     {
       title: "Order Theory",
-      host: "gitlab",
+      host: "gitee",
       repo: "cicada-lang/cicada",
       path: "books/order",
     },
     {
       title: "Category Theory",
-      host: "gitlab",
+      host: "gitee",
       repo: "cicada-lang/cicada",
       path: "books/category",
     },
     {
       title: "Logic and Judgment",
-      host: "gitlab",
+      host: "gitee",
       repo: "cicada-lang/cicada",
       path: "books/logic-and-judgment",
     },
@@ -176,7 +176,7 @@ export default class extends Vue {
 
   exampleArticles: Array<Example> = this.chs.map((n) => ({
     title: `ch${n}`,
-    host: "gitlab",
+    host: "gitee",
     repo: "cicada-lang/cicada",
     path: `books/logic-and-judgment/src/ch${n}.md`,
   }))
