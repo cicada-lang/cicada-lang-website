@@ -1,5 +1,17 @@
 <template>
-  <div class="md:py-12 max-w-prose px-6 py-6 mx-auto font-serif text-2xl">
+  <div
+    class="
+      max-w-prose
+      px-6
+      py-6
+      min-h-screen
+      flex flex-col
+      justify-center
+      mx-auto
+      font-serif
+      text-2xl
+    "
+  >
     <div v-if="error">
       <pre>{{ error }}</pre>
     </div>
