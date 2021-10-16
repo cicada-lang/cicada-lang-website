@@ -1,7 +1,7 @@
 <template>
   <div
     class="
-      md:py-12
+      py-12
       flex flex-col
       items-center
       justify-between

@@ -137,24 +137,62 @@ export default class extends Vue {
     return GitPath.fromURL(url).encode()
   }
 
-  exampleBooks: Array<Example> = [
-    {
-      title: "Group Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
-    },
-    {
-      title: "Order Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
-    },
-    {
-      title: "Category Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
-    },
-    {
-      title: "Logic and Judgment",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
-    },
-  ]
+    exampleBooks: Array<Example> = [
+      {
+        title: "Group Theory",
+        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
+      },
+      {
+        title: "Order Theory",
+        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
+      },
+      {
+        title: "Category Theory",
+        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
+      },
+      {
+        title: "Logic and Judgment",
+        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
+      },
+    ]
+
+  // exampleBooks: Array<Example> = [
+  //   {
+  //     title: "Group Theory",
+  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/group",
+  //   },
+  //   {
+  //     title: "Order Theory",
+  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/order",
+  //   },
+  //   {
+  //     title: "Category Theory",
+  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/category",
+  //   },
+  //   {
+  //     title: "Logic and Judgment",
+  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
+  //   },
+  // ]
+
+ // exampleBooks: Array<Example> = [
+ //   {
+ //     title: "Group Theory",
+ //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/group",
+ //   },
+ //   {
+ //     title: "Order Theory",
+ //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/order",
+ //   },
+ //   {
+ //     title: "Category Theory",
+ //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/category",
+ //   },
+ //   {
+ //     title: "Logic and Judgment",
+ //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
+ //   },
+ // ]
 
   // prettier-ignore
   chs = [

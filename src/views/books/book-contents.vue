@@ -1,6 +1,14 @@
 <template>
   <div
-    class="flex flex-col justify-center min-h-screen px-6 font-serif text-2xl"
+    class="
+      flex flex-col
+      justify-center
+      min-h-screen
+      px-6
+      py-12
+      font-serif
+      text-2xl
+    "
   >
     <div v-for="(text, pageName) in state.pages" :key="pageName">
       <div v-if="pageName.endsWith('.md')">
