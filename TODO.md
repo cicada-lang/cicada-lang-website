@@ -1,5 +1,3 @@
-ambr bookConfig config
-
 - `views/article-list` -- setup route to `/articles` -- an article loading page
 
 - `views/book-list` -- setup route to `/books` -- a book loading page
