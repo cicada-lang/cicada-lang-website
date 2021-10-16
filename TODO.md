@@ -1,5 +1,3 @@
-- rename `views/book` to `views/books`
-
 - update `enchanter` to fix gitlab page load limit
 
 - `views/article-list` -- setup route to `/articles` -- an article loading page

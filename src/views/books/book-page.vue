@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { BookState as State } from "@/views/book/book-state"
+import { BookState as State } from "@/views/books/book-state"
 import { BookPagePathResolver } from "./book-page-path-resolver"
 
 @Component({

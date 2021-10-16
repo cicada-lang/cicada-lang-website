@@ -1,5 +1,5 @@
 import { ServiceContainer } from "@xieyuheng/enchanter/lib/service-container"
-import { BookState } from "@/views/book/book-state"
+import { BookState } from "@/views/books/book-state"
 
 export class App extends ServiceContainer {
   bookStateCache: Map<string, BookState> = new Map()
