@@ -16,10 +16,12 @@
       </p>
     </section>
 
-    <h2 class="font-sans text-3xl font-bold">Books & Articles</h2>
+    <h2 class="font-sans text-3xl font-bold">Serives</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada code can be organized into books and articles.</p>
+      <p>
+        Cicada code can be organized into <em>Books</em> and <em>Articles.</em>
+      </p>
 
       <p>
         We strive to provide clear and beautiful rendering, to help one sharing
@@ -28,14 +30,14 @@
 
       <p>For details, please visit dedicated serive pages:</p>
 
-      <ul class="space-y-2">
-        <li>
+      <ul class="py-2 space-y-2 px-3">
+        <li class="list-disc">
           <router-link :to="{ path: `/books` }" class="font-sans underline">
             Book Serive
           </router-link>
         </li>
 
-        <li>
+        <li class="list-disc">
           <router-link :to="{ path: `/articles` }" class="font-sans underline">
             Article Serive
           </router-link>
@@ -46,8 +48,11 @@
     <h2 class="font-sans text-3xl font-bold">Community</h2>
 
     <section class="py-4 space-y-2">
-      <ul class="space-y-2">
-        <li>
+      <p>Happiness is only real when shared.</p>
+      <p>Software service is only valuable when serving people well.</p>
+
+      <ul class="py-2 space-y-2 px-3">
+        <li class="list-disc">
           GitHub:
           <a
             href="https://github.com/cicada-lang"
@@ -58,7 +63,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="list-disc">
           Telegram:
           <a
             href="https://t.me/CicadaLanguage"
@@ -69,7 +74,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="list-disc">
           IRC: #cicada-lang at
           <a
             href="https://libera.chat"
@@ -85,8 +90,12 @@
     <h2 class="font-sans text-3xl font-bold">Core Team</h2>
 
     <section class="py-4 space-y-2">
-      <ul class="space-y-2">
-        <li>
+      <p>Cicada project is started by Xie Yuheng.</p>
+      <p>Who cherishes it as a lifelong inquiry</p>
+      <p>into <em>foundations of mathematics</em>.</p>
+
+      <ul class="py-2 space-y-2 px-3">
+        <li class="list-disc">
           <a
             href="https://github.com/xieyuheng"
             class="inline-flex font-sans underline"
@@ -96,7 +105,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="list-disc">
           <a
             href="https://github.com/tsao-chi"
             class="inline-flex font-sans underline"
@@ -112,12 +121,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
-import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-
-type Example = {
-  title: string
-  url: string
-}
 
 @Component({
   name: "home",
@@ -128,10 +131,3 @@ type Example = {
 })
 export default class extends Vue {}
 </script>
-
-<style scoped>
-li {
-  list-style-type: " - ";
-  list-style-position: inside;
-}
-</style>
