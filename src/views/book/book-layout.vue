@@ -13,6 +13,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
 import { BookState as State } from "@/views/book/book-state"
+import { MetaInfo } from "vue-meta"
 
 @Component({
   name: "book-layout",
@@ -20,8 +21,13 @@ import { BookState as State } from "@/views/book/book-state"
   components: {
 
   },
+  metaInfo(this: BookLayout): MetaInfo {
+    return {
+      title: this.state?.bookConfig.title,
+    }
+  },
 })
-export default class extends Vue {
+export default class BookLayout extends Vue {
   @Prop() bookId!: string
 
   state: State | null = null

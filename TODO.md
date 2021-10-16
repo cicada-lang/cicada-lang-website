@@ -1,6 +1,7 @@
-- `views/book-layout` -- add book title to all book pages
+ambr bookConfig config
 
 - `views/article-list` -- setup route to `/articles` -- an article loading page
+
 - `views/book-list` -- setup route to `/books` -- a book loading page
 
 - `views/book-contents` -- handle title-less page
