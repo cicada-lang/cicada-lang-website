@@ -46,6 +46,15 @@
           <p class="py-1">GitHub, GitLab and Gitee are supported.</p>
           <p class="py-1">Fill in article's URL is all you need!</p>
         </div>
+
+        <div class="p-2">
+          <p class="py-2">For examples:</p>
+          <ul class="px-3">
+            <li class="max-w-sm break-all list-disc">
+              https://github.com/cicada-lang/cicada/blob/master/articles/simulating-the-sigma-type-by-hand.md
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="px-10 pt-4 pb-8">
@@ -59,13 +68,13 @@
         <ul class="px-5 py-1 space-y-2">
           <li
             class="hover:text-gray-500 text-gray-700 list-disc"
-            v-for="exampleArticle in exampleArticles"
+            v-for="example in examples"
           >
             <router-link
-              :to="{ path: `articles/${getGitPath(exampleArticle.url)}` }"
+              :to="{ path: `articles/${getGitPath(example.url)}` }"
               class="font-sans underline"
             >
-              {{ exampleArticle.title }}
+              {{ example.title }}
             </router-link>
           </li>
         </ul>
@@ -90,7 +99,7 @@ type Example = {
     "icon-arrow-circle-right": require("@/components/icons/icon-arrow-circle-right.vue").default,
   },
 })
-export default class CicadaArticleList extends Vue {
+export default class extends Vue {
   inputURL: string | null = null
 
   getGitPath(url: string): string {
@@ -103,10 +112,10 @@ export default class CicadaArticleList extends Vue {
     }
   }
 
-  exampleArticles: Array<Example> = [
+  examples: Array<Example> = [
     {
       title: "Simulating the Sigma type by hand",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/articles/simulating-the-sigma-type-by-hand.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/simulating-the-sigma-type-by-hand.md",
     },
   ]
 }

@@ -25,12 +25,15 @@
     >
       <div>
         <span class="pl-2 pr-1">{{ state.config.title }}</span>
-        <span class="text-sm">{{ state.config.version }}</span>
       </div>
 
       <h2 class="md:text-2xl py-2 font-sans text-xl font-normal">
         <span>{{ state.config.subtitle }}</span>
       </h2>
+
+      <div>
+        <span class="text-sm text-gray-500">{{ state.config.version }}</span>
+      </div>
     </router-link>
 
     <section

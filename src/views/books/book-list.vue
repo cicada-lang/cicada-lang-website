@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col my-6">
     <div class="m-auto">
-      <form @submit.prevent="loadArticle()" class="flex flex-col w-full py-4">
+      <form @submit.prevent="loadBook()" class="flex flex-col w-full py-4">
         <label
           class="pt-6 pb-6 text-5xl font-bold text-center text-gray-800"
           for="inputURL"
@@ -44,7 +44,16 @@
         <div class="p-2">
           <p class="py-1">Welcome to Cicada's book rendering service.</p>
           <p class="py-1">GitHub, GitLab and Gitee are supported.</p>
-          <p class="py-1">Fill in article's URL is all you need!</p>
+          <p class="py-1">Fill in book's URL is all you need!</p>
+        </div>
+
+        <div class="p-2">
+          <p class="py-2">For examples:</p>
+          <ul class="px-3">
+            <li class="max-w-sm break-all list-disc">
+              https://github.com/cicada-lang/cicada/tree/master/books/the-little-typer-exercises
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -53,19 +62,19 @@
 
         <div class="p-2">
           <p class="py-1">We will showcase of this service,</p>
-          <p class="py-1">in follow example articles:</p>
+          <p class="py-1">in follow example books:</p>
         </div>
 
         <ul class="px-5 py-1 space-y-2">
           <li
             class="hover:text-gray-500 text-gray-700 list-disc"
-            v-for="exampleBook in exampleBooks"
+            v-for="example in examples"
           >
             <router-link
-              :to="{ path: `books/${getGitPath(exampleBook.url)}` }"
+              :to="{ path: `books/${getGitPath(example.url)}` }"
               class="font-sans underline"
             >
-              {{ exampleBook.title }}
+              {{ example.title }}
             </router-link>
           </li>
         </ul>
@@ -90,23 +99,23 @@ type Example = {
     "icon-arrow-circle-right": require("@/components/icons/icon-arrow-circle-right.vue").default,
   },
 })
-export default class CicadaArticleList extends Vue {
+export default class extends Vue {
   inputURL: string | null = null
 
   getGitPath(url: string): string {
     return GitPath.fromURL(url).encode()
   }
 
-  loadArticle(): void {
+  loadBook(): void {
     if (this.inputURL) {
       this.$router.push(`books/${this.getGitPath(this.inputURL)}`)
     }
   }
 
-  exampleBooks: Array<Example> = [
+  examples: Array<Example> = [
     {
-      title: "Logic and Judgment",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
+      title: "The Little Typer Exercises",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/the-little-typer-exercises",
     },
     // {
     //   title: "Group Theory",

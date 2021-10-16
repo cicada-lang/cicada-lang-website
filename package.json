@@ -28,7 +28,7 @@
     "@cicada-lang/cicada": "^0.3.19",
     "@cicada-lang/partech": "^0.1.15",
     "@tailwindcss/postcss7-compat": "^2.2.17",
-    "@xieyuheng/enchanter": "^0.1.3",
+    "@xieyuheng/enchanter": "^0.1.4",
     "@xieyuheng/postmark": "^0.0.10",
     "@xieyuheng/ty": "^0.1.7",
     "autoprefixer": "^9.8.8",

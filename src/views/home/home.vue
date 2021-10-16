@@ -30,7 +30,7 @@
 
       <p>For details, please visit dedicated serive pages:</p>
 
-      <ul class="py-2 space-y-2 px-3">
+      <ul class="px-3 py-2 space-y-2">
         <li class="list-disc">
           <router-link :to="{ path: `/books` }" class="font-sans underline">
             Book Serive
@@ -51,7 +51,7 @@
       <p>Happiness is only real when shared.</p>
       <p>Software service is only valuable when serving people well.</p>
 
-      <ul class="py-2 space-y-2 px-3">
+      <ul class="px-3 py-2 space-y-2">
         <li class="list-disc">
           GitHub:
           <a
@@ -94,7 +94,7 @@
       <p>Who cherishes it as a lifelong inquiry</p>
       <p>into <em>foundations of mathematics</em>.</p>
 
-      <ul class="py-2 space-y-2 px-3">
+      <ul class="px-3 py-2 space-y-2">
         <li class="list-disc">
           <a
             href="https://github.com/xieyuheng"

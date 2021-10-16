@@ -1,5 +1,3 @@
-- `views/books/book-contents` -- handle title-less page
-
 - `views/books/book-page` -- be able to run cicada code block and show results in the page
 - `views/articles/article` -- be able to run cicada code block and show results in the page
 
