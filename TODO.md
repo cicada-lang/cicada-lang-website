@@ -1,5 +1,4 @@
-- `views/books/book-list` -- move example from `home`
-- `views/books/book-list` -- setup route to `/books` -- a book loading page
+- `views/home` -- use `list-disc`
 
 - `views/books/book-contents` -- handle title-less page
 

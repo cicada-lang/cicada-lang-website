@@ -41,19 +41,6 @@
           </router-link>
         </li>
       </ul>
-
-      <p class="font-sans font-bold">Example books:</p>
-
-      <ul class="space-y-2">
-        <li v-for="exampleBook in exampleBooks">
-          <router-link
-            :to="{ path: `/books/${getGitPath(exampleBook)}` }"
-            class="font-sans underline"
-          >
-            {{ exampleBook.title }}
-          </router-link>
-        </li>
-      </ul>
     </section>
 
     <h2 class="font-sans text-3xl font-bold">Community</h2>
@@ -139,31 +126,7 @@ type Example = {
     "icon-external-link": require("@/components/icons/icon-external-link").default
   },
 })
-export default class extends Vue {
-  getGitPath(example: Example): string {
-    const { url } = example
-    return GitPath.fromURL(url).encode()
-  }
-
-  exampleBooks: Array<Example> = [
-    {
-      title: "Group Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
-    },
-    {
-      title: "Order Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
-    },
-    {
-      title: "Category Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
-    },
-    {
-      title: "Logic and Judgment",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
-    },
-  ]
-}
+export default class extends Vue {}
 </script>
 
 <style scoped>
