@@ -1,8 +1,4 @@
-- `views/book-layout` -- use subroute
-
-  - handle error view
-  - handle loading view
-  - add book title to all book pages
+- `views/book-layout` -- add book title to all book pages
 
 - `views/article-list` -- setup route to `/articles` -- an article loading page
 - `views/book-list` -- setup route to `/books` -- a book loading page
