@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { BookState as State } from "@/views/books/book-state"
 import { BookPagePathResolver } from "./book-page-path-resolver"
 
@@ -40,6 +40,11 @@ export default class extends Vue {
     if (this.state) {
       return this.state.pages[this.pageName]
     }
+  }
+
+  @Watch("pageName")
+  scrollToTop(): void {
+    window.scrollTo(0, 0)
   }
 
   async mounted(): Promise<void> {

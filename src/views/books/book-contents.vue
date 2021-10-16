@@ -49,5 +49,9 @@ import { BookState as State } from "@/views/books/book-state"
 export default class extends Vue {
   @Prop() bookId!: string
   @Prop() state!: State
+
+  mounted(): void {
+    window.scrollTo(0, 0)
+  }
 }
 </script>
