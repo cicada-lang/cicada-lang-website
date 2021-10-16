@@ -2,30 +2,6 @@ import { RouteConfig } from "vue-router"
 
 export const routes: Array<RouteConfig> = [
   { path: "/", component: () => import("@/views/home") },
-  {
-    path: "/articles/:articleId",
-    component: () => import("@/views/article"),
-    props: (route) => ({
-      articleId: route.params.articleId,
-      baseURL: `${window.location.origin}/articles`,
-    }),
-  },
-  {
-    path: "/books/:bookId",
-    component: () => import("@/views/book"),
-    props: (route) => ({ bookId: route.params.bookId }),
-  },
-  {
-    path: "/books/:bookId/contents",
-    component: () => import("@/views/book/book-contents.vue"),
-    props: (route) => ({ bookId: route.params.bookId }),
-  },
-  {
-    path: "/books/:bookId/pages/:pageName",
-    component: () => import("@/views/book/book-page.vue"),
-    props: (route) => ({
-      bookId: route.params.bookId,
-      pageName: route.params.pageName,
-    }),
-  },
+  ...require("@/views/article/routes").routes,
+  ...require("@/views/book/routes").routes,
 ]

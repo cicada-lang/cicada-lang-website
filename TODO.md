@@ -1,5 +1,3 @@
-- extract routes about book
-
 - `views/book-layout` -- use subroute
 
   - handle error view
