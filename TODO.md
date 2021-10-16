@@ -1,11 +1,14 @@
-- `views/article-list` -- setup route to `/articles` -- an article loading page
+- rename `views/book` to `views/books`
 
+- update `enchanter` to fix gitlab page load limit
+
+- `views/article-list` -- setup route to `/articles` -- an article loading page
 - `views/book-list` -- setup route to `/books` -- a book loading page
 
 - `views/book-contents` -- handle title-less page
 
 - `views/book-page` -- be able to run cicada code block and show results in the page
-- `views/article` -- be able to run cicada code block and show results in the page
+- `views/articles` -- be able to run cicada code block and show results in the page
 
 # user
 
