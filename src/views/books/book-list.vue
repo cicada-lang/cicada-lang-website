@@ -105,21 +105,21 @@ export default class CicadaArticleList extends Vue {
 
   exampleBooks: Array<Example> = [
     {
-      title: "Group Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
-    },
-    {
-      title: "Order Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
-    },
-    {
-      title: "Category Theory",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
-    },
-    {
       title: "Logic and Judgment",
       url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
     },
+    // {
+    //   title: "Group Theory",
+    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
+    // },
+    // {
+    //   title: "Order Theory",
+    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
+    // },
+    // {
+    //   title: "Category Theory",
+    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
+    // },
   ]
 }
 </script>
