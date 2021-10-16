@@ -90,8 +90,8 @@
     <h2 class="font-sans text-3xl font-bold">Core Team</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada project is started by Xie Yuheng.</p>
-      <p>Who cherishes it as a lifelong inquiry</p>
+      <p>Cicada project is started by Xie Yuheng,</p>
+      <p>who cherishes it as a lifelong inquiry</p>
       <p>into <em>foundations of mathematics</em>.</p>
 
       <ul class="px-3 py-2 space-y-2">
