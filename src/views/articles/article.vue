@@ -1,5 +1,5 @@
 <template>
-  <div class="md:py-10 max-w-3xl px-6 py-6 mx-auto">
+  <div class="md:py-10 max-w-2xl px-6 py-6 mx-auto">
     <div v-if="error">
       <pre>{{ error }}</pre>
     </div>

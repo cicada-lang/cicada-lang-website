@@ -1,11 +1,11 @@
 <template>
   <div
     class="
-      py-12
       flex flex-col
       items-center
       justify-between
       h-screen
+      py-12
       font-serif
       text-2xl
     "

@@ -1,10 +1,10 @@
-- `views/article-list` -- setup route to `/articles` -- an article loading page
-- `views/book-list` -- setup route to `/books` -- a book loading page
+- `views/books/book-list` -- move example from `home`
+- `views/books/book-list` -- setup route to `/books` -- a book loading page
 
-- `views/book-contents` -- handle title-less page
+- `views/books/book-contents` -- handle title-less page
 
-- `views/book-page` -- be able to run cicada code block and show results in the page
-- `views/articles` -- be able to run cicada code block and show results in the page
+- `views/books/book-page` -- be able to run cicada code block and show results in the page
+- `views/articles/article` -- be able to run cicada code block and show results in the page
 
 # user
 

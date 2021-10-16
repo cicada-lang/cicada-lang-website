@@ -21,6 +21,27 @@
     <section class="py-4 space-y-2">
       <p>Cicada code can be organized into books and articles.</p>
 
+      <p>
+        We strive to provide clear and beautiful rendering, to help one sharing
+        ones work with others.
+      </p>
+
+      <p>For details, please visit dedicated serive pages:</p>
+
+      <ul class="space-y-2">
+        <li>
+          <router-link :to="{ path: `/books` }" class="font-sans underline">
+            Book Serive
+          </router-link>
+        </li>
+
+        <li>
+          <router-link :to="{ path: `/articles` }" class="font-sans underline">
+            Article Serive
+          </router-link>
+        </li>
+      </ul>
+
       <p class="font-sans font-bold">Example books:</p>
 
       <ul class="space-y-2">
@@ -33,19 +54,6 @@
           </router-link>
         </li>
       </ul>
-
-      <!-- <p class="font-sans font-bold">Example articles:</p>
-
-           <ul class="space-y-2">
-           <li v-for="exampleArticle in exampleArticles">
-           <router-link
-           :to="{ path: `/articles/${getGitPath(exampleArticle)}` }"
-           class="font-sans underline"
-           >
-           {{ exampleArticle.title }}
-           </router-link>
-           </li>
-           </ul> -->
     </section>
 
     <h2 class="font-sans text-3xl font-bold">Community</h2>
@@ -137,75 +145,24 @@ export default class extends Vue {
     return GitPath.fromURL(url).encode()
   }
 
-    exampleBooks: Array<Example> = [
-      {
-        title: "Group Theory",
-        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
-      },
-      {
-        title: "Order Theory",
-        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
-      },
-      {
-        title: "Category Theory",
-        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
-      },
-      {
-        title: "Logic and Judgment",
-        url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
-      },
-    ]
-
-  // exampleBooks: Array<Example> = [
-  //   {
-  //     title: "Group Theory",
-  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/group",
-  //   },
-  //   {
-  //     title: "Order Theory",
-  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/order",
-  //   },
-  //   {
-  //     title: "Category Theory",
-  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/category",
-  //   },
-  //   {
-  //     title: "Logic and Judgment",
-  //     url: "https://github.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
-  //   },
-  // ]
-
- // exampleBooks: Array<Example> = [
- //   {
- //     title: "Group Theory",
- //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/group",
- //   },
- //   {
- //     title: "Order Theory",
- //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/order",
- //   },
- //   {
- //     title: "Category Theory",
- //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/category",
- //   },
- //   {
- //     title: "Logic and Judgment",
- //     url: "https://gitee.com/cicada-lang/cicada/tree/master/books/logic-and-judgment",
- //   },
- // ]
-
-  // prettier-ignore
-  chs = [
-    "01", "02", "03", "04",
-    "05", "06", "07", "08",
-    "09", "10", "11", "12",
-    "13", "14", "15", "16"
+  exampleBooks: Array<Example> = [
+    {
+      title: "Group Theory",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
+    },
+    {
+      title: "Order Theory",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
+    },
+    {
+      title: "Category Theory",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
+    },
+    {
+      title: "Logic and Judgment",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment",
+    },
   ]
-
-  exampleArticles: Array<Example> = this.chs.map((n) => ({
-    title: `ch${n}`,
-    url: `https://gitlab.com/cicada-lang/cicada/-/tree/master/books/logic-and-judgment/src/ch${n}.md`,
-  }))
 }
 </script>
 
