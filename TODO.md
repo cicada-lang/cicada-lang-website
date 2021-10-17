@@ -1,3 +1,5 @@
+- `components/cicada-block` -- fix `output`
+
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
 - `components/cicada-block` -- mimic the design from eloquent javascript code block

@@ -21,8 +21,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { Module } from "@cicada-lang/cicada/lib/module"
+import { CodeBlock } from "@cicada-lang/cicada/lib/module/code-block"
 import hljs from "highlight.js"
 
 @Component({
@@ -37,20 +38,26 @@ export default class extends Vue {
   @Prop() pageName!: string
   @Prop() index!: number
   @Prop() mod!: Module
+  @Prop() code_block!: CodeBlock
 
-  get output(): string {
-    const { outputs } = this.mod.code_blocks[this.index]
+  output: string = ""
 
-    let s = ""
+  @Watch("mod.index", { immediate: true })
+  updateOutput(): void {
+    const code_block = this.mod.get_code_block(this.index)
 
-    for (const output of outputs) {
-      if (output) {
-        s += output.repr()
-        s += "\n"
-      }
+    this.output = ""
+
+    if (code_block === undefined) {
+      return
     }
 
-    return s.trim() ? s : ""
+    for (const output of code_block.outputs) {
+      this.output += output.repr()
+      this.output += "\n"
+    }
+
+    this.output = this.output.trim()
   }
 
   get code(): string {

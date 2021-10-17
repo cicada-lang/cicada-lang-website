@@ -9,9 +9,9 @@
           component: require('@/components/cicada-block').default,
           props: (node) => ({
             pageName: pageName,
-            mod: state.load(pageName),
             index: node.value.index,
             text: node.text,
+            mod: state.load(pageName),
           }),
         },
       }"
@@ -58,7 +58,7 @@ export default class extends Vue {
     window.scrollTo(0, 0)
   }
 
-  @Watch("pageName")
+  @Watch("pageName", { immediate: true })
   async run(): Promise<void> {
     const { error } = await this.state.run(this.pageName)
     if (error) {

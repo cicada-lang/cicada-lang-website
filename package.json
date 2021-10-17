@@ -25,7 +25,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "@cicada-lang/cicada": "^0.3.25",
+    "@cicada-lang/cicada": "^0.3.26",
     "@cicada-lang/partech": "^0.1.15",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@xieyuheng/enchanter": "^0.1.4",
