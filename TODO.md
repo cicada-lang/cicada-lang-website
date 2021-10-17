@@ -1,5 +1,3 @@
-- `app.cicada` -- instance of cicada's `web-app`
-
 - `views/books/book-page` -- run cicada code block and show results in the page
 - `views/books/book-page` -- edit code block in-place, and run new code in context
 - `views/books/book-page` -- reset code block

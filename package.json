@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/nanoid": "^2.1.0",
-    "@types/node": "^16.11.0",
+    "@types/node": "^16.11.1",
     "@vue/cli-plugin-pwa": "~4.5.14",
     "@vue/cli-plugin-router": "~4.5.14",
     "@vue/cli-plugin-typescript": "~4.5.14",
@@ -25,7 +25,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "@cicada-lang/cicada": "^0.3.20",
+    "@cicada-lang/cicada": "^0.3.21",
     "@cicada-lang/partech": "^0.1.15",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@xieyuheng/enchanter": "^0.1.4",
