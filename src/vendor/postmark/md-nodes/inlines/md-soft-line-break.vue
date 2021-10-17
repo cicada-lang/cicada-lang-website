@@ -1,6 +1,6 @@
 <template>
   <br v-if="state.document.attributes.newline === 'preserve'" />
-  <span v-else> </span>
+  <span v-else>&nbsp;</span>
 </template>
 
 <script lang="ts">
