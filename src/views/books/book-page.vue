@@ -9,7 +9,8 @@
           component: require('@/components/cicada-block').default,
           props: (node) => ({
             book: state.book,
-            pageName,
+            pageName: pageName,
+            index: node.value.index,
             text: node.text,
           }),
         },

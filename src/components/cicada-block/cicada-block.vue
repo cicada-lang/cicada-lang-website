@@ -7,9 +7,9 @@
     ></pre>
     <button
       @click="run()"
-      class="text-sm text-gray-700 hover:text-gray-500 self-end"
+      class="hover:text-gray-500 self-end text-sm text-gray-700"
     >
-      RUN
+      RUN {{ index }} 
     </button>
     <pre v-show="output" class="py-4 overflow-x-auto" style="font-size: 92%">{{
       output
@@ -33,6 +33,7 @@ export default class extends Vue {
   @Prop() text!: string
   @Prop() book!: Book
   @Prop() pageName!: string
+  @Prop() index!: number  
 
   output: string = ""
 
