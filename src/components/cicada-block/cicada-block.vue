@@ -17,7 +17,7 @@ export default class extends Vue {
   @Prop() text!: string
 
   get code(): string {
-    return hljs.highlight(this.text, { language: "javascript" }).value
+    return hljs.highlight(this.text, { language: "typescript" }).value
   }
 }
 </script>
