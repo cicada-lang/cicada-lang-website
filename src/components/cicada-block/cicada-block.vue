@@ -1,14 +1,12 @@
 <template>
   <pre
     class="
-      border-sky-400
-      py-3
       overflow-x-auto
-      border-t-2 border-b-2 border-dashed
+      py-3
+      border-t border-b border-dashed border-gray-800
     "
     style="font-size: 92%"
-  >le="font-size: 92%"
-  ><code>
+  ><code>{{ text }}</code></pre>
 </template>
 
 <script lang="ts">
