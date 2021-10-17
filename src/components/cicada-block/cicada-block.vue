@@ -1,8 +1,5 @@
 <template>
-  <pre
-    class="py-4 overflow-x-auto"
-    style="font-size: 92%"
-  ><code v-html="code" /></pre>
+  <pre class="py-4 overflow-x-auto" style="font-size: 92%" v-html="code"></pre>
 </template>
 
 <script lang="ts">
