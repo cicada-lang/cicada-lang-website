@@ -2,7 +2,7 @@
   <div>
     <prism
       class="overflow-x-auto"
-      style="background-color: white; font-size: 92%; padding: 0 0"
+      style="background-color: white; font-size: 92%; padding: 1rem 0rem"
       language="javascript"
       :code="text"
     ></prism>
