@@ -53,6 +53,14 @@ export default class extends Vue {
     window.scrollTo(0, 0)
   }
 
+  @Watch("pageName")
+  async run(): Promise<void> {
+    const { error } = await this.state.run(this.pageName)
+    if (error) {
+      console.error(error)
+    }
+  }
+
   async mounted(): Promise<void> {
     this.pathResolver = new BookPagePathResolver({
       pageName: this.pageName,
