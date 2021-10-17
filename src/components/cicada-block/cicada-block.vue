@@ -11,15 +11,18 @@
     >
       RUN {{ index }}
     </button>
-    <pre v-show="output" class="py-4 overflow-x-auto" style="font-size: 92%">{{
-      output
-    }}</pre>
+    <pre
+      v-show="output"
+      class="py-4 text-orange-500 overflow-x-auto"
+      style="font-size: 92%"
+      >{{ output }}</pre
+    >
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { Book } from "@cicada-lang/cicada/lib/book"
+import { Module } from "@cicada-lang/cicada/lib/module"
 import hljs from "highlight.js"
 
 @Component({
@@ -31,20 +34,31 @@ import hljs from "highlight.js"
 })
 export default class extends Vue {
   @Prop() text!: string
-  @Prop() book!: Book
   @Prop() pageName!: string
   @Prop() index!: number
+  @Prop() mod!: Module
 
-  output: string = ""
+  get output(): string {
+    const { outputs } = this.mod.code_blocks[this.index]
+
+    let s = ""
+
+    for (const output of outputs) {
+      if (output) {
+        s += output.repr()
+        s += "\n"
+      }
+    }
+
+    return s.trim() ? s : ""
+  }
 
   get code(): string {
     return hljs.highlight(this.text, { language: "typescript" }).value
   }
 
   async run(): Promise<void> {
-    const mod = await this.book.load(this.pageName)
-    await mod.run_to_the_end()
-    this.output = mod.all_output
+    await this.mod.run_to_the_end()
   }
 }
 </script>

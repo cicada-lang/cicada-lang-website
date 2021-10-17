@@ -1,6 +1,4 @@
-- `components/cicada-block` -- only output result of current code block
-
-  - react to current state of cicada `Module`
+- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
 - `components/cicada-block` -- mimic the design from eloquent javascript code block
 

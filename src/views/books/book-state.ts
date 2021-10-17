@@ -3,6 +3,7 @@ import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
 import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
 import ty from "@xieyuheng/ty"
 import { Book } from "@cicada-lang/cicada/lib/book"
+import { Module } from "@cicada-lang/cicada/lib/module"
 import { GitBookStore } from "@cicada-lang/cicada/lib/book-stores/git-book-store"
 import * as CtxObservers from "@cicada-lang/cicada/lib/ctx/ctx-observers"
 import * as Runners from "@cicada-lang/cicada/lib/runners"
@@ -39,7 +40,12 @@ export class BookState {
 
   async run(path: string): Promise<{ error?: unknown }> {
     const runner = new Runners.DefaultRunner({ book: this.book })
-    return runner.run(path)
+    return await runner.run(path)
+  }
+
+  load(path: string): Module {
+    const text = this.pages[path]
+    return this.book.load(path, text)
   }
 
   get pageNames(): Array<string> {

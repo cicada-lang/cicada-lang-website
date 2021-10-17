@@ -8,11 +8,10 @@
         Cicada: {
           component: require('@/components/cicada-block').default,
           props: (node) => ({
-            book: state.book,
             pageName: pageName,
+            mod: state.load(pageName),
             index: node.value.index,
             text: node.text,
-
           }),
         },
       }"
