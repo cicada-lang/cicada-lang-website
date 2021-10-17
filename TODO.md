@@ -1,5 +1,7 @@
-- `components/cicada-block` -- fix `output`
+- `components/cicada-block` -- fix ch08 bug
 
+- `components/cicada-block` -- add `Running...` indicator
+- `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
 - `components/cicada-block` -- mimic the design from eloquent javascript code block

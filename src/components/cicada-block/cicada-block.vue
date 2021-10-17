@@ -9,7 +9,7 @@
       @click="run()"
       class="hover:text-gray-500 self-end text-sm text-gray-700"
     >
-      RUN {{ index }}
+      RUN
     </button>
     <pre
       v-show="output"
@@ -22,8 +22,9 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
-import { CodeBlock } from "@cicada-lang/cicada/lib/module/code-block"
+import * as Runners from "@cicada-lang/cicada/lib/runners"
 import hljs from "highlight.js"
 
 @Component({
@@ -34,17 +35,22 @@ import hljs from "highlight.js"
   },
 })
 export default class extends Vue {
-  @Prop() text!: string
   @Prop() pageName!: string
   @Prop() index!: number
-  @Prop() mod!: Module
-  @Prop() code_block!: CodeBlock
+  @Prop() text!: string
+  @Prop() page!: string
+  @Prop() book!: Book
 
   output: string = ""
 
-  @Watch("mod.index", { immediate: true })
-  updateOutput(): void {
-    const code_block = this.mod.get_code_block(this.index)
+  @Watch("pageName")
+  init(): void {
+    this.book.cache.delete(this.pageName)
+    this.output = ""
+  }
+
+  updateOutput(mod: Module): void {
+    const code_block = mod.get_code_block(this.index)
 
     this.output = ""
 
@@ -65,7 +71,14 @@ export default class extends Vue {
   }
 
   async run(): Promise<void> {
-    await this.mod.run_to_the_end()
+    try {
+      this.book.cache.delete(this.pageName)
+      const mod = this.book.load(this.pageName, this.page)
+      await mod.run_to(this.index)
+      this.updateOutput(mod)
+    } catch (error) {
+      this.output = `${error}`
+    }
   }
 }
 </script>

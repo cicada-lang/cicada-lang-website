@@ -6,7 +6,6 @@ import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
 import { GitBookStore } from "@cicada-lang/cicada/lib/book-stores/git-book-store"
 import * as CtxObservers from "@cicada-lang/cicada/lib/ctx/ctx-observers"
-import * as Runners from "@cicada-lang/cicada/lib/runners"
 
 export class BookState {
   bookId: GitPath
@@ -38,11 +37,6 @@ export class BookState {
     return new BookState({ bookId, config, pages, book })
   }
 
-  async run(path: string): Promise<{ error?: unknown }> {
-    const runner = new Runners.DefaultRunner({ book: this.book })
-    return await runner.run(path)
-  }
-
   load(path: string): Module {
     const text = this.pages[path]
     return this.book.load(path, text)
@@ -56,7 +50,7 @@ export class BookState {
     return postmark.parser.parseDocument(text).postprocess({
       customBlockParsers: [
         postmark.createCustomBlockParser<{ index: number }>({
-          recognize: (info) => info.startsWith("cicada"),
+          recognize: (info) => info === "cicada",
           customKind: "Cicada",
           parse: (text, { index }) => ({ index }),
         }),

@@ -11,7 +11,8 @@
             pageName: pageName,
             index: node.value.index,
             text: node.text,
-            mod: state.load(pageName),
+            page: page,
+            book: state.book,
           }),
         },
       }"
@@ -56,14 +57,6 @@ export default class extends Vue {
   @Watch("pageName")
   scrollToTop(): void {
     window.scrollTo(0, 0)
-  }
-
-  @Watch("pageName", { immediate: true })
-  async run(): Promise<void> {
-    const { error } = await this.state.run(this.pageName)
-    if (error) {
-      console.error(error)
-    }
   }
 
   async mounted(): Promise<void> {

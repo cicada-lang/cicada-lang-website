@@ -25,7 +25,7 @@ export class ArticleState {
     return postmark.parser.parseDocument(this.text).postprocess({
       customBlockParsers: [
         postmark.createCustomBlockParser<undefined>({
-          recognize: (info) => info.startsWith("cicada"),
+          recognize: (info) => info === "cicada",
           customKind: "Cicada",
           parse: (text) => undefined,
         }),
