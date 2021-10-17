@@ -10,7 +10,12 @@
       <md-document
         :document="state.document"
         :path-resolver="pathResolver"
-        :custom-block-components="{}"
+        :custom-block-components="{
+          Cicada: {
+            component: require('@/components/cicada-block').default,
+            props: (node) => ({ text: node.text }),
+          },
+        }"
       />
     </div>
   </div>
