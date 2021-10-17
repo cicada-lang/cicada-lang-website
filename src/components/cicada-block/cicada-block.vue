@@ -1,27 +1,26 @@
 <template>
-  <div>
-    <prism
-      class="overflow-x-auto"
-      style="background-color: white; font-size: 92%; padding: 1rem 0rem"
-      language="javascript"
-      :code="text"
-    ></prism>
-  </div>
+  <pre
+    class="py-4 overflow-x-auto"
+    style="font-size: 92%"
+  ><code v-html="code" /></pre>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import "prismjs"
-import "prismjs/themes/prism.css"
+import hljs from "highlight.js"
 
 @Component({
   name: "cicada-block",
   // prettier-ignore
   components: {
-    prism: require("vue-prismjs"),
+
   },
 })
 export default class extends Vue {
   @Prop() text!: string
+
+  get code(): string {
+    return hljs.highlight(this.text, { language: "javascript" }).value
+  }
 }
 </script>
