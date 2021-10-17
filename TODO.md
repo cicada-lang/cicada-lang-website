@@ -1,10 +1,14 @@
+- `app.cicada` -- instance of cicada's `web-app`
+
 - `views/books/book-page` -- run cicada code block and show results in the page
 - `views/books/book-page` -- edit code block in-place, and run new code in context
 - `views/books/book-page` -- reset code block
 
-- `vendor/postmark` -- handle markdown table
-
 - `views/articles/article` -- run cicada code block and show results in the page
+- `views/articles/article` -- edit code block in-place, and run new code in context
+- `views/articles/article` -- reset code block
+
+- `vendor/postmark` -- handle markdown table
 
 # user
 
