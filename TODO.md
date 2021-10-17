@@ -1,10 +1,9 @@
-- `views/books/book-page` -- edit code block in-place, and run new code in context
+- `views/books/book-page` -- mimic the design from eloquent javascript code block
 
-- `views/books/book-page` -- reset code block
+  - edit code block in-place, and run new code in context
+  - reset code block
 
-- `views/articles/article` -- run cicada code block and show results in console log
-- `views/articles/article` -- edit code block in-place, and run new code in context
-- `views/articles/article` -- reset code block
+- `views/articles/article` -- be able to run cicada code block like `books/book-page`
 
 - `vendor/postmark` -- handle markdown table
 
@@ -24,7 +23,7 @@
 # landing page
 
 - `views/home` -- logo
-- `views/home` -- decorate -- celtic knotworklogo
+- `views/home` -- decorate -- celtic knotwork
 - `views/home` -- sign up form
   - sign up to receive news asynchronously
   - sign in to use our services

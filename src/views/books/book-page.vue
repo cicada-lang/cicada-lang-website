@@ -7,7 +7,11 @@
       :custom-block-components="{
         Cicada: {
           component: require('@/components/cicada-block').default,
-          props: (node) => ({ text: node.text }),
+          props: (node) => ({
+            book: state.book,
+            pageName,
+            text: node.text,
+          }),
         },
       }"
     />
