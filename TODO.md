@@ -1,5 +1,7 @@
 - `components/cicada-block` -- only output result of current code block
 
+  - react to current state of cicada `Module`
+
 - `components/cicada-block` -- mimic the design from eloquent javascript code block
 
   - edit code block in-place, and run new code in context

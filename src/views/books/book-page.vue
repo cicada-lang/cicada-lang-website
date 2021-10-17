@@ -12,6 +12,7 @@
             pageName: pageName,
             index: node.value.index,
             text: node.text,
+
           }),
         },
       }"

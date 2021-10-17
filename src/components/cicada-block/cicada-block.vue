@@ -9,7 +9,7 @@
       @click="run()"
       class="hover:text-gray-500 self-end text-sm text-gray-700"
     >
-      RUN {{ index }} 
+      RUN {{ index }}
     </button>
     <pre v-show="output" class="py-4 overflow-x-auto" style="font-size: 92%">{{
       output
@@ -33,7 +33,7 @@ export default class extends Vue {
   @Prop() text!: string
   @Prop() book!: Book
   @Prop() pageName!: string
-  @Prop() index!: number  
+  @Prop() index!: number
 
   output: string = ""
 
@@ -43,7 +43,7 @@ export default class extends Vue {
 
   async run(): Promise<void> {
     const mod = await this.book.load(this.pageName)
-    await mod.run()
+    await mod.run_to_the_end()
     this.output = mod.all_output
   }
 }
