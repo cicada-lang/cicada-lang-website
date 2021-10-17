@@ -1,9 +1,9 @@
-- cicada code block parser can return `index` of the block
-
-- `views/books/book-page` -- mimic the design from eloquent javascript code block
+- `components/cicada-block` -- mimic the design from eloquent javascript code block
 
   - edit code block in-place, and run new code in context
   - reset code block
+  - hide run button in `cicada-block-toolbox`
+  - active edit on click
 
 - `views/articles/article` -- be able to run cicada code block like `books/book-page`
 
