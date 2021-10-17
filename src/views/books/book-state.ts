@@ -36,7 +36,11 @@ export class BookState {
   parseDocument(text: string): Nodes.Document {
     return postmark.parser.parseDocument(text).postprocess({
       customBlockParsers: [
-        // TODO
+        postmark.createCustomBlockParser<undefined>({
+          recognize: (info) => info.startsWith("cicada"),
+          customKind: "Cicada",
+          parse: (text) => undefined,
+        }),
       ],
     })
   }

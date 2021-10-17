@@ -38,9 +38,5 @@ export default class extends Vue {
   get customBlockEntry(): CustomBlockEntry | undefined {
     return this.state.customBlockComponents[this.node.customKind]
   }
-
-  mounted(): void {
-    console.log(this.state.customBlockComponents[this.node.customKind])
-  }
 }
 </script>

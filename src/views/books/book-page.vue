@@ -4,7 +4,12 @@
     <md-document
       :document="state.parseDocument(page)"
       :path-resolver="pathResolver"
-      :custom-block-components="{}"
+      :custom-block-components="{
+        Cicada: {
+          component: require('@/components/cicada-block').default,
+          props: (node) => ({ text: node.text }),
+        },
+      }"
     />
     <book-page-navbar
       class="my-6"
@@ -25,6 +30,7 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   // prettier-ignore
   components: {
     "book-page-navbar": require("./book-page-navbar.vue").default,
+    "cicabook-page-navbar": require("./book-page-navbar.vue").default,
     ...require("@/vendor/postmark/md-nodes").components,
   },
 })
