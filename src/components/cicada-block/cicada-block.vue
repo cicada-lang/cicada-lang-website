@@ -98,12 +98,9 @@ export default class extends Vue {
       this.output = ""
       this.running = true
 
-      await ut.wait(1000 * 3)
-
       try {
         this.book.cache.delete(this.pageName)
         const mod = this.book.load(this.pageName, this.page)
-
         const code_block = mod.get_code_block(this.index)
         if (code_block) {
           code_block.updateCode(this.editorView.state.doc.toString())
@@ -121,6 +118,13 @@ export default class extends Vue {
 
   resetCode(): void {
     this.output = ""
+
+    this.book.cache.delete(this.pageName)
+    const mod = this.book.load(this.pageName, this.page)
+    const code_block = mod.get_code_block(this.index)
+    if (code_block) {
+      code_block.updateCode(this.text)
+    }
 
     if (this.editorView) {
       this.editorView.dispatch({
