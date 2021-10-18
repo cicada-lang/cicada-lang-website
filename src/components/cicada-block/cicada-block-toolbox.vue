@@ -10,28 +10,57 @@
       <div
         class="
           right-3
+          bg-orange-50
           absolute
           top-0
           z-50
           flex flex-col
-          items-end
-          justify-end
-          p-2
-          bg-orange-100
-          border border-orange-400
+          p-1
+          border border-orange-200
           rounded
         "
       >
-        <button @click="$emit('run')" title="Run cicada code">
-          <p class="p-1 text-orange-500 font-bold hover:text-orange-300">RUN</p>
+        <button class="w-full" @click="$emit('run')" title="Run cicada code">
+          <p
+            class="
+              hover:text-orange-300
+              p-1
+              font-bold
+              text-right text-orange-500
+            "
+          >
+            RUN
+          </p>
         </button>
-        <button @click="$emit('reset')" title="Reset to original code">
-          <p class="hover:text-orange-300 p-1 font-bold text-orange-500">
+        <button
+          class="w-full"
+          @click="$emit('reset')"
+          title="Reset to original code"
+        >
+          <p
+            class="
+              hover:text-orange-300
+              p-1
+              font-bold
+              text-right text-orange-500
+            "
+          >
             RESET
           </p>
         </button>
-        <button @click="$emit('deactivate')" title="Deactivate editor">
-          <p class="hover:text-orange-300 p-1 font-bold text-orange-500">
+        <button
+          class="w-full"
+          @click="$emit('deactivate')"
+          title="Deactivate editor"
+        >
+          <p
+            class="
+              hover:text-orange-300
+              p-1
+              font-bold
+              text-right text-orange-500
+            "
+          >
             DEACT
           </p>
         </button>

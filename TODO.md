@@ -1,7 +1,6 @@
-> Mimic the design from eloquent javascript code block.
+- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
 - `components/cicada-block` -- handle `cicada counterexample`
-- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
 - `views/articles/article` -- be able to run cicada code block like `books/book-page`
 
