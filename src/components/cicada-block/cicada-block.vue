@@ -25,28 +25,8 @@ import { Module } from "@cicada-lang/cicada/lib/module"
 import * as Runners from "@cicada-lang/cicada/lib/runners"
 import * as ut from "@/ut"
 
-import { javascript } from "@codemirror/lang-javascript"
-import {
-  keymap,
-  highlightSpecialChars,
-  drawSelection,
-  highlightActiveLine,
-} from "@codemirror/view"
-import { Extension, EditorState } from "@codemirror/state"
+import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
-import { history, historyKeymap } from "@codemirror/history"
-import { foldGutter, foldKeymap } from "@codemirror/fold"
-import { indentOnInput } from "@codemirror/language"
-import { lineNumbers, highlightActiveLineGutter } from "@codemirror/gutter"
-import { defaultKeymap } from "@codemirror/commands"
-import { bracketMatching } from "@codemirror/matchbrackets"
-import { closeBrackets, closeBracketsKeymap } from "@codemirror/closebrackets"
-import { searchKeymap, highlightSelectionMatches } from "@codemirror/search"
-import { autocompletion, completionKeymap } from "@codemirror/autocomplete"
-import { commentKeymap } from "@codemirror/comment"
-import { rectangularSelection } from "@codemirror/rectangular-selection"
-import { defaultHighlightStyle } from "@codemirror/highlight"
-import { lintKeymap } from "@codemirror/lint"
 
 @Component({
   name: "cicada-block",
@@ -72,7 +52,7 @@ export default class extends Vue {
     this.init()
   }
 
-  @Watch("pageName", { immediate: true })
+  @Watch("pageName")
   init(): void {
     this.book.cache.delete(this.pageName)
     this.output = ""
@@ -80,44 +60,13 @@ export default class extends Vue {
   }
 
   initEditor(): void {
-    const state = EditorState.create({
+    const state = createEditorState({
       doc: this.text,
-      extensions: [
-        javascript(),
-        // lineNumbers(),
-        // highlightActiveLineGutter(),
-        highlightSpecialChars(),
-        history(),
-        foldGutter(),
-        drawSelection(),
-        EditorState.allowMultipleSelections.of(true),
-        indentOnInput(),
-        defaultHighlightStyle.fallback,
-        bracketMatching(),
-        closeBrackets(),
-        // autocompletion(),
-        rectangularSelection(),
-        highlightActiveLine(),
-        highlightSelectionMatches(),
-        keymap.of([
-          ...closeBracketsKeymap,
-          ...defaultKeymap,
-          ...searchKeymap,
-          ...historyKeymap,
-          ...foldKeymap,
-          ...commentKeymap,
-          ...completionKeymap,
-          ...lintKeymap,
-        ]),
-      ],
     })
 
     const parent = this.$refs["editor"] as any
-
-    if (parent) {
-      while (parent.firstChild) {
-        parent.removeChild(parent.firstChild)
-      }
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild)
     }
 
     this.editorView = new EditorView({ state, parent })
