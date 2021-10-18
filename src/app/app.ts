@@ -5,7 +5,7 @@ import { WebApp } from "@cicada-lang/cicada/lib/app/web-app"
 export class App extends ServiceContainer {
   cicada = new WebApp()
 
-  bookStateCache: Map<string, BookState> = new Map()
+  private bookStateCache: Map<string, BookState> = new Map()
 
   async buildBookState(opts: { bookId: string }): Promise<BookState> {
     const found = this.bookStateCache.get(opts.bookId)
