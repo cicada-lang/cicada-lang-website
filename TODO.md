@@ -1,5 +1,4 @@
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
-
 - `components/cicada-block` -- handle `cicada counterexample`
 
 - `views/articles/article` -- be able to run cicada code block like `books/book-page`
