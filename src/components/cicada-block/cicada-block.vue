@@ -9,11 +9,19 @@
       class="focus:outline-none py-2 overflow-x-auto"
       :class="['border-sky-300', active && 'border-t-2 border-b-2']"
       style="font-size: 92%"
-      v-html="code"
-      contenteditable="true"
-      @focus="active = true"
-      spellcheck="false"
+      v-html="highlightedCode"
+      @click="active = true"
     ></pre>
+    <!-- <pre
+         class="focus:outline-none py-2 overflow-x-auto"
+         :class="['border-sky-300', active && 'border-t-2 border-b-2']"
+         style="font-size: 92%"
+         v-html="highlightedCode"
+         contenteditable="true"
+         @input="updateCode($event.target.innerText)"
+         @focus="active = true"
+         spellcheck="false"
+         ></pre> -->
     <div v-if="running" class="py-4 font-sans text-orange-500">Running...</div>
     <pre
       v-show="output"
@@ -46,6 +54,7 @@ export default class extends Vue {
   @Prop() page!: string
   @Prop() book!: Book
 
+  code: string = this.text
   output: string = ""
   running: boolean = false
   active: boolean = false
@@ -56,32 +65,22 @@ export default class extends Vue {
     this.output = ""
   }
 
-  updateOutput(mod: Module): void {
-    const code_block = mod.get_code_block(this.index)
-
-    this.output = ""
-
-    if (code_block === undefined) {
-      return
-    }
-
-    for (const output of code_block.outputs) {
-      this.output += output.repr()
-      this.output += "\n"
-    }
-
-    this.output = this.output.trim()
+  updateCode(code: string): void {
+    // TODO We can not update code this way, because vue will rerender the cursor.
+    // this.code = code
+    // Solutions:
+    // - (A) Maybe we can save and restore cursor by:
+    //   https://stackoverflow.com/questions/6249095/how-to-set-the-caret-cursor-position-in-a-contenteditable-element-div
+    // - (B) Use CodeMirror
   }
 
-  get code(): string {
-    return hljs.highlight(this.text, { language: "typescript" }).value
+  get highlightedCode(): string {
+    return hljs.highlight(this.code, { language: "typescript" }).value
   }
 
   async run(): Promise<void> {
     this.output = ""
     this.running = true
-
-    // await ut.wait(1 * 1000)
 
     try {
       this.book.cache.delete(this.pageName)
@@ -93,6 +92,20 @@ export default class extends Vue {
     }
 
     this.running = false
+  }
+
+  updateOutput(mod: Module): void {
+    const code_block = mod.get_code_block(this.index)
+    this.output = ""
+
+    if (code_block === undefined) return
+
+    for (const output of code_block.outputs) {
+      this.output += output.repr()
+      this.output += "\n"
+    }
+
+    this.output = this.output.trim()
   }
 }
 </script>

@@ -3,13 +3,13 @@
     <button
       @click="$emit('run')"
       title="Run cicada code"
-      class="hover:text-gray-500 self-end text-sm text-gray-700"
+      class="hover:text-gray-500 text-sm text-gray-700"
     >
       RUN
     </button>
     <button
       @click="$emit('deactivate')"
-      class="hover:text-gray-500 self-end text-sm text-gray-700"
+      class="hover:text-gray-500 text-sm text-gray-700"
       title="Deactivate editor"
     >
       X
