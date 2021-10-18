@@ -1,27 +1,13 @@
 <template>
   <div class="flex flex-col">
+    <div ref="editor" @click="active = true"></div>
+
     <cicada-block-toolbox
       v-show="active"
       @run="run()"
       @deactivate="active = false"
     />
-    <pre
-      class="focus:outline-none py-2 overflow-x-auto"
-      :class="['border-sky-300', active && 'border-t-2 border-b-2']"
-      style="font-size: 92%"
-      v-html="highlightedCode"
-      @click="active = true"
-    ></pre>
-    <!-- <pre
-         class="focus:outline-none py-2 overflow-x-auto"
-         :class="['border-sky-300', active && 'border-t-2 border-b-2']"
-         style="font-size: 92%"
-         v-html="highlightedCode"
-         contenteditable="true"
-         @input="updateCode($event.target.innerText)"
-         @focus="active = true"
-         spellcheck="false"
-         ></pre> -->
+
     <div v-if="running" class="py-4 font-sans text-orange-500">Running...</div>
     <pre
       v-show="output"
@@ -38,7 +24,29 @@ import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
 import * as Runners from "@cicada-lang/cicada/lib/runners"
 import * as ut from "@/ut"
-import hljs from "highlight.js"
+
+import { javascript } from "@codemirror/lang-javascript"
+import {
+  keymap,
+  highlightSpecialChars,
+  drawSelection,
+  highlightActiveLine,
+} from "@codemirror/view"
+import { Extension, EditorState } from "@codemirror/state"
+import { EditorView } from "@codemirror/view"
+import { history, historyKeymap } from "@codemirror/history"
+import { foldGutter, foldKeymap } from "@codemirror/fold"
+import { indentOnInput } from "@codemirror/language"
+import { lineNumbers, highlightActiveLineGutter } from "@codemirror/gutter"
+import { defaultKeymap } from "@codemirror/commands"
+import { bracketMatching } from "@codemirror/matchbrackets"
+import { closeBrackets, closeBracketsKeymap } from "@codemirror/closebrackets"
+import { searchKeymap, highlightSelectionMatches } from "@codemirror/search"
+import { autocompletion, completionKeymap } from "@codemirror/autocomplete"
+import { commentKeymap } from "@codemirror/comment"
+import { rectangularSelection } from "@codemirror/rectangular-selection"
+import { defaultHighlightStyle } from "@codemirror/highlight"
+import { lintKeymap } from "@codemirror/lint"
 
 @Component({
   name: "cicada-block",
@@ -54,10 +62,50 @@ export default class extends Vue {
   @Prop() page!: string
   @Prop() book!: Book
 
-  code: string = this.text
   output: string = ""
   running: boolean = false
   active: boolean = false
+
+  editorView: EditorView | null = null
+
+  mounted(): void {
+    const state = EditorState.create({
+      doc: this.text,
+      extensions: [
+        javascript(),
+        lineNumbers(),
+        highlightActiveLineGutter(),
+        highlightSpecialChars(),
+        history(),
+        foldGutter(),
+        drawSelection(),
+        EditorState.allowMultipleSelections.of(true),
+        indentOnInput(),
+        defaultHighlightStyle.fallback,
+        bracketMatching(),
+        closeBrackets(),
+        // autocompletion(),
+      rectangularSelection(),
+      highlightActiveLine(),
+      highlightSelectionMatches(),
+      keymap.of([
+        ...closeBracketsKeymap,
+        ...defaultKeymap,
+        ...searchKeymap,
+        ...historyKeymap,
+        ...foldKeymap,
+        ...commentKeymap,
+        ...completionKeymap,
+        ...lintKeymap,
+      ]),
+      ],
+    })
+
+    this.editorView = new EditorView({
+      state,
+      parent: this.$refs["editor"] as any
+    })
+  }
 
   @Watch("pageName")
   init(): void {
@@ -65,33 +113,29 @@ export default class extends Vue {
     this.output = ""
   }
 
-  updateCode(code: string): void {
-    // TODO We can not update code this way, because vue will rerender the cursor.
-    // this.code = code
-    // Solutions:
-    // - (A) Maybe we can save and restore cursor by:
-    //   https://stackoverflow.com/questions/6249095/how-to-set-the-caret-cursor-position-in-a-contenteditable-element-div
-    // - (B) Use CodeMirror
-  }
-
-  get highlightedCode(): string {
-    return hljs.highlight(this.code, { language: "typescript" }).value
-  }
-
   async run(): Promise<void> {
-    this.output = ""
-    this.running = true
+    if (this.editorView) {
+      this.output = ""
+      this.running = true
 
-    try {
-      this.book.cache.delete(this.pageName)
-      const mod = this.book.load(this.pageName, this.page)
-      await mod.run_to(this.index)
-      this.updateOutput(mod)
-    } catch (error) {
-      this.output = `${error}`
+      try {
+        this.book.cache.delete(this.pageName)
+        const mod = this.book.load(this.pageName, this.page)
+
+        const code_block = mod.get_code_block(this.index)
+        if (code_block) {
+          code_block.text = this.editorView.state.doc.toString()
+          // TODO need to be able to update mod code block.
+        }
+
+        await mod.run_to(this.index)
+        this.updateOutput(mod)
+      } catch (error) {
+        this.output = `${error}`
+      }
+
+      this.running = false
     }
-
-    this.running = false
   }
 
   updateOutput(mod: Module): void {
@@ -109,3 +153,10 @@ export default class extends Vue {
   }
 }
 </script>
+
+<style>
+.cm-content {
+  @apply font-mono;
+  font-size: 92%;
+}
+</style>
