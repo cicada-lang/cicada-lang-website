@@ -27,7 +27,7 @@ export function createEditorState(opts: { doc: string }): EditorState {
     extensions: [
       javascript(),
       // lineNumbers(),
-      highlightActiveLineGutter(),
+      // highlightActiveLineGutter(),
       highlightSpecialChars(),
       history(),
       // foldGutter(),
@@ -39,7 +39,7 @@ export function createEditorState(opts: { doc: string }): EditorState {
       closeBrackets(),
       // autocompletion(),
       rectangularSelection(),
-      highlightActiveLine(),
+      // highlightActiveLine(),
       highlightSelectionMatches(),
       keymap.of([
         ...closeBracketsKeymap,
