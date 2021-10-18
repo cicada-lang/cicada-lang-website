@@ -1,20 +1,23 @@
 <template>
   <div class="flex flex-col">
+    <cicada-block-toolbox
+      v-show="active"
+      @run="run()"
+      @deactivate="active = false"
+    />
     <pre
-      class="py-4 overflow-x-auto"
+      class="focus:outline-none py-2 overflow-x-auto"
+      :class="['border-sky-300', active && 'border-t-2 border-b-2']"
       style="font-size: 92%"
       v-html="code"
+      contenteditable="true"
+      @focus="active = true"
+      spellcheck="false"
     ></pre>
-    <button
-      @click="run()"
-      class="hover:text-gray-500 self-end text-sm text-gray-700"
-    >
-      RUN
-    </button>
-    <div v-if="running" class="text-sm font-sans text-orange-600">Running...</div>
+    <div v-if="running" class="py-4 font-sans text-orange-500">Running...</div>
     <pre
       v-show="output"
-      class="py-4 text-orange-500 overflow-x-auto"
+      class="py-4 overflow-x-auto text-orange-500"
       style="font-size: 92%"
       >{{ output }}</pre
     >
@@ -31,6 +34,10 @@ import hljs from "highlight.js"
 
 @Component({
   name: "cicada-block",
+  // prettier-ignore
+  components: {
+    "cicada-block-toolbox": require("./cicada-block-toolbox.vue").default,
+  },
 })
 export default class extends Vue {
   @Prop() pageName!: string
@@ -41,6 +48,7 @@ export default class extends Vue {
 
   output: string = ""
   running: boolean = false
+  active: boolean = false
 
   @Watch("pageName")
   init(): void {
