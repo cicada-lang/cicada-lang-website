@@ -30,7 +30,7 @@
 
       <p>For details, please visit dedicated serive pages:</p>
 
-      <ul class="px-3 py-2 space-y-2">
+      <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           <router-link :to="{ path: `/books` }" class="font-sans underline">
             Book Serive
@@ -48,10 +48,12 @@
     <h2 class="font-sans text-3xl font-bold">Community</h2>
 
     <section class="py-4 space-y-2">
-      <p>Happiness is only real when shared.</p>
-      <p>Software service is only valuable when serving people well.</p>
+      <p>
+        Happiness is only real when shared, and software service is only
+        valuable when serving people well.
+      </p>
 
-      <ul class="px-3 py-2 space-y-2">
+      <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           GitHub:
           <a
@@ -90,11 +92,12 @@
     <h2 class="font-sans text-3xl font-bold">Core Team</h2>
 
     <section class="py-4 space-y-2">
-      <p>Cicada project is started by Xie Yuheng,</p>
-      <p>who cherishes it as a lifelong inquiry</p>
-      <p>into <em>foundations of mathematics</em>.</p>
+      <p>
+        Cicada project is started by Xie Yuheng, who cherishes it as a lifelong
+        inquiry into <em>foundations of mathematics</em>.
+      </p>
 
-      <ul class="px-3 py-2 space-y-2">
+      <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           <a
             href="https://github.com/xieyuheng"
