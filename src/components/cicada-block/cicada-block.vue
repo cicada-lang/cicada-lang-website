@@ -11,6 +11,7 @@
     >
       RUN
     </button>
+    <div v-if="running">Running...</div>
     <pre
       v-show="output"
       class="py-4 text-orange-500 overflow-x-auto"
@@ -29,10 +30,6 @@ import hljs from "highlight.js"
 
 @Component({
   name: "cicada-block",
-  // prettier-ignore
-  components: {
-
-  },
 })
 export default class extends Vue {
   @Prop() pageName!: string
@@ -42,6 +39,7 @@ export default class extends Vue {
   @Prop() book!: Book
 
   output: string = ""
+  running: boolean = false
 
   @Watch("pageName")
   init(): void {
@@ -71,6 +69,8 @@ export default class extends Vue {
   }
 
   async run(): Promise<void> {
+    this.running = true
+
     try {
       this.book.cache.delete(this.pageName)
       const mod = this.book.load(this.pageName, this.page)
@@ -79,6 +79,8 @@ export default class extends Vue {
     } catch (error) {
       this.output = `${error}`
     }
+
+    this.running = false
   }
 }
 </script>
