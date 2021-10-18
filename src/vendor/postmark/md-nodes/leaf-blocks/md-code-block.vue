@@ -2,7 +2,7 @@
   <pre
     class="overflow-x-auto"
     style="font-size: 92%"
-  ><code style="padding: 1rem 0rem; background-color: white;">{{ node.text }}</code></pre>
+  ><code style="padding: 1rem 0rem; background-color: inherit;">{{ node.text }}</code></pre>
 </template>
 
 <script lang="ts">

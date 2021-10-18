@@ -1,20 +1,40 @@
 <template>
   <div class="flex flex-col">
-    <div ref="editor" @click="active = true"></div>
-
-    <cicada-block-toolbox
-      v-show="active"
-      @run="run()"
-      @deactivate="active = false"
-    />
-
-    <div v-if="running" class="py-4 font-sans text-orange-500">Running...</div>
-    <pre
-      v-show="output"
-      class="py-4 overflow-x-auto text-orange-500"
-      style="font-size: 92%"
-      >{{ output }}</pre
+    <div
+      class="relative py-2 border-t border-b"
+      :class="[active ? 'border-orange-400' : 'border-white']"
     >
+      <cicada-block-toolbox
+        class="-top-2 -right-4 absolute"
+        v-show="active"
+        @run="run()"
+        @reset="resetCode()"
+        @deactivate="active = false"
+      />
+
+      <div ref="editor" @click="active = true"></div>
+
+      <cicada-block-toolbox
+        class="-bottom-2 -right-4 absolute"
+        v-show="active"
+        @run="run()"
+        @reset="resetCode()"
+        @deactivate="active = false"
+      />
+    </div>
+
+    <div
+      v-if="active && running"
+      class="py-2 font-sans text-orange-500 border-b border-orange-400"
+    >
+      Running...
+    </div>
+
+    <div v-show="active && output" class="py-2 border-b border-orange-400">
+      <pre class="overflow-x-auto text-orange-500" style="font-size: 92%">{{
+        output
+      }}</pre>
+    </div>
   </div>
 </template>
 
@@ -24,7 +44,6 @@ import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
 import * as Runners from "@cicada-lang/cicada/lib/runners"
 import * as ut from "@/ut"
-
 import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
 
@@ -33,6 +52,7 @@ import { EditorView } from "@codemirror/view"
   // prettier-ignore
   components: {
     "cicada-block-toolbox": require("./cicada-block-toolbox.vue").default,
+    "icon-menu": require("@/components/icons/icon-menu.vue").default,
   },
 })
 export default class extends Vue {
@@ -45,6 +65,7 @@ export default class extends Vue {
   output: string = ""
   running: boolean = false
   active: boolean = false
+  showToolbox: boolean = false
 
   editorView: EditorView | null = null
 
@@ -77,6 +98,8 @@ export default class extends Vue {
       this.output = ""
       this.running = true
 
+      await ut.wait(1000 * 3)
+
       try {
         this.book.cache.delete(this.pageName)
         const mod = this.book.load(this.pageName, this.page)
@@ -93,6 +116,20 @@ export default class extends Vue {
       }
 
       this.running = false
+    }
+  }
+
+  resetCode(): void {
+    this.output = ""
+
+    if (this.editorView) {
+      this.editorView.dispatch({
+        changes: {
+          from: 0,
+          to: this.editorView.state.doc.length,
+          insert: this.text,
+        },
+      })
     }
   }
 
@@ -113,6 +150,10 @@ export default class extends Vue {
 </script>
 
 <style>
+.cm-editor.cm-focused {
+  outline: none;
+}
+
 .cm-content {
   @apply font-mono;
   font-size: 92%;
