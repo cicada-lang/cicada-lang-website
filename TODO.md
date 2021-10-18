@@ -1,15 +1,14 @@
-- 404 page
-
 - `components/cicada-block` -- add `Running...` indicator
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
 
-- `components/cicada-block` -- mimic the design from eloquent javascript code block
+> Mimic the design from eloquent javascript code block.
 
-  - edit code block in-place, and run new code in context
-  - reset code block
-  - hide run button in `cicada-block-toolbox`
-  - active editor on click
+- `components/cicada-block` -- run button in `cicada-block-toolbox`
+- `components/cicada-block` -- hide `cicada-block-toolbox` if editor is not active (the default)
+- `components/cicada-block` -- edit code block in-place, and run new code in context
+- `components/cicada-block` -- reset code block
+- `components/cicada-block` -- active editor on click
 
 - `views/articles/article` -- be able to run cicada code block like `books/book-page`
 
