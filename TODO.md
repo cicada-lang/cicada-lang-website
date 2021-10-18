@@ -1,8 +1,6 @@
 > Mimic the design from eloquent javascript code block.
 
-- `components/cicada-block` -- edit code block in-place, and run new code in context
 - `components/cicada-block` -- reset code block
-- `components/cicada-block` -- active editor on click
 
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`

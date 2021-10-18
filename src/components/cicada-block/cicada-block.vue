@@ -69,12 +69,23 @@ export default class extends Vue {
   editorView: EditorView | null = null
 
   mounted(): void {
+    this.init()
+  }
+
+  @Watch("pageName", { immediate: true })
+  init(): void {
+    this.book.cache.delete(this.pageName)
+    this.output = ""
+    this.initEditor()
+  }
+
+  initEditor(): void {
     const state = EditorState.create({
       doc: this.text,
       extensions: [
         javascript(),
-        lineNumbers(),
-        highlightActiveLineGutter(),
+        // lineNumbers(),
+        // highlightActiveLineGutter(),
         highlightSpecialChars(),
         history(),
         foldGutter(),
@@ -85,32 +96,31 @@ export default class extends Vue {
         bracketMatching(),
         closeBrackets(),
         // autocompletion(),
-      rectangularSelection(),
-      highlightActiveLine(),
-      highlightSelectionMatches(),
-      keymap.of([
-        ...closeBracketsKeymap,
-        ...defaultKeymap,
-        ...searchKeymap,
-        ...historyKeymap,
-        ...foldKeymap,
-        ...commentKeymap,
-        ...completionKeymap,
-        ...lintKeymap,
-      ]),
+        rectangularSelection(),
+        highlightActiveLine(),
+        highlightSelectionMatches(),
+        keymap.of([
+          ...closeBracketsKeymap,
+          ...defaultKeymap,
+          ...searchKeymap,
+          ...historyKeymap,
+          ...foldKeymap,
+          ...commentKeymap,
+          ...completionKeymap,
+          ...lintKeymap,
+        ]),
       ],
     })
 
-    this.editorView = new EditorView({
-      state,
-      parent: this.$refs["editor"] as any
-    })
-  }
+    const parent = this.$refs["editor"] as any
 
-  @Watch("pageName")
-  init(): void {
-    this.book.cache.delete(this.pageName)
-    this.output = ""
+    if (parent) {
+      while (parent.firstChild) {
+        parent.removeChild(parent.firstChild)
+      }
+    }
+
+    this.editorView = new EditorView({ state, parent })
   }
 
   async run(): Promise<void> {
@@ -124,8 +134,7 @@ export default class extends Vue {
 
         const code_block = mod.get_code_block(this.index)
         if (code_block) {
-          code_block.text = this.editorView.state.doc.toString()
-          // TODO need to be able to update mod code block.
+          code_block.updateCode(this.editorView.state.doc.toString())
         }
 
         await mod.run_to(this.index)
