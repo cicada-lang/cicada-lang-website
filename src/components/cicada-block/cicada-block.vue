@@ -11,7 +11,7 @@
     >
       RUN
     </button>
-    <div v-if="running">Running...</div>
+    <div v-if="running" class="text-sm font-sans text-orange-600">Running...</div>
     <pre
       v-show="output"
       class="py-4 text-orange-500 overflow-x-auto"
@@ -26,6 +26,7 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
 import * as Runners from "@cicada-lang/cicada/lib/runners"
+import * as ut from "@/ut"
 import hljs from "highlight.js"
 
 @Component({
@@ -69,7 +70,10 @@ export default class extends Vue {
   }
 
   async run(): Promise<void> {
+    this.output = ""
     this.running = true
+
+    // await ut.wait(1 * 1000)
 
     try {
       this.book.cache.delete(this.pageName)
