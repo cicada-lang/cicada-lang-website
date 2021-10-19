@@ -23,7 +23,7 @@ import { MetaInfo } from "vue-meta"
   },
   metaInfo(this: BookLayout): MetaInfo {
     return {
-      title: this.state?.config.title,
+      title: this.state?.bookConfig.title,
     }
   },
 })

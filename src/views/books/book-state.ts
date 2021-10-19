@@ -9,18 +9,18 @@ import * as CtxObservers from "@cicada-lang/cicada/lib/ctx/ctx-observers"
 
 export class BookState {
   bookId: GitPath
-  config: Record<string, any>
+  bookConfig: Record<string, any>
   pages: Record<string, string>
   book: Book
 
   constructor(opts: {
     bookId: GitPath
-    config: Record<string, any>
+    bookConfig: Record<string, any>
     pages: Record<string, string>
     book: Book
   }) {
     this.bookId = opts.bookId
-    this.config = opts.config
+    this.bookConfig = opts.bookConfig
     this.pages = opts.pages
     this.book = opts.book
   }
@@ -34,7 +34,7 @@ export class BookState {
       ctx: { observers: [new CtxObservers.NarrationLogger()] },
     })
     const book = await books.getFromGitPath(bookId)
-    return new BookState({ bookId, config, pages, book })
+    return new BookState({ bookId, bookConfig: config, pages, book })
   }
 
   load(path: string): Module {

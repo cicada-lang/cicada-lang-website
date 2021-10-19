@@ -24,23 +24,23 @@
       "
     >
       <div>
-        <span class="pl-2 pr-1">{{ state.config.title }}</span>
+        <span class="pl-2 pr-1">{{ state.bookConfig.title }}</span>
       </div>
 
       <h2 class="md:text-2xl py-2 font-sans text-xl font-normal">
-        <span>{{ state.config.subtitle }}</span>
+        <span>{{ state.bookConfig.subtitle }}</span>
       </h2>
 
       <div>
-        <span class="text-sm text-gray-500">{{ state.config.version }}</span>
+        <span class="text-sm text-gray-500">{{ state.bookConfig.version }}</span>
       </div>
     </router-link>
 
     <section
-      v-if="state.config.authors && state.config.authors.length > 0"
+      v-if="state.bookConfig.authors && state.bookConfig.authors.length > 0"
       class="py-4"
     >
-      <div class="font-sans font-bold" v-for="author in state.config.authors">
+      <div class="font-sans font-bold" v-for="author in state.bookConfig.authors">
         {{ author }}
       </div>
     </section>
@@ -55,8 +55,8 @@
         <span> @ {{ state.bookId.host }}</span>
       </a>
 
-      <div v-if="state.config.date" class="py-1">
-        <div class="font-sans">{{ state.config.date }}</div>
+      <div v-if="state.bookConfig.date" class="py-1">
+        <div class="font-sans">{{ state.bookConfig.date }}</div>
       </div>
     </section>
   </div>
