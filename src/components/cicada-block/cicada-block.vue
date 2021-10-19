@@ -42,6 +42,7 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
+import { StmtOutput } from "@cicada-lang/cicada/lib/stmt"
 import * as ut from "@/ut"
 import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
@@ -98,16 +99,17 @@ export default class extends Vue {
 
       try {
         this.book.cache.delete(this.pageName)
+
         const mod = await this.book.load(this.pageName, {
           observers: window.app.cicada.defaultCtxObservers,
         })
-        const code_block = mod.get_code_block(this.index)
-        if (code_block) {
-          code_block.updateCode(this.editorView.state.doc.toString())
-        }
 
-        await mod.run_to(this.index)
-        this.updateOutput(mod)
+        const outputs = await mod.rerun_with({
+          id: this.index,
+          code: this.editorView.state.doc.toString(),
+        })
+
+        this.updateOutput(outputs)
       } catch (error) {
         this.output = `${error}`
       }
@@ -123,10 +125,8 @@ export default class extends Vue {
     const mod = await this.book.load(this.pageName, {
       observers: window.app.cicada.defaultCtxObservers,
     })
-    const code_block = mod.get_code_block(this.index)
-    if (code_block) {
-      code_block.updateCode(this.text)
-    }
+
+    mod.update_code_block(this.index, this.text)
 
     if (this.editorView) {
       this.editorView.dispatch({
@@ -139,13 +139,10 @@ export default class extends Vue {
     }
   }
 
-  updateOutput(mod: Module): void {
-    const code_block = mod.get_code_block(this.index)
+  updateOutput(outputs: Array<StmtOutput>): void {
     this.output = ""
 
-    if (code_block === undefined) return
-
-    for (const output of code_block.outputs) {
+    for (const output of outputs) {
       this.output += output.repr()
       this.output += "\n"
     }

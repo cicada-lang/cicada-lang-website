@@ -1,3 +1,7 @@
+- `components/cicada-block` -- only load `mod` once
+
+- extract `cicada-block-state`
+
 - `vendor/postmark` -- handle markdown table
 
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
