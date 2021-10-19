@@ -1,10 +1,7 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
-import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
-import ty from "@xieyuheng/ty"
+import postmark, { Nodes } from "@xieyuheng/postmark"
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
-import { GitBookStore } from "@cicada-lang/cicada/lib/book-stores/git-book-store"
 import * as CtxObservers from "@cicada-lang/cicada/lib/ctx/ctx-observers"
 
 export class BookState {

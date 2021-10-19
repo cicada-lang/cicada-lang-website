@@ -1,6 +1,6 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
-import postmark, { Parser, Nodes } from "@xieyuheng/postmark"
+import postmark, { Nodes } from "@xieyuheng/postmark"
 const Path = require("path")
 
 export class ArticleState {
