@@ -1,4 +1,3 @@
-- `vendor/postmark` -- fix long line break
 - `vendor/postmark` -- handle markdown table
 
 - `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`

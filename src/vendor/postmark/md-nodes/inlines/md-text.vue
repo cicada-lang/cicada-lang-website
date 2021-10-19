@@ -1,5 +1,5 @@
 <template>
-  <span class="font-serif text-xl">{{ node.text }}</span>
+  <span class="font-serif break-words text-xl">{{ node.text }}</span>
 </template>
 
 <script lang="ts">
