@@ -1,8 +1,10 @@
-- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
-- `components/cicada-block` -- handle `cicada counterexample`
+- `views/articles/article-list` -- increase font size
 
 - `vendor/postmark` -- fix long line break
 - `vendor/postmark` -- handle markdown table
+
+- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
+- `components/cicada-block` -- handle `cicada counterexample`
 
 # user
 
