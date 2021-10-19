@@ -1,8 +1,6 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
 import postmark, { Nodes } from "@xieyuheng/postmark"
 import { Book } from "@cicada-lang/cicada/lib/book"
-import { Module } from "@cicada-lang/cicada/lib/module"
-import * as CtxObservers from "@cicada-lang/cicada/lib/ctx/ctx-observers"
 
 export class BookState {
   bookId: GitPath

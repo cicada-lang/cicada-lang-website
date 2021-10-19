@@ -16,6 +16,8 @@
             props: (node) => ({
               text: node.text.trim(),
               index: node.value.index,
+              book: state.book,
+              pageName: state.pageName,
             }),
           },
         }"
