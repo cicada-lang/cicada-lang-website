@@ -3,7 +3,7 @@
        which is setted by `md-link` and so on.
   -->
   <span
-    ><code class="font-mono font-normal break-all" style="font-size: 88%">{{
+    ><code class="font-mono font-normal break-words" style="font-size: 88%">{{
       node.text
     }}</code></span
   >
