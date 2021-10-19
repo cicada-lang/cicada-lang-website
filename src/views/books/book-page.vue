@@ -11,7 +11,6 @@
             pageName: pageName,
             index: node.value.index,
             text: node.text.trim(),
-            page: page,
             book: state.book,
           }),
         },

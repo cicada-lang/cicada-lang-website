@@ -15,6 +15,7 @@
             component: require('@/components/cicada-block').default,
             props: (node) => ({
               text: node.text.trim(),
+              index: node.value.index,
             }),
           },
         }"

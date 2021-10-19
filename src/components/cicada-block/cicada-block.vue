@@ -59,7 +59,6 @@ export default class extends Vue {
   @Prop() pageName!: string
   @Prop() index!: number
   @Prop() text!: string
-  @Prop() page!: string
   @Prop() book!: Book
 
   output: string = ""
