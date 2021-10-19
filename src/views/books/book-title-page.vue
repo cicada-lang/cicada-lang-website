@@ -32,7 +32,9 @@
       </h2>
 
       <div>
-        <span class="text-sm text-gray-500">{{ state.bookConfig.version }}</span>
+        <span class="text-sm text-gray-500">{{
+          state.bookConfig.version
+        }}</span>
       </div>
     </router-link>
 
@@ -40,7 +42,10 @@
       v-if="state.bookConfig.authors && state.bookConfig.authors.length > 0"
       class="py-4"
     >
-      <div class="font-sans font-bold" v-for="author in state.bookConfig.authors">
+      <div
+        class="font-sans font-bold"
+        v-for="author in state.bookConfig.authors"
+      >
         {{ author }}
       </div>
     </section>

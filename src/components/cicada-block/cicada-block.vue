@@ -100,7 +100,9 @@ export default class extends Vue {
 
       try {
         this.book.cache.delete(this.pageName)
-        const mod = this.book.load(this.pageName, this.page)
+        const mod = await this.book.load(this.pageName, {
+          observers: window.app.cicada.defaultCtxObservers,
+        })
         const code_block = mod.get_code_block(this.index)
         if (code_block) {
           code_block.updateCode(this.editorView.state.doc.toString())
@@ -116,11 +118,13 @@ export default class extends Vue {
     }
   }
 
-  resetCode(): void {
+  async resetCode(): Promise<void> {
     this.output = ""
 
     this.book.cache.delete(this.pageName)
-    const mod = this.book.load(this.pageName, this.page)
+    const mod = await this.book.load(this.pageName, {
+      observers: window.app.cicada.defaultCtxObservers,
+    })
     const code_block = mod.get_code_block(this.index)
     if (code_block) {
       code_block.updateCode(this.text)

@@ -27,16 +27,9 @@ export class BookState {
     const files = bookId.createGitFileStore()
     const config = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(config.src).all()
-    const books = window.app.cicada.createGitBookStore({
-      ctx: { observers: [new CtxObservers.NarrationLogger()] },
-    })
+    const books = window.app.cicada.createGitBookStore()
     const book = await books.getFromGitPath(bookId)
     return new BookState({ bookId, bookConfig: config, pages, book })
-  }
-
-  load(path: string): Module {
-    const text = this.pages[path]
-    return this.book.load(path, text)
   }
 
   get pageNames(): Array<string> {
