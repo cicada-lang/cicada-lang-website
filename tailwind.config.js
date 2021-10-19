@@ -5,7 +5,12 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Linux Biolinum O", "sans-serif"],
-      serif: ["Linux Libertine O", "serif"],
+      serif: [
+        // "EBGaramond",
+        // "BodoniModa",
+        "Linux Libertine O",
+        "serif",
+      ],
       mono: [
         // "Inconsolata LGC",
         // "Terminus (TTF)",
@@ -34,7 +39,7 @@ module.exports = {
     extend: {
       opacity: ["disabled"],
       backgroundColor: ["disabled"],
-      borderWidth: ['hover', 'focus'],
+      borderWidth: ["hover", "focus"],
     },
   },
 }
