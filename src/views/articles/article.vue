@@ -18,6 +18,7 @@
               index: node.value.index,
               book: state.book,
               pageName: state.pageName,
+              page: state.text,
             }),
           },
         }"

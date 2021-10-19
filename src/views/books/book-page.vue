@@ -10,6 +10,7 @@
           props: (node) => ({
             pageName: pageName,
             index: node.value.index,
+            page: page || '',
             text: node.text.trim(),
             book: state.book,
           }),

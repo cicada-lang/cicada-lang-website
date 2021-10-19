@@ -38,7 +38,7 @@
         </div>
       </form>
 
-      <div class="text-xl pb-8">
+      <div class="pb-8 text-xl">
         <div class="px-10 pt-4">
           <h3 class="py-1 text-2xl font-bold text-gray-800">Usage</h3>
 

@@ -58,6 +58,7 @@ import { EditorView } from "@codemirror/view"
 export default class extends Vue {
   @Prop() pageName!: string
   @Prop() index!: number
+  @Prop() page!: string
   @Prop() text!: string
   @Prop() book!: Book
 
@@ -65,8 +66,13 @@ export default class extends Vue {
   running: boolean = false
   active: boolean = false
   showToolbox: boolean = false
-
   editorView: EditorView | null = null
+
+  get mod(): Module {
+    return this.book.load(this.pageName, this.page, {
+      observers: window.app.cicada.defaultCtxObservers,
+    })
+  }
 
   mounted(): void {
     this.init()
@@ -74,7 +80,6 @@ export default class extends Vue {
 
   @Watch("pageName")
   init(): void {
-    this.book.cache.delete(this.pageName)
     this.output = ""
     this.initEditor()
   }
@@ -98,13 +103,7 @@ export default class extends Vue {
       this.running = true
 
       try {
-        this.book.cache.delete(this.pageName)
-
-        const mod = await this.book.load(this.pageName, {
-          observers: window.app.cicada.defaultCtxObservers,
-        })
-
-        const outputs = await mod.rerun_with({
+        const outputs = await this.mod.rerun_with({
           id: this.index,
           code: this.editorView.state.doc.toString(),
         })
@@ -121,12 +120,7 @@ export default class extends Vue {
   async resetCode(): Promise<void> {
     this.output = ""
 
-    this.book.cache.delete(this.pageName)
-    const mod = await this.book.load(this.pageName, {
-      observers: window.app.cicada.defaultCtxObservers,
-    })
-
-    mod.update_code_block(this.index, this.text)
+    this.mod.update_code_block(this.index, this.text)
 
     if (this.editorView) {
       this.editorView.dispatch({
