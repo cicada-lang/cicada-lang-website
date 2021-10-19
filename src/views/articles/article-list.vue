@@ -117,6 +117,10 @@ export default class extends Vue {
       title: "Simulating the Sigma type by hand",
       url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/simulating-the-sigma-type-by-hand.md",
     },
+    {
+      title: "Integer as quotient type",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/integer-as-quotient-type.md",
+    },
   ]
 }
 </script>

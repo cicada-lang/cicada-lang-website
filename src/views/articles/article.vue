@@ -13,7 +13,9 @@
         :custom-block-components="{
           Cicada: {
             component: require('@/components/cicada-block').default,
-            props: (node) => ({ text: node.text }),
+            props: (node) => ({
+              text: node.text.trim(),
+            }),
           },
         }"
       />
