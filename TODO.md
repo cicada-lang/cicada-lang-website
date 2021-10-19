@@ -1,5 +1,3 @@
-- `views/articles/article-list` -- increase font size
-
 - `vendor/postmark` -- fix long line break
 - `vendor/postmark` -- handle markdown table
 
