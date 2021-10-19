@@ -42,7 +42,6 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
-import * as Runners from "@cicada-lang/cicada/lib/runners"
 import * as ut from "@/ut"
 import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
