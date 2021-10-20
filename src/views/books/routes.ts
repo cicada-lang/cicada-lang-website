@@ -21,11 +21,11 @@ export const routes: Array<RouteConfig> = [
         props: (route) => ({ bookId: route.params.bookId }),
       },
       {
-        path: "pages/:pageName",
+        path: "pages/*",
         component: () => import("@/views/books/book-page.vue"),
         props: (route) => ({
           bookId: route.params.bookId,
-          pageName: route.params.pageName,
+          pageName: route.params.pathMatch,
         }),
       },
     ],
