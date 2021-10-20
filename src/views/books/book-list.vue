@@ -119,18 +119,10 @@ export default class extends Vue {
       title: "The Little Typer Exercises",
       url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/the-little-typer-exercises",
     },
-    // {
-    //   title: "Group Theory",
-    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/group",
-    // },
-    // {
-    //   title: "Order Theory",
-    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/order",
-    // },
-    // {
-    //   title: "Category Theory",
-    //   url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/category",
-    // },
+    {
+      title: "Mathematical Structures",
+      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/mathematical-structures",
+    },
   ]
 }
 </script>
