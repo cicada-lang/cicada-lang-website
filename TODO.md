@@ -1,5 +1,3 @@
-- `components/cicada-block` -- extract component to do syntax highlighting for `StmtOutput`
-
 - `components/cicada-block` -- handle `cicada counterexample`
 
 - `components/cicada-block` -- observer for beautiful narration

@@ -30,11 +30,19 @@
       Running...
     </div>
 
-    <div v-show="active && output" class="py-2 border-b border-orange-400">
-      <pre class="overflow-x-auto text-orange-500" style="font-size: 92%">{{
-        output
-      }}</pre>
-    </div>
+    <stmt-output-list
+      v-show="active && outputs.length"
+      class="py-2 overflow-x-auto border-b border-orange-400"
+      style="font-size: 92%"
+      :outputs="outputs"
+    />
+
+    <pre
+      v-show="active && error"
+      class="text-rose-500 py-2 overflow-x-auto border-b border-orange-400"
+      style="font-size: 92%"
+      >{{ error }}</pre
+    >
   </div>
 </template>
 
@@ -52,6 +60,7 @@ import { EditorView } from "@codemirror/view"
   // prettier-ignore
   components: {
     "cicada-block-toolbox": require("./cicada-block-toolbox.vue").default,
+    "stmt-output-list": require("./stmt-output-list.vue").default,
     "icon-menu": require("@/components/icons/icon-menu.vue").default,
   },
 })
@@ -62,7 +71,8 @@ export default class extends Vue {
   @Prop() text!: string
   @Prop() book!: Book
 
-  output: string = ""
+  error: unknown | null = null
+  outputs: Array<StmtOutput> = []
   running: boolean = false
   active: boolean = false
   showToolbox: boolean = false
@@ -80,7 +90,8 @@ export default class extends Vue {
 
   @Watch("pageName")
   init(): void {
-    this.output = ""
+    this.outputs = []
+    this.error = null
     this.initEditor()
   }
 
@@ -99,7 +110,8 @@ export default class extends Vue {
 
   async run(): Promise<void> {
     if (this.editorView) {
-      this.output = ""
+      this.outputs = []
+      this.error = null
       this.running = true
 
       try {
@@ -108,9 +120,9 @@ export default class extends Vue {
           code: this.editorView.state.doc.toString(),
         })
 
-        this.updateOutput(outputs)
+        this.outputs = outputs
       } catch (error) {
-        this.output = `${error}`
+        this.error = error
       }
 
       this.running = false
@@ -118,7 +130,8 @@ export default class extends Vue {
   }
 
   async resetCode(): Promise<void> {
-    this.output = ""
+    this.outputs = []
+    this.error = null
 
     this.mod.update_code_block(this.index, this.text)
 
@@ -131,17 +144,6 @@ export default class extends Vue {
         },
       })
     }
-  }
-
-  updateOutput(outputs: Array<StmtOutput>): void {
-    this.output = ""
-
-    for (const output of outputs) {
-      this.output += output.repr()
-      this.output += "\n"
-    }
-
-    this.output = this.output.trim()
   }
 }
 </script>
