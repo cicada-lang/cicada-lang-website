@@ -52,7 +52,7 @@
             <p class="py-2">For examples:</p>
             <ul class="px-8">
               <li class="max-w-sm text-lg break-all list-disc">
-                https://github.com/cicada-lang/cicada/tree/master/books/the-little-typer-exercises
+                https://gitlab.com/cicada-lang/cicada/-/tree/master/books/the-little-typer-exercises
               </li>
             </ul>
           </div>

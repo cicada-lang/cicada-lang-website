@@ -52,7 +52,7 @@
             <p class="py-2">For examples:</p>
             <ul class="px-8">
               <li class="max-w-sm text-lg break-all list-disc">
-                https://github.com/cicada-lang/cicada/blob/master/articles/simulating-the-sigma-type-by-hand.md
+                https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/simulating-the-sigma-type-by-hand.md
               </li>
             </ul>
           </div>
