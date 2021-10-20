@@ -1,6 +1,7 @@
 import { ServiceContainer } from "@xieyuheng/enchanter/lib/service-container"
 import { BookState } from "@/views/books/book-state"
 import { WebApp } from "@cicada-lang/cicada/lib/app/web-app"
+import postmark, { Nodes } from "@xieyuheng/postmark"
 
 export class App extends ServiceContainer {
   cicada = new WebApp()
@@ -15,4 +16,15 @@ export class App extends ServiceContainer {
     this.bookStateCache.set(opts.bookId, state)
     return state
   }
+
+  postmarkParser = postmark.createParser({
+    enableTable: true,
+    customBlockParsers: [
+      postmark.createCustomBlockParser<{ index: number }>({
+        recognize: (info) => info === "cicada",
+        customKind: "Cicada",
+        parse: (text, { index }) => ({ index }),
+      }),
+    ],
+  })
 }

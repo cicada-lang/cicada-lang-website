@@ -10,6 +10,7 @@
   />
   <!-- NOTE leaf-blocks -->
   <md-paragraph v-else-if="node.kind === 'Paragraph'" :state="state" :node="node" />
+  <md-table v-else-if="node.kind === 'Table'" :state="state" :node="node" />
   <md-headline v-else-if="node.kind === 'Headline'" :state="state" :node="node" />
   <md-thematic-break v-else-if="node.kind === 'ThematicBreak'" :state="state" :node="node" />
   <md-html-block v-else-if="node.kind === 'HtmlBlock'" :state="state" :node="node" />

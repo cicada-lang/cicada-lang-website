@@ -5,6 +5,7 @@ export const components = {
   "md-node": () => import("./md-node.vue"),
 
   "md-paragraph": () => import("./leaf-blocks/md-paragraph.vue"),
+  "md-table": () => import("./leaf-blocks/md-table.vue"),
   "md-headline": () => import("./leaf-blocks/md-headline.vue"),
   "md-thematic-break": () => import("./leaf-blocks/md-thematic-break.vue"),
   "md-html-block": () => import("./leaf-blocks/md-html-block.vue"),

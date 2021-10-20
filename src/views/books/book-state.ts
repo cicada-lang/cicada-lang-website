@@ -1,5 +1,5 @@
 import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-import postmark, { Nodes } from "@xieyuheng/postmark"
+import { Nodes } from "@xieyuheng/postmark"
 import { Book } from "@cicada-lang/cicada/lib/book"
 
 export class BookState {
@@ -34,14 +34,6 @@ export class BookState {
   }
 
   parseDocument(text: string): Nodes.Document {
-    return postmark.parser.parseDocument(text).postprocess({
-      customBlockParsers: [
-        postmark.createCustomBlockParser<{ index: number }>({
-          recognize: (info) => info === "cicada",
-          customKind: "Cicada",
-          parse: (text, { index }) => ({ index }),
-        }),
-      ],
-    })
+    return window.app.postmarkParser.parseDocument(text)
   }
 }
