@@ -26,7 +26,7 @@ export default class extends Vue {
       return [
         `<span class="text-orange-600">${output.exp.repr()}</span>`,
         `<span class="text-gray-500">: </span>`,
-        `<span class="text-sky-700">${output.t.repr()}</span>`,
+        `<span class="text-sky-600">${output.t.repr()}</span>`,
       ].join("")
     } else {
       return `<span class="text-orange-600">${output.repr()}</span>`
