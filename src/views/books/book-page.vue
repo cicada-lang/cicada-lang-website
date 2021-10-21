@@ -46,7 +46,10 @@ export default class extends Vue {
   @Prop() pageName!: string
   @Prop() state!: State
 
-  pathResolver: BookPagePathResolver | null = null
+  pathResolver = new BookPagePathResolver({
+    pageName: this.pageName,
+    baseURL: this.baseURL,
+  })
 
   get page(): string | undefined {
     if (this.state) {
@@ -57,13 +60,6 @@ export default class extends Vue {
   @Watch("pageName")
   scrollToTop(): void {
     window.scrollTo(0, 0)
-  }
-
-  async mounted(): Promise<void> {
-    this.pathResolver = new BookPagePathResolver({
-      pageName: this.pageName,
-      baseURL: this.baseURL,
-    })
   }
 }
 </script>
