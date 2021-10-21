@@ -36,7 +36,7 @@ import * as ut from "@xieyuheng/enchanter/lib/ut"
 export default class extends Vue {
   @Prop() state!: State
 
-  attributes: any = this.state.document.attributes
+  attributes = this.state.document.attributes
 
   get year(): string | undefined {
     if (this.attributes.year) {
