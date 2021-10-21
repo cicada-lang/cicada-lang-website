@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { StmtOutput } from "@cicada-lang/cicada/lib/stmt"
-import * as StmtOutputs from "@cicada-lang/cicada/lib/stmt/stmt-outputs"
+import { StmtOutput } from "@cicada-lang/cicada/lib/lang/stmt"
+import * as StmtOutputs from "@cicada-lang/cicada/lib/lang/stmt/stmt-outputs"
 
 @Component({
   name: "stmt-output-list",

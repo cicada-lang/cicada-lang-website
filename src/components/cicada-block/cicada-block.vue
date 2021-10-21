@@ -50,7 +50,7 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
-import { StmtOutput } from "@cicada-lang/cicada/lib/stmt"
+import { StmtOutput } from "@cicada-lang/cicada/lib/lang/stmt"
 import * as ut from "@/ut"
 import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
@@ -115,7 +115,7 @@ export default class extends Vue {
       this.running = true
 
       try {
-        const outputs = await this.mod.rerun_with({
+        const outputs = await this.mod.rerunWith({
           id: this.index,
           code: this.editorView.state.doc.toString(),
         })
@@ -133,7 +133,7 @@ export default class extends Vue {
     this.outputs = []
     this.error = null
 
-    this.mod.update_code_block(this.index, this.text)
+    this.mod.updateCodeBlock(this.index, this.text)
 
     if (this.editorView) {
       this.editorView.dispatch({
