@@ -1,6 +1,3 @@
-- `views/books` -- `pathResolver` in `state`
-- `views/articles` -- `pathResolver` in `state`
-
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- observer for beautiful narration
 
