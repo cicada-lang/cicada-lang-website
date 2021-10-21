@@ -1,5 +1,3 @@
-- `views/books/book-contents` -- handle title-less book
-
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- observer for beautiful narration
 

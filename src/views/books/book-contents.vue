@@ -11,7 +11,11 @@
     "
   >
     <div v-for="(text, pageName) in state.pages" :key="pageName">
-      <div v-if="pageName.endsWith('.md')">
+      <div
+        v-if="
+          pageName.endsWith('.md') && state.parseDocument(text).attributes.title
+        "
+      >
         <router-link
           :to="{ path: `/books/${bookId}/pages/${pageName}` }"
           class="hover:text-gray-500 font-sans"
