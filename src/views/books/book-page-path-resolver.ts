@@ -20,7 +20,7 @@ export class BookPagePathResolver extends PathResolver {
     } else {
       const newPageName = Path.resolve(Path.dirname(this.pageName), path)
       // NOTE The return value of `Path.resolve` already has a starting "/"
-      return `${this.baseURL}${newPageName}`
+      return `${this.baseURL}/${newPageName}`
     }
   }
 

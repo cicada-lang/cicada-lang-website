@@ -1,30 +1,20 @@
 <template>
-  <div class="md:py-10 max-w-2xl px-6 py-6 mx-auto">
-    <div v-if="error">
-      <pre>{{ error }}</pre>
-    </div>
-    <div v-else-if="!state" class="flex flex-col items-center">
-      <div class="py-4">Loading...</div>
-    </div>
-    <div v-else>
-      <md-document
-        :document="state.document"
-        :path-resolver="pathResolver"
-        :custom-block-components="{
-          Cicada: {
-            component: require('@/components/cicada-block').default,
-            props: (node) => ({
-              text: node.text.trim(),
-              index: node.value.index,
-              book: state.book,
-              pageName: state.pageName,
-              page: state.text,
-            }),
-          },
-        }"
-      />
-    </div>
-  </div>
+  <md-document
+    :document="state.document"
+    :path-resolver="pathResolver"
+    :custom-block-components="{
+      Cicada: {
+        component: require('@/components/cicada-block').default,
+        props: (node) => ({
+          text: node.text.trim(),
+          index: node.value.index,
+          book: state.book,
+          pageName: state.pageName,
+          page: state.text,
+        }),
+      },
+    }"
+  />
 </template>
 
 <script lang="ts">
@@ -43,22 +33,11 @@ export default class extends Vue {
   @Prop() articleId!: string
   @Prop() baseURL!: string
 
-  state: State | null = null
-  error: unknown | null = null
-  pathResolver: ArticlePathResolver | null = null
+  @Prop() state!: State
 
-  async mounted(): Promise<void> {
-    try {
-      this.state = await State.build({
-        articleId: this.articleId,
-      })
-      this.pathResolver = new ArticlePathResolver({
-        articleId: this.state.articleId,
-        baseURL: this.baseURL,
-      })
-    } catch (error) {
-      this.error = error
-    }
-  }
+  pathResolver = new ArticlePathResolver({
+    articleId: this.state.articleId,
+    baseURL: this.baseURL,
+  })
 }
 </script>

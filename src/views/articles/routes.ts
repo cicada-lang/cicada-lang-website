@@ -7,10 +7,19 @@ export const routes: Array<RouteConfig> = [
   },
   {
     path: "/articles/:articleId",
-    component: () => import("@/views/articles/article.vue"),
+    component: () => import("@/views/articles/article-layout.vue"),
     props: (route) => ({
       articleId: route.params.articleId,
-      baseURL: `${window.location.origin}/articles`,
     }),
+    children: [
+      {
+        path: "",
+        component: () => import("@/views/articles/article.vue"),
+        props: (route) => ({
+          articleId: route.params.articleId,
+          baseURL: `${window.location.origin}/articles`,
+        }),
+      },
+    ],
   },
 ]

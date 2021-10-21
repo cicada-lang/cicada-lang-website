@@ -32,7 +32,7 @@
       </h2>
 
       <div>
-        <span class="text-lg font-normal font-sans">{{
+        <span class="font-sans text-lg font-normal">{{
           state.bookConfig.version
         }}</span>
       </div>

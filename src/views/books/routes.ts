@@ -26,6 +26,7 @@ export const routes: Array<RouteConfig> = [
         props: (route) => ({
           bookId: route.params.bookId,
           pageName: route.params.pathMatch,
+          baseURL: `${window.location.origin}/books/${route.params.bookId}/pages`,
         }),
       },
     ],
