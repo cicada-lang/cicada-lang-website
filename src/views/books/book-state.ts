@@ -36,4 +36,18 @@ export class BookState {
   parseDocument(text: string): Nodes.Document {
     return window.app.postmarkParser.parseDocument(text)
   }
+
+  get documentsWithTitle(): Record<string, Nodes.Document> {
+    const documents: Record<string, Nodes.Document> = {}
+    for (const [pageName, text] of Object.entries(this.pages)) {
+      if (pageName.endsWith(".md")) {
+        const document = this.parseDocument(text)
+        if (document.attributes.title) {
+          documents[pageName] = document
+        }
+      }
+    }
+
+    return documents
+  }
 }
