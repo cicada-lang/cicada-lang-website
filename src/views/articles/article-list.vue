@@ -89,7 +89,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
+import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
 
 type Example = {
   title: string

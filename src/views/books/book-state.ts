@@ -1,4 +1,4 @@
-import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
+import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
 import { Nodes } from "@xieyuheng/postmark"
 import { Book } from "@cicada-lang/cicada/lib/book"
 

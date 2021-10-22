@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/nanoid": "^2.1.0",
-    "@types/node": "^16.11.1",
+    "@types/node": "^16.11.2",
     "@vue/cli-plugin-pwa": "~4.5.14",
     "@vue/cli-plugin-router": "~4.5.14",
     "@vue/cli-plugin-typescript": "~4.5.14",
@@ -44,7 +44,7 @@
     "@codemirror/state": "^0.19.2",
     "@codemirror/view": "^0.19.9",
     "@tailwindcss/postcss7-compat": "^2.2.17",
-    "@xieyuheng/enchanter": "^0.1.7",
+    "@enchanterjs/enchanter": "^0.1.8",
     "@xieyuheng/postmark": "^0.1.2",
     "@xieyuheng/ty": "^0.1.7",
     "autoprefixer": "^9.8.8",

@@ -1,5 +1,5 @@
-import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
-import { GitFileStore } from "@xieyuheng/enchanter/lib/git-file-store"
+import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { GitFileStore } from "@enchanterjs/enchanter/lib/git-file-store"
 import postmark, { Nodes } from "@xieyuheng/postmark"
 import { Book } from "@cicada-lang/cicada/lib/book"
 const Path = require("path")

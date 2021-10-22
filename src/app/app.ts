@@ -1,4 +1,4 @@
-import { ServiceContainer } from "@xieyuheng/enchanter/lib/service-container"
+import { ServiceContainer } from "@enchanterjs/enchanter/lib/service-container"
 import { BookState } from "@/views/books/book-state"
 import { WebApp } from "@cicada-lang/cicada/lib/app/web-app"
 import postmark, { Nodes } from "@xieyuheng/postmark"

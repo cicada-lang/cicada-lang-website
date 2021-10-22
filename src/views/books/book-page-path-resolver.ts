@@ -1,5 +1,5 @@
 import { PathResolver } from "@/vendor/postmark/models/path-resolver"
-import { GitPath } from "@xieyuheng/enchanter/lib/git-path"
+import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
 const Path = require("path")
 
 export class BookPagePathResolver extends PathResolver {

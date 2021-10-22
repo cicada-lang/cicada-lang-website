@@ -24,7 +24,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
 import { MdDocumentState as State } from "./md-document-state"
-import * as ut from "@xieyuheng/enchanter/lib/ut"
+import * as ut from "@enchanterjs/enchanter/lib/ut"
 
 @Component({
   name: "md-document-attributes",
