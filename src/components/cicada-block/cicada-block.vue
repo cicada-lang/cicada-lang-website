@@ -23,26 +23,32 @@
       />
     </div>
 
-    <div
-      v-if="active && running"
-      class="py-2 font-sans text-orange-500 border-b border-orange-400"
-    >
-      Running...
-    </div>
+    <transition name="fade">
+      <div
+        v-show="active && running"
+        class="py-2 font-sans text-orange-500 border-b border-orange-400"
+      >
+        Running...
+      </div>
+    </transition>
 
-    <stmt-output-list
-      v-show="active && outputs.length"
-      class="py-2 overflow-x-auto border-b border-orange-400"
-      style="font-size: 92%"
-      :outputs="outputs"
-    />
+    <transition name="slide-right">
+      <stmt-output-list
+        v-show="active && outputs.length"
+        class="py-2 overflow-x-auto border-b border-orange-400"
+        style="font-size: 92%"
+        :outputs="outputs"
+      />
+    </transition>
 
-    <pre
-      v-show="active && error"
-      class="text-rose-500 py-2 overflow-x-auto border-b border-orange-400"
-      style="font-size: 92%"
-      >{{ error }}</pre
-    >
+    <transition name="slide-left">
+      <pre
+        v-show="active && error"
+        class="text-rose-500 py-2 overflow-x-auto border-b border-orange-400"
+        style="font-size: 92%"
+        >{{ error }}</pre
+      >
+    </transition>
   </div>
 </template>
 
@@ -156,5 +162,34 @@ export default class extends Vue {
 .cm-content {
   @apply font-mono;
   font-size: 92%;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: transform 250ms ease;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+  transform: translateX(-25px);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 250ms ease;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translateX(25px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
