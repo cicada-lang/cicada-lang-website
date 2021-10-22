@@ -1,9 +1,9 @@
 <template>
-  <transition name="fade">
+  <fade>
     <div class="modal absolute flex justify-start shadow-lg">
       <slot />
     </div>
-  </transition>
+  </fade>
 </template>
 
 <script lang="ts">
@@ -11,6 +11,10 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 
 @Component({
   name: "modal-fade-drop",
+  // prettier-ignore
+  components: {
+    "fade": require("@/components/transitions/fade.vue").default,
+  },
 })
 export default class extends Vue {
   emiter(event: Event): void {
@@ -29,14 +33,3 @@ export default class extends Vue {
   }
 }
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 250ms;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

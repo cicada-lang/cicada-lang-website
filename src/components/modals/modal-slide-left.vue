@@ -1,11 +1,11 @@
 <template>
-  <transition name="slide">
+  <slide-left>
     <div class="fixed inset-0 flex justify-start" @click.self="$emit('close')">
       <div class="shadow-2xl">
         <slot />
       </div>
     </div>
-  </transition>
+  </slide-left>
 </template>
 
 <script lang="ts">
@@ -13,6 +13,10 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 
 @Component({
   name: "modal-slide-left",
+  // prettier-ignore
+  components: {
+    "slide-left": require("@/components/transitions/slide-left.vue").default,
+  },
 })
 export default class extends Vue {
   mounted(): void {
@@ -24,15 +28,3 @@ export default class extends Vue {
   }
 }
 </script>
-
-<style scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 250ms ease;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateX(-25px);
-}
-</style>
