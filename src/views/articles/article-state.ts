@@ -30,7 +30,7 @@ export class ArticleState {
     const files = articleId.upward().createGitFileStore()
     const text = await files.getOrFail(Path.basename(articleId.path))
     const pageName = articleId.path
-    const book = await window.app.cicada.gitBooks.fake({
+    const book = await app.cicada.gitBooks.fake({
       fallback: files,
       faked: { [pageName]: text },
     })
@@ -38,6 +38,6 @@ export class ArticleState {
   }
 
   get document(): Nodes.Document {
-    return window.app.postmarkParser.parseDocument(this.text)
+    return app.postmarkParser.parseDocument(this.text)
   }
 }

@@ -89,7 +89,7 @@ export default class extends Vue {
 
   get mod(): Module {
     return this.book.load(this.pageName, this.page, {
-      observers: window.app.cicada.defaultCtxObservers,
+      observers: app.cicada.defaultCtxObservers,
     })
   }
 

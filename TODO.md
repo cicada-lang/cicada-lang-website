@@ -1,5 +1,3 @@
-- use global `app` -- instead of `window.app`
-
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- observer for beautiful narration
 

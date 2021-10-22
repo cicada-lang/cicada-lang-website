@@ -1,11 +1,9 @@
 import { App } from "./app"
 
 declare global {
-  interface Window {
-    app: App
-  }
+  var app: App
 }
 
 const app = new App()
 
-window.app = app
+globalThis.app = app
