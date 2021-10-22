@@ -2,6 +2,7 @@
   <div class="md:py-10 px-6 py-6">
     <book-page-navbar :bookId="bookId" :pageName="pageName" :state="state" />
     <md-document
+      :key="pageName"
       :document="state.parseDocument(page)"
       :path-resolver="pathResolver"
       :custom-block-components="{

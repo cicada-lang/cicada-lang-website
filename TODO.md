@@ -1,5 +1,3 @@
-- fix non-reactive `md-document-attributes`
-
 - `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- observer for beautiful narration
 
