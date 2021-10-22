@@ -35,7 +35,7 @@ export default class BookLayout extends Vue {
 
   async mounted(): Promise<void> {
     try {
-      this.state = await window.app.buildBookState({
+      this.state = await State.build({
         bookId: this.bookId,
       })
     } catch (error) {
