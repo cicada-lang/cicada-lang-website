@@ -15,6 +15,29 @@
 
       <div ref="editor" @click="active = true"></div>
 
+      <fade class="absolute top-0">
+        <div
+          v-show="narrations.length > 0"
+          class="
+            flex flex-col
+            font-sans
+            p-4
+            rounded
+            bg-sky-50
+            ring-4 ring-sky-200
+          "
+        >
+          <button @click="narrations = []" class="self-end">CLOSE</button>
+          <div
+            class="py-2 text-lg font-narration"
+            v-for="(narration, index) in narrations"
+            :key="index"
+          >
+            {{ narration }}
+          </div>
+        </div>
+      </fade>
+
       <cicada-block-toolbox
         class="-bottom-2 -right-4 absolute"
         v-show="active"
@@ -24,20 +47,6 @@
         @deactivate="active = false"
       />
     </div>
-
-    <fade>
-      <div
-        v-show="narrations.length > 0"
-        class="py-2 font-sans border-b border-orange-400"
-      >
-        <pre
-          class="py-2 font-serif"
-          v-for="(narration, index) in narrations"
-          :key="index"
-          >{{ narration }}</pre
-        >
-      </div>
-    </fade>
 
     <fade>
       <div
