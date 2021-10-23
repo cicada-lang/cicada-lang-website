@@ -1,5 +1,15 @@
-- `components/cicada-block` -- handle `cicada counterexample`
 - `components/cicada-block` -- observer for beautiful narration
+
+  - use a different font
+  - should we use text center? which will break the indentation of formated text
+    - should we use more structured data type for text instead of string?
+
+- `components/cicada-block` -- handle `cicada counterexample`
+
+  - denote the code block is counterexample even when not activated
+  - allow interact with `cicada counterexample` code block
+    - should be parsed, but be ignored in normal run
+    - running code block with error will not effect current `mod`
 
 # user
 

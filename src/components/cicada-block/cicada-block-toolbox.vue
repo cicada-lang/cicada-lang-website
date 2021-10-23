@@ -32,6 +32,18 @@
             RUN
           </p>
         </button>
+        <button class="w-full" @click="$emit('copy')" title="Copy code to clipboard">
+          <p
+            class="
+              hover:text-orange-300
+              p-1
+              font-bold
+              text-right text-orange-500
+            "
+          >
+            COPY
+          </p>
+        </button>
         <button
           class="w-full"
           @click="$emit('reset')"

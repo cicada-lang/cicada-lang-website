@@ -7,7 +7,8 @@
       <cicada-block-toolbox
         class="-top-2 -right-4 absolute"
         v-show="active"
-        @run="run()"
+        @run="runCode()"
+        @copy="copyCode()"
         @reset="resetCode()"
         @deactivate="active = false"
       />
@@ -17,7 +18,8 @@
       <cicada-block-toolbox
         class="-bottom-2 -right-4 absolute"
         v-show="active"
-        @run="run()"
+        @run="runCode()"
+        @copy="copyCode()"
         @reset="resetCode()"
         @deactivate="active = false"
       />
@@ -117,7 +119,7 @@ export default class extends Vue {
     this.editorView = new EditorView({ state, parent })
   }
 
-  async run(): Promise<void> {
+  async runCode(): Promise<void> {
     if (this.editorView) {
       this.outputs = []
       this.error = null
@@ -135,6 +137,13 @@ export default class extends Vue {
       }
 
       this.running = false
+    }
+  }
+
+  async copyCode(): Promise<void> {
+    if (this.editorView) {
+      const code = this.editorView.state.doc.toString()
+      await navigator.clipboard.writeText(code)
     }
   }
 
