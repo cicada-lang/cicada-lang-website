@@ -6,9 +6,12 @@ module.exports = {
     fontFamily: {
       sans: ["Linux Biolinum O", "sans-serif"],
       serif: [
-        // "EBGaramond",
-        // "BodoniModa",
         "Linux Libertine O",
+        "serif",
+      ],
+      narration: [
+        "EBGaramond",
+        // "BodoniModa",
         "serif",
       ],
       mono: [

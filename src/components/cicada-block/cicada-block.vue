@@ -27,6 +27,20 @@
 
     <fade>
       <div
+        v-show="narrations.length > 0"
+        class="py-2 font-sans border-b border-orange-400"
+      >
+        <pre
+          class="py-2 font-serif"
+          v-for="(narration, index) in narrations"
+          :key="index"
+          >{{ narration }}</pre
+        >
+      </div>
+    </fade>
+
+    <fade>
+      <div
         v-show="active && running"
         class="py-2 font-sans text-orange-500 border-b border-orange-400"
       >
@@ -62,6 +76,7 @@ import { StmtOutput } from "@cicada-lang/cicada/lib/lang/stmt"
 import * as ut from "@/ut"
 import { createEditorState } from "./editor-state"
 import { EditorView } from "@codemirror/view"
+import { CtxEvent, CtxObserver } from "@cicada-lang/cicada/lib/lang/ctx"
 
 @Component({
   name: "cicada-block",
@@ -89,9 +104,19 @@ export default class extends Vue {
   showToolbox: boolean = false
   editorView: EditorView | null = null
 
+  narrations: Array<string> = []
+
   get mod(): Module {
     return this.book.load(this.pageName, this.page, {
-      observers: app.cicada.defaultCtxObservers,
+      observers: [
+        app.cicada.createCtxObserver({
+          receive: (event) => {
+            if (event.tag === "narration") {
+              this.narrations.push(event.msg)
+            }
+          },
+        }),
+      ],
     })
   }
 
@@ -102,6 +127,7 @@ export default class extends Vue {
   @Watch("pageName")
   init(): void {
     this.outputs = []
+    this.narrations = []
     this.error = null
     this.initEditor()
   }
@@ -122,6 +148,7 @@ export default class extends Vue {
   async runCode(): Promise<void> {
     if (this.editorView) {
       this.outputs = []
+      this.narrations = []
       this.error = null
       this.running = true
 
