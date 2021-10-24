@@ -24,14 +24,15 @@
             p-4
             mx-3
             my-4
-            font-sans
+                  font-sans
+                  text-xl
             border-4 border-orange-200 border-double
             rounded-lg
           "
         >
           <button
             @click="narrations = []"
-            class="text-orange-500 font-bold self-end hover:text-orange-300"
+            class="text-orange-500 text-base font-bold self-end hover:text-orange-300"
           >
             CLOSE
           </button>
@@ -39,9 +40,8 @@
             class="font-narration py-2 text-xl"
             v-for="(narration, index) in narrations"
             :key="index"
-          >
-            {{ narration }}
-          </div>
+            v-html="narration"
+          ></div>
         </div>
       </fade>
 
@@ -133,6 +133,19 @@ export default class extends Vue {
           },
         }),
       ],
+      highlighter: app.cicada.createHighlighter({
+        highlight: (tag, text) => {
+          switch (tag) {
+            case "code":
+              return `\
+                <span
+                  class="font-mono text-sky-600"
+                  style="font-size: 81%;">${text}</span>`
+            default:
+              return text
+          }
+        },
+      }),
     })
   }
 

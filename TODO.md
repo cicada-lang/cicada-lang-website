@@ -1,4 +1,4 @@
-- `components/cicada-block` -- narration with highlighing
+- `components/cicada-block--block` -- extract component
 
 - `components/cicada-block` -- handle `cicada counterexample`
 
