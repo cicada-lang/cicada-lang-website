@@ -1,6 +1,6 @@
 - learn from codemirror highlighing
 
-- `components/cicada-block` -- beautiful narration -- with highlighing
+- `components/cicada-block` -- narration with highlighing
 
 - `components/cicada-block` -- handle `cicada counterexample`
 
