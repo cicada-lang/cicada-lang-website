@@ -118,7 +118,7 @@ export default class extends Vue {
             case "code":
               return `\
                 <span
-                  class="font-mono text-sky-600"
+                  class="text-sky-600 font-mono"
                   style="font-size: 81%;">${text}</span>`
             default:
               return text
