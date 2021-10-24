@@ -16,33 +16,11 @@
       <div ref="editor" @click="active = true"></div>
 
       <fade class="absolute top-0">
-        <div
+        <cicada-block-narration
           v-show="narrations.length > 0"
-          class="
-            bg-orange-50
-            flex flex-col
-            p-4
-            mx-3
-            my-4
-                  font-sans
-                  text-xl
-            border-4 border-orange-200 border-double
-            rounded-lg
-          "
-        >
-          <button
-            @click="narrations = []"
-            class="text-orange-500 text-base font-bold self-end hover:text-orange-300"
-          >
-            CLOSE
-          </button>
-          <div
-            class="font-narration py-2 text-xl"
-            v-for="(narration, index) in narrations"
-            :key="index"
-            v-html="narration"
-          ></div>
-        </div>
+          @close="narrations = []"
+          :narrations="narrations"
+        />
       </fade>
 
       <cicada-block-toolbox
@@ -99,6 +77,7 @@ import { CtxEvent, CtxObserver } from "@cicada-lang/cicada/lib/lang/ctx"
   // prettier-ignore
   components: {
     "cicada-block-toolbox": require("./cicada-block-toolbox.vue").default,
+    "cicada-block-narration": require("./cicada-block-narration.vue").default,
     "stmt-output-list": require("./stmt-output-list.vue").default,
     "icon-menu": require("@/components/icons/icon-menu.vue").default,
     "fade": require("@/components/transitions/fade.vue").default,

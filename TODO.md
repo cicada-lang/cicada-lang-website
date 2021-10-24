@@ -1,5 +1,3 @@
-- `components/cicada-block--block` -- extract component
-
 - `components/cicada-block` -- handle `cicada counterexample`
 
   - denote the code block is counterexample even when not activated

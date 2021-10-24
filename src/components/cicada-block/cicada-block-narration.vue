@@ -1,0 +1,43 @@
+<template>
+  <div
+    class="
+      bg-orange-50
+      flex flex-col
+      p-4
+      mx-3
+      my-4
+      font-sans
+      text-xl
+      border-4 border-orange-200 border-double
+      rounded-lg
+    "
+  >
+    <button
+      @click="$emit('close')"
+      class="text-orange-500 text-base font-bold self-end hover:text-orange-300"
+    >
+      CLOSE
+    </button>
+    <div
+      class="font-narration py-2 text-xl"
+      v-for="(narration, index) in narrations"
+      :key="index"
+      v-html="narration"
+    ></div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+
+@Component({
+  name: "cicada-block-narration",
+  // prettier-ignore
+  components: {
+
+  },
+})
+export default class extends Vue {
+  @Prop() narrations!: Array<string>
+}
+</script>
