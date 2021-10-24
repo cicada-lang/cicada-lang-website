@@ -40,31 +40,7 @@
 
       <div class="pb-8 text-xl">
         <div class="px-10 pt-4">
-          <h3 class="py-1 text-2xl font-bold text-gray-800">Usage</h3>
-
-          <div class="p-2">
-            <p class="py-1">Welcome to Cicada's book rendering service.</p>
-            <p class="py-1">GitHub, GitLab and Gitee are supported.</p>
-            <p class="py-1">Fill in book's URL is all you need!</p>
-          </div>
-
-          <div class="p-2">
-            <p class="py-2">For examples:</p>
-            <ul class="px-8">
-              <li class="max-w-sm text-lg break-all list-disc">
-                https://gitlab.com/cicada-lang/cicada/-/tree/master/books/the-little-typer-exercises
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="px-10 pt-4">
           <h3 class="py-1 text-2xl font-bold text-gray-800">Example Books</h3>
-
-          <div class="p-2">
-            <p class="py-1">We will showcase of this service,</p>
-            <p class="py-1">in follow example books:</p>
-          </div>
 
           <ul class="px-8 py-1 space-y-2">
             <li

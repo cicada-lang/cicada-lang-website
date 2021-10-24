@@ -19,17 +19,17 @@
         <div
           v-show="narrations.length > 0"
           class="
-            flex flex-col
-            font-sans
-            p-4
-            rounded
             bg-sky-50
             ring-4 ring-sky-200
+            flex flex-col
+            p-4
+            font-sans
+            rounded
           "
         >
           <button @click="narrations = []" class="self-end">CLOSE</button>
           <div
-            class="py-2 text-lg font-narration"
+            class="font-narration py-2 text-lg"
             v-for="(narration, index) in narrations"
             :key="index"
           >

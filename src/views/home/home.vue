@@ -24,8 +24,8 @@
       </p>
 
       <p>
-        We strive to provide clear and beautiful rendering, to help one sharing
-        ones work with others.
+        We strive to provide simple content management and clear rendering, to
+        help one sharing ones work with others.
       </p>
 
       <p>For details, please visit dedicated serive pages:</p>

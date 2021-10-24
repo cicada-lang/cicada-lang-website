@@ -1,4 +1,6 @@
-- `components/cicada-block` -- beautiful narration
+- learn from codemirror highlighing
+
+- `components/cicada-block` -- beautiful narration -- with highlighing
 
 - `components/cicada-block` -- handle `cicada counterexample`
 
@@ -6,6 +8,16 @@
   - allow interact with `cicada counterexample` code block
     - should be parsed, but be ignored in normal run
     - running code block with error will not effect current `mod`
+
+# content manager
+
+- we need to use a content server
+
+  - to get good url name
+
+  - to replace the use of gitlab and github API
+    - they have rate limits
+    - structured ID to them are not good url name
 
 # user
 
