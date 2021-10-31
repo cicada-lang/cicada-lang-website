@@ -13,10 +13,6 @@ import * as StmtOutputs from "@cicada-lang/cicada/lib/lang/stmt/stmt-outputs"
 
 @Component({
   name: "stmt-output-list",
-  // prettier-ignore
-  components: {
-
-  },
 })
 export default class extends Vue {
   @Prop() outputs!: Array<StmtOutput>

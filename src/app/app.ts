@@ -9,7 +9,7 @@ export class App extends ServiceContainer {
     enableTable: true,
     customBlockParsers: [
       postmark.createCustomBlockParser<{ index: number }>({
-        recognize: (info) => info === "cicada",
+        recognize: (info) => info.startsWith("cicada"),
         customKind: "Cicada",
         parse: (text, { index }) => ({ index }),
       }),

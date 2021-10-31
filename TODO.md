@@ -1,7 +1,3 @@
-- `components/cicada-block` a generic way of handling code block with modifiers
-
-  - disallow interaction and show a label at the corner
-
 - [bug] multiple position of `@elab` narration.
 
 # content manager

@@ -32,10 +32,6 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 
 @Component({
   name: "cicada-block-narration",
-  // prettier-ignore
-  components: {
-
-  },
 })
 export default class extends Vue {
   @Prop() narrations!: Array<string>

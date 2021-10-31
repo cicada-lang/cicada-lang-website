@@ -1,0 +1,51 @@
+<template>
+  <click-away class="relative" @away="active = false">
+    <div
+      class="
+        absolute
+        right-1
+        top-4
+        px-1
+        py-0.5
+        bg-rose-50
+        opacity-50
+        hover:opacity-30
+        text-rose-500
+        border border-rose-200
+        rounded
+        italic
+      "
+    >
+      {{ extra }}
+    </div>
+    <pre
+      class="overflow-x-auto border-t border-b border-white"
+      :class="[active && 'border-rose-400']"
+      style="font-size: 92%"
+      @click="active = true"
+    ><code style="padding: 1rem 0rem; background-color: inherit;">{{ text }}</code></pre>
+  </click-away>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import hljs from "highlight.js"
+
+@Component({
+  name: "cicada-block-extra",
+  // prettier-ignore
+  components: {
+    "click-away": require("@/components/utilities/click-away.vue").default,
+  },
+})
+export default class extends Vue {
+  @Prop() text!: string
+  @Prop() extra!: string
+
+  active: boolean = false
+
+  mounted(): void {
+    hljs.highlightAll()
+  }
+}
+</script>

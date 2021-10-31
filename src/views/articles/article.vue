@@ -8,6 +8,7 @@
         props: (node) => ({
           text: node.text.trim(),
           index: node.value.index,
+          info: node.info,
           book: state.book,
           pageName: state.pageName,
           page: state.text,
