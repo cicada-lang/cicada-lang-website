@@ -15,7 +15,7 @@
 
       <div ref="editor" @click="active = true"></div>
 
-      <fade class="absolute top-0">
+      <fade class="absolute top-0 z-40">
         <cicada-block-narration
           v-show="narrations.length > 0"
           @close="narrations = []"
