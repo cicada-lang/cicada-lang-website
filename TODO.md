@@ -1,3 +1,5 @@
+- article page take title of the article
+
 - `components/cicada-block` -- handle `cicada counterexample`
 
   - denote the code block is counterexample even when not activated
