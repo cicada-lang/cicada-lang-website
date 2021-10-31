@@ -8,7 +8,7 @@
         px-1
         py-0.5
         bg-rose-50
-        opacity-50
+        opacity-90
         hover:opacity-30
         text-rose-500
         border border-rose-200
