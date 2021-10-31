@@ -1,13 +1,8 @@
-- `components/cicada-block` -- handle `cicada counterexample`
+- `components/cicada-block` a generic way of handling code block with modifiers
 
-  - denote the code block is counterexample even when not activated
-  - allow interact with `cicada counterexample` code block
-    - should be parsed, but be ignored in normal run
-    - running code block with error will not effect current `mod`
+  - disallow interaction and show a label at the corner
 
-- `components/cicada-block` -- handle `cicada wishful`
-
-  - there should be a generic way of handling code block with modifiers
+- [bug] multiple position of `@elab` narration.
 
 # content manager
 
