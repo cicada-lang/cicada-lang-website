@@ -7,6 +7,10 @@
     - should be parsed, but be ignored in normal run
     - running code block with error will not effect current `mod`
 
+- `components/cicada-block` -- handle `cicada wishful`
+
+  - there should be a generic way of handling code block with modifiers
+
 # content manager
 
 - we need to use a content server
