@@ -13,15 +13,17 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
+import { MetaInfo } from "vue-meta"
 
 @Component({
   name: "cicada-article-layout",
-  // prettier-ignore
-  components: {
-
+  metaInfo(this: ArticleLayout): MetaInfo {
+    return {
+      title: this.state?.document.attributes.title,
+    }
   },
 })
-export default class extends Vue {
+export default class ArticleLayout extends Vue {
   @Prop() articleId!: string
 
   state: State | null = null

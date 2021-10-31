@@ -17,10 +17,6 @@ import { MetaInfo } from "vue-meta"
 
 @Component({
   name: "book-layout",
-  // prettier-ignore
-  components: {
-
-  },
   metaInfo(this: BookLayout): MetaInfo {
     return {
       title: this.state?.bookConfig.title,
