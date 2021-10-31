@@ -101,6 +101,14 @@ export default class extends Vue {
       title: "Integer as quotient type",
       url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/integer-as-quotient-type.md",
     },
+    {
+      title: "Implicit arguments",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/notes/implicit-arguments.md",
+    },
+    {
+      title: "Inductive datatype",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/notes/inductive-datatype.md",
+    },
   ]
 }
 </script>
