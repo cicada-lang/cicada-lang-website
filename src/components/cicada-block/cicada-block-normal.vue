@@ -161,11 +161,9 @@ export default class extends Vue {
       this.running = true
 
       try {
-        const outputs = await this.mod.rerunWith({
-          id: this.index,
-          code: this.editorView.state.doc.toString(),
-        })
-
+        const id = this.index
+        const code = this.editorView.state.doc.toString()
+        const outputs = await this.mod.runWithNewCode(id, code)
         this.outputs = outputs
       } catch (error) {
         this.error = error
@@ -186,7 +184,7 @@ export default class extends Vue {
     this.outputs = []
     this.error = null
 
-    this.mod.updateCodeBlock(this.index, this.text)
+    this.mod.codeBlocks.updateCode(this.index, this.text)
 
     if (this.editorView) {
       this.editorView.dispatch({
