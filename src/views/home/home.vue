@@ -7,7 +7,11 @@
         Cicada language is a dependently typed programming language and
         interactive theorem prover.
       </p>
+    </section>
 
+    <h2 class="font-sans text-3xl font-bold">Aim</h2>
+
+    <section class="py-4 space-y-2">
       <p>
         The aim of cicada project is to help people understand that developing
         software and developing mathematics are increasingly the same kind of
