@@ -1,3 +1,4 @@
+- `views/home` -- add `Aim` section
 - [bug] multiple position of `@elab` narration.
 
 # content manager
