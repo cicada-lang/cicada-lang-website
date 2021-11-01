@@ -50,7 +50,7 @@
               v-for="example in examples"
             >
               <router-link
-                :to="{ path: `articles/${getGitPath(example.url)}` }"
+                :to="{ path: `/articles/${getGitPath(example.url)}` }"
                 class="font-sans underline"
               >
                 {{ example.title }}
