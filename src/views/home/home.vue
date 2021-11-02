@@ -25,14 +25,10 @@
     <section class="py-4 space-y-2">
       <p>
         Cicada code can be organized into <em>Books</em> and <em>Articles.</em>
-      </p>
-
-      <p>
         We strive to provide simple content management and clear rendering, to
-        help one sharing ones work with others.
+        help one sharing ones work with others. For details, please visit
+        dedicated serive pages:
       </p>
-
-      <p>For details, please visit dedicated serive pages:</p>
 
       <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
@@ -97,7 +93,7 @@
 
     <section class="py-4 space-y-2">
       <p>
-        Cicada project is started by Xie Yuheng, who cherishes it as a lifelong
+        Cicada project was started by Xie Yuheng, who cherishes it as a lifelong
         inquiry into <em>foundations of mathematics</em>.
       </p>
 
