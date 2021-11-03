@@ -11,7 +11,9 @@
     "
   >
     <router-link
-      :to="{ path: `/books/${state.bookId.repo}@${state.bookId.host}?front-matter=contents` }"
+      :to="{
+        path: `/books/${state.bookId.repo}@${state.bookId.host}?front-matter=contents`,
+      }"
       class="
         md:text-4xl
         hover:text-gray-500
