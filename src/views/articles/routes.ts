@@ -6,17 +6,17 @@ export const routes: Array<RouteConfig> = [
     component: () => import("@/views/articles/article-list.vue"),
   },
   {
-    path: "/articles/:articleId",
+    path: "/articles/*",
     component: () => import("@/views/articles/article-layout.vue"),
     props: (route) => ({
-      articleId: route.params.articleId,
+      articleId: route.params.pathMatch,
     }),
     children: [
       {
         path: "",
         component: () => import("@/views/articles/article.vue"),
         props: (route) => ({
-          articleId: route.params.articleId,
+          articleId: route.params.pathMatch,
           baseURL: `${window.location.origin}/articles`,
         }),
       },

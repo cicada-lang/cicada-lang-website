@@ -1,17 +1,10 @@
-# improve url format
+- improve url format for `/books`
 
-- books
+  - dynamic dispatch components -- instead of subroutes
 
-  /books/xieyuheng/mathematical-structures@github.com
-  /books/xieyuheng/mathematical-structures@gitlab.com -- default
-  /books/xieyuheng/mathematical-structures/-/title
-  /books/xieyuheng/mathematical-structures/-/contents
+  /books/xieyuheng/mathematical-structures?front-matter=title
+  /books/xieyuheng/mathematical-structures?front-matter=contents
   /books/xieyuheng/mathematical-structures/-/category/hom-set/category.md
-
-- articles
-
-  /articles/cicada-lang/cicada/-/notes/inductive-datatype.md
-  /articles/cicada-lang/cicada/-/notes/inductive-datatype.md?action=edit
 
 - [bug] multiple position of `@elab` narration.
 
