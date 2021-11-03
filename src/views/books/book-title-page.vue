@@ -56,11 +56,10 @@
       <a
         :href="state.bookId.formatURL()"
         class="
-          flex
           md:flex-row
-          flex-col
-          items-center
           hover:text-gray-500
+          flex flex-col
+          items-center
           py-1
           font-sans
           text-xl
@@ -72,7 +71,7 @@
       </a>
 
       <div v-if="state.bookConfig.date" class="py-1">
-        <div class="font-sans">{{ state.bookConfig.date }}</div>
+        <div class="text font-sans text-xl">{{ state.bookConfig.date }}</div>
       </div>
     </section>
   </div>
