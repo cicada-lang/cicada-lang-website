@@ -44,7 +44,7 @@
     "@codemirror/state": "^0.19.2",
     "@codemirror/view": "^0.19.10",
     "@tailwindcss/postcss7-compat": "^2.2.17",
-    "@enchanterjs/enchanter": "^0.1.21",
+    "@enchanterjs/enchanter": "^0.1.23",
     "@xieyuheng/postmark": "^0.1.4",
     "@xieyuheng/ty": "^0.1.7",
     "autoprefixer": "^9.8.8",
