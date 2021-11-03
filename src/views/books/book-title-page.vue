@@ -55,11 +55,20 @@
     <section class="flex flex-col items-center px-4">
       <a
         :href="state.bookId.formatURL()"
-        class="hover:text-gray-500 py-1 font-sans text-xl"
+        class="
+          flex
+          md:flex-row
+          flex-col
+          items-center
+          hover:text-gray-500
+          py-1
+          font-sans
+          text-xl
+        "
         target="_blank"
       >
-        <span>{{ state.bookId.repo }}</span>
-        <span> @ {{ state.bookId.host }}</span>
+        <div>{{ state.bookId.repo }}</div>
+        <div>@{{ state.bookId.host }}</div>
       </a>
 
       <div v-if="state.bookConfig.date" class="py-1">
