@@ -15,19 +15,9 @@
 
 - [bug] multiple position of `@elab` narration.
 
-# content manager
-
-- we need to use a content server
-
-  - to get good url name
-
-  - to replace the use of gitlab and github API
-    - they have rate limits
-    - structured ID to them are not good url name
-
 # user
 
-- `views/user` -- setup route to `/{username}`
+- `views/users` -- setup route to `/{username}`
 
 # study
 
