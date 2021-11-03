@@ -3,7 +3,7 @@
     <div>
       <router-link
         v-if="prevPageName"
-        :to="{ path: `/books/${bookId}/pages/${prevPageName}` }"
+        :to="{ path: `/books/${state.bookName}/-/${prevPageName}` }"
         class="hover:text-gray-700"
         title="Previous Page"
       >
@@ -14,7 +14,7 @@
 
     <div>
       <router-link
-        :to="{ path: `/books/${bookId}` }"
+        :to="{ path: `/books/${state.bookName}` }"
         class="hover:text-gray-700"
         title="Back to Title Page"
       >
@@ -22,7 +22,7 @@
       </router-link>
       /
       <router-link
-        :to="{ path: `/books/${bookId}/contents` }"
+        :to="{ path: `/books/${state.bookName}?front-matter=contents` }"
         class="hover:text-gray-700"
         title="Back to Contents"
       >
@@ -33,7 +33,7 @@
     <div>
       <router-link
         v-if="nextPageName"
-        :to="{ path: `/books/${bookId}/pages/${nextPageName}` }"
+        :to="{ path: `/books/${state.bookName}/-/${nextPageName}` }"
         class="hover:text-gray-700"
         title="Next Page"
       >
@@ -56,7 +56,6 @@ import { BookState as State } from "@/views/books/book-state"
   },
 })
 export default class extends Vue {
-  @Prop() bookId!: string
   @Prop() pageName!: string
   @Prop() state!: State
 

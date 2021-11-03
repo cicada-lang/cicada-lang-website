@@ -11,7 +11,7 @@
     "
   >
     <router-link
-      :to="{ path: `/books/${bookId}/contents` }"
+      :to="{ path: `/books/${state.bookId.repo}@${state.bookId.host}?front-matter=contents` }"
       class="
         md:text-4xl
         hover:text-gray-500
@@ -79,7 +79,6 @@ import { BookState as State } from "@/views/books/book-state"
   },
 })
 export default class extends Vue {
-  @Prop() bookId!: string
   @Prop() state!: State
 }
 </script>

@@ -6,27 +6,46 @@ export class BookState {
   bookId: GitPath
   bookConfig: Record<string, any>
   pages: Record<string, string>
+  pageName: string
   book: Book
 
   constructor(opts: {
     bookId: GitPath
     bookConfig: Record<string, any>
     pages: Record<string, string>
+    pageName: string
     book: Book
   }) {
     this.bookId = opts.bookId
     this.bookConfig = opts.bookConfig
     this.pages = opts.pages
+    this.pageName = opts.pageName
     this.book = opts.book
   }
 
   static async build(opts: { bookId: string }): Promise<BookState> {
     const bookId = GitPath.decode(opts.bookId)
+
+    const pageName = bookId.path
+    bookId.path = ""
+
     const files = bookId.createGitFileStore()
-    const config = JSON.parse(await files.getOrFail("book.json"))
-    const pages = await files.cd(config.src).all()
+    const bookConfig = JSON.parse(await files.getOrFail("book.json"))
+    const pages = await files.cd(bookConfig.src).all()
     const book = await app.cicada.gitBooks.getFromGitPath(bookId)
-    return new BookState({ bookId, bookConfig: config, pages, book })
+    return new BookState({ bookId, bookConfig, pages, pageName, book })
+  }
+
+  updateBookId(input: string): void {
+    const bookId = GitPath.decode(input)
+    this.pageName = bookId.path
+    bookId.path = ""
+    this.bookId = bookId
+  }
+
+  get bookName(): string {
+    const { host, repo } = this.bookId
+    return `${repo}@${host}`
   }
 
   get pageNames(): Array<string> {

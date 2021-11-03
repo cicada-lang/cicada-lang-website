@@ -93,11 +93,11 @@ export default class extends Vue {
   examples: Array<Example> = [
     {
       title: "The Little Typer Exercises",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/the-little-typer-exercises",
+      url: "https://gitlab.com/xieyuheng/the-little-typer-exercises",
     },
     {
       title: "Mathematical Structures",
-      url: "https://gitlab.com/cicada-lang/cicada/-/tree/master/books/mathematical-structures",
+      url: "https://gitlab.com/xieyuheng/mathematical-structures",
     },
   ]
 }

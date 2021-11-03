@@ -1,4 +1,5 @@
 import { RouteConfig } from "vue-router"
+import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
 
 export const routes: Array<RouteConfig> = [
   {
@@ -8,27 +9,14 @@ export const routes: Array<RouteConfig> = [
   {
     path: "/books/*",
     component: () => import("@/views/books/book-layout.vue"),
-    props: (route) => ({ bookId: route.params.pathMatch }),
-    children: [
-      {
-        path: "",
-        component: () => import("@/views/books/book-title-page.vue"),
-        props: (route) => ({ bookId: route.params.pathMatch }),
+    props: (route) => ({
+      bookId: route.params.pathMatch,
+      frontMatter: route.query["front-matter"],
+      backMatter: route.query["back-matter"],
+      get baseURL(): string {
+        const { host, repo } = GitPath.decode(route.params.pathMatch)
+        return `${window.location.origin}/books/${repo}@${host}`
       },
-      {
-        path: "contents",
-        component: () => import("@/views/books/book-contents.vue"),
-        props: (route) => ({ bookId: route.params.pathMatch }),
-      },
-      {
-        path: "pages/*",
-        component: () => import("@/views/books/book-page.vue"),
-        props: (route) => ({
-          bookId: route.params.pathMatch,
-          pageName: route.params.pathMatch,
-          baseURL: `${window.location.origin}/books/${route.params.bookId}/pages`,
-        }),
-      },
-    ],
+    }),
   },
 ]

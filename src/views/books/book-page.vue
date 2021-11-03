@@ -1,6 +1,6 @@
 <template>
   <div class="md:py-10 px-6 py-6">
-    <book-page-navbar :bookId="bookId" :pageName="pageName" :state="state" />
+    <book-page-navbar  :pageName="pageName" :state="state" />
     <md-document
       :key="pageName"
       :document="state.parseDocument(page)"
@@ -21,7 +21,6 @@
     />
     <book-page-navbar
       class="my-6"
-      :bookId="bookId"
       :pageName="pageName"
       :state="state"
     />
@@ -43,7 +42,6 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   },
 })
 export default class extends Vue {
-  @Prop() bookId!: string
   @Prop() baseURL!: string
   @Prop() pageName!: string
   @Prop() state!: State
