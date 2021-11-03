@@ -15,12 +15,12 @@
       :key="pageName"
     >
       <div>
-        <button
-          @click="gotoPage(pageName)"
+        <router-link
+          :to="{ path: `/books/${state.bookName}/-/${pageName}` }"
           class="hover:text-gray-500 font-sans"
         >
           {{ document.attributes.title }}
-        </button>
+        </router-link>
         <div
           class="
             font-sans
@@ -54,14 +54,6 @@ export default class extends Vue {
 
   mounted(): void {
     window.scrollTo(0, 0)
-  }
-
-  gotoPage(pageName: string): void {
-    this.state.pageName = pageName
-
-    this.$router.push({
-      path: `/books/${this.state.bookName}/-/${pageName}`,
-    })
   }
 }
 </script>
