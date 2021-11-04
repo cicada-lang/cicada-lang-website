@@ -49,7 +49,7 @@ export default class extends Vue {
 
   get page(): string | undefined {
     if (this.state) {
-      return this.state.pages[this.pageName]
+      return this.state.files[this.pageName + ".md"]
     }
   }
 

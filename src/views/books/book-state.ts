@@ -5,20 +5,20 @@ import { Book } from "@cicada-lang/cicada/lib/book"
 export class BookState {
   bookId: GitPath
   bookConfig: Record<string, any>
-  pages: Record<string, string>
+  files: Record<string, string>
   pageName: string
   book: Book
 
   constructor(opts: {
     bookId: GitPath
     bookConfig: Record<string, any>
-    pages: Record<string, string>
+    files: Record<string, string>
     pageName: string
     book: Book
   }) {
     this.bookId = opts.bookId
     this.bookConfig = opts.bookConfig
-    this.pages = opts.pages
+    this.files = opts.files
     this.pageName = opts.pageName
     this.book = opts.book
   }
@@ -26,19 +26,19 @@ export class BookState {
   static async build(opts: { bookId: string }): Promise<BookState> {
     const bookId = GitPath.decode(opts.bookId)
 
-    const pageName = bookId.path
+    const pageName = bookId.path.replace(/\.md$/, "")
     bookId.path = ""
 
     const files = bookId.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(bookConfig.src).all()
     const book = await app.cicada.gitBooks.getFromGitPath(bookId)
-    return new BookState({ bookId, bookConfig, pages, pageName, book })
+    return new BookState({ bookId, bookConfig, files: pages, pageName, book })
   }
 
   updateBookId(input: string): void {
     const bookId = GitPath.decode(input)
-    this.pageName = bookId.path
+    this.pageName = bookId.path.replace(/\.md$/, "")
     bookId.path = ""
     this.bookId = bookId
   }
@@ -49,7 +49,9 @@ export class BookState {
   }
 
   get pageNames(): Array<string> {
-    return Object.keys(this.pages).filter((path) => path.endsWith(".md"))
+    return Object.keys(this.files)
+      .filter((path) => path.endsWith(".md"))
+      .map((path) => path.replace(/\.md$/, ""))
   }
 
   parseDocument(text: string): Nodes.Document {
@@ -58,11 +60,11 @@ export class BookState {
 
   get documentsWithTitle(): Record<string, Nodes.Document> {
     const documents: Record<string, Nodes.Document> = {}
-    for (const [pageName, text] of Object.entries(this.pages)) {
+    for (const [pageName, text] of Object.entries(this.files)) {
       if (pageName.endsWith(".md")) {
         const document = this.parseDocument(text)
         if (document.attributes.title) {
-          documents[pageName] = document
+          documents[pageName.replace(/\.md$/, "")] = document
         }
       }
     }

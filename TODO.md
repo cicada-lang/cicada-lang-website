@@ -1,5 +1,3 @@
-- `/books` remove `.md` postfix in url and contents page
-
 - [bug] multiple position of `@elab` narration.
 
 # user
