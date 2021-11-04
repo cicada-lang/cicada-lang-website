@@ -11,7 +11,7 @@
     "
   >
     <div
-      v-for="(document, pageName) in state.documentsWithTitle"
+      v-for="{ pageName, document } in state.documentsWithTitle"
       :key="pageName"
     >
       <div>

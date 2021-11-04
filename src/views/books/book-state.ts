@@ -48,27 +48,29 @@ export class BookState {
     return `${repo}@${host}`
   }
 
-  get pageNames(): Array<string> {
-    return Object.keys(this.files)
-      .filter((path) => path.endsWith(".md"))
-      .map((path) => path.replace(/\.md$/, ""))
-  }
-
   parseDocument(text: string): Nodes.Document {
     return app.postmarkParser.parseDocument(text)
   }
 
-  get documentsWithTitle(): Record<string, Nodes.Document> {
-    const documents: Record<string, Nodes.Document> = {}
-    for (const [pageName, text] of Object.entries(this.files)) {
+  get documentsWithTitle(): Array<{
+    pageName: string
+    document: Nodes.Document
+  }> {
+    const documents: Array<{ pageName: string; document: Nodes.Document }> = []
+    const entries = Object.entries(this.files)
+    for (const [pageName, text] of entries) {
       if (pageName.endsWith(".md")) {
         const document = this.parseDocument(text)
         if (document.attributes.title) {
-          documents[pageName.replace(/\.md$/, "")] = document
+          documents.push({ pageName: pageName.replace(/\.md$/, ""), document })
         }
       }
     }
 
-    return documents
+    return documents.sort((x, y) => (x.pageName > y.pageName ? 1 : -1))
+  }
+
+  get pageNames(): Array<string> {
+    return this.documentsWithTitle.map(({ pageName }) => pageName)
   }
 }
