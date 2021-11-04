@@ -28,11 +28,11 @@ export class ArticleState {
   static async build(opts: { articleId: string }): Promise<ArticleState> {
     const articleId = GitPath.decode(opts.articleId)
     const files = articleId.upward().createGitFileStore()
-    const text = await files.getOrFail(Path.basename(articleId.path))
     const pageName = articleId.path
+    const text = await files.getOrFail(Path.basename(pageName + ".md"))
     const book = await app.cicada.gitBooks.fake({
       fallback: files,
-      faked: { [pageName]: text },
+      faked: { [pageName + ".md"]: text },
     })
     return new ArticleState({ articleId, files, text, pageName, book })
   }
