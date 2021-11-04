@@ -83,8 +83,7 @@ export default class extends Vue {
   inputURL: string | null = null
 
   getGitPath(url: string): string {
-    const path = GitPath.fromURL(url).encode()
-    return path.replace(/\.md$/, "")
+    return GitPath.fromURL(url).encode().replace(/\.md$/, "")
   }
 
   loadArticle(): void {
