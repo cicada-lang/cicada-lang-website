@@ -1,3 +1,4 @@
+- less `py` for `cicada-block-extra`
 - [bug] multiple position of `@elab` narration.
 
 # user
