@@ -1,7 +1,5 @@
 - support rendering `.cic` file
 
-- less `py-*` for `cicada-block-extra`
-
 - [bug] multiple position of `@elab` narration.
 
 # user

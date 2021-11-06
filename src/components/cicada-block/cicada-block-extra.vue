@@ -23,7 +23,7 @@
       :class="[active && 'border-rose-400']"
       style="font-size: 92%"
       @click="active = true"
-    ><code style="padding: 1rem 0rem; background-color: inherit;">{{ text }}</code></pre>
+    ><code style="padding: 0.5rem 0.5rem; background-color: inherit;">{{ text }}</code></pre>
   </click-away>
 </template>
 
