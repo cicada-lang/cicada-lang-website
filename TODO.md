@@ -1,4 +1,3 @@
-- add `.md` back
 - support rendering `.cic` file
 
 - less `py-*` for `cicada-block-extra`

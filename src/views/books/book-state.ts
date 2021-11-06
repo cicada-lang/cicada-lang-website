@@ -26,7 +26,7 @@ export class BookState {
   static async build(opts: { bookId: string }): Promise<BookState> {
     const bookId = GitPath.decode(opts.bookId)
 
-    const pageName = bookId.path.replace(/\.md$/, "")
+    const pageName = bookId.path
     bookId.path = ""
 
     const files = bookId.createGitFileStore()
@@ -38,7 +38,7 @@ export class BookState {
 
   updateBookId(input: string): void {
     const bookId = GitPath.decode(input)
-    this.pageName = bookId.path.replace(/\.md$/, "")
+    this.pageName = bookId.path
     bookId.path = ""
     this.bookId = bookId
   }
@@ -62,7 +62,7 @@ export class BookState {
       if (pageName.endsWith(".md")) {
         const document = this.parseDocument(text)
         if (document.attributes.title) {
-          documents.push({ pageName: pageName.replace(/\.md$/, ""), document })
+          documents.push({ pageName, document })
         }
       }
     }

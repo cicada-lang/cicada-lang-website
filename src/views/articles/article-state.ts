@@ -29,10 +29,10 @@ export class ArticleState {
     const articleId = GitPath.decode(opts.articleId)
     const files = articleId.upward().createGitFileStore()
     const pageName = articleId.path
-    const text = await files.getOrFail(Path.basename(pageName + ".md"))
+    const text = await files.getOrFail(Path.basename(pageName))
     const book = await app.cicada.gitBooks.fake({
       fallback: files,
-      faked: { [pageName + ".md"]: text },
+      faked: { [pageName]: text },
     })
     return new ArticleState({ articleId, files, text, pageName, book })
   }
