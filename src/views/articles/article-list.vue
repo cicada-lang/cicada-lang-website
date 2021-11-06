@@ -103,11 +103,11 @@ export default class extends Vue {
     },
     {
       title: "Implicit arguments",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/notes/implicit-arguments.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/implicit-arguments.md",
     },
     {
       title: "Inductive datatype",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/notes/inductive-datatype.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/inductive-datatype.md",
     },
   ]
 }
