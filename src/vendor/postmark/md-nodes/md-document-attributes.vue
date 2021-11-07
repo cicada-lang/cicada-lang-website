@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col py-2 pl-1 pr-5 font-sans text-lg text-gray-600">
+  <div class="flex flex-col py-2 font-sans text-lg text-gray-700">
     <div class="flex justify-between py-1">
       <div>
         <div v-if="authors" class="font-bold">{{ authors }}</div>
