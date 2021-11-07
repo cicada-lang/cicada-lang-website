@@ -100,7 +100,7 @@
       <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           <a
-            href="https://github.com/xieyuheng"
+            href="https://xieyuheng.com"
             class="inline-flex font-sans underline"
             target="_blank"
           >
