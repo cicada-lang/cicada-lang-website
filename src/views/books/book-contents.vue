@@ -21,6 +21,7 @@
         >
           {{ document.attributes.title }}
         </router-link>
+
         <div
           class="
             font-sans
@@ -28,10 +29,13 @@
             italic
             leading-3
             tracking-tight
-            text-right text-gray-600
+            text-right text-gray-500
+            hover:text-black
           "
         >
-          {{ pageName }}
+          <router-link :to="{ path: `/books/${state.bookName}/-/${pageName}` }">
+            {{ pageName }}
+          </router-link>
         </div>
       </div>
     </div>

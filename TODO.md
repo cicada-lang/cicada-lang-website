@@ -1,4 +1,7 @@
-- `contents` -- address also link to page
+- improve `articles/` routes
+
+- improve `books/` routes
+
 - support rendering `.cic` file
 - [bug] multiple position of `@elab` narration.
 - [bug] can not use `import` in `articles/`
