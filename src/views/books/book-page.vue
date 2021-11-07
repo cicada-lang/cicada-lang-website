@@ -33,7 +33,6 @@ import { BookPagePathResolver } from "./book-page-path-resolver"
   // prettier-ignore
   components: {
     "book-page-navbar": require("./book-page-navbar.vue").default,
-    "cicabook-page-navbar": require("./book-page-navbar.vue").default,
     ...require("@/vendor/postmark/md-nodes").components,
   },
 })
