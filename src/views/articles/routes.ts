@@ -13,7 +13,7 @@ export const routes: Array<RouteConfig> = [
     }),
     children: [
       {
-        path: "",
+        path: "/articles/*",
         component: () => import("@/views/articles/article.vue"),
         props: (route) => ({
           articleId: route.params.pathMatch,
