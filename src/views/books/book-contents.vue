@@ -24,13 +24,13 @@
 
         <div
           class="
+            hover:text-black
             font-sans
             text-xs
             italic
             leading-3
             tracking-tight
             text-right text-gray-500
-            hover:text-black
           "
         >
           <router-link :to="{ path: `/books/${state.bookName}/-/${pageName}` }">
