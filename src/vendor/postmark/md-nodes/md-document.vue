@@ -7,7 +7,10 @@
       {{ document.attributes.title }}
     </h1>
 
-    <md-document-attributes :state="state" />
+    <md-document-attributes
+      v-if="!almostEmptyAttributes(document.attributes)"
+      :state="state"
+    />
 
     <md-node
       class="py-2"
@@ -40,5 +43,11 @@ export default class extends Vue {
     document: this.document,
     customBlockComponents: this.customBlockComponents,
   })
+
+  almostEmptyAttributes(attributes: Record<string, any>): boolean {
+    const obj = { ...attributes }
+    delete obj.title
+    return Object.keys(obj).length === 0
+  }
 }
 </script>
