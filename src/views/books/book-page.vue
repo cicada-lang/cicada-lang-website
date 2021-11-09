@@ -4,7 +4,6 @@
     <md-document
       :key="pageName"
       :document="state.parseDocument(page)"
-      :path-resolver="pathResolver"
       :custom-block-components="{
         Cicada: {
           component: require('@/components/cicada-block').default,
@@ -26,7 +25,6 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { BookState as State } from "@/views/books/book-state"
-import { BookPagePathResolver } from "./book-page-path-resolver"
 
 @Component({
   name: "book-page",
@@ -40,11 +38,6 @@ export default class extends Vue {
   @Prop() baseURL!: string
   @Prop() pageName!: string
   @Prop() state!: State
-
-  pathResolver = new BookPagePathResolver({
-    pageName: this.pageName,
-    baseURL: this.baseURL,
-  })
 
   get page(): string | undefined {
     if (this.state) {

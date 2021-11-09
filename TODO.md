@@ -1,4 +1,3 @@
-- remove `path-resolver`
 - support rendering `.cic` file
 - [bug] multiple position of `@elab` narration.
 - [bug] can not use `import` in `articles/`

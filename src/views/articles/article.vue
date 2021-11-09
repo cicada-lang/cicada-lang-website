@@ -1,7 +1,6 @@
 <template>
   <md-document
     :document="state.document"
-    :path-resolver="pathResolver"
     :custom-block-components="{
       Cicada: {
         component: require('@/components/cicada-block').default,
@@ -21,7 +20,6 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
-import { ArticlePathResolver } from "./article-path-resolver"
 
 @Component({
   name: "cicada-article",
@@ -35,10 +33,5 @@ export default class extends Vue {
   @Prop() baseURL!: string
 
   @Prop() state!: State
-
-  pathResolver = new ArticlePathResolver({
-    articleId: this.state.articleId,
-    baseURL: this.baseURL,
-  })
 }
 </script>

@@ -23,7 +23,6 @@
 import { Component, Prop, Vue } from "vue-property-decorator"
 import { Nodes } from "@xieyuheng/postmark"
 import { CustomBlockEntry, MdDocumentState as State } from "./md-document-state"
-import { PathResolver } from "../models/path-resolver"
 
 @Component({
   name: "md-document",
@@ -35,12 +34,10 @@ import { PathResolver } from "../models/path-resolver"
 })
 export default class extends Vue {
   @Prop() document!: Nodes.Document
-  @Prop() pathResolver!: PathResolver
   @Prop() customBlockComponents!: Record<string, CustomBlockEntry>
 
   state = new State({
     document: this.document,
-    pathResolver: this.pathResolver,
     customBlockComponents: this.customBlockComponents,
   })
 }
