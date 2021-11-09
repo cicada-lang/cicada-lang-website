@@ -4,8 +4,8 @@
 
     <section class="py-4 space-y-2">
       <p>
-        Cicada language is a dependently typed programming language and
-        interactive theorem prover.
+        Cicada language is a <em>dependently typed programming language</em> and
+        <em>interactive theorem prover</em>.
       </p>
     </section>
 
