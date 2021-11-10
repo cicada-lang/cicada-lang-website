@@ -45,7 +45,11 @@ export default class extends Vue {
   @Prop() node!: Nodes.Link
 
   isExternal(path: string): boolean {
-    return path.startsWith("http://") || path.startsWith("https://")
+    return (
+      path.startsWith("http://") ||
+      path.startsWith("https://") ||
+      path.startsWith("mailto:")
+    )
   }
 
   target(path: string): string {
