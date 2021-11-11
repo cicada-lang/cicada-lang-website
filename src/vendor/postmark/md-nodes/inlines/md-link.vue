@@ -1,7 +1,7 @@
 <template>
   <!-- NOTE A link starts with `http` is viewed as an external link. -->
   <a
-    v-if="isExternal(node.href)"
+    v-if="isNativeLink(node.href)"
     class="inline-flex items-center font-sans underline"
     :href="node.href"
     :title="node.title"
@@ -44,8 +44,9 @@ export default class extends Vue {
   @Prop() state!: State
   @Prop() node!: Nodes.Link
 
-  isExternal(path: string): boolean {
+  isNativeLink(path: string): boolean {
     return (
+      path.startsWith("#") ||
       path.startsWith("http://") ||
       path.startsWith("https://") ||
       path.startsWith("mailto:")
@@ -53,11 +54,7 @@ export default class extends Vue {
   }
 
   target(path: string): string {
-    if (this.isExternal(path)) {
-      return "_blank"
-    } else {
-      return "_self"
-    }
+    return path.startsWith("#") || !this.isNativeLink(path) ? "_self" : "_blank"
   }
 }
 </script>

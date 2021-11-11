@@ -1,5 +1,9 @@
 - `views/articles/article-list` -- load all articless from `cicada/articles/`
 
+  - note about loading from
+
+- improve `loading ...` style
+
 - support rendering `.cic` file
 - [bug] multiple position of `@elab` narration.
 - [bug] can not use `import` in `articles/`
