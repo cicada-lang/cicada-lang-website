@@ -4,7 +4,9 @@
       <pre>{{ error }}</pre>
     </div>
     <div v-else-if="!state" class="flex flex-col items-center">
-      <div class="py-4">Loading ...</div>
+      <div class="text-xl text-gray-600">
+        <p>Loading article ...</p>
+      </div>
     </div>
     <router-view v-else :state="state" />
   </div>

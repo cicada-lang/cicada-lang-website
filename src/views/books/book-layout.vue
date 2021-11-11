@@ -4,7 +4,9 @@
       <pre class="text-rose-800">{{ error }}</pre>
     </div>
     <div v-else-if="!state" class="flex flex-col items-center">
-      <div class="py-4">Loading ...</div>
+      <div class="py-6 text-xl text-gray-600">
+        <p>Loading book ...</p>
+      </div>
     </div>
 
     <book-contents v-else-if="frontMatter === 'contents'" :state="state" />
