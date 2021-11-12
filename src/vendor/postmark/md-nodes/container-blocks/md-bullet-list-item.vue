@@ -1,6 +1,7 @@
 <template>
   <li class="list-disc">
     <md-node
+      class="py-2"
       v-for="(child, index) in node.children"
       :key="index"
       :state="state"

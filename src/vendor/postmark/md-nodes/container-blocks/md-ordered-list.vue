@@ -1,5 +1,5 @@
 <template>
-  <ol class="px-7 flex flex-col py-4 space-y-2">
+  <ol class="px-7 flex flex-col">
     <md-node
       style="font-family: inherit"
       v-for="(child, index) in node.children"
