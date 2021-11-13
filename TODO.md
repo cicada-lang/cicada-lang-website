@@ -1,5 +1,3 @@
-- `vendor/postmark/md-document` should also support `attributes.year`
-
 - `views/articles/article-list` -- load all articless from `cicada/articles/`
 
   - note about loading from
