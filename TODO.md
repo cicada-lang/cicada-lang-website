@@ -1,6 +1,4 @@
-- `views/articles/article-list` -- load all articless from `cicada/articles/`
-
-  - note about loading from
+- `views/articles/article-list` -- save recent visits in `localStorage`
 
 - support rendering `.cic` file
 - [bug] multiple position of `@elab` narration.
