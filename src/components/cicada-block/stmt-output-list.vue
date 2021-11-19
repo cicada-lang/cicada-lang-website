@@ -20,12 +20,12 @@ export default class extends Vue {
   renderOutput(output: StmtOutput): string {
     if (output instanceof StmtOutputs.NormalTerm) {
       return [
-        `<span class="text-orange-600">${output.exp.repr()}</span>`,
+        `<span class="text-orange-600">${output.exp.format()}</span>`,
         `<span class="text-gray-500">: </span>`,
-        `<span class="text-sky-600">${output.t.repr()}</span>`,
+        `<span class="text-sky-600">${output.t.format()}</span>`,
       ].join("")
     } else {
-      return `<span class="text-orange-600">${output.repr()}</span>`
+      return `<span class="text-orange-600">${output.format()}</span>`
     }
   }
 }
