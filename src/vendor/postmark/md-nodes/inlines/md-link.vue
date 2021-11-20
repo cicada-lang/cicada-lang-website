@@ -11,7 +11,7 @@
       v-for="(child, index) in node.children"
       :key="index"
       :state="state"
-      :node="child" /><icon-external-link class="p-1"
+      :node="child" /><icon-external-link class="p-1 flex-shrink-0"
   /></a>
   <router-link
     v-else
