@@ -95,19 +95,19 @@ export default class extends Vue {
   examples: Array<Example> = [
     {
       title: "Simulating the Sigma type by hand",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/simulating-the-sigma-type-by-hand.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/docs/articles/simulating-the-sigma-type-by-hand.md",
     },
     {
       title: "Integer as quotient type",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/integer-as-quotient-type.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/docs/articles/integer-as-quotient-type.md",
     },
     {
       title: "Implicit arguments",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/implicit-arguments.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/docs/articles/implicit-arguments.md",
     },
     {
       title: "Inductive datatype",
-      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/articles/inductive-datatype.md",
+      url: "https://gitlab.com/cicada-lang/cicada/-/blob/master/docs/articles/inductive-datatype.md",
     },
   ]
 }
