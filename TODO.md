@@ -1,4 +1,7 @@
+- `views/root/root-layout` -- import layout
+
 - `docs/` route replace `articles/`
+
 - support rendering `.cic` file
 
 # home
