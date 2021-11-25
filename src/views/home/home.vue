@@ -20,26 +20,26 @@
       </p>
     </section>
 
-    <h2 class="font-sans text-3xl font-bold">Serives</h2>
+    <h2 class="font-sans text-3xl font-bold">Services</h2>
 
     <section class="py-4 space-y-2">
       <p>
         Cicada code can be organized into <em>Books</em> and <em>Articles.</em>
         We strive to provide simple content management and clear rendering, to
         help one sharing ones work with others. For details, please visit
-        dedicated serive pages:
+        dedicated service pages:
       </p>
 
       <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           <router-link :to="{ path: `/books` }" class="font-sans underline">
-            Book Serive
+            Book Service
           </router-link>
         </li>
 
         <li class="list-disc">
           <router-link :to="{ path: `/articles` }" class="font-sans underline">
-            Article Serive
+            Article Service
           </router-link>
         </li>
       </ul>
