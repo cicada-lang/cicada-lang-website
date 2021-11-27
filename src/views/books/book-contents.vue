@@ -1,14 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      justify-center
-      min-h-screen
-      px-6
-      py-12
-      font-serif
-      text-2xl
-    "
+    class="flex flex-col justify-center min-h-screen px-6 py-12 font-serif text-2xl"
   >
     <div
       v-for="{ pageName, document } in state.documentsWithTitle"
@@ -23,15 +15,7 @@
         </router-link>
 
         <div
-          class="
-            hover:text-black
-            font-sans
-            text-xs
-            italic
-            leading-3
-            tracking-tight
-            text-right text-gray-500
-          "
+          class="hover:text-black font-sans text-xs italic leading-3 tracking-tight text-right text-gray-500"
         >
           <router-link :to="{ path: `/books/${state.bookName}/-/${pageName}` }">
             {{ pageName }}

@@ -8,26 +8,11 @@
       @close="showToolbox = false"
     >
       <div
-        class="
-          right-3
-          bg-orange-50
-          absolute
-          top-0
-          z-50
-          flex flex-col
-          p-1
-          border border-orange-200
-          rounded
-        "
+        class="right-3 bg-orange-50 absolute top-0 z-50 flex flex-col p-1 border border-orange-200 rounded"
       >
         <button class="w-full" @click="$emit('run')" title="Run cicada code">
           <p
-            class="
-              hover:text-orange-300
-              p-1
-              font-bold
-              text-right text-orange-500
-            "
+            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
           >
             RUN
           </p>
@@ -38,12 +23,7 @@
           title="Copy code to clipboard"
         >
           <p
-            class="
-              hover:text-orange-300
-              p-1
-              font-bold
-              text-right text-orange-500
-            "
+            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
           >
             COPY
           </p>
@@ -54,12 +34,7 @@
           title="Reset to original code"
         >
           <p
-            class="
-              hover:text-orange-300
-              p-1
-              font-bold
-              text-right text-orange-500
-            "
+            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
           >
             RESET
           </p>
@@ -70,12 +45,7 @@
           title="Deactivate editor"
         >
           <p
-            class="
-              hover:text-orange-300
-              p-1
-              font-bold
-              text-right text-orange-500
-            "
+            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
           >
             DEACT
           </p>

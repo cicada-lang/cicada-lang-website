@@ -1,16 +1,6 @@
 <template>
   <div
-    class="
-      bg-orange-50
-      flex flex-col
-      p-4
-      mx-3
-      my-4
-      font-sans
-      text-xl
-      border-4 border-orange-200 border-double
-      rounded-lg
-    "
+    class="bg-orange-50 flex flex-col p-4 mx-3 my-4 font-sans text-xl border-4 border-orange-200 border-double rounded-lg"
   >
     <button
       @click="$emit('close')"

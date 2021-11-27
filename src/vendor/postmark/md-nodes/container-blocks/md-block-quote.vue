@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      px-3
-      my-2
-      font-sans
-      text-gray-600
-      border-l-4 border-gray-300
-    "
+    class="flex flex-col px-3 my-2 font-sans text-gray-600 border-l-4 border-gray-300"
   >
     <md-node
       class="py-2"
