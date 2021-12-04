@@ -1,3 +1,7 @@
+- update `cicada`
+
+- remove the `narration` feature
+
 - `views/root/root-layout` -- import layout
 
 - `docs/` route replace `articles/`
