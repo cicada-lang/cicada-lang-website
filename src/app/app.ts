@@ -5,14 +5,9 @@ import postmark, { Nodes } from "@xieyuheng/postmark"
 export class App extends ServiceContainer {
   cicada = new WebApp()
 
-  postmarkParser = postmark.createParser({
-    enableTable: true,
-    customBlockParsers: [
-      postmark.createCustomBlockParser<{ index: number }>({
-        recognize: (info) => info.startsWith("cicada"),
-        customKind: "Cicada",
-        parse: (text, { index }) => ({ index }),
-      }),
-    ],
+  postmarkParser = postmark.createParser().customBlock({
+    recognize: (info) => info.startsWith("cicada"),
+    customKind: "Cicada",
+    parse: (text, { index }) => ({ index }),
   })
 }
