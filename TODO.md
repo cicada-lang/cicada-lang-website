@@ -10,5 +10,4 @@
 
 # bug
 
-- [bug] multiple position of `@elab` narration.
 - [bug] can not use `import` in `articles/`
