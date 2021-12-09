@@ -58,10 +58,6 @@ import { BookState as State } from "@/views/books/book-state"
 
 @Component({
   name: "book-title-page",
-  // prettier-ignore
-  components: {
-    // TODO
-  },
 })
 export default class extends Vue {
   @Prop() state!: State
