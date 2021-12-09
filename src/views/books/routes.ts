@@ -1,5 +1,5 @@
-import { RouteConfig } from "vue-router"
 import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { RouteConfig } from "vue-router"
 
 export const routes: Array<RouteConfig> = [
   {

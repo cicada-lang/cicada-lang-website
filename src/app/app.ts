@@ -1,6 +1,6 @@
-import { ServiceContainer } from "@enchanterjs/enchanter/lib/service-container"
 import { WebApp } from "@cicada-lang/cicada/lib/app/web-app"
-import postmark, { Nodes } from "@xieyuheng/postmark"
+import { ServiceContainer } from "@enchanterjs/enchanter/lib/service-container"
+import postmark from "@xieyuheng/postmark"
 
 export class App extends ServiceContainer {
   cicada = new WebApp()

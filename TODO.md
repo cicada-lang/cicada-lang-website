@@ -1,4 +1,3 @@
-- "prettier-plugin-organize-imports"
 - remove the `narration` feature
 - `views/root/root-layout` -- import layout
 

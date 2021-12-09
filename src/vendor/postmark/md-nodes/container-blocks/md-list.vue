@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts">
+import { Node } from "@xieyuheng/postmark"
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { Node, Nodes } from "@xieyuheng/postmark"
 import { MdDocumentState as State } from "../md-document-state"
 
 @Component({

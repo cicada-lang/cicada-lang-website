@@ -1,6 +1,6 @@
+import { Book } from "@cicada-lang/cicada/lib/book"
 import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
 import { Nodes } from "@xieyuheng/postmark"
-import { Book } from "@cicada-lang/cicada/lib/book"
 
 export class BookState {
   bookId: GitPath

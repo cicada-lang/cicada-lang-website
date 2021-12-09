@@ -1,25 +1,18 @@
-import { javascript } from "@codemirror/lang-javascript"
-import {
-  keymap,
-  highlightSpecialChars,
-  drawSelection,
-  highlightActiveLine,
-} from "@codemirror/view"
-import { Extension, EditorState } from "@codemirror/state"
-import { EditorView } from "@codemirror/view"
-import { history, historyKeymap } from "@codemirror/history"
-import { foldGutter, foldKeymap } from "@codemirror/fold"
-import { indentOnInput } from "@codemirror/language"
-import { lineNumbers, highlightActiveLineGutter } from "@codemirror/gutter"
-import { defaultKeymap } from "@codemirror/commands"
-import { bracketMatching } from "@codemirror/matchbrackets"
+import { completionKeymap } from "@codemirror/autocomplete"
 import { closeBrackets, closeBracketsKeymap } from "@codemirror/closebrackets"
-import { searchKeymap, highlightSelectionMatches } from "@codemirror/search"
-import { autocompletion, completionKeymap } from "@codemirror/autocomplete"
+import { defaultKeymap } from "@codemirror/commands"
 import { commentKeymap } from "@codemirror/comment"
-import { rectangularSelection } from "@codemirror/rectangular-selection"
+import { foldKeymap } from "@codemirror/fold"
 import { defaultHighlightStyle } from "@codemirror/highlight"
+import { history, historyKeymap } from "@codemirror/history"
+import { javascript } from "@codemirror/lang-javascript"
+import { indentOnInput } from "@codemirror/language"
 import { lintKeymap } from "@codemirror/lint"
+import { bracketMatching } from "@codemirror/matchbrackets"
+import { rectangularSelection } from "@codemirror/rectangular-selection"
+import { highlightSelectionMatches, searchKeymap } from "@codemirror/search"
+import { EditorState } from "@codemirror/state"
+import { drawSelection, highlightSpecialChars, keymap } from "@codemirror/view"
 
 export function createEditorState(opts: { doc: string }): EditorState {
   return EditorState.create({

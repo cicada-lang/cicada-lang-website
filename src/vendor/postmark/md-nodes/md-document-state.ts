@@ -1,5 +1,4 @@
 import { Nodes } from "@xieyuheng/postmark"
-import Vue from "vue"
 
 export type CustomBlockEntry = {
   component: Vue.Component
