@@ -13,10 +13,10 @@ export const components = {
   "md-custom-block": () => import("./leaf-blocks/md-custom-block.vue"),
 
   "md-block-quote": () => import("./container-blocks/md-block-quote.vue"),
-  "md-bullet-list": () => import("./container-blocks/md-bullet-list.vue"),
-  "md-bullet-list-item": () => import("./container-blocks/md-bullet-list-item.vue"),
+  "md-list": () => import("./container-blocks/md-list.vue"),
+  "md-item": () => import("./container-blocks/md-item.vue"),
   "md-ordered-list": () => import("./container-blocks/md-ordered-list.vue"),
-  "md-ordered-list-item": () => import("./container-blocks/md-ordered-list-item.vue"),
+  "md-ordered-item": () => import("./container-blocks/md-ordered-item.vue"),
 
   "md-emphasis": () => import("./inlines/md-emphasis.vue"),
   "md-strong": () => import("./inlines/md-strong.vue"),

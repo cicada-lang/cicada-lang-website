@@ -4,7 +4,7 @@
   >
     <button
       @click="$emit('close')"
-      class="text-orange-500 text-base font-bold self-end hover:text-orange-300"
+      class="hover:text-orange-300 self-end text-base font-bold text-orange-500"
     >
       CLOSE
     </button>

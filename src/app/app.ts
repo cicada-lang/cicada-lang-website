@@ -6,8 +6,8 @@ export class App extends ServiceContainer {
   cicada = new WebApp()
 
   postmarkParser = postmark.createParser().customBlock({
-    recognize: (info) => info.startsWith("cicada"),
     customKind: "Cicada",
+    recognize: (info) => info.startsWith("cicada"),
     parse: (text, { index }) => ({ index }),
   })
 }

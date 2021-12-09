@@ -1,13 +1,13 @@
 <template>
-  <li class="list-decimal">
+  <ul class="px-7 flex flex-col">
     <md-node
-      class="py-2"
+      style="font-family: inherit"
       v-for="(child, index) in node.children"
       :key="index"
       :state="state"
       :node="child"
     />
-  </li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -16,7 +16,7 @@ import { Node, Nodes } from "@xieyuheng/postmark"
 import { MdDocumentState as State } from "../md-document-state"
 
 @Component({
-  name: "md-ordered-list-item",
+  name: "md-list",
   // prettier-ignore
   components: {
     ...require("../../md-nodes").components

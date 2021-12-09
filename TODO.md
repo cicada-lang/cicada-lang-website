@@ -1,7 +1,5 @@
-- update `cicada`
-
+- "prettier-plugin-organize-imports"
 - remove the `narration` feature
-
 - `views/root/root-layout` -- import layout
 
 - `docs/` route replace `articles/`

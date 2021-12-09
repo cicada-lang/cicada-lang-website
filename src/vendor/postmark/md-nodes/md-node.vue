@@ -2,11 +2,11 @@
 <template>
   <!-- NOTE container-blocks -->
   <md-block-quote v-if="node.kind === 'BlockQuote'" :state="state" :node="node" />
-  <md-bullet-list v-else-if="node.kind === 'BulletList'" :state="state" :node="node" />
-  <md-bullet-list-item v-else-if="node.kind === 'BulletListItem'" :state="state" :node="node"
+  <md-list v-else-if="node.kind === 'List'" :state="state" :node="node" />
+  <md-item v-else-if="node.kind === 'Item'" :state="state" :node="node"
   />
   <md-ordered-list v-else-if="node.kind === 'OrderedList'" :state="state" :node="node" />
-  <md-ordered-list-item v-else-if="node.kind === 'OrderedListItem'" :state="state" :node="node"
+  <md-ordered-item v-else-if="node.kind === 'OrderedItem'" :state="state" :node="node"
   />
   <!-- NOTE leaf-blocks -->
   <md-paragraph v-else-if="node.kind === 'Paragraph'" :state="state" :node="node" />

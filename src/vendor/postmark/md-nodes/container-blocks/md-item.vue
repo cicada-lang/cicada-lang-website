@@ -16,7 +16,7 @@ import { Node, Nodes } from "@xieyuheng/postmark"
 import { MdDocumentState as State } from "../md-document-state"
 
 @Component({
-  name: "md-bullet-list-item",
+  name: "md-item",
   // prettier-ignore
   components: {
     ...require("../../md-nodes").components
