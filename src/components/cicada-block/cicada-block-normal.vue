@@ -15,14 +15,6 @@
 
       <div ref="editor" @click="active = true"></div>
 
-      <fade class="absolute top-0 z-40">
-        <cicada-block-narration
-          v-show="narrations.length > 0"
-          @close="narrations = []"
-          :narrations="narrations"
-        />
-      </fade>
-
       <cicada-block-toolbox
         class="-bottom-2 -right-4 absolute"
         v-show="active"
@@ -77,7 +69,6 @@ import { CtxEvent, CtxObserver } from "@cicada-lang/cicada/lib/lang/ctx"
   // prettier-ignore
   components: {
     "cicada-block-toolbox": require("./cicada-block-toolbox.vue").default,
-    "cicada-block-narration": require("./cicada-block-narration.vue").default,
     "stmt-output-list": require("./stmt-output-list.vue").default,
     "icon-menu": require("@/components/icons/icon-menu.vue").default,
     "fade": require("@/components/transitions/fade.vue").default,
@@ -99,23 +90,13 @@ export default class extends Vue {
   showToolbox: boolean = false
   editorView: EditorView | null = null
 
-  narrations: Array<string> = []
-
   mounted(): void {
     this.init()
   }
 
   get mod(): Module {
     return this.book.load(this.pageName, this.page, {
-      observers: [
-        app.cicada.createCtxObserver({
-          receive: (event) => {
-            if (event.tag === "narration") {
-              this.narrations.push(event.msg)
-            }
-          },
-        }),
-      ],
+      observers: [],
       highlighter: app.cicada.createHighlighter({
         highlight: (tag, text) => {
           switch (tag) {
@@ -135,7 +116,6 @@ export default class extends Vue {
   @Watch("pageName")
   init(): void {
     this.outputs = []
-    this.narrations = []
     this.error = null
     this.initEditor()
   }
@@ -156,7 +136,6 @@ export default class extends Vue {
   async runCode(): Promise<void> {
     if (this.editorView) {
       this.outputs = []
-      this.narrations = []
       this.error = null
       this.running = true
 
