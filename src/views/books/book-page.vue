@@ -31,7 +31,7 @@ import { BookState as State } from "@/views/books/book-state"
   // prettier-ignore
   components: {
     "book-page-navbar": require("./book-page-navbar.vue").default,
-    ...require("@/vendor/postmark/md-nodes").components,
+    ...require("@xieyuheng/postmark-components-vue2/src/md-nodes").components,
   },
 })
 export default class extends Vue {
