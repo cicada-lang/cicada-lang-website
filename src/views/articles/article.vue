@@ -25,7 +25,7 @@ import { ArticleState as State } from "./article-state"
   name: "cicada-article",
   // prettier-ignore
   components: {
-    ...require("@xieyuheng/postmark-components-vue2/src/md-nodes").components,
+    ...require("@xieyuheng/postmark-components-vue2").components,
   },
 })
 export default class extends Vue {
