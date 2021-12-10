@@ -46,7 +46,7 @@
     "@enchanterjs/enchanter": "^0.1.28",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@xieyuheng/postmark": "^0.2.2",
-    "@xieyuheng/postmark-components-vue2": "^0.2.1",
+    "@xieyuheng/postmark-components-vue2": "^0.2.2",
     "@xieyuheng/ty": "^0.1.9",
     "autoprefixer": "^9.8.8",
     "commonmark": "^0.30.0",
