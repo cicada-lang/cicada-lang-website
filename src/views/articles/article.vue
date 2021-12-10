@@ -18,20 +18,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
 
 @Component({
   name: "cicada-article",
-  // prettier-ignore
   components: {
     ...require("@xieyuheng/postmark-components-vue2").components,
   },
 })
 export default class extends Vue {
-  @Prop() articleId!: string
-  @Prop() baseURL!: string
-
   @Prop() state!: State
 }
 </script>
