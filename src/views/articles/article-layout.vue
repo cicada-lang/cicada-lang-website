@@ -31,11 +31,10 @@ export default class ArticleLayout extends Vue {
   state: State | null = null
   error: unknown | null = null
 
-  async mounted(): Promise<void> {
+  @Watch("$route", { immediate: true, deep: true })
+  async updateState(route: any): Promise<void> {
     try {
-      this.state = await State.build({
-        articleId: this.articleId,
-      })
+      this.state = await State.build({ articleId: this.articleId })
     } catch (error) {
       this.error = error
     }
