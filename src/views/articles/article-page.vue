@@ -22,7 +22,7 @@ import { Component, Prop, Vue } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
 
 @Component({
-  name: "cicada-article",
+  name: "article-page",
   components: {
     ...require("@xieyuheng/postmark-components-vue2").components,
   },

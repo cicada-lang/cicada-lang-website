@@ -60,7 +60,7 @@ type Example = {
 }
 
 @Component({
-  name: "cicada-article-list",
+  name: "article-list",
   // prettier-ignore
   components: {
     "icon-arrow-circle-right": require("@/components/icons/icon-arrow-circle-right.vue").default,

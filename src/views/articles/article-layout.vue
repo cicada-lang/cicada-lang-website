@@ -18,7 +18,7 @@ import { ArticleState as State } from "./article-state"
 import { MetaInfo } from "vue-meta"
 
 @Component({
-  name: "cicada-article-layout",
+  name: "article-layout",
   metaInfo(this: ArticleLayout): MetaInfo {
     return {
       title: this.state?.document.attributes.title,
