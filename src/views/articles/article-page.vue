@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { ArticleState as State } from "./article-state"
 
 @Component({
@@ -29,5 +29,10 @@ import { ArticleState as State } from "./article-state"
 })
 export default class extends Vue {
   @Prop() state!: State
+
+  @Watch("state.pageName")
+  scrollToTop(): void {
+    window.scrollTo(0, 0)
+  }
 }
 </script>
