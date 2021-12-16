@@ -1,6 +1,9 @@
 <template>
   <page-layout class="flex flex-col">
-    <form @submit.prevent="loadArticle()" class="flex flex-col w-full pt-8 pb-4">
+    <form
+      @submit.prevent="loadArticle()"
+      class="flex flex-col w-full pt-8 pb-4"
+    >
       <label
         class="pt-6 pb-6 text-4xl font-bold text-center text-gray-800"
         for="inputURL"
@@ -13,20 +16,7 @@
           id="inputURL"
           required
           autocomplete="url"
-          class="
-            focus:outline-none focus:ring-2 focus:ring-gray-300
-            placeholder-opacity-60
-            w-full
-            px-6
-            pt-4
-            pb-3
-            text-lg
-            font-bold
-            text-gray-800
-            placeholder-gray-800
-            bg-gray-200
-            rounded-lg
-          "
+          class="focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-opacity-60 w-full px-6 pt-4 pb-3 text-lg font-bold text-gray-800 placeholder-gray-800 bg-gray-200 rounded-lg"
           type="url"
           placeholder="Article URL"
           spellcheck="false"

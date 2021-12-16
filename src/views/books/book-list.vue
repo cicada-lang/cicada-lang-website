@@ -1,61 +1,48 @@
 <template>
   <page-layout class="flex flex-col">
-      <form @submit.prevent="loadBook()" class="flex flex-col pt-8 pb-4">
-        <label
-          class="pt-6 pb-6 text-4xl font-bold text-center text-gray-800"
-          for="inputURL"
-        >
-          Cicada Books
-        </label>
-        <div class="flex pl-4 pr-1">
-          <input
-            v-model.trim="inputURL"
-            id="inputURL"
-            required
-            autocomplete="url"
-            class="
-              focus:outline-none focus:ring-2 focus:ring-gray-300
-              placeholder-opacity-60
-              w-full
-              px-6
-              pt-4
-              pb-3
-              text-lg
-              font-bold
-              text-gray-800
-              placeholder-gray-800
-              bg-gray-200
-              rounded-lg
-            "
-            type="url"
-            placeholder="Book URL"
-            spellcheck="false"
-          />
-          <button class="p-2 text-gray-800" type="submit">
-            <icon-arrow-circle-right class="w-8 h-8" />
-          </button>
-        </div>
-      </form>
-
-      <div class="pb-8 text-xl">
-        <div class="px-10 pt-4">
-          <h3 class="py-1 text-2xl font-bold text-gray-800">Example Books</h3>
-
-          <ul class="px-8 py-1 space-y-2">
-            <li
-              class="hover:text-gray-500 text-gray-700 list-disc"
-              v-for="example in examples"
-            >
-              <router-link
-                :to="{ path: `/books/${getGitPath(example.url)}` }"
-                class="font-sans underline"
-              >
-                {{ example.title }}
-              </router-link>
-            </li>
-          </ul>
-        </div>
+    <form @submit.prevent="loadBook()" class="flex flex-col pt-8 pb-4">
+      <label
+        class="pt-6 pb-6 text-4xl font-bold text-center text-gray-800"
+        for="inputURL"
+      >
+        Cicada Books
+      </label>
+      <div class="flex pl-4 pr-1">
+        <input
+          v-model.trim="inputURL"
+          id="inputURL"
+          required
+          autocomplete="url"
+          class="focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-opacity-60 w-full px-6 pt-4 pb-3 text-lg font-bold text-gray-800 placeholder-gray-800 bg-gray-200 rounded-lg"
+          type="url"
+          placeholder="Book URL"
+          spellcheck="false"
+        />
+        <button class="p-2 text-gray-800" type="submit">
+          <icon-arrow-circle-right class="w-8 h-8" />
+        </button>
       </div>
+    </form>
+
+    <div class="pb-8 text-xl">
+      <div class="px-10 pt-4">
+        <h3 class="py-1 text-2xl font-bold text-gray-800">Example Books</h3>
+
+        <ul class="px-8 py-1 space-y-2">
+          <li
+            class="hover:text-gray-500 text-gray-700 list-disc"
+            v-for="example in examples"
+          >
+            <router-link
+              :to="{ path: `/books/${getGitPath(example.url)}` }"
+              class="font-sans underline"
+            >
+              {{ example.title }}
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </page-layout>
 </template>
 
