@@ -2,12 +2,14 @@
   <div>
     <section class="py-4 space-y-2">
       <p>
-        Cicada language is a <em>dependently typed programming language</em> and
-        <em>interactive theorem prover</em>.
+        <em class="font-bold text-gray-800">Cicada language</em> is a <br />
+        <em class="font-bold text-gray-800"
+          >dependently typed programming language</em
+        >
+        and <br />
+        <em class="font-bold text-gray-800">interactive theorem prover</em>.
       </p>
     </section>
-
-    <h2 class="font-sans text-3xl font-bold">Aim</h2>
 
     <section class="py-4 space-y-2">
       <p>
@@ -18,39 +20,23 @@
       </p>
     </section>
 
-    <h2 class="font-sans text-3xl font-bold">Services</h2>
-
     <section class="py-4 space-y-2">
       <p>
-        Cicada code can be organized into <em>Books</em> and <em>Articles.</em>
-        We strive to provide simple content management and clear rendering, to
-        help one sharing ones work with others. For details, please visit
-        dedicated service pages:
+        Cicada code can be shared as
+        <router-link :to="{ path: `/books` }" class="font-sans underline">
+          <em>Books</em>
+        </router-link>
+
+        and
+        <router-link :to="{ path: `/articles` }" class="font-sans underline">
+          <em> Articles</em> </router-link
+        >.
       </p>
-
-      <ul class="px-8 py-2 space-y-2">
-        <li class="list-disc">
-          <router-link :to="{ path: `/books` }" class="font-sans underline">
-            Book Service
-          </router-link>
-        </li>
-
-        <li class="list-disc">
-          <router-link :to="{ path: `/articles` }" class="font-sans underline">
-            Article Service
-          </router-link>
-        </li>
-      </ul>
     </section>
 
     <h2 class="font-sans text-3xl font-bold">Community</h2>
 
     <section class="py-4 space-y-2">
-      <p>
-        Happiness is only real when shared, and software service is only
-        valuable when serving people well.
-      </p>
-
       <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           GitHub:
@@ -90,11 +76,6 @@
     <h2 class="font-sans text-3xl font-bold">Core Team</h2>
 
     <section class="py-4 space-y-2">
-      <p>
-        Cicada project was started by Xie Yuheng, who cherishes it as a lifelong
-        inquiry into <em>foundations of mathematics</em>.
-      </p>
-
       <ul class="px-8 py-2 space-y-2">
         <li class="list-disc">
           <a

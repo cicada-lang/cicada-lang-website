@@ -1,5 +1,8 @@
 - `/home/home-header` link to `/books` and `/articles`
-- `/home/home-page` simplify intro
+
+- `/about/about-page` simplify home
+
+- [refactor] move `home-layout` to `layouts/page-layout`
 
 - make code block more
 

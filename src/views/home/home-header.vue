@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="py-4">
     <home-logo />
   </div>
 </template>
