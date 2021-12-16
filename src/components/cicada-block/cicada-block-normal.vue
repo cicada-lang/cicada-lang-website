@@ -1,34 +1,20 @@
 <template>
   <div class="flex flex-col">
-    <div
-      class="relative py-2 border-t border-b"
-      :class="[active ? 'border-orange-400' : 'border-white']"
-    >
+    <div class="border-sky-400 relative p-3 border-t border-l">
       <cicada-block-toolbox
         class="-top-2 -right-4 absolute"
-        v-show="active"
         @run="runCode()"
         @copy="copyCode()"
         @reset="resetCode()"
-        @deactivate="active = false"
       />
 
-      <div ref="editor" @click="active = true"></div>
-
-      <cicada-block-toolbox
-        class="-bottom-2 -right-4 absolute"
-        v-show="active"
-        @run="runCode()"
-        @copy="copyCode()"
-        @reset="resetCode()"
-        @deactivate="active = false"
-      />
+      <div ref="editor"></div>
     </div>
 
     <fade>
       <div
-        v-show="active && running"
-        class="py-2 font-sans text-orange-500 border-b border-orange-400"
+        v-show="running"
+        class="text-sky-500 border-sky-400 py-2 font-sans border-b"
       >
         Running...
       </div>
@@ -36,8 +22,8 @@
 
     <slide-right>
       <stmt-output-list
-        v-show="active && outputs.length"
-        class="py-2 overflow-x-auto border-b border-orange-400"
+        v-show="outputs.length"
+        class="border-sky-400 py-2 overflow-x-auto border-b"
         style="font-size: 92%"
         :outputs="outputs"
       />
@@ -45,8 +31,8 @@
 
     <slide-left>
       <pre
-        v-show="active && error"
-        class="text-rose-500 py-2 overflow-x-auto border-b border-orange-400"
+        v-show="error"
+        class="text-rose-500 border-sky-400 py-2 overflow-x-auto border-b"
         style="font-size: 92%"
         >{{ error }}</pre
       >
@@ -86,7 +72,6 @@ export default class extends Vue {
   error: unknown | null = null
   outputs: Array<StmtOutput> = []
   running: boolean = false
-  active: boolean = false
   showToolbox: boolean = false
   editorView: EditorView | null = null
 

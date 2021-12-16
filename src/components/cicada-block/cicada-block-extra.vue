@@ -1,16 +1,26 @@
 <template>
-  <click-away class="relative" @away="active = false">
+  <click-away class="relative">
     <div
-      class="absolute right-1 top-4 px-1 py-0.5 bg-rose-50 opacity-90 hover:opacity-30 text-rose-500 border border-rose-200 rounded italic"
+      class="
+        absolute
+        right-0
+        top-2
+        px-1
+        py-0.5
+        bg-rose-50
+        opacity-90
+        hover:opacity-30
+        text-rose-500
+        border border-rose-400
+        italic
+      "
     >
       {{ extra }}
     </div>
     <pre
-      class="overflow-x-auto border-t border-b border-white"
-      :class="[active && 'border-rose-400']"
+      class="overflow-x-auto border-t border-l border-white border-rose-400"
       style="font-size: 92%"
-      @click="active = true"
-    ><code style="padding: 0.5rem 0.5rem; background-color: inherit;">{{ text }}</code></pre>
+    ><code style="padding: 1rem 1rem; background-color: inherit;">{{ text }}</code></pre>
   </click-away>
 </template>
 
@@ -28,8 +38,6 @@ import hljs from "highlight.js"
 export default class extends Vue {
   @Prop() text!: string
   @Prop() extra!: string
-
-  active: boolean = false
 
   mounted(): void {
     hljs.highlightAll()

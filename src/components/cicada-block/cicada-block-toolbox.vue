@@ -1,6 +1,6 @@
 <template>
   <button @click="showToolbox = !showToolbox">
-    <icon-menu class="w-4 text-orange-500" />
+    <icon-menu class="text-sky-500 w-4" />
 
     <modal-fade-drop
       v-show="showToolbox"
@@ -8,12 +8,10 @@
       @close="showToolbox = false"
     >
       <div
-        class="right-3 bg-orange-50 absolute top-0 z-50 flex flex-col p-1 border border-orange-200 rounded"
+        class="right-3 bg-sky-50 border-sky-200 absolute top-0 z-50 flex flex-col p-1 border rounded"
       >
         <button class="w-full" @click="$emit('run')" title="Run cicada code">
-          <p
-            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
-          >
+          <p class="hover:text-sky-300 text-sky-500 p-1 font-bold text-right">
             RUN
           </p>
         </button>
@@ -22,9 +20,7 @@
           @click="$emit('copy')"
           title="Copy code to clipboard"
         >
-          <p
-            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
-          >
+          <p class="hover:text-sky-300 text-sky-500 p-1 font-bold text-right">
             COPY
           </p>
         </button>
@@ -33,21 +29,8 @@
           @click="$emit('reset')"
           title="Reset to original code"
         >
-          <p
-            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
-          >
+          <p class="hover:text-sky-300 text-sky-500 p-1 font-bold text-right">
             RESET
-          </p>
-        </button>
-        <button
-          class="w-full"
-          @click="$emit('deactivate')"
-          title="Deactivate editor"
-        >
-          <p
-            class="hover:text-orange-300 p-1 font-bold text-right text-orange-500"
-          >
-            DEACT
           </p>
         </button>
       </div>
