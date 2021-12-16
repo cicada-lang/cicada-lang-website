@@ -1,4 +1,5 @@
-- `/home/home-header`
+- `/home/home-header` link to `/books` and `/articles`
+- `/home/home-page` simplify intro
 
 - make code block more
 

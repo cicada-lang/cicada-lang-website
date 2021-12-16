@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="font-sans text-4xl font-bold">Cicada Language</h1>
-
     <section class="py-4 space-y-2">
       <p>
         Cicada language is a <em>dependently typed programming language</em> and

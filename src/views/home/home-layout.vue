@@ -1,5 +1,6 @@
 <template>
   <div class="md:py-10 max-w-3xl px-3 py-6 mx-auto font-serif text-xl">
+    <home-header />
     <home-page />
   </div>
 </template>
@@ -11,7 +12,8 @@ import { Component, Vue } from "vue-property-decorator"
   name: "home-layout",
   // prettier-ignore
   components: {
-    "home-page": require("@/views/home/home-page.vue").default
+    "home-header": require("@/views/home/home-header.vue").default,
+    "home-page": require("@/views/home/home-page.vue").default,
   },
 })
 export default class extends Vue {}
