@@ -14,7 +14,20 @@
             id="inputURL"
             required
             autocomplete="url"
-            class="focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-opacity-60 w-full px-6 pt-4 pb-3 text-lg font-bold text-gray-800 placeholder-gray-800 bg-gray-200 rounded-lg"
+            class="
+              focus:outline-none focus:ring-2 focus:ring-gray-300
+              placeholder-opacity-60
+              w-full
+              px-6
+              pt-4
+              pb-3
+              text-lg
+              font-bold
+              text-gray-800
+              placeholder-gray-800
+              bg-gray-200
+              rounded-lg
+            "
             type="url"
             placeholder="Book URL"
             spellcheck="false"
@@ -79,6 +92,10 @@ export default class extends Vue {
   }
 
   examples: Array<Example> = [
+    {
+      title: "蝉之书 / Cicada Book",
+      url: "https://gitlab.com/cicada-lang/cicada-book",
+    },
     {
       title: "The Little Typer Exercises",
       url: "https://gitlab.com/xieyuheng/the-little-typer-exercises",
