@@ -1,3 +1,8 @@
+- `/home/home-page` & `/home/home-layout`
+- `/home/home-header`
+
+- make code block more
+
 - `views/root/root-layout` -- import layout
 
 - `docs/` route replace `articles/`

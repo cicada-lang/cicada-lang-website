@@ -1,5 +1,5 @@
 <template>
-  <div class="md:py-10 max-w-prose px-6 py-6 mx-auto font-serif text-xl">
+  <div class="md:py-10 max-w-3xl px-3 py-6 mx-auto font-serif text-xl">
     <h1 class="font-sans text-4xl font-bold">Cicada Language</h1>
 
     <section class="py-4 space-y-2">
