@@ -1,6 +1,15 @@
 <template>
-  <div class="py-4">
+  <div class="flex items-baseline justify-between py-4">
     <page-logo />
+
+    <div class="flex space-x-4 font-sans">
+      <router-link class="hover:text-gray-400" :to="{ path: `/books` }">
+        BOOKS
+      </router-link>
+      <router-link class="hover:text-gray-400" :to="{ path: `/articles` }">
+        ARTICLES
+      </router-link>
+    </div>
   </div>
 </template>
 

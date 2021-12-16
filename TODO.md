@@ -1,5 +1,3 @@
-- `/home/home-header` link to `/books` and `/articles`
-
 - `/about/about-page` simplify home
 
 - make code block more
