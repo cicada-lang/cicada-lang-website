@@ -1,14 +1,6 @@
 - make code block more
-
-- `views/root/root-layout` -- import layout
-
-- `docs/` route replace `articles/`
-
+- `docs/` route
 - support rendering `.cic` file
-
-# home
-
-- `views/home` -- logo
 
 # bug
 
