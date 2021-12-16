@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <page-layout>
     <section class="py-4 space-y-2">
       <p>
         <em class="font-bold text-gray-800">Cicada language</em> is a <br />
@@ -98,7 +98,7 @@
         </li>
       </ul>
     </section>
-  </div>
+  </page-layout>
 </template>
 
 <script lang="ts">
@@ -108,7 +108,8 @@ import { Component, Vue } from "vue-property-decorator"
   name: "home-page",
   // prettier-ignore
   components: {
-    "icon-external-link": require("@/components/icons/icon-external-link.vue").default
+    "page-layout": require("@/layouts/page-layout").default,
+    "icon-external-link": require("@/components/icons/icon-external-link.vue").default,
   },
 })
 export default class extends Vue {}

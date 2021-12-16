@@ -2,8 +2,6 @@
 
 - `/about/about-page` simplify home
 
-- [refactor] move `home-layout` to `layouts/page-layout`
-
 - make code block more
 
 - `views/root/root-layout` -- import layout

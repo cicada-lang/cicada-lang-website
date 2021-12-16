@@ -1,15 +1,17 @@
 <template>
-  <div class="font-sans text-4xl font-bold">Cicada</div>
+  <div class="py-4">
+    <page-logo />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
 
 @Component({
-  name: "home-logo",
+  name: "page-header",
   // prettier-ignore
   components: {
-
+    "page-logo": require("./page-logo.vue").default,
   },
 })
 export default class extends Vue {}
