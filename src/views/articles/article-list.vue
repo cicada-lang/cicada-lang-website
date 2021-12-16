@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col my-6">
+  <page-layout class="flex flex-col">
     <div class="mx-auto">
       <form @submit.prevent="loadArticle()" class="flex flex-col w-full py-4">
         <label
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </page-layout>
 </template>
 
 <script lang="ts">
@@ -63,6 +63,7 @@ type Example = {
   name: "article-list",
   // prettier-ignore
   components: {
+    "page-layout": require("@/layouts/page-layout").default,
     "icon-arrow-circle-right": require("@/components/icons/icon-arrow-circle-right.vue").default,
   },
 })

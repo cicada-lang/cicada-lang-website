@@ -1,5 +1,5 @@
 <template>
-  <div class="md:py-10 max-w-3xl px-3 py-6 mx-auto font-serif text-xl">
+  <div class="max-w-3xl p-4 mx-auto font-serif text-xl">
     <page-header />
     <slot />
   </div>
