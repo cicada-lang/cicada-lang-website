@@ -32,13 +32,7 @@
     <slide-left>
       <pre
         v-show="error"
-        class="
-          text-rose-500
-          border-sky-400
-          p-3
-          overflow-x-auto
-          border-t border-l
-        "
+        class="text-rose-500 border-sky-400 p-3 overflow-x-auto border-t border-l"
         style="font-size: 92%"
         >{{ error }}</pre
       >
