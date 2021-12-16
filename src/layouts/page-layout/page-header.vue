@@ -1,13 +1,16 @@
 <template>
-  <div class="flex items-baseline justify-between py-4">
-    <page-logo />
+  <div class="flex items-baseline flex-wrap justify-between py-4">
+    <page-logo class="my-2" />
 
-    <div class="flex space-x-4 font-sans">
-      <router-link class="hover:text-gray-400" :to="{ path: `/books` }">
+    <div class="flex flex-wrap font-sans">
+      <router-link class="hover:text-gray-400 pr-4" :to="{ path: `/books` }">
         BOOKS
       </router-link>
-      <router-link class="hover:text-gray-400" :to="{ path: `/articles` }">
+      <router-link class="hover:text-gray-400 pr-4" :to="{ path: `/articles` }">
         ARTICLES
+      </router-link>
+      <router-link class="hover:text-gray-400" :to="{ path: `/about` }">
+        ABOUT
       </router-link>
     </div>
   </div>

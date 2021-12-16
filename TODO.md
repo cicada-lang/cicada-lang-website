@@ -1,5 +1,3 @@
-- `/about/about-page` simplify home
-
 - make code block more
 
 - `views/root/root-layout` -- import layout
