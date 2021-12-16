@@ -2,12 +2,10 @@
   <page-layout>
     <section class="py-4 space-y-2">
       <p class="text-gray-500">
-        <em class="font-bold text-gray-800">Cicada language</em> is a <br />
-        <em class="font-bold text-gray-800"
-          >dependently typed programming language</em
-        >
+        <em class="text-gray-800">Cicada language</em> is a <br />
+        <em class="text-gray-800">dependently typed programming language</em>
         and a <br />
-        <em class="font-bold text-gray-800">interactive theorem prover</em>.
+        <em class="text-gray-800">interactive theorem prover</em>.
       </p>
     </section>
 
