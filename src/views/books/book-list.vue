@@ -2,7 +2,7 @@
   <page-layout class="flex flex-col">
     <form @submit.prevent="loadBook()" class="flex flex-col pt-8 pb-4">
       <label
-        class="pt-6 pb-6 text-4xl font-bold text-center text-gray-800"
+        class="pt-6 pb-6 font-sans text-4xl font-bold text-center text-gray-800"
         for="inputURL"
       >
         Cicada Books
@@ -13,7 +13,7 @@
           id="inputURL"
           required
           autocomplete="url"
-          class="focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-opacity-60 w-full px-6 pt-4 pb-3 text-lg font-bold text-gray-800 placeholder-gray-800 bg-gray-200 rounded-lg"
+          class="focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-opacity-60 w-full px-6 pt-4 pb-3 font-sans text-lg font-bold text-gray-800 placeholder-gray-800 bg-gray-200 rounded-lg"
           type="url"
           placeholder="Book URL"
           spellcheck="false"
@@ -26,7 +26,9 @@
 
     <div class="pb-8 text-xl">
       <div class="px-10 pt-4">
-        <h3 class="py-1 text-2xl font-bold text-gray-800">Example Books</h3>
+        <h3 class="py-1 font-sans text-2xl font-bold text-gray-800">
+          Example Books
+        </h3>
 
         <ul class="px-8 py-1 space-y-2">
           <li
