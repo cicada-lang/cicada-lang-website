@@ -1,5 +1,5 @@
 <template>
-  <div class="md:py-10 max-w-3xl px-3 py-6 mx-auto font-serif text-xl">
+  <div>
     <h1 class="font-sans text-4xl font-bold">Cicada Language</h1>
 
     <section class="py-4 space-y-2">
@@ -126,7 +126,7 @@
 import { Component, Vue } from "vue-property-decorator"
 
 @Component({
-  name: "home",
+  name: "home-page",
   // prettier-ignore
   components: {
     "icon-external-link": require("@/components/icons/icon-external-link.vue").default
