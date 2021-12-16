@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-wrap items-baseline justify-between py-4">
-    <page-logo class="my-2" />
+    <router-link :to="{ path: `/` }">
+      <page-logo class="my-2" />
+    </router-link>
 
     <div class="flex flex-wrap font-sans">
       <router-link class="hover:text-gray-400 pr-4" :to="{ path: `/books` }">

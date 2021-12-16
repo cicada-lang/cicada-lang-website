@@ -1,3 +1,6 @@
+- `article-list` -- use `page-layout`
+- `book-list` -- use `page-layout`
+
 - make code block more
 
 - `views/root/root-layout` -- import layout
