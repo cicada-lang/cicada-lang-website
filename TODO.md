@@ -1,4 +1,3 @@
-- improve style of `article-list` and `book-list`
 - make code block more
 - `docs/` route
 - support rendering `.cic` file

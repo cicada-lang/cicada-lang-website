@@ -1,9 +1,8 @@
 <template>
   <page-layout class="flex flex-col">
-    <div class="mx-auto">
-      <form @submit.prevent="loadBook()" class="flex flex-col py-4">
+      <form @submit.prevent="loadBook()" class="flex flex-col pt-8 pb-4">
         <label
-          class="pt-6 pb-6 text-5xl font-bold text-center text-gray-800"
+          class="pt-6 pb-6 text-4xl font-bold text-center text-gray-800"
           for="inputURL"
         >
           Cicada Books
@@ -57,7 +56,6 @@
           </ul>
         </div>
       </div>
-    </div>
   </page-layout>
 </template>
 
