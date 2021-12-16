@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-baseline flex-wrap justify-between py-4">
+  <div class="flex flex-wrap items-baseline justify-between py-4">
     <page-logo class="my-2" />
 
     <div class="flex flex-wrap font-sans">
