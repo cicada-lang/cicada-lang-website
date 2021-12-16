@@ -1,19 +1,7 @@
 <template>
   <click-away class="relative">
     <div
-      class="
-        absolute
-        right-0
-        top-2
-        px-1
-        py-0.5
-        bg-gray-50
-        opacity-90
-        hover:opacity-30
-        text-gray-500
-        border border-gray-400
-        italic
-      "
+      class="absolute right-0 top-2 px-1 py-0.5 bg-gray-50 opacity-90 hover:opacity-30 text-gray-500 border border-gray-400 italic"
     >
       {{ extra }}
     </div>
