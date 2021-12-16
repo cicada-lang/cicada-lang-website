@@ -14,7 +14,7 @@
     <fade>
       <div
         v-show="running"
-        class="text-sky-500 border-sky-400 py-2 font-sans border-b"
+        class="text-sky-500 border-sky-400 p-3 font-sans border-t border-l"
       >
         Running...
       </div>
@@ -23,7 +23,7 @@
     <slide-right>
       <stmt-output-list
         v-show="outputs.length"
-        class="border-sky-400 py-2 overflow-x-auto border-b"
+        class="border-sky-400 p-3 overflow-x-auto border-t border-l"
         style="font-size: 92%"
         :outputs="outputs"
       />
@@ -32,7 +32,13 @@
     <slide-left>
       <pre
         v-show="error"
-        class="text-rose-500 border-sky-400 py-2 overflow-x-auto border-b"
+        class="
+          text-rose-500
+          border-sky-400
+          p-3
+          overflow-x-auto
+          border-t border-l
+        "
         style="font-size: 92%"
         >{{ error }}</pre
       >
