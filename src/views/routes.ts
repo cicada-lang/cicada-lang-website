@@ -1,8 +1,8 @@
 import { RouteConfig } from "vue-router"
 
 export const routes: Array<RouteConfig> = [
-  ...require("@/views/home/routes").routes,
-  ...require("@/views/articles/routes").routes,
-  ...require("@/views/books/routes").routes,
-  { path: "*", component: () => import("@/views/errors/page-not-found.vue") },
+  { path: "/", component: () => import("./home/home-page.vue") },
+  ...require("./articles/routes").routes,
+  ...require("./books/routes").routes,
+  { path: "*", component: () => import("./errors/page-not-found.vue") },
 ]
