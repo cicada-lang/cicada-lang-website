@@ -35,6 +35,17 @@
         </li>
 
         <li class="list-disc">
+          GitLab:
+          <a
+            href="https://gitlab.com/cicada-lang"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            cicada-lang <icon-external-link class="w-4" />
+          </a>
+        </li>
+
+        <li class="list-disc">
           Telegram:
           <a
             href="https://t.me/CicadaLanguage"
