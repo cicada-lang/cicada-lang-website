@@ -7,18 +7,18 @@
         top-2
         px-1
         py-0.5
-        bg-rose-50
+        bg-gray-50
         opacity-90
         hover:opacity-30
-        text-rose-500
-        border border-rose-400
+        text-gray-500
+        border border-gray-400
         italic
       "
     >
       {{ extra }}
     </div>
     <pre
-      class="overflow-x-auto border-t border-l border-white border-rose-400"
+      class="overflow-x-auto border-t border-l border-white border-gray-400"
       style="font-size: 92%"
     ><code style="padding: 1rem 1rem; background-color: inherit;">{{ text }}</code></pre>
   </click-away>
