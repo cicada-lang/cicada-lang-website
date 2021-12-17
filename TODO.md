@@ -1,11 +1,7 @@
-# docs
-
 - `docs/tests` route
 
-- we need to support rendering `.cic` file
+  - we need to support rendering `.cic` file
 
-- link to `cicada-book`
-
-# bug
+# bugs
 
 - [bug] can not use `import` in `articles/`
