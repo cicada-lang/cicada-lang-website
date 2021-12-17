@@ -80,7 +80,7 @@ export default class extends Vue {
 
   examples: Array<Example> = [
     {
-      title: "蝉之书 / Cicada Book",
+      title: "The Cicada Book",
       url: "https://gitlab.com/cicada-lang/cicada-book",
     },
     {

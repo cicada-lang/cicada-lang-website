@@ -1,5 +1,10 @@
-- `docs/` route
-- support rendering `.cic` file
+# docs
+
+- `docs/tests` route
+
+- we need to support rendering `.cic` file
+
+- link to `cicada-book`
 
 # bug
 

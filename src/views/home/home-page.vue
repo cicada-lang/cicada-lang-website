@@ -17,20 +17,6 @@
         each other, and help each other in very good ways.
       </p>
     </section>
-
-    <section class="py-4 space-y-2">
-      <p>
-        Cicada code can be shared as
-        <router-link :to="{ path: `/books` }" class="font-sans underline">
-          <em>Books</em>
-        </router-link>
-
-        and
-        <router-link :to="{ path: `/articles` }" class="font-sans underline">
-          <em> Articles</em> </router-link
-        >.
-      </p>
-    </section>
   </page-layout>
 </template>
 
