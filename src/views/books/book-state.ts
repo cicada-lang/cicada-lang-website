@@ -45,7 +45,7 @@ export class BookState {
 
   get bookName(): string {
     const { host, repo } = this.bookId
-    return `${repo}@${host}`
+    return `${host}/${repo}`
   }
 
   parseDocument(text: string): Nodes.Document {
