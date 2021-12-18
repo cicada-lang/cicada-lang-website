@@ -17,7 +17,7 @@
 
       <p>
         <router-link
-          :to="{ path: `/books/cicada-lang/cicada-book@gitlab.com` }"
+          :to="{ path: `/books/gitlab.com/cicada-lang/cicada-book` }"
           class="font-sans underline"
         >
           <em>The Cicada Book</em>
