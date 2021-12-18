@@ -36,7 +36,7 @@
             v-for="example in examples"
           >
             <router-link
-              :to="{ path: `/books/${getGitPath(example.url)}` }"
+              :to="{ path: `/books/${getGitLink(example.url)}` }"
               class="font-sans underline"
             >
               {{ example.title }}
@@ -50,7 +50,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 
 type Example = {
   title: string
@@ -68,13 +68,13 @@ type Example = {
 export default class extends Vue {
   inputURL: string | null = null
 
-  getGitPath(url: string): string {
-    return GitPath.fromURL(url).encode()
+  getGitLink(url: string): string {
+    return GitLink.fromURL(url).encode()
   }
 
   loadBook(): void {
     if (this.inputURL) {
-      this.$router.push(`books/${this.getGitPath(this.inputURL)}`)
+      this.$router.push(`books/${this.getGitLink(this.inputURL)}`)
     }
   }
 

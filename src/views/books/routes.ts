@@ -1,4 +1,4 @@
-import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 import { RouteConfig } from "vue-router"
 
 export const routes: Array<RouteConfig> = [
@@ -14,7 +14,7 @@ export const routes: Array<RouteConfig> = [
       frontMatter: route.query["front-matter"],
       backMatter: route.query["back-matter"],
       get baseURL(): string {
-        const { host, repo } = GitPath.decode(route.params.pathMatch)
+        const { host, repo } = GitLink.decode(route.params.pathMatch)
         return `${window.location.origin}/books/${repo}@${host}`
       },
     }),

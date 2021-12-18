@@ -1,18 +1,18 @@
 import { Book } from "@cicada-lang/cicada/lib/book"
 import { GitFileStore } from "@enchanterjs/enchanter/lib/git-file-store"
-import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 import { Nodes } from "@xieyuheng/postmark"
 const Path = require("path")
 
 export class ArticleState {
-  articleId: GitPath
+  articleId: GitLink
   files: GitFileStore
   text: string
   pageName: string
   book: Book
 
   constructor(opts: {
-    articleId: GitPath
+    articleId: GitLink
     files: GitFileStore
     text: string
     pageName: string
@@ -26,7 +26,7 @@ export class ArticleState {
   }
 
   static async build(opts: { articleId: string }): Promise<ArticleState> {
-    const articleId = GitPath.decode(opts.articleId)
+    const articleId = GitLink.decode(opts.articleId)
     const files = articleId.upward().createGitFileStore()
     const pageName = articleId.path
     const text = await files.getOrFail(Path.basename(pageName))

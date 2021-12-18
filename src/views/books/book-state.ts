@@ -1,16 +1,16 @@
 import { Book } from "@cicada-lang/cicada/lib/book"
-import { GitPath } from "@enchanterjs/enchanter/lib/git-path"
+import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 import { Nodes } from "@xieyuheng/postmark"
 
 export class BookState {
-  bookId: GitPath
+  bookId: GitLink
   bookConfig: Record<string, any>
   files: Record<string, string>
   pageName: string
   book: Book
 
   constructor(opts: {
-    bookId: GitPath
+    bookId: GitLink
     bookConfig: Record<string, any>
     files: Record<string, string>
     pageName: string
@@ -24,7 +24,7 @@ export class BookState {
   }
 
   static async build(opts: { bookId: string }): Promise<BookState> {
-    const bookId = GitPath.decode(opts.bookId)
+    const bookId = GitLink.decode(opts.bookId)
 
     const pageName = bookId.path
     bookId.path = ""
@@ -32,12 +32,12 @@ export class BookState {
     const files = bookId.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(bookConfig.src).all()
-    const book = await app.cicada.gitBooks.getFromGitPath(bookId)
+    const book = await app.cicada.gitBooks.getFromGitLink(bookId)
     return new BookState({ bookId, bookConfig, files: pages, pageName, book })
   }
 
   updateBookId(input: string): void {
-    const bookId = GitPath.decode(input)
+    const bookId = GitLink.decode(input)
     this.pageName = bookId.path
     bookId.path = ""
     this.bookId = bookId
