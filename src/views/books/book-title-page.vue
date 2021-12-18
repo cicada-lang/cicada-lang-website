@@ -1,12 +1,29 @@
 <template>
   <div
-    class="flex flex-col items-center justify-between h-screen py-12 font-serif text-2xl"
+    class="
+      flex flex-col
+      items-center
+      justify-between
+      h-screen
+      py-12
+      font-serif
+      text-2xl
+    "
   >
     <router-link
       :to="{
         path: `/books/${state.bookId.host}/${state.bookId.repo}?front-matter=contents`,
       }"
-      class="md:text-4xl hover:text-gray-500 flex flex-col items-center py-4 font-sans text-3xl font-bold"
+      class="
+        md:text-4xl
+        hover:text-gray-500
+        flex flex-col
+        items-center
+        py-4
+        font-sans
+        text-3xl
+        font-bold
+      "
     >
       <div>
         <span class="pl-2 pr-1">{{ state.bookConfig.title }}</span>
@@ -38,10 +55,23 @@
     <section class="flex flex-col items-center px-4">
       <a
         :href="state.bookId.formatURL()"
-        class="md:flex-row hover:text-gray-500 flex flex-col items-center py-1 font-sans text-xl"
+        class="
+          md:flex-row
+          hover:text-gray-500
+          flex flex-col
+          items-center
+          py-1
+          font-sans
+          text-xl
+        "
         target="_blank"
       >
-        <div>{{ state.bookId.host }}/{{ state.bookId.repo }}</div>
+        <div class="py-1">
+          {{ state.bookId.host }}<span class="md:inline hidden">/</span>
+        </div>
+        <div class="py-1">
+          {{ state.bookId.repo }}
+        </div>
       </a>
 
       <div v-if="state.bookConfig.date" class="py-1">
