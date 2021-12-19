@@ -1,6 +1,6 @@
 <template>
   <page-layout>
-    <h2 class="font-sans text-2xl font-bold">Why the project?</h2>
+    <h2 class="font-sans text-2xl font-bold">Why this project?</h2>
 
     <section class="py-4 space-y-2">
       <p>

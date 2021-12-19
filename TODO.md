@@ -1,3 +1,5 @@
+- [refactor] use `readonly.link` to host books, articles and tests
+
 - [refactor] simplify `book-state`
 
 - [refactor] simplify `article-state`
