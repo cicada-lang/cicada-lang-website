@@ -2,7 +2,9 @@
 
 - [refactor] use config to map `GitLink` to CDN prefix
 
-- show info about CDN in `book-title-page`
+- show more info in `book-title-page`
+
+  - about CDN
 
 - `docs/tests/test-layout`
 - `docs/tests/test-list`
@@ -11,7 +13,3 @@
   - we need to support rendering `.cic` file
 
 - `error` with page layouts
-
-# bugs
-
-- [bug] can not use `import` in `articles/`
