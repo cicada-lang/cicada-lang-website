@@ -7,7 +7,7 @@ export const routes: Array<RouteConfig> = [
   },
   {
     path: "/articles/*",
-    component: () => import("@/views/articles/article-layout.vue"),
+    component: () => import("@/views/articles/article-root.vue"),
     props: (route) => ({
       link: route.params.pathMatch,
     }),

@@ -1,4 +1,3 @@
-- [refactor] rename `article-layout` to `article-root`
 - [refactor] rename `book-layout` to `book-root`
 
 - [refactor] `cicada-block` should take `ModuleLoader` instead of `Module`
