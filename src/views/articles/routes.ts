@@ -11,14 +11,5 @@ export const routes: Array<RouteConfig> = [
     props: (route) => ({
       link: route.params.pathMatch,
     }),
-    children: [
-      {
-        path: "/articles/*",
-        component: () => import("@/views/articles/article-page.vue"),
-        props: (route) => ({
-          link: route.params.pathMatch,
-        }),
-      },
-    ],
   },
 ]

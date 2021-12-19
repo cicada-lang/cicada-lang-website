@@ -8,7 +8,7 @@
         <p>Loading article ...</p>
       </div>
     </div>
-    <router-view v-else :state="state" />
+    <article-page v-else :state="state" />
   </div>
 </template>
 
@@ -19,6 +19,10 @@ import { MetaInfo } from "vue-meta"
 
 @Component({
   name: "article-layout",
+  // prettier-ignore
+  components: {
+    "article-page": require("@/views/articles/article-page.vue").default,
+  },
   metaInfo(this: ArticleLayout): MetaInfo {
     return {
       title: this.state?.document.attributes.title,
