@@ -17,7 +17,6 @@ export const routes: Array<RouteConfig> = [
         component: () => import("@/views/articles/article-page.vue"),
         props: (route) => ({
           link: route.params.pathMatch,
-          baseURL: `${window.location.origin}/articles`,
         }),
       },
     ],

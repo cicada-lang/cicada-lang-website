@@ -14,7 +14,6 @@
       v-else-if="state.pageName"
       :pageName="state.pageName"
       :state="state"
-      :baseURL="baseURL"
     />
     <book-title-page v-else :state="state" />
   </div>
@@ -43,7 +42,6 @@ export default class BookLayout extends Vue {
   @Prop() bookId!: string
   @Prop() frontMatter!: string | undefined
   @Prop() backMatter!: string | undefined
-  @Prop() baseURL!: string
 
   state: State | null = null
   error: unknown | null = null

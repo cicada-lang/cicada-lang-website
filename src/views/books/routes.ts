@@ -13,10 +13,6 @@ export const routes: Array<RouteConfig> = [
       bookId: route.params.pathMatch,
       frontMatter: route.query["front-matter"],
       backMatter: route.query["back-matter"],
-      get baseURL(): string {
-        const { host, repo } = GitLink.decode(route.params.pathMatch)
-        return `${window.location.origin}/books/${repo}@${host}`
-      },
     }),
   },
 ]

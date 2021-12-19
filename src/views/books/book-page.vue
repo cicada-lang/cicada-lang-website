@@ -37,7 +37,6 @@ import { Module } from "@cicada-lang/cicada/lib/module"
   },
 })
 export default class extends Vue {
-  @Prop() baseURL!: string
   @Prop() pageName!: string
   @Prop() state!: State
 
