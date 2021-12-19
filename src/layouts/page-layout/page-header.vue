@@ -4,11 +4,11 @@
       <page-logo class="my-2" />
     </router-link>
 
-    <div class="flex flex-wrap font-sans">
-      <router-link class="hover:text-gray-400 pr-4" :to="{ path: `/docs` }">
+    <div class="flex flex-wrap font-sans text-gray-400">
+      <router-link class="hover:text-gray-900 pr-4" :to="{ path: `/docs` }">
         DOCS
       </router-link>
-      <router-link class="hover:text-gray-400" :to="{ path: `/about` }">
+      <router-link class="hover:text-gray-900" :to="{ path: `/about` }">
         ABOUT
       </router-link>
     </div>
