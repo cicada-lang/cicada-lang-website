@@ -1,3 +1,7 @@
+- [refactor] simplify `book-state`
+
+- [refactor] simplify `article-state`
+
 - [refactor] `cicada-block` should take `ModuleLoader` instead of `Module`
 
 - [refactor] use config to map `GitLink` to CDN prefix
