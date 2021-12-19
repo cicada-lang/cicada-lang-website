@@ -8,7 +8,7 @@ export const routes: Array<RouteConfig> = [
   },
   {
     path: "/books/*",
-    component: () => import("@/views/books/book-layout.vue"),
+    component: () => import("@/views/books/book-root.vue"),
     props: (route) => ({
       link: route.params.pathMatch,
       frontMatter: route.query["front-matter"],

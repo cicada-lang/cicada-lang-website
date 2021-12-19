@@ -25,7 +25,7 @@ import { BookState as State } from "@/views/books/book-state"
 import { MetaInfo } from "vue-meta"
 
 @Component({
-  name: "book-layout",
+  name: "book-root",
   // prettier-ignore
   components: {
     "book-title-page": require("@/views/books/book-title-page.vue").default,

@@ -18,7 +18,7 @@ import { ArticleState as State } from "./article-state"
 import { MetaInfo } from "vue-meta"
 
 @Component({
-  name: "article-layout",
+  name: "article-root",
   // prettier-ignore
   components: {
     "article-page": require("@/views/articles/article-page.vue").default,
