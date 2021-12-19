@@ -1,4 +1,5 @@
-- [refactor] rename `bookId` to `link`
+- [refactor] `cicada-block` should take `ModuleLoader` instead of `Module`
+
 - [refactor] use config to map `GitLink` to CDN prefix
 
 - show info about CDN in `book-title-page`

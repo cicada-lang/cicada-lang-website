@@ -4,7 +4,7 @@
   >
     <router-link
       :to="{
-        path: `/books/${state.bookId.host}/${state.bookId.repo}?front-matter=contents`,
+        path: `/books/${state.link.host}/${state.link.repo}?front-matter=contents`,
       }"
       class="md:text-4xl hover:text-gray-500 flex flex-col items-center py-4 font-sans text-3xl font-bold"
     >
@@ -37,16 +37,16 @@
 
     <section class="flex flex-col items-center px-4">
       <a
-        :href="state.bookId.formatURL()"
+        :href="state.link.formatURL()"
         class="md:flex-row hover:text-gray-500 flex flex-col items-center py-1 font-sans text-xl"
         target="_blank"
       >
         <div class="py-1">
-          <span class="md:inline hidden">{{ state.bookId.host }}/</span
-          >{{ state.bookId.repo }}
+          <span class="md:inline hidden">{{ state.link.host }}/</span
+          >{{ state.link.repo }}
         </div>
         <div class="py-1">
-          <span class="md:hidden inline">{{ state.bookId.host }}</span>
+          <span class="md:hidden inline">{{ state.link.host }}</span>
         </div>
       </a>
 

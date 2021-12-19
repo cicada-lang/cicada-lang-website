@@ -3,36 +3,36 @@ import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 import { Nodes } from "@xieyuheng/postmark"
 
 export class BookState {
-  bookId: GitLink
+  link: GitLink
   bookConfig: Record<string, any>
   files: Record<string, string>
   pageName: string
 
   constructor(opts: {
-    bookId: GitLink
+    link: GitLink
     bookConfig: Record<string, any>
     files: Record<string, string>
     pageName: string
   }) {
-    this.bookId = opts.bookId
+    this.link = opts.link
     this.bookConfig = opts.bookConfig
     this.files = opts.files
     this.pageName = opts.pageName
   }
 
-  static async build(opts: { bookId: string }): Promise<BookState> {
-    const bookId = GitLink.decode(opts.bookId)
-    const pageName = bookId.path
-    bookId.path = ""
-    const files = bookId.createGitFileStore()
+  static async build(opts: { link: string }): Promise<BookState> {
+    const link = GitLink.decode(opts.link)
+    const pageName = link.path
+    link.path = ""
+    const files = link.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(bookConfig.src).all()
-    return new BookState({ bookId, bookConfig, files: pages, pageName })
+    return new BookState({ link, bookConfig, files: pages, pageName })
   }
 
   async loadMod(pageName: string): Promise<Module> {
     // TODO use config to map `GitLink` to CDN prefix
-    const link = this.bookId
+    const link = this.link
     const { repo, version } = link
     const path = this.bookConfig.src + "/" + pageName
     const url = version
@@ -42,15 +42,15 @@ export class BookState {
     return await Module.load(url)
   }
 
-  updateBookId(input: string): void {
-    const bookId = GitLink.decode(input)
-    this.pageName = bookId.path
-    bookId.path = ""
-    this.bookId = bookId
+  updateLink(input: string): void {
+    const link = GitLink.decode(input)
+    this.pageName = link.path
+    link.path = ""
+    this.link = link
   }
 
   get bookName(): string {
-    const { host, repo } = this.bookId
+    const { host, repo } = this.link
     return `${host}/${repo}`
   }
 

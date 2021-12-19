@@ -39,7 +39,7 @@ import { MetaInfo } from "vue-meta"
   },
 })
 export default class BookLayout extends Vue {
-  @Prop() bookId!: string
+  @Prop() link!: string
   @Prop() frontMatter!: string | undefined
   @Prop() backMatter!: string | undefined
 
@@ -48,7 +48,7 @@ export default class BookLayout extends Vue {
 
   async mounted(): Promise<void> {
     try {
-      this.state = await State.build({ bookId: this.bookId })
+      this.state = await State.build({ link: this.link })
     } catch (error) {
       this.error = error
     }
@@ -56,11 +56,11 @@ export default class BookLayout extends Vue {
 
   @Watch("$route", { immediate: true, deep: true })
   updateState(route: any): void {
-    this.bookId = route.params.pathMatch
+    this.link = route.params.pathMatch
     this.frontMatter = route.query["front-matter"]
     this.backMatter = route.query["back-matter"]
     if (this.state) {
-      this.state.updateBookId(this.bookId)
+      this.state.updateLink(this.link)
     }
   }
 }
