@@ -29,16 +29,20 @@ export default class extends Vue {
   @Prop() page!: string
   @Prop() text!: string
   @Prop() mod!: Module
+  @Prop() debug?: boolean
 
   mounted(): void {
-    console.log({
-      pageName: this.pageName,
-      index: this.index,
-      info: this.info,
-      page: this.page,
-      text: this.text,
-      mod: this.mod,
-    })
+    if (this.debug) {
+      console.log({
+        msg: "[cicada-block] debug",
+        pageName: this.pageName,
+        index: this.index,
+        info: this.info,
+        page: this.page,
+        text: this.text,
+        mod: this.mod,
+      })
+    }
   }
 
   get extra(): string | undefined {
