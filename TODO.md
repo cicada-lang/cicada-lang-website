@@ -1,3 +1,7 @@
+- improve `page-header`
+- update cicada -- not `Book` anymore, map `GitLink` to CDN
+- show info about CDN in `book-title-page`
+
 - `docs/tests/test-layout`
 - `docs/tests/test-list`
 - `docs/tests/test-page`

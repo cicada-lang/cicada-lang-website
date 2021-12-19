@@ -67,10 +67,11 @@
         target="_blank"
       >
         <div class="py-1">
-          {{ state.bookId.host }}<span class="md:inline hidden">/</span>
+          <span class="md:inline hidden">{{ state.bookId.host }}/</span
+          >{{ state.bookId.repo }}
         </div>
         <div class="py-1">
-          {{ state.bookId.repo }}
+          <span class="md:hidden inline">{{ state.bookId.host }}</span>
         </div>
       </a>
 
