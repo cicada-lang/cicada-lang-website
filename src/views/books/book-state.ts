@@ -1,4 +1,4 @@
-import { Book } from "@cicada-lang/cicada/lib/book"
+import { Module } from "@cicada-lang/cicada/lib/module"
 import { GitLink } from "@enchanterjs/enchanter/lib/git-link"
 import { Nodes } from "@xieyuheng/postmark"
 
@@ -7,33 +7,39 @@ export class BookState {
   bookConfig: Record<string, any>
   files: Record<string, string>
   pageName: string
-  book: Book
 
   constructor(opts: {
     bookId: GitLink
     bookConfig: Record<string, any>
     files: Record<string, string>
     pageName: string
-    book: Book
   }) {
     this.bookId = opts.bookId
     this.bookConfig = opts.bookConfig
     this.files = opts.files
     this.pageName = opts.pageName
-    this.book = opts.book
   }
 
   static async build(opts: { bookId: string }): Promise<BookState> {
     const bookId = GitLink.decode(opts.bookId)
-
     const pageName = bookId.path
     bookId.path = ""
-
     const files = bookId.createGitFileStore()
     const bookConfig = JSON.parse(await files.getOrFail("book.json"))
     const pages = await files.cd(bookConfig.src).all()
-    const book = await app.cicada.gitBooks.getFromGitLink(bookId)
-    return new BookState({ bookId, bookConfig, files: pages, pageName, book })
+    return new BookState({ bookId, bookConfig, files: pages, pageName })
+  }
+
+  async loadMod(pageName: string): Promise<Module> {
+    // TODO use config to map `GitLink` to CDN prefix
+    const link = this.bookId
+    const { repo, version } = link
+    const path = this.bookConfig.src + "/" + pageName
+    const url = version
+      ? new URL(`https://cdn.jsdelivr.net/gh/${repo}@${version}/${path}`)
+      : new URL(`https://cdn.jsdelivr.net/gh/${repo}/${path}`)
+
+    return await Module.load(url)
   }
 
   updateBookId(input: string): void {

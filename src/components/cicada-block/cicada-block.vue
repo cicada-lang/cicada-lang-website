@@ -6,13 +6,13 @@
     :index="index"
     :page="page"
     :text="text"
-    :book="book"
+    :mod="mod"
   />
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { Book } from "@cicada-lang/cicada/lib/book"
+import { Module } from "@cicada-lang/cicada/lib/module"
 
 @Component({
   name: "cicada-block",
@@ -28,7 +28,18 @@ export default class extends Vue {
   @Prop() info!: string
   @Prop() page!: string
   @Prop() text!: string
-  @Prop() book!: Book
+  @Prop() mod!: Module
+
+  mounted(): void {
+    console.log({
+      pageName: this.pageName,
+      index: this.index,
+      info: this.info,
+      page: this.page,
+      text: this.text,
+      mod: this.mod,
+    })
+  }
 
   get extra(): string | undefined {
     const prefix = "cicada "

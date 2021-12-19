@@ -26,7 +26,7 @@ import { MetaInfo } from "vue-meta"
   },
 })
 export default class ArticleLayout extends Vue {
-  @Prop() articleId!: string
+  @Prop() link!: string
 
   state: State | null = null
   error: unknown | null = null
@@ -34,7 +34,7 @@ export default class ArticleLayout extends Vue {
   @Watch("$route", { immediate: true, deep: true })
   async updateState(route: any): Promise<void> {
     try {
-      this.state = await State.build({ articleId: this.articleId })
+      this.state = await State.build({ link: this.link })
     } catch (error) {
       this.error = error
     }

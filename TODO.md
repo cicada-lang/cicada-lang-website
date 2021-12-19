@@ -1,4 +1,6 @@
-- update cicada -- not `Book` anymore, map `GitLink` to CDN
+- [refactor] rename `bookId` to `link`
+- [refactor] use config to map `GitLink` to CDN prefix
+
 - show info about CDN in `book-title-page`
 
 - `docs/tests/test-layout`

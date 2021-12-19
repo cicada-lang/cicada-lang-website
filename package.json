@@ -25,8 +25,8 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "@cicada-lang/cicada": "^0.6.4",
-    "@cicada-lang/partech": "^0.1.15",
+    "@cicada-lang/cicada": "^0.6.5",
+    "@cicada-lang/partech": "^0.1.17",
     "@codemirror/autocomplete": "^0.19.9",
     "@codemirror/closebrackets": "^0.19.0",
     "@codemirror/commands": "^0.19.6",

@@ -2,6 +2,7 @@
   <div class="md:py-10 px-6 py-6">
     <book-page-navbar :pageName="pageName" :state="state" />
     <md-document
+      v-if="mod"
       :key="pageName"
       :document="state.parseDocument(page)"
       :custom-block-components="{
@@ -13,7 +14,7 @@
             info: node.info,
             page: page || '',
             text: node.text.trim(),
-            book: state.book,
+            mod,
           }),
         },
       }"
@@ -25,6 +26,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { BookState as State } from "@/views/books/book-state"
+import { Module } from "@cicada-lang/cicada/lib/module"
 
 @Component({
   name: "book-page",
@@ -38,6 +40,12 @@ export default class extends Vue {
   @Prop() baseURL!: string
   @Prop() pageName!: string
   @Prop() state!: State
+
+  mod: Module | null = null
+
+  async mounted(): Promise<void> {
+    this.mod = await this.state.loadMod(this.pageName)
+  }
 
   get page(): string | undefined {
     if (this.state) {

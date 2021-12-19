@@ -42,8 +42,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { Book } from "@cicada-lang/cicada/lib/book"
 import { Module } from "@cicada-lang/cicada/lib/module"
+import { Ctx } from "@cicada-lang/cicada/lib/lang/ctx"
 import { StmtOutput } from "@cicada-lang/cicada/lib/lang/stmt"
 import * as ut from "@/ut"
 import { createEditorState } from "./editor-state"
@@ -67,7 +67,7 @@ export default class extends Vue {
   @Prop() index!: number
   @Prop() page!: string
   @Prop() text!: string
-  @Prop() book!: Book
+  @Prop() mod!: Module
 
   error: unknown | null = null
   outputs: Array<StmtOutput> = []
@@ -77,25 +77,19 @@ export default class extends Vue {
 
   mounted(): void {
     this.init()
-  }
-
-  get mod(): Module {
-    return this.book.load(this.pageName, this.page, {
-      observers: [],
-      highlighter: app.cicada.createHighlighter({
-        highlight: (tag, text) => {
-          switch (tag) {
-            case "code":
-              return `\
+    Ctx.highlighter = {
+      highlight: (tag, text) => {
+        switch (tag) {
+          case "code":
+            return `\
                 <span
                   class="text-sky-600 font-mono"
                   style="font-size: 81%;">${text}</span>`
-            default:
-              return text
-          }
-        },
-      }),
-    })
+          default:
+            return text
+        }
+      },
+    }
   }
 
   @Watch("pageName")
