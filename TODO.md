@@ -1,4 +1,4 @@
-- [refactor] use `readonly.link` to host books, articles and tests
+- `error` with page layouts
 
 - [refactor] simplify `book-state`
 
@@ -17,5 +17,3 @@
 - `docs/tests/test-page`
 
   - we need to support rendering `.cic` file
-
-- `error` with page layouts

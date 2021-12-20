@@ -4,26 +4,77 @@
 
     <section class="py-4 space-y-2">
       <p>
-        Cicada code can be shared as
-        <router-link :to="{ path: `/books` }" class="font-sans underline">
-          <em>Books</em>
-        </router-link>
-
-        and
-        <router-link :to="{ path: `/articles` }" class="font-sans underline">
-          <em> Articles</em> </router-link
-        >.
-      </p>
-
-      <p>
-        <router-link
-          :to="{ path: `/books/github.com/cicada-lang/cicada-book` }"
-          class="font-sans underline"
+        Cicada uses
+        <a href="https://readonly.link" class="font-sans underline"
+          >Readonly.Link</a
         >
-          <em>The Cicada Book</em>
-        </router-link>
-        serve as an introduction to the language.
+        to render documents.
       </p>
+
+      <p><strong>Books:</strong></p>
+
+      <ul class="px-6">
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/books/github.com/cicada-lang/cicada-book"
+            class="font-sans underline"
+          >
+            The Cicada Book
+          </a>
+          -- An introduction to Cicada Language
+        </li>
+
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/books/github.com/xieyuheng/mathematical-structures"
+            class="font-sans underline"
+          >
+            Mathematical Structures
+          </a>
+          -- Formalizing abstract structures by <em>classes and objects</em>
+        </li>
+
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/books/github.com/xieyuheng/the-little-typer-exercises"
+            class="font-sans underline"
+          >
+            The Little Typer Exercises
+          </a>
+          -- A student's report on <em>"The Little Typer"</em>
+        </li>
+      </ul>
+
+      <p><strong>Articles:</strong></p>
+
+      <ul class="px-6">
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/one-of-euler-s-conjecture.md"
+            class="font-sans underline"
+          >
+            One of Euler's conjecture
+          </a>
+        </li>
+
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/inductive-datatype.md"
+            class="font-sans underline"
+          >
+            Inductive datatype
+          </a>
+        </li>
+
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/implicit-arguments.md"
+            class="font-sans underline"
+          >
+            Implicit arguments
+          </a>
+        </li>
+      </ul>
     </section>
 
     <h2 class="font-sans text-2xl font-bold">Reference</h2>
