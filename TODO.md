@@ -1,5 +1,3 @@
-- `error` with page layouts
-
 - [refactor] simplify `book-state`
 
 - [refactor] simplify `article-state`

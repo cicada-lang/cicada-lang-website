@@ -1,8 +1,27 @@
 <template>
-  <div class="flex flex-col max-w-3xl mx-auto">
-    <div class="py-20">
-      <h1 class="font-sans text-2xl font-bold">404</h1>
-      <p class="text-xl">Page Not Found</p>
-    </div>
-  </div>
+  <page-layout>
+    <section class="py-4 space-y-2">
+      <h2>404</h2>
+      <p>Page Not Found</p>
+    </section>
+  </page-layout>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator"
+
+@Component({
+  name: "page-not-found",
+  // prettier-ignore
+  components: {
+    "page-layout": require("@/layouts/page-layout").default,
+  },
+})
+export default class extends Vue {}
+</script>
+
+<style scoped>
+h2 {
+  @apply py-1 font-sans text-2xl font-bold;
+}
+</style>
