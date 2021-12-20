@@ -1,7 +1,5 @@
 import Vue from "vue"
-import "./app"
 import "./assets/fonts/fonts.css"
-import "./plugins/highlight"
 import "./plugins/register-service-worker"
 import "./plugins/vue-meta"
 import router from "./router"
