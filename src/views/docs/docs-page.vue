@@ -21,6 +21,7 @@
           >
             蝉语独白
           </a>
+          -- Cicada Monologues (in Chinese)
         </li>
 
         <li class="list-disc">
