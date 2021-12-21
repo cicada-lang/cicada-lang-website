@@ -16,12 +16,11 @@
       <ul class="px-6">
         <li class="list-disc">
           <a
-            href="https://readonly.link/books/github.com/cicada-lang/cicada-book"
+            href="https://readonly.link/books/github.com/xieyuheng/cicada-monologues"
             class="font-sans underline"
           >
-            The Cicada Book
+            蝉语独白
           </a>
-          -- An introduction to Cicada Language
         </li>
 
         <li class="list-disc">
@@ -81,11 +80,11 @@
 
     <section class="py-4 space-y-2">
       <p>
-        We use
-        <router-link :to="{ path: `/docs/tests` }" class="font-sans underline">
+        We will use
+        <a class="font-sans underline">
           <em>Tests</em>
-        </router-link>
-        as language reference documents.
+        </a>
+        as language reference documents. (TODO)
       </p>
     </section>
   </page-layout>
