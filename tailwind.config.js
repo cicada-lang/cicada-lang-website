@@ -6,5 +6,10 @@ module.exports = {
       serif: ["Linux Libertine O", "serif"],
       mono: ["Fira Code", "monospace"],
     },
+    extend: {
+      colors: {
+        gray: colors.stone,
+      },
+    },
   },
 }
