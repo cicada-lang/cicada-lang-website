@@ -5,9 +5,9 @@
     <section class="py-4 space-y-2">
       <p>
         Cicada uses
-        <a href="https://readonly.link" class="font-sans underline"
-          >Readonly.Link</a
-        >
+        <a href="https://readonly.link" class="inline-flex font-sans underline"
+          >Readonly.Link <IconExternalLink class="w-4" />
+        </a>
         to render documents.
       </p>
 
@@ -17,9 +17,9 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/cicada-monologues"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            蝉语独白
+            蝉语独白 <IconExternalLink class="w-4" />
           </a>
           -- Cicada Monologues (in Chinese)
         </li>
@@ -27,9 +27,9 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/mathematical-structures"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            Mathematical Structures
+            Mathematical Structures <IconExternalLink class="w-4" />
           </a>
           -- Formalizing abstract structures by <em>classes and objects</em>
         </li>
@@ -37,9 +37,9 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/the-little-typer-exercises"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            The Little Typer Exercises
+            The Little Typer Exercises <IconExternalLink class="w-4" />
           </a>
           -- A student's report on <em>"The Little Typer"</em>
         </li>
@@ -51,27 +51,27 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/one-of-euler-s-conjecture.md"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            One of Euler's conjecture
+            One of Euler's conjecture <IconExternalLink class="w-4" />
           </a>
         </li>
 
         <li class="list-disc">
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/inductive-datatype.md"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            Inductive datatype
+            Inductive datatype <IconExternalLink class="w-4" />
           </a>
         </li>
 
         <li class="list-disc">
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/implicit-arguments.md"
-            class="font-sans underline"
+            class="inline-flex font-sans underline"
           >
-            Implicit arguments
+            Implicit arguments <IconExternalLink class="w-4" />
           </a>
         </li>
       </ul>
@@ -82,8 +82,8 @@
     <section class="py-4 space-y-2">
       <p>
         We will use
-        <a class="font-sans underline">
-          <em>Tests</em>
+        <a class="inline-flex font-sans underline">
+          <em>Tests</em> <IconExternalLink class="w-4" />
         </a>
         as language reference documents. (TODO)
       </p>
