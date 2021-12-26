@@ -3,14 +3,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator"
+import { defineComponent } from "vue"
 
-@Component({
+export default defineComponent({
   name: "page-logo",
-  // prettier-ignore
-  components: {
-
-  },
 })
-export default class extends Vue {}
 </script>

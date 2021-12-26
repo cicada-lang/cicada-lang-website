@@ -8,16 +8,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator"
+import { defineComponent } from "vue"
 
-@Component({
+export default defineComponent({
   name: "page-not-found",
   // prettier-ignore
   components: {
     "page-layout": require("@/layouts/page-layout").default,
   },
 })
-export default class extends Vue {}
 </script>
 
 <style scoped>

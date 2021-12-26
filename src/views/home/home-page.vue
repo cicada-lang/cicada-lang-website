@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator"
+import { defineComponent } from "vue"
 
-@Component({
+export default defineComponent({
   name: "home-page",
   // prettier-ignore
   components: {
@@ -31,5 +31,4 @@ import { Component, Vue } from "vue-property-decorator"
     "icon-external-link": require("@/components/icons/icon-external-link.vue").default,
   },
 })
-export default class extends Vue {}
 </script>

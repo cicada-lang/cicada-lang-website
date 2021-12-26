@@ -6,14 +6,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator"
+import { defineComponent } from "vue"
 
-@Component({
+export default defineComponent({
   name: "page-layout",
   // prettier-ignore
   components: {
     "page-header": require("./page-header.vue").default,
   },
 })
-export default class extends Vue {}
 </script>
