@@ -91,15 +91,7 @@
   </PageLayout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue"
-
-export default defineComponent({
-  name: "HomePage",
-  // prettier-ignore
-  components: {
-    "PageLayout": require("@/layouts/page-layout").default,
-    "IconExternalLink": require("@/components/icons/IconExternalLink.vue").default,
-  },
-})
+<script setup lang="ts">
+import PageLayout from "@/layouts/page-layout"
+import IconExternalLink from "@/components/icons/IconExternalLink.vue"
 </script>

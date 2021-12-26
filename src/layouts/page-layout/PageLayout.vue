@@ -5,14 +5,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue"
-
-export default defineComponent({
-  name: "PageLayout",
-  // prettier-ignore
-  components: {
-    "PageHeader": require("./PageHeader.vue").default,
-  },
-})
+<script setup lang="ts">
+import PageHeader from "./PageHeader.vue"
 </script>

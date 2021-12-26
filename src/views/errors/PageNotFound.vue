@@ -7,16 +7,8 @@
   </PageLayout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue"
-
-export default defineComponent({
-  name: "PageNotFound",
-  // prettier-ignore
-  components: {
-    "PageLayout": require("@/layouts/page-layout").default,
-  },
-})
+<script setup lang="ts">
+import PageLayout from "@/layouts/page-layout"
 </script>
 
 <style scoped>

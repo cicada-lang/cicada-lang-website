@@ -15,14 +15,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue"
-
-export default defineComponent({
-  name: "PageHeader",
-  // prettier-ignore
-  components: {
-    "PageLogo": require("./PageLogo.vue").default,
-  },
-})
+<script setup lang="ts">
+import PageLogo from "./PageLogo.vue"
 </script>
