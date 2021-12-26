@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import PageLayout from "@/layouts/page-layout"
+import PageLayout from "../../layouts/page-layout"
 </script>
 
 <style scoped>
