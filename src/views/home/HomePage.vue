@@ -1,5 +1,5 @@
 <template>
-  <page-layout>
+  <PageLayout>
     <section class="py-4 space-y-2">
       <p class="text-gray-500">
         <em class="text-gray-800">Cicada language</em> is a <br />
@@ -17,18 +17,18 @@
         each other, and help each other in very good ways.
       </p>
     </section>
-  </page-layout>
+  </PageLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
 
 export default defineComponent({
-  name: "home-page",
+  name: "HomePage",
   // prettier-ignore
   components: {
-    "page-layout": require("@/layouts/page-layout").default,
-    "icon-external-link": require("@/components/icons/icon-external-link.vue").default,
+    "PageLayout": require("@/layouts/page-layout").default,
+    "IconExternalLink": require("@/components/icons/IconExternalLink.vue").default,
   },
 })
 </script>

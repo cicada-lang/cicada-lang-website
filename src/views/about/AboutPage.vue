@@ -1,5 +1,5 @@
 <template>
-  <page-layout>
+  <PageLayout>
     <h2 class="font-sans text-2xl font-bold">Why this project?</h2>
 
     <section class="py-4 space-y-2">
@@ -10,7 +10,7 @@
           class="inline-flex font-sans underline"
           target="_blank"
         >
-          Xie Yuheng <icon-external-link class="w-4" /> </a
+          Xie Yuheng <IconExternalLink class="w-4" /> </a
         >, <br />
         who just wants to build his own language to prove himself.
       </p>
@@ -32,7 +32,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            cicada-lang <icon-external-link class="w-4" />
+            cicada-lang <IconExternalLink class="w-4" />
           </a>
         </li>
 
@@ -43,7 +43,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            CicadaLanguage <icon-external-link class="w-4" />
+            CicadaLanguage <IconExternalLink class="w-4" />
           </a>
         </li>
 
@@ -54,7 +54,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            libera.chat <icon-external-link class="w-4" />
+            libera.chat <IconExternalLink class="w-4" />
           </a>
         </li>
       </ul>
@@ -70,7 +70,7 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            Xie Yuheng <icon-external-link class="w-4" />
+            Xie Yuheng <IconExternalLink class="w-4" />
           </a>
         </li>
 
@@ -80,23 +80,23 @@
             class="inline-flex font-sans underline"
             target="_blank"
           >
-            Zaoqi <icon-external-link class="w-4" />
+            Zaoqi <IconExternalLink class="w-4" />
           </a>
         </li>
       </ul>
     </section>
-  </page-layout>
+  </PageLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
 
 export default defineComponent({
-  name: "about-page",
+  name: "AboutPage",
   // prettier-ignore
   components: {
-    "page-layout": require("@/layouts/page-layout").default,
-    "icon-external-link": require("@/components/icons/icon-external-link.vue").default,
+    "PageLayout": require("@/layouts/page-layout").default,
+    "IconExternalLink": require("@/components/icons/IconExternalLink.vue").default,
   },
 })
 </script>

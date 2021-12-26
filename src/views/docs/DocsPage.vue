@@ -1,5 +1,5 @@
 <template>
-  <page-layout>
+  <PageLayout>
     <h2 class="font-sans text-2xl font-bold">Books & Articles</h2>
 
     <section class="py-4 space-y-2">
@@ -88,18 +88,18 @@
         as language reference documents. (TODO)
       </p>
     </section>
-  </page-layout>
+  </PageLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
 
 export default defineComponent({
-  name: "home-page",
+  name: "HomePage",
   // prettier-ignore
   components: {
-    "page-layout": require("@/layouts/page-layout").default,
-    "icon-external-link": require("@/components/icons/icon-external-link.vue").default,
+    "PageLayout": require("@/layouts/page-layout").default,
+    "IconExternalLink": require("@/components/icons/IconExternalLink.vue").default,
   },
 })
 </script>

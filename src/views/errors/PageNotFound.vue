@@ -1,20 +1,20 @@
 <template>
-  <page-layout>
+  <PageLayout>
     <section class="py-4 space-y-2">
       <h2>404</h2>
       <p>Page Not Found</p>
     </section>
-  </page-layout>
+  </PageLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
 
 export default defineComponent({
-  name: "page-not-found",
+  name: "PageNotFound",
   // prettier-ignore
   components: {
-    "page-layout": require("@/layouts/page-layout").default,
+    "PageLayout": require("@/layouts/page-layout").default,
   },
 })
 </script>

@@ -1,1 +1,1 @@
-export { default } from "./page-layout.vue"
+export { default } from "./PageLayout.vue"

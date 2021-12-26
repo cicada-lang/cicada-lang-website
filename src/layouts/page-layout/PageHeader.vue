@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap items-baseline justify-between pb-8">
     <router-link :to="{ path: `/` }">
-      <page-logo class="my-2" />
+      <PageLogo class="my-2" />
     </router-link>
 
     <div class="flex flex-wrap font-sans text-gray-400">
@@ -19,10 +19,10 @@
 import { defineComponent } from "vue"
 
 export default defineComponent({
-  name: "page-header",
+  name: "PageHeader",
   // prettier-ignore
   components: {
-    "page-logo": require("./page-logo.vue").default,
+    "PageLogo": require("./PageLogo.vue").default,
   },
 })
 </script>

@@ -1,4 +1,3 @@
-- change component file naming convention
 - use <script setup> for all vue files
 
 - use external links

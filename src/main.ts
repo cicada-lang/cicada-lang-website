@@ -6,7 +6,7 @@ import "./plugins/register-service-worker"
 import router from "./router"
 import "./styles/tailwind.css"
 
-createApp(require("./views/root/root-layout.vue").default)
+createApp(require("./views/root/RootLayout.vue").default)
   .use(router)
   .use(vueMetaPlugin)
   .use(createMetaManager())
