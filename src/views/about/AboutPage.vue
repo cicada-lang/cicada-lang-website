@@ -45,6 +45,18 @@
           >
             CicadaLanguage <IconExternalLink class="w-4" />
           </a>
+          <ul class="px-8 py-2 space-y-2">
+            <li class="list-disc">
+               中文 / Chinese:
+              <a
+                href="https://t.me/CicadaLanguageCN"
+                class="inline-flex font-sans underline"
+                target="_blank"
+              >
+                CicadaLanguageCN <IconExternalLink class="w-4" />
+              </a>
+            </li>
+          </ul>
         </li>
 
         <li class="list-disc">
