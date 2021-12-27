@@ -24,7 +24,7 @@
         and software service is only valuable when serving people well.
       </p>
 
-      <ul class="px-8 py-2 space-y-2">
+      <ul class="px-5 py-2 space-y-2">
         <li class="list-disc">
           GitHub:
           <a
@@ -45,9 +45,9 @@
           >
             CicadaLanguage <IconExternalLink class="w-4" />
           </a>
-          <ul class="px-8 py-2 space-y-2">
+          <ul class="px-5 py-2 space-y-2">
             <li class="list-disc">
-               中文 / Chinese:
+              中文 / Chinese:
               <a
                 href="https://t.me/CicadaLanguageCN"
                 class="inline-flex font-sans underline"
@@ -75,7 +75,7 @@
     <h2 class="font-sans text-2xl font-bold">Core Team</h2>
 
     <section class="py-4 space-y-2">
-      <ul class="px-8 py-2 space-y-2">
+      <ul class="px-5 py-2 space-y-2">
         <li class="list-disc">
           <a
             href="https://xieyuheng.com"
