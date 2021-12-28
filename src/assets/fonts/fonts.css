@@ -5,7 +5,7 @@
   src: url("Bodoni_Moda/static/BodoniModa_9pt/BodoniModa_9pt-Regular.ttf");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   src: url("Bodoni_Moda/static/BodoniModa_9pt/BodoniModa_9pt-Italic.ttf");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -21,7 +21,7 @@
   src: url("Bodoni_Moda/static/BodoniModa_9pt/BodoniModa_9pt-Bold.ttf");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* Garamond */
@@ -31,7 +31,7 @@
   src: url("EB_Garamond/static/EBGaramond-Regular.ttf");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   src: url("EB_Garamond/static/EBGaramond-Italic.ttf");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -47,7 +47,7 @@
   src: url("EB_Garamond/static/EBGaramond-Bold.ttf");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* Linux Libertine O */
@@ -57,7 +57,7 @@
   src: url("linlib-r-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -65,7 +65,7 @@
   src: url("linlib-ri-subset.woff");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -73,7 +73,7 @@
   src: url("linlib-rb-subset.woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -81,7 +81,7 @@
   src: url("linlib-as-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* Linux Biolinum O */
@@ -91,7 +91,7 @@
   src: url("linbio-r-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -99,7 +99,7 @@
   src: url("linbio-ri-subset.woff");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -107,7 +107,7 @@
   src: url("linbio-rb-subset.woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* Inconsolata LGC */
@@ -117,7 +117,7 @@
   src: url("incons-r-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -125,7 +125,7 @@
   src: url("incons-ri-subset.woff");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -133,7 +133,7 @@
   src: url("incons-rb-subset.woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* Terminus (TTF) */
@@ -143,7 +143,7 @@
   src: url("terminus-ttf-4.49.1/TerminusTTF-4.49.1.ttf");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -151,7 +151,7 @@
   src: url("terminus-ttf-4.49.1/TerminusTTF-Italic-4.49.1.ttf");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -159,7 +159,7 @@
   src: url("terminus-ttf-4.49.1/TerminusTTF-Bold-4.49.1.ttf");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -167,7 +167,7 @@
   src: url("terminus-ttf-4.49.1/TerminusTTF-Bold Italic-4.49.1.ttf");
   font-weight: bold;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* To display subscripts and angle brackets that are missing in Inconsolata */
@@ -176,7 +176,7 @@
   src: url("dejamono-r-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* FiraCode */
@@ -191,7 +191,7 @@
   src: url("jsMath-cmex10-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* STIX fonts */
@@ -201,7 +201,7 @@
   src: url("STIXSizeOneSym-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -209,7 +209,7 @@
   src: url("STIXSizeTwoSym-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -217,7 +217,7 @@
   src: url("STIXSizeThreeSym-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -225,7 +225,7 @@
   src: url("STIXSizeFourSym-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -233,7 +233,7 @@
   src: url("STIXSizeFiveSym-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -241,7 +241,7 @@
   src: url("STIXIntegralsD-Regular.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -249,7 +249,7 @@
   src: url("STIXGeneral-Regular-subset.woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -257,7 +257,7 @@
   src: url("STIXGeneral-Italic-subset.woff");
   font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -265,7 +265,7 @@
   src: url("STIXGeneral-Bold-subset.woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* A few arrows for navigation */
@@ -275,5 +275,5 @@
   src: url("dejasans-b-arrows.woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
