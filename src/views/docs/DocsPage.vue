@@ -5,7 +5,10 @@
     <section class="py-4 space-y-2">
       <p>
         Cicada uses
-        <a href="https://readonly.link" class="inline-flex font-sans underline"
+        <a
+          href="https://readonly.link"
+          class="inline-flex font-sans underline"
+          target="_blank"
           >Readonly.Link <IconExternalLink class="w-4" />
         </a>
         to render documents.
@@ -18,6 +21,7 @@
           <a
             href="https://readonly.link/books/github.com/xieyuheng/cicada-monologues"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             蝉语独白 <IconExternalLink class="w-4" />
           </a>
@@ -28,6 +32,7 @@
           <a
             href="https://readonly.link/books/github.com/xieyuheng/mathematical-structures"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             Mathematical Structures <IconExternalLink class="w-4" />
           </a>
@@ -38,6 +43,7 @@
           <a
             href="https://readonly.link/books/github.com/xieyuheng/the-little-typer-exercises"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             The Little Typer Exercises <IconExternalLink class="w-4" />
           </a>
@@ -52,6 +58,7 @@
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/one-of-euler-s-conjecture.md"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             One of Euler's conjecture <IconExternalLink class="w-4" />
           </a>
@@ -61,6 +68,7 @@
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/inductive-datatype.md"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             Inductive datatype <IconExternalLink class="w-4" />
           </a>
@@ -70,6 +78,7 @@
           <a
             href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/implicit-arguments.md"
             class="inline-flex font-sans underline"
+            target="_blank"
           >
             Implicit arguments <IconExternalLink class="w-4" />
           </a>
@@ -82,7 +91,7 @@
     <section class="py-4 space-y-2">
       <p>
         We will use
-        <a class="inline-flex font-sans underline">
+        <a class="inline-flex font-sans underline" target="_blank">
           <em>Tests</em> <IconExternalLink class="w-4" />
         </a>
         as language reference documents. (TODO)
