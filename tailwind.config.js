@@ -4,8 +4,8 @@ module.exports = {
   content: ["./src/**/*.vue"],
   theme: {
     fontFamily: {
-      sans: ["Linux Biolinum O", "sans-serif"],
-      serif: ["Linux Libertine O", "serif"],
+      sans: ["Linux Biolinum O", "LXGWWenKai", "sans-serif"],
+      serif: ["Linux Libertine O", "LXGWWenKai", "serif"],
       mono: ["Fira Code", "monospace"],
     },
     extend: {
