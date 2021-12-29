@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Bodoni Moda
+- Font Author: Copyright 2020 The Bodoni Moda Project Authors (https://github.com/indestructible-type)
+- Font Source: http://fonts.gstatic.com/s/bodonimoda/v7/aFT67PxzY382XsXX63LUYL6GYFcan6NJrKp-VPjfJMShrpsGFUt8oandwIBytVjMYwE.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

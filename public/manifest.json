@@ -1,6 +1,6 @@
 {
-  "name": "Cicada Language",
-  "short_name": "Cicada",
+  "name": "Cicada",
+  "short_name": "cic",
   "description": "Cicada Language",
   "display": "standalone",
   "start_url": "/",
