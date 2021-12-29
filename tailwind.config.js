@@ -4,9 +4,10 @@ module.exports = {
   content: ["./src/**/*.vue"],
   theme: {
     fontFamily: {
-      sans: ["Linux Biolinum O", "LXGWWenKai", "sans-serif"],
+      sans: ["Linux Biolinum O", "LXGWNewClearGothic", "sans-serif"],
       serif: ["Linux Libertine O", "LXGWWenKai", "serif"],
       mono: ["Fira Code", "monospace"],
+      logo: ["BodoniModa", "LXGWWenKai", "serif"],
     },
     extend: {
       colors: {

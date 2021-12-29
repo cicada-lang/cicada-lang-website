@@ -1,3 +1,3 @@
 <template>
-  <div class="font-sans text-4xl font-bold">Cicada</div>
+  <div class="text-4xl font-logo font-bold">Cicada Language</div>
 </template>

@@ -2,7 +2,7 @@
   <PageLayout>
     <section class="py-4 space-y-2">
       <p class="text-gray-500">
-        <em class="text-gray-800">Cicada language</em> is a <br />
+        <span class="font-logo text-gray-800">Cicada language</span> is a <br />
         <em class="text-gray-800">dependently typed programming language</em>
         and a <br />
         <em class="text-gray-800">interactive theorem prover</em>.
