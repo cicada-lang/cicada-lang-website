@@ -91,10 +91,14 @@
     <section class="py-4 space-y-2">
       <p>
         We will use
-        <a class="inline-flex font-sans underline" target="_blank">
+        <a
+          href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/tests"
+          class="inline-flex font-sans underline"
+          target="_blank"
+        >
           <em>Tests</em> <IconExternalLink class="w-4" />
         </a>
-        as language reference documents. (TODO)
+        as language reference documents.
       </p>
     </section>
   </PageLayout>
