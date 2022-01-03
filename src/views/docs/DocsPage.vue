@@ -9,7 +9,7 @@
           href="https://readonly.link"
           class="inline-flex font-sans underline"
           target="_blank"
-          >readonly.link <IconExternalLink class="w-4" />
+          >Readonly.Link <IconExternalLink class="w-4" />
         </a>
         to render documents.
       </p>
