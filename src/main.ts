@@ -10,3 +10,12 @@ createApp(require("./views/root/RootLayout.vue").default)
   .use(vueMetaPlugin)
   .use(createMetaManager())
   .mount("#app")
+
+async function unregisterServiceWorker(): Promise<void> {
+  const registrations = await navigator.serviceWorker.getRegistrations()
+  for (let registration of registrations) {
+    registration.unregister()
+  }
+}
+
+unregisterServiceWorker()
