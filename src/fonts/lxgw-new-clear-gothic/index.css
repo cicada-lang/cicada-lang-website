@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "LXGW New Clear Gothic";
+  src: local("LXGW New Clear Gothic Regular"),
+    local("LXGW New Clear Gothic-Regular"), local("LXGW New Clear Gothic"),
+    url("LXGWNewClearGothic-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LXGW New Clear Gothic";
+  src: local("LXGW New Clear Gothic, Book"), local("LXGW New Clear Gothic-Book"),
+    url("LXGWNewClearGothic-Book.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 中文字体不用斜体 */
+
+@font-face {
+  font-family: "LXGW New Clear Gothic";
+  src: local("LXGW New Clear Gothic Regular"),
+    local("LXGW New Clear Gothic-Regular"), local("LXGW New Clear Gothic"),
+    url("LXGWNewClearGothic-Regular.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LXGW New Clear Gothic";
+  src: local("LXGW New Clear Gothic Book"), local("LXGW New Clear Gothic-Book"),
+    url("LXGWNewClearGothic-Book.ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Linux Libertine O";
+  src: local("Linux Libertine O Regular"), local("Linux Libertine O-Regular"),
+    local("Linux Libertine O"), url("linlib-r-subset.woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine O";
+  src: local("Linux Libertine O Italic"), local("Linux Libertine O-Italic"),
+    url("linlib-ri-subset.woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine O";
+  src: local("Linux Libertine O Bold"), local("Linux Libertine O-Bold"),
+    url("linlib-rb-subset.woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine Capitals O";
+  src: local("Linux Libertine Capitals O"), url("linlib-as-subset.woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

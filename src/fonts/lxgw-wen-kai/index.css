@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "LXGW WenKai";
+  src: local("LXGW WenKai Regular"), local("LXGW WenKai-Regular"),
+    local("LXGW WenKai"), url("LXGWWenKai-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LXGW WenKai";
+  src: local("LXGW WenKai Bold"), local("LXGW WenKai-Bold"),
+    url("LXGWWenKai-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 中文字体不用斜体 */
+
+@font-face {
+  font-family: "LXGW WenKai";
+  src: local("LXGW WenKai"), url("LXGWWenKai-Regular.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LXGW WenKai";
+  src: local("LXGW WenKai Bold"), local("LXGW WenKai-Bold"),
+    url("LXGWWenKai-Bold.ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,7 +1,7 @@
 import { createApp } from "vue"
 import { createMetaManager } from "vue-meta"
 import { plugin as vueMetaPlugin } from "vue-meta"
-import "./assets/fonts/fonts.css"
+import "./fonts/index.css"
 import router from "./router"
 import "./styles/tailwind.css"
 
