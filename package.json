@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/nanoid": "^2.1.0",
     "@types/node": "^17.0.6",
+    "@vue/cli-plugin-babel": "~5.0.0-rc.1",
     "@vue/cli-plugin-router": "~5.0.0-rc.1",
     "@vue/cli-plugin-typescript": "~5.0.0-rc.1",
     "@vue/cli-service": "~5.0.0-rc.1",
@@ -33,6 +34,7 @@
     "nanoid": "^3.1.30",
     "path-browserify": "^1.0.1",
     "util": "^0.12.4",
+    "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-meta": "^3.0.0-alpha.9",
     "vue-router": "^4.0.3"
