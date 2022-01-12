@@ -19,7 +19,7 @@
       <ul class="px-6">
         <li class="list-disc">
           <a
-            href="https://readonly.link/manuals/github.com/cicada-lang/cicada"
+            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada"
             class="inline-flex font-sans underline"
             target="_blank"
           >
