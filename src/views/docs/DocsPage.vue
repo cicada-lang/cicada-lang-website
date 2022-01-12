@@ -14,6 +14,20 @@
         to render documents.
       </p>
 
+      <p><strong>Manuals:</strong></p>
+
+      <ul class="px-6">
+        <li class="list-disc">
+          <a
+            href="https://readonly.link/manual/github.com/cicada-lang/cicada"
+            class="inline-flex font-sans underline"
+            target="_blank"
+          >
+            Cicada Language Manual <IconExternalLink class="w-4" />
+          </a>
+        </li>
+      </ul>
+
       <p><strong>Books:</strong></p>
 
       <ul class="px-6">
@@ -84,22 +98,6 @@
           </a>
         </li>
       </ul>
-    </section>
-
-    <h2 class="font-sans text-2xl font-bold">Reference</h2>
-
-    <section class="py-4 space-y-2">
-      <p>
-        We will use
-        <a
-          href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/tests"
-          class="inline-flex font-sans underline"
-          target="_blank"
-        >
-          <em>Tests</em> <IconExternalLink class="w-4" />
-        </a>
-        as language reference documents.
-      </p>
     </section>
   </PageLayout>
 </template>
