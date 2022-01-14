@@ -1,7 +1,5 @@
 <template>
   <PageLayout>
-    <h2 class="font-sans text-2xl font-bold">Books & Articles</h2>
-
     <section class="py-4 space-y-2">
       <p>
         Cicada uses
@@ -62,40 +60,6 @@
             The Little Typer Exercises <IconExternalLink class="w-4" />
           </a>
           -- A student's report on <em>"The Little Typer"</em>
-        </li>
-      </ul>
-
-      <p><strong>Articles:</strong></p>
-
-      <ul class="px-6">
-        <li class="list-disc">
-          <a
-            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/one-of-euler-s-conjecture.md"
-            class="inline-flex font-sans underline"
-            target="_blank"
-          >
-            One of Euler's conjecture <IconExternalLink class="w-4" />
-          </a>
-        </li>
-
-        <li class="list-disc">
-          <a
-            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/inductive-datatype.md"
-            class="inline-flex font-sans underline"
-            target="_blank"
-          >
-            Inductive datatype <IconExternalLink class="w-4" />
-          </a>
-        </li>
-
-        <li class="list-disc">
-          <a
-            href="https://readonly.link/articles/github.com/cicada-lang/cicada/-/docs/articles/implicit-arguments.md"
-            class="inline-flex font-sans underline"
-            target="_blank"
-          >
-            Implicit arguments <IconExternalLink class="w-4" />
-          </a>
         </li>
       </ul>
     </section>
