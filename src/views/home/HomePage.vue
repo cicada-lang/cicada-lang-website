@@ -4,7 +4,7 @@
       <p class="text-gray-500">
         <span class="font-logo text-gray-800">Cicada language</span> is a <br />
         <em class="text-gray-800">dependently typed programming language</em>
-        and a <br />
+        and an <br />
         <em class="text-gray-800">interactive theorem prover</em>.
       </p>
     </section>
