@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <div class="md:pt-16 pt-8 pb-4 md:text-5xl text-3xl font-serif text-center">
+    <div class="md:pt-10 pt-8 pb-4 md:text-5xl text-3xl font-serif text-center">
       Let's build a bridge between <br />
       <span class="font-bold text-gray-800">writing software</span> and <br />
       <span class="font-bold text-gray-800">doing mathematics</span>
