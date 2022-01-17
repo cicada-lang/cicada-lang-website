@@ -1,1 +1,5 @@
-- link to tests on `readonly.link`
+- `HomePage` show off code examples
+
+  - embedded iframe from readonly.link
+
+- chinese UI

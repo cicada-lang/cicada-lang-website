@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap items-baseline justify-between pb-8">
+  <div class="flex flex-wrap justify-between items-center py-3 w-full">
     <router-link :to="{ path: `/` }">
       <PageLogo class="my-2" />
     </router-link>

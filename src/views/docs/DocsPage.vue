@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <section class="py-4 space-y-2">
+    <section class="py-4 space-y-2 md:text-2xl text-xl">
       <p>
         Cicada uses
         <a

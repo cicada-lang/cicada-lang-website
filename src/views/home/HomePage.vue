@@ -1,20 +1,21 @@
 <template>
   <PageLayout>
     <section class="py-4 space-y-2">
-      <p class="text-gray-500">
-        <span class="font-logo text-gray-800">Cicada language</span> is a <br />
-        <em class="text-gray-800">dependently typed programming language</em>
-        and an <br />
-        <em class="text-gray-800">interactive theorem prover</em>.
+      <p class="md:text-5xl text-3xl font-serif text-center">
+        Let's build a bridge between <br />
+        <span class="font-bold text-gray-800">writing software</span> and <br />
+        <span class="font-bold text-gray-800">doing mathematics</span>
       </p>
     </section>
 
     <section class="py-4 space-y-2">
-      <p>
-        The aim of cicada project is to help people understand that developing
-        software and developing mathematics are increasingly the same kind of
-        activity, and people who practices these developments, can learn from
-        each other, and help each other in very good ways.
+      <p class="md:text-2xl text-lg text-center">
+        <span class="font-logo text-gray-900">Cicada Language</span>
+        is a dependently typed
+        <br />
+        <span class="font-bold text-gray-900"> programming language</span>
+        and an <br />
+        <span class="font-bold text-gray-900">interactive theorem prover</span>
       </p>
     </section>
   </PageLayout>
