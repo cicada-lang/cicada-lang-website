@@ -1,18 +1,7 @@
 <template>
   <PageLayout>
-    <section class="py-4 space-y-2 md:text-2xl text-xl">
-      <p>
-        Cicada uses
-        <a
-          href="https://readonly.link"
-          class="inline-flex font-sans underline"
-          target="_blank"
-          >Readonly.Link <IconExternalLink class="w-4" />
-        </a>
-        to render documents.
-      </p>
-
-      <p><strong>Manuals:</strong></p>
+    <div class="py-4 space-y-2 md:text-2xl text-xl">
+      <h2 class="font-sans text-2xl font-bold">The Manual</h2>
 
       <ul class="px-6">
         <li class="list-disc">
@@ -26,7 +15,7 @@
         </li>
       </ul>
 
-      <p><strong>Books:</strong></p>
+      <h2 class="font-sans text-2xl font-bold">Books</h2>
 
       <ul class="px-6">
         <li class="list-disc">
@@ -62,7 +51,23 @@
           -- A student's report on <em>"The Little Typer"</em>
         </li>
       </ul>
-    </section>
+
+      <h2 class="font-sans text-2xl font-bold">Tools</h2>
+
+      <ul class="px-6">
+        <li class="list-disc">
+          <p>
+            <a
+              href="https://readonly.link"
+              class="inline-flex font-sans underline"
+              target="_blank"
+              >Readonly.Link <IconExternalLink class="w-4" />
+            </a>
+            -- our document renderer.
+          </p>
+        </li>
+      </ul>
+    </div>
   </PageLayout>
 </template>
 

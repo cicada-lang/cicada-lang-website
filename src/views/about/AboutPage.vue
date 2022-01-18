@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <div class="md:text-2xl text-xl">
+    <div class="py-4 md:text-2xl text-xl">
       <h2 class="font-sans text-2xl font-bold">Why this project?</h2>
 
       <section class="py-4 space-y-2">
