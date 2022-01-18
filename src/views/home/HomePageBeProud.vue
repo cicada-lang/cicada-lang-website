@@ -148,7 +148,7 @@ import IconExternalLink from "../../components/icons/IconExternalLink.vue"
 }
 
 .keyword {
-  @apply text-rose-600;
+  @apply font-medium text-orange-600;  
 }
 
 .type {
