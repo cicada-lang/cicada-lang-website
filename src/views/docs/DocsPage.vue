@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <div class="py-4 space-y-2 md:text-2xl text-xl">
+    <div class="py-4 space-y-4 md:text-2xl text-xl">
       <h2 class="font-sans text-2xl font-bold">The Manual</h2>
 
       <ul class="px-6">
