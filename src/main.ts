@@ -1,9 +1,9 @@
 import { createApp } from "vue"
 import { createMetaManager } from "vue-meta"
 import { plugin as vueMetaPlugin } from "vue-meta"
-import "./fonts/index.css"
 import router from "./router"
-import "./styles/tailwind.css"
+import "./fonts/index.css"
+import "./styles/index.css"
 
 createApp(require("./views/root/RootLayout.vue").default)
   .use(router)
