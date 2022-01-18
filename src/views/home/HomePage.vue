@@ -18,6 +18,18 @@
     </div>
 
     <HomePageBeProud class="my-8" />
+
+    <div class="pt-2 pb-20 md:text-4xl font-bold font-sans text-center">
+      <div class="text-3xl py-6 text-amber-500">Get Started</div>
+
+      <router-link to="/docs" class="font-normal">
+        <button
+          class="border-2 py-3 px-6 bg-amber-400 hover:bg-amber-300 rounded-lg font-bold text-2xl border-amber-200 text-white"
+        >
+          DOCS
+        </button>
+      </router-link>
+    </div>
   </PageLayout>
 </template>
 

@@ -1,4 +1,4 @@
-- `HomePage` Get Started section
+- `PageFooter` -- link to github and twitter
 
 - chinese UI
 
