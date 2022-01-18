@@ -1,5 +1,3 @@
-- `PageFooter` -- link to twitter
-
 - chinese UI
 
 # maybe
