@@ -133,7 +133,7 @@ import IconExternalLink from "../../components/icons/IconExternalLink.vue"
 .entry .explanation .reference {
   @apply flex
   self-end
-  py-1 font-sans md:text-lg  text-base
+  py-0.5 font-sans md:text-lg  text-base
   underline decoration-stone-600 underline-offset-2;
 }
 
