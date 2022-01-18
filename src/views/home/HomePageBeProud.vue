@@ -133,7 +133,9 @@ import IconExternalLink from "../../components/icons/IconExternalLink.vue"
   @apply md:w-1/2 md:py-12
   md:border-l-2 md:border-stone-300
   w-full
-  md:py-6 py-2 md:px-4 px-3
+  md:py-24 py-2
+  md:mb-0 mb-6
+  md:px-4 px-3
   overflow-x-auto text-base font-mono;
 }
 
