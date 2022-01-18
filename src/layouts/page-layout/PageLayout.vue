@@ -1,7 +1,16 @@
 <template>
   <div class="flex flex-col w-full font-serif items-center text-xl">
     <div
-      class="w-full px-4 flex flex-col items-center shadow fixed bg-white md:opacity-90"
+      class="
+        w-full
+        px-4
+        flex flex-col
+        items-center
+        shadow
+        fixed
+        bg-white
+        md:opacity-90
+      "
     >
       <PageHeader class="max-w-5xl" />
     </div>
@@ -13,7 +22,14 @@
     </div>
 
     <div
-      class="w-full px-4 flex flex-col items-center border-t border-stone-200 bg-stone-50"
+      class="
+        w-full
+        px-4
+        flex flex-col
+        items-center
+        border-t border-stone-200
+        bg-stone-50
+      "
     >
       <PageFooter class="max-w-5xl" />
     </div>
@@ -21,6 +37,19 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from "vue"
+import { useRoute } from "vue-router"
+
 import PageHeader from "./PageHeader.vue"
 import PageFooter from "./PageFooter.vue"
+
+const route = useRoute()
+
+watch(
+  () => route.path,
+  () => {
+    window.scrollTo(0, 0)
+  },
+  { immediate: true }
+)
 </script>
