@@ -1,4 +1,4 @@
-- `PageFooter` -- link to github and twitter
+- `PageFooter` -- link to twitter
 
 - chinese UI
 
