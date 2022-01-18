@@ -5,6 +5,15 @@
         <div>
           Define <em>natural number</em> as an <b>inductive datatype</b>.
         </div>
+
+        <div class="reference">
+          <IconBookmark class="w-5 mt-0.5 mr-1" />
+          <a
+            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01-nat.md"
+            target="_blank"
+            >Natural Number | The Manual</a
+          >
+        </div>
       </div>
 
       <div class="code">
@@ -29,6 +38,15 @@
           Prove the
           <em> commutative property of addition</em> for
           <em>natural number</em>, by defining a <b>function</b>.
+        </div>
+
+        <div class="reference">
+          <IconBookmark class="w-5 mt-0.5 mr-1" />
+          <a
+            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
+            target="_blank"
+            >Proving Theorems About Nat | The Manual</a
+          >
         </div>
       </div>
 
@@ -56,6 +74,15 @@
           <b>class</b>. Note that, we can use <b>extends</b> to reuse already
           defined <em>Monoid</em>.
         </div>
+
+        <div class="reference">
+          <IconBookmark class="w-5 mt-0.5 mr-1" />
+          <a
+            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.mdhttps://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
+            target="_blank"
+            >Mathematical Structures | A Book</a
+          >
+        </div>
       </div>
 
       <div class="code">
@@ -78,6 +105,7 @@
 </template>
 
 <script setup lang="ts">
+import IconBookmark from "../../components/icons/IconBookmark.vue"
 import IconExternalLink from "../../components/icons/IconExternalLink.vue"
 </script>
 
@@ -87,14 +115,26 @@ import IconExternalLink from "../../components/icons/IconExternalLink.vue"
 }
 
 .entry .explanation {
-  @apply md:w-1/2 w-full flex items-center;
+  @apply md:text-2xl text-xl
+  md:w-1/2
+  pr-4 w-full
+  pt-8
+  flex flex-col justify-center;
+}
+
+.entry .explanation .reference {
+  @apply flex
+  self-end
+  py-2 font-sans md:text-xl  text-lg
+  underline decoration-stone-600 underline-offset-2;
 }
 
 .entry .code {
   @apply md:w-1/2 md:py-12
   md:border-l-2 md:border-stone-300
   w-full
-  py-6 px-3 overflow-x-auto text-base font-mono;
+  md:py-6 py-2 md:px-4 px-3
+  overflow-x-auto text-base font-mono;
 }
 
 .keyword {
