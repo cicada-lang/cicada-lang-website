@@ -8,7 +8,7 @@
           Cicada project was founded by
           <a
             href="https://xieyuheng.com"
-            class="inline-flex font-sans underline"
+            class="inline-flex font-sans items-center underline"
             target="_blank"
           >
             Xie Yuheng <IconExternalLink class="w-4" /> </a
@@ -30,7 +30,7 @@
             GitHub:
             <a
               href="https://github.com/cicada-lang"
-              class="inline-flex font-sans underline"
+              class="inline-flex font-sans items-center underline"
               target="_blank"
             >
               cicada-lang <IconExternalLink class="w-4" />
@@ -41,7 +41,7 @@
             Telegram:
             <a
               href="https://t.me/CicadaLanguage"
-              class="inline-flex font-sans underline"
+              class="inline-flex font-sans items-center underline"
               target="_blank"
             >
               CicadaLanguage <IconExternalLink class="w-4" />
@@ -51,7 +51,7 @@
                 中文 / Chinese:
                 <a
                   href="https://t.me/CicadaLanguageCN"
-                  class="inline-flex font-sans underline"
+                  class="inline-flex font-sans items-center underline"
                   target="_blank"
                 >
                   CicadaLanguageCN <IconExternalLink class="w-4" />
@@ -64,7 +64,7 @@
             IRC: #cicada-lang at
             <a
               href="https://libera.chat"
-              class="inline-flex font-sans underline"
+              class="inline-flex font-sans items-center underline"
               target="_blank"
             >
               libera.chat <IconExternalLink class="w-4" />
@@ -80,7 +80,7 @@
           <li class="list-disc">
             <a
               href="https://xieyuheng.com"
-              class="inline-flex font-sans underline"
+              class="inline-flex font-sans items-center underline"
               target="_blank"
             >
               Xie Yuheng <IconExternalLink class="w-4" />
@@ -90,7 +90,7 @@
           <li class="list-disc">
             <a
               href="https://github.com/tsao-chi"
-              class="inline-flex font-sans underline"
+              class="inline-flex font-sans items-center underline"
               target="_blank"
             >
               Zaoqi <IconExternalLink class="w-4" />
