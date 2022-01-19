@@ -7,7 +7,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mt-1 mr-1" />
+          <IconBookmark class="w-4 h-4 mt-1 mr-1" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01-nat.md"
             target="_blank"
@@ -41,7 +41,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mt-1 mr-1" />
+          <IconBookmark class="w-4 h-4 mt-1 mr-1" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
@@ -76,7 +76,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mt-1 mr-1" />
+          <IconBookmark class="w-4 h-4 mt-1 mr-1" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/class/01-class-n-object.md"
             target="_blank"
@@ -84,7 +84,7 @@
           >
         </div>
         <div class="reference">
-          <IconBookmark class="w-4 mt-1 mr-1" />
+          <IconBookmark class="w-4 h-4 mt-1 mr-1" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.mdhttps://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
