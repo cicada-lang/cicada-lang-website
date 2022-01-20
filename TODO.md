@@ -1,5 +1,2 @@
-- chinese UI
-
-# maybe
-
-- `HomePageBeProud` on hover, show detailed explanation of code
+- `HomePageBeProud` on hover -- explain `almost`
+- `HomePageBeProud` on hover -- explain reading `add_commute` as theorem
