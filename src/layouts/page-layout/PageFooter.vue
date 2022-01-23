@@ -16,6 +16,14 @@
       >
         <IconTwitter class="hover:text-gray-900 w-5 text-gray-500" />
       </a>
+
+      <a
+        href="mailto:xyheme@gmail.com"
+        target="_blank"
+        title="xyheme@gmail.com"
+      >
+        <IconMail class="hover:text-gray-900 w-5 text-gray-500" />
+      </a>
     </div>
 
     <div class="font-sans text-lg text-gray-600">
@@ -27,4 +35,5 @@
 <script setup lang="ts">
 import IconGithub from "../../components/icons/IconGithub.vue"
 import IconTwitter from "../../components/icons/IconTwitter.vue"
+import IconMail from "../../components/icons/IconMail.vue"
 </script>
