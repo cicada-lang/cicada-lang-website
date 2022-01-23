@@ -1,2 +1,0 @@
-- `HomePageBeProud` on hover -- explain `almost`
-- `HomePageBeProud` on hover -- explain reading `add_commute` as theorem

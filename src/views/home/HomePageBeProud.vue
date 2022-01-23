@@ -25,7 +25,7 @@
         <pre><span class="keyword">function</span> <span class="define">add</span>(x: <span class="type">Nat</span>, y: <span class="type">Nat</span>): <span class="type">Nat</span> {</pre>
         <pre>  <span class="keyword">return</span> <span class="keyword">induction</span> (x) {</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">zero</span> => y</pre>
-        <pre>    <span class="keyword">case</span> <span class="ctor">add1</span>(_prev, almost) =></pre>
+        <pre>    <span class="keyword">case</span> <span class="ctor">add1</span>(_prev, <span class="underline decoration-dotted decoration-2 underline-offset-2" v-tooltip="{ content: 'almost.prev will be the same as add(prev)', triggers: ['hover', 'click'] }">almost</span>) =></pre>
         <pre>      add1(almost.prev)</pre>
         <pre>  }</pre>
         <pre>}</pre>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="code">
-        <pre><span class="keyword">function</span> <span class="define">add_commute</span>(</pre>
+        <pre><span class="keyword">function</span> <span class="define underline decoration-dotted decoration-2 underline-offset-2" v-tooltip="{ content: 'For all x and y in Nat, add(x, y) is equal to add(y, x)', triggers: ['hover', 'click'] }">add_commute</span>(</pre>
         <pre>  x: <span class="type">Nat</span>, y: <span class="type">Nat</span>,</pre>
         <pre>): <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x)) {</pre>
         <pre>  <span class="keyword">return</span> <span class="keyword">induction</span> (x) {</pre>
