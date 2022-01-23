@@ -1,3 +1,3 @@
 <template>
-  <div class="text-4xl font-logo font-bold">Cicada</div>
+  <div class="font-logo font-bold">Cicada</div>
 </template>

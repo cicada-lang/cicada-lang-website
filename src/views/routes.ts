@@ -4,6 +4,7 @@ export const routes: Array<RouteRecordRaw> = [
   { path: "/", component: () => import("./home/HomePage.vue") },
   { path: "/about", component: () => import("./about/AboutPage.vue") },
   { path: "/docs", component: () => import("./docs/DocsPage.vue") },
+  { path: "/sponsors", component: () => import("./sponsors/SponsorsPage.vue") },
   {
     path: "/:pathMatch(.*)",
     component: () => import("./errors/PageNotFound.vue"),
