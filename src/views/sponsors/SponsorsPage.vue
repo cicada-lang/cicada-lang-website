@@ -4,8 +4,9 @@
       <p>Cicada Language is an open source project.</p>
 
       <p>
-        If you appreciate the endeavour and want to support, please consider
-        make a donation!
+        If you appreciate the endeavour and want to support,
+        <br class="md:block hidden" />
+        please consider make a donation!
       </p>
 
       <h2 class="font-sans text-2xl font-bold">One-time Donation</h2>
@@ -36,7 +37,8 @@
 
       <p>
         If you wish, we will list your personal avatar or company logo on our
-        homepage, and provide a link to your website.
+        homepage, <br class="md:block hidden" />
+        and provide a link to your website.
       </p>
     </div>
   </PageLayout>
