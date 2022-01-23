@@ -12,8 +12,10 @@
             target="_blank"
           >
             Xie Yuheng <IconExternalLink class="w-4" /> </a
-          >, <br />
-          who just wants to build his own language to prove himself.
+          >, <br class="md:block hidden" />
+          who wants to share the ideas about dependent type,
+          <br class="md:block hidden" />
+          by a language that is familiar to his fellow programmers.
         </p>
       </section>
 
