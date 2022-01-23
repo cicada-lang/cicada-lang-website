@@ -19,7 +19,7 @@
 
     <HomePageBeProud class="my-8" />
 
-    <div class="space-y-10 pb-10">
+    <div class="space-y-10 pt-4 pb-14">
       <div class="md:text-4xl font-bold font-sans text-center">
         <div class="text-3xl pb-6 text-amber-500">Get Started</div>
 
