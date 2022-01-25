@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-wrap justify-between items-center md:py-3 w-full">
+  <div class="flex w-full flex-wrap items-center justify-between md:py-3">
     <router-link :to="{ path: `/` }">
-      <PageLogo class="my-2 md:text-4xl text-2xl" />
+      <PageLogo class="my-2 text-2xl md:text-4xl" />
     </router-link>
 
     <div class="flex flex-wrap font-sans text-gray-400">
-      <router-link class="hover:text-gray-900 pr-4" :to="{ path: `/docs` }">
+      <router-link class="pr-4 hover:text-gray-900" :to="{ path: `/docs` }">
         DOCS
       </router-link>
-      <router-link class="hover:text-gray-900 pr-4" :to="{ path: `/sponsors` }">
+      <router-link class="pr-4 hover:text-gray-900" :to="{ path: `/sponsors` }">
         SPONSORS
       </router-link>
       <router-link class="hover:text-gray-900" :to="{ path: `/about` }">

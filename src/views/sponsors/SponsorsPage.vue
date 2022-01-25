@@ -1,11 +1,11 @@
 <template>
   <PageLayout>
-    <div class="py-4 space-y-4 md:text-2xl text-xl">
+    <div class="space-y-4 py-4 text-xl md:text-2xl">
       <p>Cicada Language is an open source project.</p>
 
       <p>
         If you appreciate the endeavour and want to support,
-        <br class="md:block hidden" />
+        <br class="hidden md:block" />
         please consider make a donation!
       </p>
 
@@ -14,7 +14,7 @@
       <div class="px-6">
         <a
           href="https://paypal.me/xieyuheng"
-          class="inline-flex font-sans items-center underline"
+          class="inline-flex items-center font-sans underline"
           target="_blank"
         >
           <img src="../../images/paypal.png" class="h-12" />
@@ -37,7 +37,7 @@
 
       <p>
         If you wish, we will list your personal avatar or company logo on our
-        homepage, <br class="md:block hidden" />
+        homepage, <br class="hidden md:block" />
         and provide a link to your website.
       </p>
     </div>

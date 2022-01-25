@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col justify-center items-center md:py-10 py-6 w-full">
-    <div class="pb-3 space-x-3 flex items-stretch">
+  <div class="flex w-full flex-col items-center justify-center py-6 md:py-10">
+    <div class="flex items-stretch space-x-3 pb-3">
       <a
         href="https://github.com/cicada-lang/cicada"
         target="_blank"
         title="github.com/cicada-lang/cicada"
       >
-        <IconGithub class="hover:text-gray-900 w-5 text-gray-500" />
+        <IconGithub class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
 
       <a
@@ -14,7 +14,7 @@
         target="_blank"
         title="@CicadaLanguage"
       >
-        <IconTwitter class="hover:text-gray-900 w-5 text-gray-500" />
+        <IconTwitter class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
 
       <a
@@ -22,7 +22,7 @@
         target="_blank"
         title="xyheme@gmail.com"
       >
-        <IconMail class="hover:text-gray-900 w-5 text-gray-500" />
+        <IconMail class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
     </div>
 

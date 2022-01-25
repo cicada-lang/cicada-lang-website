@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <section class="py-4 space-y-2">
+    <section class="space-y-2 py-4">
       <h2>404</h2>
       <p>Page Not Found</p>
     </section>

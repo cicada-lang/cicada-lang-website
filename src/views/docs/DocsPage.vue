@@ -1,13 +1,13 @@
 <template>
   <PageLayout>
-    <div class="py-4 space-y-4 md:text-2xl text-xl">
+    <div class="space-y-4 py-4 text-xl md:text-2xl">
       <h2 class="font-sans text-2xl font-bold">The Manual</h2>
 
       <ul class="px-6">
         <li class="list-disc">
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada"
-            class="inline-flex font-sans items-center underline"
+            class="inline-flex items-center font-sans underline"
             target="_blank"
           >
             Cicada Language Manual <IconExternalLink class="w-4" />
@@ -21,7 +21,7 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/cicada-monologues"
-            class="inline-flex font-sans items-center underline"
+            class="inline-flex items-center font-sans underline"
             target="_blank"
           >
             蝉语独白 <IconExternalLink class="w-4" />
@@ -32,7 +32,7 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/mathematical-structures"
-            class="inline-flex font-sans items-center underline"
+            class="inline-flex items-center font-sans underline"
             target="_blank"
           >
             Mathematical Structures <IconExternalLink class="w-4" />
@@ -43,7 +43,7 @@
         <li class="list-disc">
           <a
             href="https://readonly.link/books/github.com/xieyuheng/the-little-typer-exercises"
-            class="inline-flex font-sans items-center underline"
+            class="inline-flex items-center font-sans underline"
             target="_blank"
           >
             The Little Typer Exercises <IconExternalLink class="w-4" />
@@ -59,7 +59,7 @@
           <p>
             <a
               href="https://readonly.link"
-              class="inline-flex font-sans items-center underline"
+              class="inline-flex items-center font-sans underline"
               target="_blank"
               >Readonly.Link <IconExternalLink class="w-4" />
             </a>

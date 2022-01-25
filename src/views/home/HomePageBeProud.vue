@@ -7,7 +7,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mr-1" />
+          <IconBookmark class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01-nat.md"
             target="_blank"
@@ -41,7 +41,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mr-1" />
+          <IconBookmark class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
@@ -76,7 +76,7 @@
         </div>
 
         <div class="reference">
-          <IconBookmark class="w-4 mr-1" />
+          <IconBookmark class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/class/01-class-n-object.md"
             target="_blank"
@@ -84,7 +84,7 @@
           >
         </div>
         <div class="reference">
-          <IconBookmark class="w-4 mr-1" />
+          <IconBookmark class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.mdhttps://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
@@ -118,33 +118,33 @@ import IconBookmark from "../../components/icons/IconBookmark.vue"
 
 <style scoped>
 .entry {
-  @apply w-full flex flex-col md:flex-row justify-center items-stretch;
+  @apply flex w-full flex-col items-stretch justify-center md:flex-row;
 }
 
 .entry .explanation {
-  @apply md:text-2xl text-xl
-  md:w-1/2
-  pr-4 w-full
+  @apply flex w-full
+  flex-col
+  justify-center pr-4
   pt-8
-  flex flex-col justify-center;
+  text-xl md:w-1/2 md:text-2xl;
 }
 
 .entry .explanation .reference {
   @apply flex
   items-center
   self-end
-  py-0.5 font-sans md:text-lg  text-base
-  underline decoration-stone-600 underline-offset-2;
+  py-0.5 font-sans text-base  underline
+  decoration-stone-600 underline-offset-2 md:text-lg;
 }
 
 .entry .code {
-  @apply md:w-1/2 md:py-12
+  @apply mb-6 w-full
+  overflow-x-auto py-3
+  px-3
+  font-mono text-base
+  md:mb-0 md:w-1/2
   md:border-l-2 md:border-stone-300
-  w-full
-  md:py-24 py-3
-  md:mb-0 mb-6
-  md:px-4 px-3
-  overflow-x-auto text-base font-mono;
+  md:py-12 md:py-24 md:px-4;
 }
 
 .keyword {

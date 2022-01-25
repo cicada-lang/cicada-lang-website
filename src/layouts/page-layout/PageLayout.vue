@@ -1,19 +1,19 @@
 <template>
-  <div class="flex flex-col w-full font-serif items-center text-xl">
+  <div class="flex w-full flex-col items-center font-serif text-xl">
     <div
-      class="w-full px-4 flex flex-col items-center shadow fixed bg-white opacity-90"
+      class="fixed flex w-full flex-col items-center bg-white px-4 opacity-90 shadow"
     >
       <PageHeader class="max-w-5xl" />
     </div>
 
     <div
-      class="md:pt-28 pt-20 px-4 w-full flex flex-col max-w-5xl min-h-screen"
+      class="flex min-h-screen w-full max-w-5xl flex-col px-4 pt-20 md:pt-28"
     >
       <slot />
     </div>
 
     <div
-      class="w-full px-4 flex flex-col items-center border-t border-stone-200 bg-stone-50"
+      class="flex w-full flex-col items-center border-t border-stone-200 bg-stone-50 px-4"
     >
       <PageFooter class="max-w-5xl" />
     </div>
