@@ -9,7 +9,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01-nat.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01-nat.md"
             target="_blank"
             >Natural Number | The Manual</a
           >
@@ -43,7 +43,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
             >Proving Theorems About Nat | The Manual</a
           >
@@ -78,7 +78,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/class/01-class-n-object.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/01-class-n-object.md"
             target="_blank"
             >Class & Object | The Manual</a
           >
@@ -86,7 +86,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.mdhttps://readonly.link/manuals/gitlab.com/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
             >Mathematical Structures | A Book</a
           >

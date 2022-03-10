@@ -6,7 +6,7 @@
       <ul class="px-6">
         <li class="list-disc">
           <a
-            href="https://readonly.link/manuals/gitlab.com/cicada-lang/cicada"
+            href="https://readonly.link/manuals/cicada-lang/cicada"
             class="inline-flex items-center font-sans underline"
             target="_blank"
           >
@@ -20,7 +20,7 @@
       <ul class="px-6">
         <li class="list-disc">
           <a
-            href="https://readonly.link/books/github.com/xieyuheng/cicada-monologues"
+            href="https://readonly.link/books/xieyuheng/cicada-monologues"
             class="inline-flex items-center font-sans underline"
             target="_blank"
           >
@@ -31,7 +31,7 @@
 
         <li class="list-disc">
           <a
-            href="https://readonly.link/books/github.com/xieyuheng/mathematical-structures"
+            href="https://readonly.link/books/xieyuheng/mathematical-structures"
             class="inline-flex items-center font-sans underline"
             target="_blank"
           >
@@ -42,7 +42,7 @@
 
         <li class="list-disc">
           <a
-            href="https://readonly.link/books/github.com/xieyuheng/the-little-typer-exercises"
+            href="https://readonly.link/books/xieyuheng/the-little-typer-exercises"
             class="inline-flex items-center font-sans underline"
             target="_blank"
           >
