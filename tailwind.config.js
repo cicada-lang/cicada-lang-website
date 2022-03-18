@@ -13,11 +13,11 @@ module.exports = {
       serif: ["Linux Libertine O", "LXGW WenKai", "serif"],
       mono: [
         "Fira Code",
-        "LXGW New Clear Gothic",
-        "LXGW Clear Gothic",
+        // NOTE One Chinese character should equal to two English characters.
+        "LXGW WenKai Larger",
         "monospace",
       ],
-      logo: ["Bodoni Moda", "LXGW WenKai", "serif"],
+      logo: ["Bodoni Moda", "Source Han Serif SC", "serif"],
     },
     extend: {
       colors: {
