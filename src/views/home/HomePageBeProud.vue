@@ -23,7 +23,7 @@
         <pre>}</pre>
         <br />
         <pre><span class="keyword">function</span> <span class="define">add</span>(x: <span class="type">Nat</span>, y: <span class="type">Nat</span>): <span class="type">Nat</span> {</pre>
-        <pre>  <span class="keyword">return</span> <span class="keyword">induction</span> (x) {</pre>
+        <pre>  <span class="keyword">return</span> <span class="keyword">recursion</span> (x) {</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">zero</span> => y</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">add1</span>(prev, <span class="underline decoration-dotted decoration-2 underline-offset-2" v-tooltip="{ content: 'almost.prev will be the same as add(prev, y)', triggers: ['hover', 'click'] }">almost</span>) =></pre>
         <pre>      add1(almost.prev)</pre>
