@@ -55,7 +55,7 @@
         <pre>  x: <span class="type">Nat</span>, y: <span class="type">Nat</span>,</pre>
         <pre>): <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x)) {</pre>
         <pre>  <span class="keyword">return</span> <span class="keyword">induction</span> (x) {</pre>
-        <pre>    (x) => <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x))</pre>
+        <pre>    <span class="keyword">motive</span> (x) => <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x))</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">zero</span> => add_zero_commute(y)</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">add1</span>(prev, almost) =></pre>
         <pre>      equal_compose(</pre>
