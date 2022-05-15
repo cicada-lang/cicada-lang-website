@@ -31,17 +31,6 @@
 
         <li class="list-disc">
           <a
-            href="https://readonly.link/books/xieyuheng/mathematical-structures"
-            class="inline-flex items-center font-sans underline"
-            target="_blank"
-          >
-            Mathematical Structures <IconExternalLink class="w-4" />
-          </a>
-          -- Formalizing abstract structures by <em>classes and objects</em>
-        </li>
-
-        <li class="list-disc">
-          <a
             href="https://readonly.link/books/xieyuheng/the-little-typer-exercises"
             class="inline-flex items-center font-sans underline"
             target="_blank"
