@@ -83,14 +83,6 @@
             >Class & Object | The Manual</a
           >
         </div>
-        <div class="reference">
-          <IconBookmark class="mr-1 w-4" />
-          <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
-            target="_blank"
-            >Mathematical Structures | A Book</a
-          >
-        </div>
       </div>
 
       <div class="code">
