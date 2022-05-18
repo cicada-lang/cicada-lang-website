@@ -11,7 +11,7 @@
           <a
             href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01-nat.md"
             target="_blank"
-            >Natural Number | The Manual</a
+            >Natural Number</a
           >
         </div>
       </div>
@@ -45,7 +45,7 @@
           <a
             href="https://readonly.link/manuals/cicada-lang/cicada/-/datatype/01.1-proving-theorems-about-nat.md"
             target="_blank"
-            >Proving Theorems About Nat | The Manual</a
+            >Proving Theorems About Nat</a
           >
         </div>
       </div>
@@ -78,9 +78,9 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/01-class-n-object.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/04-mathematical-structure-as-class.md"
             target="_blank"
-            >Class & Object | The Manual</a
+            >Mathematical Structure as Class</a
           >
         </div>
       </div>
