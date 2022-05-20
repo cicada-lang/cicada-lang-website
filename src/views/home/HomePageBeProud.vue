@@ -9,7 +9,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/01-nat.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/nat.md"
             target="_blank"
             >Natural Number</a
           >
@@ -43,7 +43,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/01.1-proving-theorems-about-nat.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/proving-theorems-about-nat.md"
             target="_blank"
             >Proving Theorems About Nat</a
           >
@@ -78,7 +78,7 @@
         <div class="reference">
           <IconBookmark class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/04-mathematical-structure-as-class.md"
+            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/mathematical-structure-as-class.md"
             target="_blank"
             >Mathematical Structure as Class</a
           >
