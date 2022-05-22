@@ -51,16 +51,16 @@
       </div>
 
       <div class="code">
-        <pre><span class="keyword">function</span> <span class="define underline decoration-dotted decoration-2 underline-offset-2" v-tooltip="{ content: 'For all x and y in natural number, x + y = y + x', triggers: ['hover', 'click'] }">add_commute</span>(</pre>
+        <pre><span class="keyword">function</span> <span class="define underline decoration-dotted decoration-2 underline-offset-2" v-tooltip="{ content: 'For all x and y in natural number, x + y = y + x', triggers: ['hover', 'click'] }">add_is_commutative</span>(</pre>
         <pre>  x: <span class="type">Nat</span>, y: <span class="type">Nat</span>,</pre>
         <pre>): <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x)) {</pre>
         <pre>  <span class="keyword">return</span> <span class="keyword">induction</span> (x) {</pre>
         <pre>    <span class="keyword">motive</span> (x) => <span class="type">Equal</span>(<span class="type">Nat</span>, add(x, y), add(y, x))</pre>
-        <pre>    <span class="keyword">case</span> <span class="ctor">zero</span> => add_zero_commute(y)</pre>
+        <pre>    <span class="keyword">case</span> <span class="ctor">zero</span> => add_is_commutative_on_zero(y)</pre>
         <pre>    <span class="keyword">case</span> <span class="ctor">add1</span>(prev, almost) =></pre>
         <pre>      equal_compose(</pre>
         <pre>        equal_map(almost.prev, add1),</pre>
-        <pre>        equal_swap(add_add1_commute(y, prev)),</pre>
+        <pre>        equal_swap(add_is_commutative_on_add1(y, prev)),</pre>
         <pre>      )</pre>
         <pre>  }</pre>
         <pre>}</pre>
