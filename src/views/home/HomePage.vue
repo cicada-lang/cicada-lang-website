@@ -31,18 +31,6 @@
           </button>
         </router-link>
       </div>
-
-      <div class="text-center font-sans font-bold md:text-4xl">
-        <div class="pb-6 text-3xl text-lime-500">Become a Sponsor</div>
-
-        <router-link to="/sponsors" class="font-normal">
-          <button
-            class="rounded-lg border-2 border-lime-200 bg-lime-400 py-3 px-6 text-2xl font-bold text-white hover:bg-lime-300"
-          >
-            SPONSORS
-          </button>
-        </router-link>
-      </div>
     </div>
   </PageLayout>
 </template>

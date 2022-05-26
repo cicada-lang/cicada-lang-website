@@ -8,9 +8,6 @@
       <router-link class="pr-4 hover:text-gray-900" :to="{ path: `/docs` }">
         DOCS
       </router-link>
-      <router-link class="pr-4 hover:text-gray-900" :to="{ path: `/sponsors` }">
-        SPONSORS
-      </router-link>
       <router-link class="hover:text-gray-900" :to="{ path: `/about` }">
         ABOUT
       </router-link>

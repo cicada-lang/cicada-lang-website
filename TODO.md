@@ -1,0 +1,1 @@
+- remove donation link
