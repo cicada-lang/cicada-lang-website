@@ -1,4 +1,3 @@
-- remove layouts/page-layout/index.ts
 - components/Link.vue
 - use components/Link.vue instead of RouterLink
 - use heroicon package
