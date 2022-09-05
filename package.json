@@ -4,9 +4,9 @@
     "dev": "vite",
     "build": "vite build",
     "check": "vue-tsc --noEmit",
-    "watch": "vue-tsc --noEmit --watch",
-    "check:ts": "tsc --noEmit",
-    "watch:ts": "tsc --noEmit --watch",
+    "check:watch": "vue-tsc --noEmit --watch",
+    "check:ts-only": "tsc --noEmit",
+    "check:ts-only:watch": "tsc --noEmit --watch",
     "format": "prettier src --write",
     "prepare": "husky install"
   },
