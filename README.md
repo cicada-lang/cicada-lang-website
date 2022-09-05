@@ -1,7 +1,8 @@
 # Cicada Language Website
 
 [ [HOMEPAGE](https://cicada-lang.org)
-| [MANUAL](https://readonly.link/manuals/gitlab.com/cicada-lang/cicada) ]
+| [MANUAL](https://readonly.link/manuals/cicada-lang/cicada)
+| [ABOUT](https://cicada-lang.org/about) ]
 
 ## Development
 
