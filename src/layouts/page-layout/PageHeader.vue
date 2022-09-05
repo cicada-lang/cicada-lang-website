@@ -5,9 +5,11 @@
     </RouterLink>
 
     <div class="flex flex-wrap font-sans text-gray-400">
-      <a class="pr-4 hover:text-gray-900"           href="https://readonly.link/manuals/cicada-lang/cicada"
-
-          target="_blank">
+      <a
+        class="pr-4 hover:text-gray-900"
+        href="https://readonly.link/manuals/cicada-lang/cicada"
+        target="_blank"
+      >
         DOCS
       </a>
       <RouterLink class="hover:text-gray-900" :to="{ path: `/about` }">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PageLayout from '../../components/layouts/page-layout'
+import PageLayout from '../../layouts/page-layout'
 import IconExternalLink from '../../components/icons/IconExternalLink.vue'
 </script>
 

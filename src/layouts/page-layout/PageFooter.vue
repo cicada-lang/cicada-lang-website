@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import IconGithub from '../../components/icons/IconGithub.vue'
+import IconTwitter from '../../components/icons/IconTwitter.vue'
+import IconReadonly from '../../components/icons/IconReadonly.vue'
+import IconMail from '../../components/icons/IconMail.vue'
+</script>
+
 <template>
   <div class="flex w-full flex-col items-center justify-center py-6 md:py-10">
     <div class="flex items-stretch space-x-3 pb-3">
@@ -39,10 +46,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import IconGithub from '../../../components/icons/IconGithub.vue'
-import IconTwitter from '../../../components/icons/IconTwitter.vue'
-import IconReadonly from '../../../components/icons/IconReadonly.vue'
-import IconMail from '../../../components/icons/IconMail.vue'
-</script>
