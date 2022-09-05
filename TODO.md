@@ -1,4 +1,4 @@
-- fix pages/routes.ts
+- use App.vue instead of Root
 - use heroicon package
 - add prettier to pre-commit hook
 - DOCS link to manual

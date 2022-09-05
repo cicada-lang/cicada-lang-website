@@ -1,11 +1,12 @@
 import { RouteRecordRaw } from 'vue-router'
+import HomePage from './home/HomePage.vue'
+import AboutPage from './about/AboutPage.vue'
+import DocsPage from './docs/DocsPage.vue'
+import PageNotFound from './errors/PageNotFound.vue'
 
 export const routes: Array<RouteRecordRaw> = [
-  { path: '/', component: () => import('./home/HomePage.vue') },
-  { path: '/about', component: () => import('./about/AboutPage.vue') },
-  { path: '/docs', component: () => import('./docs/DocsPage.vue') },
-  {
-    path: '/:pathMatch(.*)',
-    component: () => import('./errors/PageNotFound.vue'),
-  },
+  { path: '/', component: HomePage },
+  { path: '/about', component: AboutPage },
+  { path: '/docs', component: DocsPage },
+  { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
