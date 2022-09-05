@@ -1,3 +1,4 @@
+import { createHead } from '@vueuse/head'
 import { createApp } from 'vue'
 import FloatingVue from 'floating-vue'
 import router from './router'
@@ -6,4 +7,10 @@ import './assets/fonts/index.css'
 import 'floating-vue/dist/style.css'
 import App from './App.vue'
 
-createApp(App).use(router).use(FloatingVue).mount('#app')
+const root = createApp(App)
+
+root.use(router)
+root.use(createHead())
+root.use(FloatingVue)
+
+root.mount('#app')
