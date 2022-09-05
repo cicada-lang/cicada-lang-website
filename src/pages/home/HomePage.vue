@@ -29,13 +29,17 @@ import HomePageBeProud from './HomePageBeProud.vue'
       <div class="text-center font-sans font-bold md:text-4xl">
         <div class="pb-6 text-3xl text-amber-500">Get Started</div>
 
-        <router-link to="/docs" class="font-normal">
+        <a
+          href="https://readonly.link/manuals/cicada-lang/cicada"
+          class="font-normal"
+          target="_blank"
+        >
           <button
             class="rounded-lg border-2 border-amber-200 bg-amber-400 py-3 px-6 text-2xl font-bold text-white hover:bg-amber-300"
           >
             DOCS
           </button>
-        </router-link>
+        </a>
       </div>
     </div>
   </PageLayout>

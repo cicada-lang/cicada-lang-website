@@ -1,3 +1,5 @@
-- use heroicon package
+- rename router-link to RouterLink
+- components/Link.vue
+- use components/Link.vue instead of RouterLink
 - add prettier to pre-commit hook
-- DOCS link to manual
+- use heroicon package
