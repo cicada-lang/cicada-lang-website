@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconBookmark from '../../components/icons/IconBookmark.vue'
+import { BookmarkIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import IconBookmark from '../../components/icons/IconBookmark.vue'
         </div>
 
         <div class="reference">
-          <IconBookmark class="mr-1 w-4" />
+          <BookmarkIcon class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/nat.md"
             target="_blank"
@@ -45,7 +45,7 @@ import IconBookmark from '../../components/icons/IconBookmark.vue'
         </div>
 
         <div class="reference">
-          <IconBookmark class="mr-1 w-4" />
+          <BookmarkIcon class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/proving-theorems-about-nat.md"
             target="_blank"
@@ -80,7 +80,7 @@ import IconBookmark from '../../components/icons/IconBookmark.vue'
         </div>
 
         <div class="reference">
-          <IconBookmark class="mr-1 w-4" />
+          <BookmarkIcon class="mr-1 w-4" />
           <a
             href="https://readonly.link/manuals/cicada-lang/cicada/-/class/mathematical-structure-as-class.md"
             target="_blank"

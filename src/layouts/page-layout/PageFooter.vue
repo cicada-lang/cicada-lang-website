@@ -2,7 +2,7 @@
 import IconGithub from '../../components/icons/IconGithub.vue'
 import IconTwitter from '../../components/icons/IconTwitter.vue'
 import IconReadonly from '../../components/icons/IconReadonly.vue'
-import IconMail from '../../components/icons/IconMail.vue'
+import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
@@ -37,7 +37,7 @@ import IconMail from '../../components/icons/IconMail.vue'
         target="_blank"
         title="xyheme@gmail.com"
       >
-        <IconMail class="w-5 text-gray-500 hover:text-gray-900" />
+        <EnvelopeIcon class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
     </div>
 

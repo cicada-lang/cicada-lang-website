@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import IconExternalLink from '../../components/icons/IconExternalLink.vue'
+import { LinkIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
             class="inline-flex items-center font-sans underline"
             target="_blank"
           >
-            Xie Yuheng <IconExternalLink class="w-4" /> </a
+            Xie Yuheng <LinkIcon class="w-4" /> </a
           >, <br class="hidden md:block" />
           who wants to share the ideas about dependent type,
           <br class="hidden md:block" />
@@ -40,7 +40,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
               class="inline-flex items-center font-sans underline"
               target="_blank"
             >
-              cicada-lang <IconExternalLink class="w-4" />
+              cicada-lang <LinkIcon class="w-4" />
             </a>
           </li>
 
@@ -51,7 +51,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
               class="inline-flex items-center font-sans underline"
               target="_blank"
             >
-              CicadaLanguage <IconExternalLink class="w-4" />
+              CicadaLanguage <LinkIcon class="w-4" />
             </a>
             <ul class="space-y-2 px-5 pt-2">
               <li class="list-disc">
@@ -61,7 +61,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
                   class="inline-flex items-center font-sans underline"
                   target="_blank"
                 >
-                  CicadaLanguageCN <IconExternalLink class="w-4" />
+                  CicadaLanguageCN <LinkIcon class="w-4" />
                 </a>
               </li>
             </ul>
@@ -74,7 +74,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
               class="inline-flex items-center font-sans underline"
               target="_blank"
             >
-              libera.chat <IconExternalLink class="w-4" />
+              libera.chat <LinkIcon class="w-4" />
             </a>
           </li>
         </ul>
@@ -90,7 +90,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
               class="inline-flex items-center font-sans underline"
               target="_blank"
             >
-              Xie Yuheng <IconExternalLink class="w-4" />
+              Xie Yuheng <LinkIcon class="w-4" />
             </a>
           </li>
 
@@ -100,7 +100,7 @@ import IconExternalLink from '../../components/icons/IconExternalLink.vue'
               class="inline-flex items-center font-sans underline"
               target="_blank"
             >
-              Zaoqi <IconExternalLink class="w-4" />
+              Zaoqi <LinkIcon class="w-4" />
             </a>
           </li>
         </ul>
