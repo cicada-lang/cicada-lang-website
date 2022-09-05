@@ -103,6 +103,16 @@ import { LinkIcon } from '@heroicons/vue/24/outline'
               Zaoqi <LinkIcon class="w-4" />
             </a>
           </li>
+
+          <li class="list-disc">
+            <a
+              href="https://github.com/LittleJianCH"
+              class="inline-flex items-center font-sans underline"
+              target="_blank"
+            >
+              LittleJian <LinkIcon class="w-4" />
+            </a>
+          </li>
         </ul>
       </section>
     </div>
