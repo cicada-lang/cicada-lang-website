@@ -1,4 +1,3 @@
-- rename views to pages
 - fix pages/routes.ts
 - use heroicon package
 - add prettier to pre-commit hook

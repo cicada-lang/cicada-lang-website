@@ -4,7 +4,7 @@ import router from './router'
 import './fonts/index.css'
 import './styles/index.css'
 import 'floating-vue/dist/style.css'
-import RootLayout from './views/root/RootLayout.vue'
+import RootLayout from './pages/root/RootLayout.vue'
 
 createApp(RootLayout).use(router).use(FloatingVue).mount('#app')
 
