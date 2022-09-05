@@ -4,6 +4,14 @@
 | [MANUAL](https://readonly.link/manuals/gitlab.com/cicada-lang/cicada)
 | [ABOUT](https://cicada-lang.org/about) ]
 
+## Development
+
+```sh
+npm install     # Install dependencies
+npm run dev     # Start the dev server
+npm run format  # Format the code
+```
+
 ## Contributions
 
 > Be polite, do not bring negative emotion to others.

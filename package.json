@@ -7,7 +7,6 @@
     "watch": "vue-tsc --noEmit --watch",
     "check:ts": "tsc --noEmit",
     "watch:ts": "tsc --noEmit --watch",
-    "test": "vitest --run",
     "format": "prettier src --write",
     "prepare": "husky install"
   },
