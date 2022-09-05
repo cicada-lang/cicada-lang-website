@@ -1,8 +1,13 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  content: ["./src/**/*.vue"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    extend: {
+      colors: {
+        gray: colors.stone,
+      },
+    },
     fontFamily: {
       sans: [
         "Linux Biolinum O",
@@ -18,11 +23,6 @@ module.exports = {
         "monospace",
       ],
       logo: ["Bodoni Moda", "Source Han Serif SC", "serif"],
-    },
-    extend: {
-      colors: {
-        gray: colors.stone,
-      },
     },
   },
 }

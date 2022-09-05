@@ -1,4 +1,3 @@
-- use vite
 - use heroicon package
 - add prettier to pre-commit hook
 - DOCS link to manual
