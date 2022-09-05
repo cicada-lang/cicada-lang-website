@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import PageLayout from '../../components/layouts/page-layout'
+import IconExternalLink from '../../components/icons/IconExternalLink.vue'
+</script>
+
 <template>
   <PageLayout>
     <div class="space-y-4 py-4 text-xl md:text-2xl">
@@ -59,8 +64,3 @@
     </div>
   </PageLayout>
 </template>
-
-<script setup lang="ts">
-import PageLayout from '../../components/layouts/page-layout'
-import IconExternalLink from '../../components/icons/IconExternalLink.vue'
-</script>

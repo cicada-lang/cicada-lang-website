@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import PageLayout from '../../components/layouts/page-layout'
+import IconExternalLink from '../../components/icons/IconExternalLink.vue'
+import HomePageBeProud from './HomePageBeProud.vue'
+</script>
+
 <template>
   <PageLayout>
     <div
@@ -34,9 +40,3 @@
     </div>
   </PageLayout>
 </template>
-
-<script setup lang="ts">
-import PageLayout from '../../components/layouts/page-layout'
-import IconExternalLink from '../../components/icons/IconExternalLink.vue'
-import HomePageBeProud from './HomePageBeProud.vue'
-</script>

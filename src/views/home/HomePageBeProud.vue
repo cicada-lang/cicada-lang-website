@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import IconBookmark from '../../components/icons/IconBookmark.vue'
+</script>
+
 <template>
   <div class="w-full">
     <div class="entry">
@@ -103,10 +107,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import IconBookmark from '../../components/icons/IconBookmark.vue'
-</script>
 
 <style scoped>
 .entry {

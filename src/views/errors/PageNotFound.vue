@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import PageLayout from '../../components/layouts/page-layout'
+</script>
+
+
 <template>
   <PageLayout>
     <section class="space-y-2 py-4">
@@ -7,9 +12,6 @@
   </PageLayout>
 </template>
 
-<script setup lang="ts">
-import PageLayout from '../../components/layouts/page-layout'
-</script>
 
 <style scoped>
 h2 {
