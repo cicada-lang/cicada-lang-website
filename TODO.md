@@ -1,0 +1,2 @@
+- use vite
+- DOCS link to manual
