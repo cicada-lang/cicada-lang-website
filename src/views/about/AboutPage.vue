@@ -105,6 +105,6 @@
 </template>
 
 <script setup lang="ts">
-import PageLayout from "../../components/layouts/page-layout"
-import IconExternalLink from "../../components/icons/IconExternalLink.vue"
+import PageLayout from '../../components/layouts/page-layout'
+import IconExternalLink from '../../components/icons/IconExternalLink.vue'
 </script>

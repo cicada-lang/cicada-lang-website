@@ -21,11 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue"
-import { useRoute } from "vue-router"
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 
-import PageHeader from "./PageHeader.vue"
-import PageFooter from "./PageFooter.vue"
+import PageHeader from './PageHeader.vue'
+import PageFooter from './PageFooter.vue'
 
 const route = useRoute()
 
@@ -34,6 +34,6 @@ watch(
   () => {
     window.scrollTo(0, 0)
   },
-  { immediate: true }
+  { immediate: true },
 )
 </script>

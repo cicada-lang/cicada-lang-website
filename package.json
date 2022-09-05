@@ -8,12 +8,7 @@
     "watch": "tsc --noEmit --watch",
     "format": "prettier src --write"
   },
-  "prettier": {
-    "semi": false,
-    "trailingComma": "es5"
-  },
   "devDependencies": {
-    "@types/nanoid": "^2.1.0",
     "@types/node": "^17.0.36",
     "@vue/cli-plugin-babel": "~5.0.4",
     "@vue/cli-plugin-router": "~5.0.4",

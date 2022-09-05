@@ -41,8 +41,8 @@
 </template>
 
 <script setup lang="ts">
-import IconGithub from "../../../components/icons/IconGithub.vue"
-import IconTwitter from "../../../components/icons/IconTwitter.vue"
-import IconReadonly from "../../../components/icons/IconReadonly.vue"
-import IconMail from "../../../components/icons/IconMail.vue"
+import IconGithub from '../../../components/icons/IconGithub.vue'
+import IconTwitter from '../../../components/icons/IconTwitter.vue'
+import IconReadonly from '../../../components/icons/IconReadonly.vue'
+import IconMail from '../../../components/icons/IconMail.vue'
 </script>

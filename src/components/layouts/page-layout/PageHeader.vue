@@ -16,5 +16,5 @@
 </template>
 
 <script setup lang="ts">
-import PageLogo from "./PageLogo.vue"
+import PageLogo from './PageLogo.vue'
 </script>
