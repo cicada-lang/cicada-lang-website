@@ -1,8 +1,13 @@
+<script setup lang="ts">
+import PageLogo from './PageLogo.vue'
+import Link from '../../components/Link.vue'
+</script>
+
 <template>
   <div class="flex w-full flex-wrap items-center justify-between md:py-3">
-    <RouterLink :to="{ path: `/` }">
+    <Link href="/">
       <PageLogo class="my-2 text-2xl md:text-4xl" />
-    </RouterLink>
+    </Link>
 
     <div class="flex flex-wrap font-sans text-gray-400">
       <a
@@ -12,13 +17,8 @@
       >
         DOCS
       </a>
-      <RouterLink class="hover:text-gray-900" :to="{ path: `/about` }">
-        ABOUT
-      </RouterLink>
+
+      <Link class="hover:text-gray-900" href="/about"> ABOUT </Link>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import PageLogo from './PageLogo.vue'
-</script>
