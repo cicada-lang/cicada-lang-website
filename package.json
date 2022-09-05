@@ -13,7 +13,7 @@
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^2.0.10",
-    "@vueuse/core": "^9.1.1",
+    "@vueuse/core": "^9.2.0",
     "@vueuse/head": "^0.7.9",
     "@xieyuheng/ty": "^0.1.17",
     "husky": "^8.0.1",
