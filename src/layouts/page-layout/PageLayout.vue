@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+import PageHeader from './PageHeader.vue'
+import PageFooter from './PageFooter.vue'
+
+const route = useRoute()
+
+watch(
+  () => route.path,
+  () => {
+    window.scrollTo(0, 0)
+  },
+  { immediate: true },
+)
+</script>
+
 <template>
   <div class="flex w-full flex-col items-center font-serif text-xl">
     <div
@@ -19,21 +37,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { watch } from 'vue'
-import { useRoute } from 'vue-router'
-
-import PageHeader from './PageHeader.vue'
-import PageFooter from './PageFooter.vue'
-
-const route = useRoute()
-
-watch(
-  () => route.path,
-  () => {
-    window.scrollTo(0, 0)
-  },
-  { immediate: true },
-)
-</script>
