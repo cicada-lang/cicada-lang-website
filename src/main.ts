@@ -6,10 +6,7 @@ import './styles/index.css'
 import 'floating-vue/dist/style.css'
 import RootLayout from './views/root/RootLayout.vue'
 
-createApp(RootLayout)
-  .use(router)
-  .use(FloatingVue)
-  .mount('#app')
+createApp(RootLayout).use(router).use(FloatingVue).mount('#app')
 
 async function unregisterServiceWorker(): Promise<void> {
   const registrations = await navigator.serviceWorker.getRegistrations()
