@@ -2,7 +2,6 @@
 import PageLayout from '../../components/layouts/page-layout'
 </script>
 
-
 <template>
   <PageLayout>
     <section class="space-y-2 py-4">
@@ -11,7 +10,6 @@ import PageLayout from '../../components/layouts/page-layout'
     </section>
   </PageLayout>
 </template>
-
 
 <style scoped>
 h2 {
