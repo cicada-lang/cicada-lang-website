@@ -113,6 +113,16 @@ import { LinkIcon } from '@heroicons/vue/24/outline'
               LittleJian <LinkIcon class="w-4" />
             </a>
           </li>
+
+          <li class="list-disc">
+            <a
+              href="https://github.com/bzy-debug"
+              class="inline-flex items-center font-sans underline"
+              target="_blank"
+            >
+              Bao Zhiyuan <LinkIcon class="w-4" />
+            </a>
+          </li>
         </ul>
       </section>
     </div>
