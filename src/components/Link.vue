@@ -16,6 +16,6 @@
         }
       }
     "
-    ><a><slot /></a
+    ><a class="cursor-pointer"><slot /></a
   ></span>
 </template>
