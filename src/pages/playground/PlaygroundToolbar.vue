@@ -23,8 +23,6 @@ async function share() {
 
 <template>
   <div>
-    <button class="text-theme-900 font-logo text-base" @click="share()">
-      SHARE
-    </button>
+    <button class="font-semibold text-theme-900" @click="share()">SHARE</button>
   </div>
 </template>

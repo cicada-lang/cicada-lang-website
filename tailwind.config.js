@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.stone,
+        theme: colors.blue,
       },
     },
     fontFamily: {

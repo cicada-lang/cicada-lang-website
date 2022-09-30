@@ -10,14 +10,15 @@ defineProps<{
 
 <template>
   <div
-    class="border-theme-300 bg-theme-200 flex items-center justify-between border-b px-3 py-2"
+    class="flex items-center justify-between border-b border-theme-300 bg-theme-200 px-3 py-2"
   >
     <Link
       href="/playground"
-      class="text-theme-900 font-logo text-xl font-semibold"
+      class="font-logo text-xl font-semibold text-theme-900"
     >
       Cicada Playground
     </Link>
+
     <PlaygroundToolbar :state="state" />
   </div>
 </template>

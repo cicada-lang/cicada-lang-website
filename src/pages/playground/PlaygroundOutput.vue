@@ -19,7 +19,7 @@ defineProps<{
       v-else
       class="flex h-full w-full flex-col overflow-x-auto overflow-y-auto"
     >
-      <div class="p-3 font-mono text-sm md:text-base">
+      <div class="p-3 font-mono text-sm text-theme-600 md:text-base">
         <div v-for="(output, index) in state.outputs" :key="index">
           <div v-if="output" v-html="output" class="whitespace-pre-line"></div>
         </div>
