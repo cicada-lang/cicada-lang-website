@@ -1,14 +1,15 @@
-import { Mod, Errors } from '@cicada-lang/cicada'
-import { Loader } from '@cicada-lang/cicada/lib/loader'
-
-console.log(Loader)
-
-const loader = new Loader()
+import { Loader, Mod, Errors } from '@cicada-lang/cicada'
 
 export class PlaygroundState {
-  mod = new Mod({ url: new URL(window.location.href), loader })
+  loader = new Loader()
+
+  mod = new Mod({
+    url: new URL(window.location.href),
+    loader: this.loader,
+  })
 
   text = ''
+
   error?: {
     kind: string
     message: string
@@ -22,7 +23,7 @@ export class PlaygroundState {
     try {
       delete this.error
       if (!this.text) return
-      this.mod = await loader.load(url, { code: this.text })
+      this.mod = await this.loader.load(url, { code: this.text })
     } catch (error) {
       this.catchError(error)
     }
