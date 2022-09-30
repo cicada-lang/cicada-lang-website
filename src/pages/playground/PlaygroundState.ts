@@ -11,7 +11,6 @@ export class PlaygroundState {
   text = ''
 
   error?: {
-    kind: string
     message: string
   }
 
@@ -23,22 +22,23 @@ export class PlaygroundState {
     try {
       delete this.error
       if (!this.text) return
-      this.mod = await this.loader.load(url, { code: this.text })
+      this.mod = await this.loader.load(url, { text: this.text })
     } catch (error) {
       this.catchError(error)
     }
   }
 
   catchError(error: unknown): void {
-    if (!(error instanceof Error)) throw error
-    if (error instanceof Errors.ParsingError) {
+    if (!(error instanceof Error)) {
       this.error = {
-        kind: 'ParsingError',
-        message: error.message + '\n' + error.report(this.text),
+        message: JSON.stringify(error),
+      }
+    } else if (error instanceof Errors.ParsingError) {
+      this.error = {
+        message: error.report(this.text),
       }
     } else {
       this.error = {
-        kind: error.name,
         message: error.message,
       }
     }
