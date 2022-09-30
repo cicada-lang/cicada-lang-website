@@ -44,20 +44,18 @@ watch(
 </script>
 
 <template>
-  <PageLayout>
-    <div class="flex h-full flex-col">
-      <PlaygroundHeader :state="state" />
-      <div class="flex h-full flex-col overflow-y-auto md:flex-row">
-        <PlaygroundEditor
-          class="shrink grow md:w-1/2 md:resize-x"
-          style="min-height: 30rem"
-          :state="state"
-        />
-        <PlaygroundOutput
-          class="border-theme-300 shrink grow border-l md:w-1/2"
-          :state="state"
-        />
-      </div>
+  <div class="flex h-screen flex-col">
+    <PlaygroundHeader :state="state" />
+    <div class="flex h-full flex-col overflow-y-auto md:flex-row">
+      <PlaygroundEditor
+        class="shrink grow md:w-1/2 md:resize-x"
+        style="min-height: 30rem"
+        :state="state"
+      />
+      <PlaygroundOutput
+        class="border-theme-300 shrink grow border-l md:w-1/2"
+        :state="state"
+      />
     </div>
-  </PageLayout>
+  </div>
 </template>

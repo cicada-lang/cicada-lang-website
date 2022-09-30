@@ -1,4 +1,4 @@
-link to playground
+improve playground style
 
 change cicada-lang/lambda to cicada-lang/cicada
 
