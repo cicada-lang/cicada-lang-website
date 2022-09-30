@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import Link from '../../components/Link.vue'
 import { PlaygroundState as State } from './PlaygroundState'
 
 const route = useRoute()
@@ -22,7 +23,8 @@ async function share() {
 </script>
 
 <template>
-  <div>
+  <div class="space-x-3">
+    <Link class="font-semibold text-theme-900" href="/"> HOMEPAGE </Link>
     <button class="font-semibold text-theme-900" @click="share()">SHARE</button>
   </div>
 </template>
