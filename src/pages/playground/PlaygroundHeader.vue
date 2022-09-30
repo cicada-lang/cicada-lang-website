@@ -12,12 +12,9 @@ defineProps<{
   <div
     class="flex items-center justify-between border-b border-theme-300 bg-theme-200 px-3 py-2"
   >
-    <Link
-      href="/playground"
-      class="font-logo text-xl font-semibold text-theme-900"
-    >
+    <div class="font-logo text-xl font-semibold text-theme-900">
       Cicada Playground
-    </Link>
+    </div>
 
     <PlaygroundToolbar :state="state" />
   </div>
