@@ -1,15 +1,12 @@
-import { Mod, ModLoader } from '@cicada-lang/lambda/lib/lang/mod'
-import { BlockResource } from '@cicada-lang/lambda/lib/lang/block'
-import { Parser } from '@cicada-lang/lambda/lib/lang/parser'
-import { ParsingError } from '@cicada-lang/sexp/lib/errors'
+import { Mod, Errors } from '@cicada-lang/cicada'
+import { Loader } from '@cicada-lang/cicada/lib/loader'
 
-const loader = new ModLoader()
+console.log(Loader)
+
+const loader = new Loader()
 
 export class PlaygroundState {
-  mod = new Mod(new URL(window.location.href), {
-    loader,
-    blocks: new BlockResource(),
-  })
+  mod = new Mod({ url: new URL(window.location.href), loader })
 
   text = ''
   error?: {
@@ -17,14 +14,15 @@ export class PlaygroundState {
     message: string
   }
 
-  get outputs(): Array<undefined | string> {
-    return this.mod.blocks.outputs
+  get outputs(): Array<string> {
+    return Array.from(this.mod.outputs.values())
   }
 
   async refresh(url: URL): Promise<void> {
     try {
       delete this.error
-      this.mod = await loader.loadAndExecute(url, { code: this.text })
+      if (!this.text) return
+      this.mod = await loader.load(url, { code: this.text })
     } catch (error) {
       this.catchError(error)
     }
@@ -32,10 +30,10 @@ export class PlaygroundState {
 
   catchError(error: unknown): void {
     if (!(error instanceof Error)) throw error
-    if (error instanceof ParsingError) {
+    if (error instanceof Errors.ParsingError) {
       this.error = {
         kind: 'ParsingError',
-        message: error.message + '\n' + error.span.report(this.text),
+        message: error.message + '\n' + error.report(this.text),
       }
     } else {
       this.error = {

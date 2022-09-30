@@ -1,5 +1,5 @@
+update cicada-lang/cicada for better error report
+
 improve playground style
 
-change cicada-lang/lambda to cicada-lang/cicada
-
-- remove cicada-lang/sexp
+[maybe] use run button
