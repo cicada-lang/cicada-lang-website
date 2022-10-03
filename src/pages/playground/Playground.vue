@@ -4,8 +4,6 @@ import { useRouter, useRoute } from 'vue-router'
 import { PlaygroundState as State } from './PlaygroundState'
 import debounce from 'lodash/debounce'
 import { Base64 } from 'js-base64'
-
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import PlaygroundHeader from './PlaygroundHeader.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
