@@ -1,2 +1,0 @@
-- use `+` as prefix to sort it before number
-- `+` `-` < decimal < `A-Z` < `a-z`
