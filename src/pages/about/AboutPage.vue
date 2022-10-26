@@ -79,52 +79,6 @@ import { LinkIcon } from '@heroicons/vue/24/outline'
           </li>
         </ul>
       </section>
-
-      <h2 class="font-sans text-2xl font-bold">Core Team</h2>
-
-      <section class="space-y-2 py-4">
-        <ul class="space-y-2 px-5 pt-2">
-          <li class="list-disc">
-            <a
-              href="https://xieyuheng.com"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              Xie Yuheng <LinkIcon class="w-4" />
-            </a>
-          </li>
-
-          <li class="list-disc">
-            <a
-              href="https://github.com/tsao-chi"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              Zaoqi <LinkIcon class="w-4" />
-            </a>
-          </li>
-
-          <li class="list-disc">
-            <a
-              href="https://github.com/LittleJianCH"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              LittleJian <LinkIcon class="w-4" />
-            </a>
-          </li>
-
-          <li class="list-disc">
-            <a
-              href="https://github.com/bzy-debug"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              Bao Zhiyuan <LinkIcon class="w-4" />
-            </a>
-          </li>
-        </ul>
-      </section>
     </div>
   </PageLayout>
 </template>
