@@ -10,7 +10,7 @@ defineProps<{
   <div class="h-full w-full overflow-y-auto">
     <div v-if="state.error" class="h-full w-full overflow-y-auto">
       <pre
-        class="whitespace-pre-line px-3 py-2 text-base"
+        class="whitespace-pre px-3 py-2 text-base"
         v-html="state.error.message"
       ></pre>
     </div>
@@ -21,7 +21,7 @@ defineProps<{
     >
       <div class="p-3 font-mono text-sm text-theme-600 md:text-base">
         <div v-for="(output, index) in state.outputs" :key="index">
-          <div v-if="output" v-html="output" class="whitespace-pre-line"></div>
+          <div v-if="output" v-html="output" class="whitespace-pre"></div>
         </div>
       </div>
     </div>
