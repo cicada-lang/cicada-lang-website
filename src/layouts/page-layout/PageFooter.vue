@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import IconGithub from '../../components/icons/IconGithub.vue'
-import IconTwitter from '../../components/icons/IconTwitter.vue'
-import IconReadonly from '../../components/icons/IconReadonly.vue'
 import { EnvelopeIcon } from '@heroicons/vue/24/outline'
+import IconGithub from '../../components/icons/IconGithub.vue'
+import IconReadonly from '../../components/icons/IconReadonly.vue'
+import IconTwitter from '../../components/icons/IconTwitter.vue'
 </script>
 
 <template>
   <div class="flex w-full flex-col items-center justify-center py-6 md:py-10">
     <div class="flex items-stretch space-x-3 pb-3">
       <a
-        href="https://readonly.link/authors/cicada-lang"
+        href="https://readonly.link/authors/https://cdn.cic.run/docs/author.json"
         target="_blank"
-        title="readonly.link/authors/cicada-lang"
+        title="readonly.link/authors/https://cdn.cic.run/docs/author.json"
       >
         <IconReadonly class="w-5 text-gray-500 hover:text-gray-900" />
       </a>

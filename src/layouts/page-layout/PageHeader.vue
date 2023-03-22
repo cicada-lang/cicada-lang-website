@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PageLogo from './PageLogo.vue'
 import Link from '../../components/Link.vue'
+import PageLogo from './PageLogo.vue'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import Link from '../../components/Link.vue'
     <div class="flex flex-wrap space-x-3 font-sans text-gray-400">
       <a
         class="hover:text-gray-900"
-        href="https://readonly.link/manuals/cicada-lang/cicada"
+        href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json"
         target="_blank"
       >
         DOCS

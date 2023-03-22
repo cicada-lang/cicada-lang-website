@@ -13,7 +13,7 @@ import { BookmarkIcon } from '@heroicons/vue/24/outline'
         <div class="reference">
           <BookmarkIcon class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/nat.md"
+            href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json/-/datatypes/nat.md"
             target="_blank"
             >Natural Number</a
           >
@@ -47,7 +47,7 @@ import { BookmarkIcon } from '@heroicons/vue/24/outline'
         <div class="reference">
           <BookmarkIcon class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/datatypes/proving-theorems-about-nat.md"
+            href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json/-/datatypes/proving-theorems-about-nat.md"
             target="_blank"
             >Proving Theorems About Nat</a
           >
@@ -82,7 +82,7 @@ import { BookmarkIcon } from '@heroicons/vue/24/outline'
         <div class="reference">
           <BookmarkIcon class="mr-1 w-4" />
           <a
-            href="https://readonly.link/manuals/cicada-lang/cicada/-/class/mathematical-structure-as-class.md"
+            href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json/-/class/mathematical-structure-as-class.md"
             target="_blank"
             >Mathematical Structure as Class</a
           >
