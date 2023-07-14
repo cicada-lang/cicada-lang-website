@@ -1,8 +1,8 @@
 import { RouteRecordRaw } from 'vue-router'
-import HomePage from './home/HomePage.vue'
 import AboutPage from './about/AboutPage.vue'
-import Playground from './playground/Playground.vue'
 import PageNotFound from './errors/PageNotFound.vue'
+import HomePage from './home/HomePage.vue'
+import Playground from './playground/Playground.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   { path: '/', component: HomePage },

@@ -131,12 +131,12 @@ import { BookmarkIcon } from '@heroicons/vue/24/outline'
 
 .entry .code {
   @apply mb-6 w-full
-  overflow-x-auto py-3
-  px-3
+  overflow-x-auto px-3
+  py-3
   font-mono text-base
   md:mb-0 md:w-1/2
   md:border-l-2 md:border-stone-300
-  md:py-12 md:py-24 md:px-4;
+  md:px-4 md:py-12 md:py-24;
 }
 
 .keyword {

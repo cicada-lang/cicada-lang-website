@@ -6,7 +6,7 @@ import HomePageBeProud from './HomePageBeProud.vue'
 <template>
   <PageLayout>
     <div
-      class="pt-8 pb-4 text-center font-serif text-3xl sm:text-4xl md:pt-10 md:text-5xl"
+      class="pb-4 pt-8 text-center font-serif text-3xl sm:text-4xl md:pt-10 md:text-5xl"
     >
       Let's build a bridge between <br />
       <span class="font-bold text-gray-800">writing software</span> and <br />
@@ -24,7 +24,7 @@ import HomePageBeProud from './HomePageBeProud.vue'
 
     <HomePageBeProud class="my-8" />
 
-    <div class="space-y-10 pt-4 pb-14">
+    <div class="space-y-10 pb-14 pt-4">
       <div class="text-center font-sans font-bold md:text-4xl">
         <div class="pb-6 text-3xl text-amber-500">Get Started</div>
 
@@ -34,7 +34,7 @@ import HomePageBeProud from './HomePageBeProud.vue'
           target="_blank"
         >
           <button
-            class="rounded-lg border-2 border-amber-200 bg-amber-400 py-3 px-6 text-2xl font-bold text-white hover:bg-amber-300"
+            class="rounded-lg border-2 border-amber-200 bg-amber-400 px-6 py-3 text-2xl font-bold text-white hover:bg-amber-300"
           >
             DOCS
           </button>

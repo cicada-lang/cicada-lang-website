@@ -1,11 +1,11 @@
 import { createHead } from '@vueuse/head'
-import { createApp } from 'vue'
 import FloatingVue from 'floating-vue'
-import router from './router'
-import './assets/styles/index.css'
-import './assets/fonts/index.css'
 import 'floating-vue/dist/style.css'
+import { createApp } from 'vue'
 import App from './App.vue'
+import './assets/fonts/index.css'
+import './assets/styles/index.css'
+import router from './router'
 
 const root = createApp(App)
 
