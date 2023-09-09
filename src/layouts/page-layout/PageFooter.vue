@@ -42,7 +42,7 @@ import IconTwitter from '../../components/icons/IconTwitter.vue'
     </div>
 
     <div class="font-sans text-lg text-gray-600">
-      Copyright © 2021-2022 Xie Yuheng
+      Copyright © 2021-2023 Xie Yuheng
     </div>
   </div>
 </template>
