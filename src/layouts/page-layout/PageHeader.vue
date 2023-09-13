@@ -12,7 +12,7 @@ import PageLogo from './PageLogo.vue'
     <div class="flex flex-wrap space-x-3 font-sans text-gray-400">
       <a
         class="hover:text-gray-900"
-        href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json"
+        href="https://readonly.link/manuals/https://code-of-cicada-solo.fidb.app/docs/manual.json"
         target="_blank"
       >
         DOCS

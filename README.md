@@ -1,7 +1,7 @@
 # Cicada Language Website
 
 [ [Homepage](https://cicada-lang.org)
-| [Manual](https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json)
+| [Manual](https://readonly.link/manuals/https://code-of-cicada-solo.fidb.app/docs/manual.json)
 | [About](https://cicada-lang.org/about) ]
 
 ## Development

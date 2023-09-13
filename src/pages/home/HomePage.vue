@@ -29,7 +29,7 @@ import HomePageBeProud from './HomePageBeProud.vue'
         <div class="pb-6 text-3xl text-amber-500">Get Started</div>
 
         <a
-          href="https://readonly.link/manuals/https://cdn.cicada-solo.cic.run/docs/manual.json"
+          href="https://readonly.link/manuals/https://code-of-cicada-solo.fidb.app/docs/manual.json"
           class="font-normal"
           target="_blank"
         >
