@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { EnvelopeIcon } from '@heroicons/vue/24/outline'
-import IconGithub from '../../components/icons/IconGithub.vue'
-import IconReadonly from '../../components/icons/IconReadonly.vue'
-import IconTwitter from '../../components/icons/IconTwitter.vue'
+import GithubIcon from '../../components/icons/GithubIcon.vue'
+import ReadonlyIcon from '../../components/icons/ReadonlyIcon.vue'
+import TwitterIcon from '../../components/icons/TwitterIcon.vue'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import IconTwitter from '../../components/icons/IconTwitter.vue'
         target="_blank"
         title="readonly.link/authors/https://code-of-cicada.fidb.app/docs/author.json"
       >
-        <IconReadonly class="w-5 text-gray-500 hover:text-gray-900" />
+        <ReadonlyIcon class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
 
       <a
@@ -21,7 +21,7 @@ import IconTwitter from '../../components/icons/IconTwitter.vue'
         target="_blank"
         title="github.com/cicada-lang/cicada"
       >
-        <IconGithub class="w-5 text-gray-500 hover:text-gray-900" />
+        <GithubIcon class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
 
       <a
@@ -29,7 +29,7 @@ import IconTwitter from '../../components/icons/IconTwitter.vue'
         target="_blank"
         title="@CicadaLanguage"
       >
-        <IconTwitter class="w-5 text-gray-500 hover:text-gray-900" />
+        <TwitterIcon class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
 
       <a
