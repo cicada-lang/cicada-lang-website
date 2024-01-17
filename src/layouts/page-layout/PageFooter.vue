@@ -42,7 +42,7 @@ import TwitterIcon from '../../components/icons/TwitterIcon.vue'
     </div>
 
     <div class="font-sans text-lg text-gray-600">
-      Copyright © 2021-2023 Xie Yuheng
+      Copyright © 2021-{{ new Date().getFullYear() }} Xie Yuheng
     </div>
   </div>
 </template>
