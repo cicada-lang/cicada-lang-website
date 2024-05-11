@@ -43,40 +43,6 @@ import { LinkIcon } from '@heroicons/vue/24/outline'
               cicada-lang <LinkIcon class="w-4" />
             </a>
           </li>
-
-          <li class="list-disc">
-            Telegram:
-            <a
-              href="https://t.me/CicadaLanguage"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              CicadaLanguage <LinkIcon class="w-4" />
-            </a>
-            <ul class="space-y-2 px-5 pt-2">
-              <li class="list-disc">
-                中文 / Chinese:
-                <a
-                  href="https://t.me/CicadaLanguageCN"
-                  class="inline-flex items-center font-sans underline"
-                  target="_blank"
-                >
-                  CicadaLanguageCN <LinkIcon class="w-4" />
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="list-disc">
-            IRC: #cicada-lang at
-            <a
-              href="https://libera.chat"
-              class="inline-flex items-center font-sans underline"
-              target="_blank"
-            >
-              libera.chat <LinkIcon class="w-4" />
-            </a>
-          </li>
         </ul>
       </section>
     </div>
