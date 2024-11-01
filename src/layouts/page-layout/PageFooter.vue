@@ -9,9 +9,9 @@ import TwitterIcon from '../../components/icons/TwitterIcon.vue'
   <div class="flex w-full flex-col items-center justify-center py-6 md:py-10">
     <div class="flex items-stretch space-x-3 pb-3">
       <a
-        href="https://readonly.link/authors/https://code-of-cicada.fidb.app/docs/author.json"
+        href="https://readonly.link/authors/https://code-of-cicada.xieyuheng.com/docs/author.json"
         target="_blank"
-        title="readonly.link/authors/https://code-of-cicada.fidb.app/docs/author.json"
+        title="readonly.link/authors/https://code-of-cicada.xieyuheng.com/docs/author.json"
       >
         <ReadonlyIcon class="w-5 text-gray-500 hover:text-gray-900" />
       </a>
